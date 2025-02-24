@@ -1,0 +1,109 @@
+{
+    "hero": "رؤية موحدة للاستثمار العقاري",
+    "heroSub": "نحن نقدم مشاريع عقارية متميزة تساهم في ازدهار المجتمعات وتوليد عوائد استثنائية.",
+    "cta": "يتعلم أكثر",
+    "aboutHead": "من نحن",
+    "aboutSub": "نحن شركة استثمار خاصة مرخصة من سلطة دبي للخدمات المالية تجمع بين المعرفة المحلية العميقة والخبرة العالمية في مجال العقارات، مما يوفر للمستثمرين الدوليين إمكانية الوصول إلى فرص عقارية عالية النمو في كندا. يعتمد نجاحنا على تعزيز العلاقات طويلة الأمد مع مستثمرينا لتقديم أصول حقيقية بعوائد حقيقية.",
+    "stats": [
+        {
+            "number": "80+",
+            "text": "Years of Combined Experience"
+        },
+        {
+            "number": "CA$1.5B+",
+            "text": "Equity Investment Opportunity"
+        },
+        {
+            "number": "45+",
+            "text": "Premium Developments"
+        },
+        {
+            "number": "$50B",
+            "text": "Investment Track Record"
+        }
+    ],
+    "valuesHead": "Real Values",
+    "values": [
+            {
+                "number": "01",
+                "sub": "Sustainability",
+                "text":"Investing only in responsibly designed developments that align with Canada's housing demand to deliver sustainable value for investors and communities."
+            },
+            {
+                "number": "02",
+                "sub": "Partnership",
+                "text":"Striving to be the partner of choice for investors, developers, and communities, building strong relationships that deliver long-term success and real returns."
+            },
+            {
+                "number": "03",
+                "sub": "Integrity",
+                "text":"Committed to the highest standards of transparency, honesty and ethics in everything we do."
+            },
+            {
+                "number": "04",
+                "sub": "Expertise",
+                "text":"Combining deep local knowledge with global real estate expertise to ensure our investment strategies are innovative, data-led and reliable."
+            }
+    ],
+    "advantageHead": "Canada's Real Estate Advantage",
+    "advantage": [
+        {
+            "text": "It's of the world's most stable and successful economies"
+        },
+        {
+            "text": "Canada stands out as a prime investment destination because of its fast-growing and stable G7 economy, abundant natural resources, AAA credit rating, rapidly rising population and high housing demand."
+        },
+        {
+            "text": "The need for housing makes it the most lucrative asset class in Canadian real estate."
+        }
+    ],
+    "advantageCta": "View More",
+    "sectionBreak": "A Complete Suite of Real Investment Positives",
+    "portfolioHead": "Our Featured Portfolio",
+    "portfolioSub": "Real Returns have Never Looked So Good",
+    "portfolioCta": "All Portfolio",
+    "portfolio": [
+        {
+            "text1": "148, Niagara",
+            "text2": "Hamilton, ON"
+        },
+        {
+            "text1": "148, Niagara",
+            "text2": "Hamilton, ON"
+        },
+        {
+            "text1": "148, Niagara",
+            "text2": "Hamilton, ON"
+        },
+        {
+            "text1": "148, Niagara",
+            "text2": "Hamilton, ON"
+        }
+    ],
+    "contactHead": "Invest or Partner With Us",
+    "contactSub": "Unlock Real Assets with Real Returns",
+    "form": {
+        "head": "Get In touch",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message",
+        "submit": "Submit",
+        "terms": "Yes, I would like to receive communications about my selected communities from Elite Developments. * We will only use this information as described in our privacy policy."
+    },
+    "footerCopy": "Copyright © 2025 All Rights Reserved. Elite Developments",
+    "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
+    "footerEmailText": "Enter Your Email",
+    "footerEmailButton": "Subscribe",
+    "footerNav": [
+        {
+            "text": "Invest With Us",
+            "link": "/invest-with-us"
+        },
+        {
+            "text": "Contact Us",
+            "link": "/contact"
+        }
+    ]
+}
