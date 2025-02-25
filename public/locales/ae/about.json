@@ -1,0 +1,99 @@
+{
+    "hero":"A Growing Fold of High-Growth Investments",
+    "cta": "Learn More",
+    "aboutHead": "Who We Are",
+    "aboutSub":"Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). With 80+ years of combined experience, our success is built on deep investment and industry expertise, coupled with a commitment to high-quality assets that deliver value to both our investors and the communities they serve.",
+    "aboutPara":"Investors can access varied investment opportunities including our exclusive portfolio of 45+ premium, community-centered developments in Ontario, Canada. Our meticulous site selection, investment process, institution-grade oversight structure and hands-on asset management deliver superior risk-adjusted returns.",
+    "successPara":"Elite Capital’s success is built on fostering long-lasting relationships with our investors to deliver real assets with real returns",
+    "stats": [
+        {
+            "number": "10K+",
+            "text": "Residential and Commercial Units"
+        },
+        {
+            "number": "26M+ sqft.",
+            "text": "Of Residential Development"
+        },
+        {
+            "number": "CA$5B+",
+            "text": "In Projected Completed Value"
+        },
+        {
+            "number": "45",
+            "text": "Active Projects in Canada"
+        }
+    ],
+    "team":"Meet Our Team",
+    "teamMembers":[
+        {
+            "name":"Vimal Jain",
+            "des":"CEO – Elite Capital (DIFC)",
+            "img":"/assets/images/about/vimal-jain.png"
+        },
+        {
+            "name":"Samim Sakhi",
+            "des":"Executive Director",
+            "img":"/assets/images/about/samim-sakhi.png"
+        },
+        {
+             "name":"Susan Mansuri",
+            "des":"Legal & Corporate Development Manager",
+            "img":"/assets/images/about/susan-mansuri.png"
+        },
+        {
+            "name":"Amir Banaga",
+           "des":"Investment Partnerships & Corporate Development Manager",
+           "img":"/assets/images/about/amir-banaga.png"
+       },
+       {
+        "name":"Tom Arnold",
+       "des":"Senior Advisor",
+       "img":"/assets/images/about/tom-arnold.png"
+   }],
+   "teamSub":"Board Of Directors & Investment Committee ",
+   "boardMembers":[
+        {
+            "name":"Hamid Hakimi",
+            "des":"CEO - Elite Developments",
+            "img":"/assets/images/about/hamid-hakimi.png",
+            "features":[
+                "Board of Directors",
+                "Investment Committee"
+            ]
+        },
+        {
+            "name":"Samim Sakhi",
+            "des":"Executive Director",
+            "img":"/assets/images/about/samim-sakhi.png",
+            "features":[
+                "Board of Directors",
+                "Investment Committee"
+            ]
+        },
+        {
+             "name":"Rizvan Magamdov",
+            "des":"FPO",
+            "img":"/assets/images/about/icon.png",
+            "features":[
+                "Board of Directors"
+            ]
+        },
+        {
+            "name":"Vimal Jain",
+           "des":"CEO – Elite Capital (DIFC)",
+           "img":"/assets/images/about/vimal-jain.png",
+           "features":[
+                "Board of Directors",
+                "Investment Committee"
+            ]
+       },
+       {
+        "name":"Khabib Nurmagomedov",
+       "des":"Advisory and Shareholder",
+       "img":"/assets/images/about/khabib.png",
+       "features":[
+                "Board of Directors"
+            ]
+   }]
+
+}

@@ -5,7 +5,7 @@ const Values = () => {
     const values = t('values', { returnObjects: true });
 
     return (
-        <section className="bg-[#747977] py-[5vw]">
+        <section className="bg-[#747977] py-[5vw]"> 
             <div className="px-[12%]">
                 <div className="text-white">
                     <h3 className="text-[5vw] font-display font-bold text-center mb-[4vw]">{t('valuesHead')}</h3>

@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Hero from "@/components/Homepage/Hero";
+import Portfolio from "@/components/Homepage/Portfolio";
 import SectionBreak from "@/components/Homepage/SectionBreak";
 import Stats from "@/components/Homepage/Stats";
 import Values from "@/components/Homepage/Values";
@@ -19,6 +20,7 @@ export default function Home() {
       <Values />
       <Advantage />
       <SectionBreak />
+      <Portfolio/>
       <Footer />
     </>
   );

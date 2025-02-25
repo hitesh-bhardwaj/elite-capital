@@ -39,7 +39,7 @@ const Footer = () => {
                             <Link href="#" className="">
                                 <span>Invest With Us</span>
                             </Link>
-                            <Link href="/contact-us" className="">
+                            <Link href="/contact" className="">
                                 <span>Contact Us</span>
                             </Link>
                         </div>

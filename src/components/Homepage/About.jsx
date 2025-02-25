@@ -13,7 +13,7 @@ const About = () => {
                     <div className="text-black1 w-[55%]">
                         <h2 className="text-[5vw] font-display leading-1.15 font-bold mb-[3vw]">{t('aboutHead')}</h2>
                         <p className="mb-[3vw]">{t('aboutSub')}</p>
-                        <LineButton href={"/about"} text={t('cta')} />
+                        <LineButton href={"/about-us"} text={t('cta')} />
                     </div>
                     <div className="w-1/2 flex h-full items-end justify-end">
                         <Image 
