@@ -94,6 +94,30 @@
        "features":[
                 "Board of Directors"
             ]
-   }]
+   },
+   {
+    "name":"John Doe",
+   "des":"ABC",
+   "img":"/assets/images/about/icon.png",
+   "features":[
+            "Investment Committee"
+        ]
+},
+{
+    "name":"John Doe",
+   "des":"ABC",
+   "img":"/assets/images/about/icon.png",
+   "features":[
+            "Investment Committee"
+        ]
+},
+{
+    "name":"John Doe",
+   "des":"ABC",
+   "img":"/assets/images/about/icon.png",
+   "features":[
+            "Investment Committee"
+        ]
+}]
 
 }
