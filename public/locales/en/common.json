@@ -59,23 +59,27 @@
     ],
     "advantageCta": "View More",
     "sectionBreak": "A Complete Suite of Real Investment Positives",
-    "portfolioHead": "Our Featured Portfolio",
+    "portfolioHead": "Our <br/> Featured Portfolio",
     "portfolioSub": "Real Returns have Never Looked So Good",
     "portfolioCta": "All Portfolio",
     "portfolio": [
         {
+            "image":"/assets/images/homepage/portfolio-1.png",
             "text1": "148, Niagara",
             "text2": "Hamilton, ON"
         },
         {
+            "image":"/assets/images/homepage/hero-bg.jpg",
             "text1": "148, Niagara",
             "text2": "Hamilton, ON"
         },
         {
+            "image":"/assets/images/homepage/portfolio-1.png",
             "text1": "148, Niagara",
             "text2": "Hamilton, ON"
         },
         {
+            "image":"/assets/images/homepage/hero-bg.jpg",
             "text1": "148, Niagara",
             "text2": "Hamilton, ON"
         }

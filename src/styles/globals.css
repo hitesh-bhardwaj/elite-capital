@@ -8,3 +8,10 @@
   --font-display: var(--font-display);
   --font-body: var(--font-body)
 }
+    .slide {
+	transition: opacity 1s ease-in-out;
+  }
+  
+  .slide--current {
+	opacity: 1;
+  }

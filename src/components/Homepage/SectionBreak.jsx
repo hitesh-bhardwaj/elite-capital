@@ -14,7 +14,7 @@ const SectionBreak = () => {
     
         gsap.to(marquee, {
           x: `-${textWidth}px`, 
-          duration: 15, 
+          duration: 15 , 
           ease: "linear",
           repeat: -1,
           onRepeat: () => {
