@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
+import Contact from "@/components/Homepage/Contact";
 import Hero from "@/components/Homepage/Hero";
 import Portfolio from "@/components/Homepage/Portfolio";
 import SectionBreak from "@/components/Homepage/SectionBreak";
@@ -21,6 +22,7 @@ export default function Home() {
       <Advantage />
       <SectionBreak />
       <Portfolio/>
+      <Contact/>
       <Footer />
     </>
   );
