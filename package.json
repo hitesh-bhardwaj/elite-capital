@@ -20,11 +20,14 @@
     "fs": "^0.0.1-security",
     "gsap": "^3.12.7",
     "i18next": "^24.2.2",
+    "lenis": "^1.1.21",
     "next": "15.1.7",
     "next-i18next": "^15.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^15.4.1"
+    "react-i18next": "^15.4.1",
+    "split-type": "^0.3.4",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

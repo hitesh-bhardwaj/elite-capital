@@ -32,7 +32,7 @@ const Portfolio = () => {
         gsap.timeline({
             defaults: { duration: 1.5, ease: 'power3.out' },
             onComplete: () => {
-                gsap.set(currentSlide, { opacity: 0 });
+                gsap.set(currentSlide, { opacity: 1 });
                 isAnimating.current = false;
             }
         })
@@ -40,7 +40,7 @@ const Portfolio = () => {
             .set(upcomingContent, { opacity: 0, y: 30 }, "-=0.5")
             .to(currentSlide, { x: -direction * 100 + "%" }, 0)
             .to(currentInner, { x: direction * 60 + "%" }, 0)
-            .to(currentContent, { y: -30, opacity: 0 }, 0)
+            .to(currentContent, { y: -30, opacity: 1 }, 0)
             .to(upcomingSlide, { x: "0%" }, 0)
             .to(upcomingInner, { x: "0%" }, 0)
             .to(upcomingContent, { y: 0, opacity: 1 }, "-=0.9");
@@ -51,8 +51,8 @@ const Portfolio = () => {
             <div className="slides relative w-full h-full overflow-hidden" ref={slidesRef}>
                 {portfolio.map((item, index) => (
                     <>
-                        <div key={index} className={`slide absolute w-full h-full flex items-center justify-center opacity-0 ${index === current ? "slide--current" : ""}`}>
-                            <img src={item.image} alt={item.text1} className="absolute w-full h-full object-cover" />
+                        <div key={index} className={`slide absolute w-full h-full flex items-center justify-center opacity-0 overflow-hidden ${index === current ? "slide--current" : ""}`}>
+                            <img src={item.image} alt={item.text1} className="absolute w-full h-full object-cover slide__img" />
                             <div className="slide__content relative z-[2] text-white left-[-25%] top-[-30%]">
                                 <h2
                                     className="slide__heading text-[5vw] font-display leading-[1.2]"

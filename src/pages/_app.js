@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Head from "next/head";
 import { appWithTranslation } from 'next-i18next'
+import { ReactLenis } from "lenis/react";
 
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
@@ -38,9 +39,11 @@ const App = ({ Component, pageProps }) => {
         <title>Elite Capital</title>
         <meta name="description" content="Real Assets, Real Returns" />
       </Head>
+      <ReactLenis root>
       <main className={`${bodoni_moda.variable} ${bricolage_grotesque.variable} font-body text-[1.55vw] text-black1`}>
         <Component {...pageProps} />
       </main>
+      </ReactLenis>
     </>
   )
 }
