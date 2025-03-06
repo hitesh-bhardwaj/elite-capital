@@ -5,11 +5,11 @@ const Values = () => {
     const values = t('values', { returnObjects: true });
 
     return (
-        <section className="bg-[#747977] py-[5vw]"> 
-            <div className="px-[12%]">
-                <div className="text-white">
-                    <h3 data-title-anim className="text-[5vw] font-display font-bold text-center mb-[4vw]">{t('valuesHead')}</h3>
-                    <div className="grid grid-cols-2 gap-x-[7vw] gap-y-[5vw]">
+        <section className="bg-[#B1C3B7] py-[5vw]"> 
+            <div className="px-[8%]">
+                <div className="">
+                    <h3 data-title-anim className="text-[5vw] font-display font-bold mb-[4vw]">{t('valuesHead')}</h3>
+                    <div className="grid grid-cols-3 gap-x-[4vw] gap-y-[5vw]">
                         {values.map((item, index) => (
                             <div key={index}>
                                 <span className="text-[1.25vw] mb-3 fadeUp block">{item.number}.</span>

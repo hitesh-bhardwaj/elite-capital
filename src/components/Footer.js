@@ -36,6 +36,9 @@ const Footer = () => {
                             />
                         </div>
                         <div className="uppercase mt-4 font-medium flex items-end justify-end gap-[5vw]">
+                        <Link href="#" className="">
+                                <span>Who We Are</span>
+                            </Link>
                             <Link href="#" className="">
                                 <span>Invest With Us</span>
                             </Link>

@@ -7,23 +7,23 @@
     "successPara":"Elite Capital’s success is built on fostering long-lasting relationships with our investors to deliver real assets with real returns",
     "stats": [
         {
+            "number": "45",
+            "text": "Active projects in Canada"
+        },
+        {
             "number": "10K+",
-            "text": "Residential and Commercial Units"
+            "text": "Residential and commercial units"
         },
         {
             "number": "26M+ sqft.",
-            "text": "Of Residential Development"
+            "text": "of residential development"
         },
         {
-            "number": "CA$5B+",
-            "text": "In Projected Completed Value"
-        },
-        {
-            "number": "45",
-            "text": "Active Projects in Canada"
+            "number": "CA$1.5B+",
+            "text": "Equity investment opportunity"
         }
     ],
-    "team":"Meet Our Team",
+    "team":"Our Team",
     "teamMembers":[
         {
             "name":"Vimal Jain",
@@ -32,7 +32,7 @@
         },
         {
             "name":"Samim Sakhi",
-            "des":"Executive Director",
+            "des":"Executive Director & President, Elite Developments",
             "img":"/assets/images/about/samim-sakhi.png"
         },
         {
@@ -63,7 +63,7 @@
         },
         {
             "name":"Samim Sakhi",
-            "des":"Executive Director",
+            "des":"Executive Director & President, Elite Developments",
             "img":"/assets/images/about/samim-sakhi.png",
             "features":[
                 "Board of Directors",
@@ -118,6 +118,29 @@
    "features":[
             "Investment Committee"
         ]
-}]
+}],
+"teamSub2":"Our Shariah Board",
+"shariahMembers":[
+    {
+        "name":"Dr. Mohamed Ali Elgari",
+        "des":"Chairman",
+        "img":"/assets/images/about/icon.png"
+    },
+    {
+        "name":"Dr. Mohd Daud Bakar",
+        "des":"Executive Member",
+        "img":"/assets/images/about/icon.png"
+    },
+    {
+         "name":"Dr. Muhammad Amin Ali Qattan",
+        "des":"",
+        "img":"/assets/images/about/icon.png"
+    },
+    {
+        "name":"Dr. Osama Al Dereai",
+       "des":" ",
+       "img":"/assets/images/about/icon.png"
+   }],
+   "shariahSub":"The Shariah Supervisory Board shall be managed by Amanie Advisors Ltd, a company incorporated in DIFC with license No: CL0696. Amanie Advisors Ltd is also the appointed Shariah Advisor for Elite Capital (DIFC) Limited."
 
 }

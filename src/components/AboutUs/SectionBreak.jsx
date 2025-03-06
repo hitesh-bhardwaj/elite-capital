@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 import { useEffect } from "react";
 const SectionBreak = () => {
-    const { t } = useTranslation('about');
+    const { t } = useTranslation('invest');
     useEffect(() => {
 
    

@@ -84,7 +84,7 @@ const Stats = () => {
   return (
     <>
       <section className="relative bg-[#F2F2E9] overflow-hidden py-[8%]">
-        {/* <div className="px-[5vw] flex items-center justify-between">
+        <div className="px-[5vw] flex items-center justify-between">
                     {text.map((item, index) => (
                         <React.Fragment key={index}>
                             <div className="text-center w-[25%]">
@@ -94,8 +94,8 @@ const Stats = () => {
                             <span className="block h-[25vw] w-[1.5px] bg-black1 last:hidden mx-[2%] vlineDraw" />
                         </React.Fragment>
                     ))}
-                </div> */}
-        <div className="flex justify-between items-end mobile:flex-col mobile:items-start mobile:gap-[10vw] mobile:mt-[10vw]">
+                </div>
+        {/* <div className="flex justify-between items-end mobile:flex-col mobile:items-start mobile:gap-[10vw] mobile:mt-[10vw]">
           <div className="flex items-center justify-start gap-[2vw] mobile:grid mobile:grid-cols-2 mobile:items-start mobile:space-between mobile:w-full mobile:gap-y-[5vw]">
             <div className="flex  flex-col items-center gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0">
               <div className="font-display ">
@@ -226,11 +226,11 @@ const Stats = () => {
                 data-para-anim
                 className="font-medium  w-[75%] text-center mb-[15px] mobile:text-[5vw] tablet:text-[2vw] mobile:mb-0"
               >
-                Investment Track Record
+               Equity investment potential of our exclusive pipeline
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );

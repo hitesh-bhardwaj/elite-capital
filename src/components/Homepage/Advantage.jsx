@@ -33,11 +33,11 @@ const Advantage = () => {
     return (
         <section className="bg-[#93AE79] overflow-hidden">
             <div className="flex items-center">
-                <div className="text-black1 w-1/2 pl-[5vw] pr-[4.5vw]">
-                    <h3 data-title-anim className="text-[5vw] font-display mb-[4vw] leading-[1]">{t('advantageHead')}</h3>
+                <div className="text-black1 w-1/2 pl-[4vw] pr-[3.5vw]">
+                    <h3 data-title-anim className="text-[5vw] capitalize font-display mb-[4vw] leading-[1]">{t('advantageHead')}</h3>
                     <div className="space-y-[2vw] mb-[3vw]">
                         {advantage.map((item, index) => (
-                            <p data-para-anim key={index} className="">{item.text}</p>
+                            <div data-para-anim key={index}  dangerouslySetInnerHTML={{__html:item.text}}/>
                         ))}
                     </div>
                     <LineButton text={t('advantageCta')} href="#" className="fadein"/>

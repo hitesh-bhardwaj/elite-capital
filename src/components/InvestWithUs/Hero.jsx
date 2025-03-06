@@ -1,10 +1,10 @@
 import { useTranslation } from "next-i18next";
-import bg from "../../../public/assets/images/contact/hero-bg.png"
+import bg from "../../../public/assets/images/invest/invest-hero.png"
 import Image from "next/image";
 import LinkButton from "../ui/LinkButton";
 
 const Hero = () => {
-    const { t } = useTranslation('contact');
+    const { t } = useTranslation('invest');
 
     return (
         <>
@@ -18,8 +18,8 @@ const Hero = () => {
                     loading="lazy"
                 />
                 <div className="relative z-10 px-[5vw] flex items-center justify-start h-screen">
-                    <div className="py-[10%] text-white w-[45%]">
-                        <h1 className="text-[5vw] font-display leading-1.15 font-bold mb-[1vw]">{t('hero')}</h1>
+                    <div className="py-[10%] text-white w-[65%]">
+                        <h1 className="text-[5vw] font-display leading-1.15 font-medium mb-[1vw]">{t('hero')}</h1>
                         <LinkButton href={"/about"} text={t('cta')} className="mt-[3vw]" />
                     </div>
                 </div>

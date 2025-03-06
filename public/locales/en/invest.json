@@ -1,0 +1,102 @@
+{
+    "hero":"Invest in a Thriving Market with Our Sound Investment Strategy",
+    "cta": "Learn More",
+    "aboutsub":[
+        {
+            "text":"Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). With 80+ years of combined experience, our success is built on deep investment and industry expertise, coupled with a commitment to high-quality assets that deliver value to both our investors and the communities they serve."
+        },
+        {
+            "text":"Investors can access varied investment opportunities including our exclusive portfolio of 45+ premium, community-centered developments in Ontario, Canada. Our meticulous site selection, investment process, institution-grade oversight structure and hands-on asset management deliver superior risk-adjusted returns."
+        },
+        {
+            "text":"Elite Capital’s success is built on fostering long-lasting relationships with our investors to deliver real assets with real returns."
+        }
+    ],
+    "stats": [
+        {
+            "number": "45",
+            "text": "Active projects in Canada"
+        },
+        {
+            "number": "26M+ sqft.",
+            "text": "of residential development"
+        },
+        {
+            "number": "10K+",
+            "text": "Residential and commercial units"
+        },
+        {
+            "number": "CA$1.5B+",
+            "text": "Equity investment opportunity"
+        }
+    ],
+    "portfolioHead":"Our Select Pipeline of Investment Opportunities",
+    "portfolioSub":"Diversified portfolio of purpose-built residential developments in Ontario",
+    "portfolios":[
+        {
+            "img":"/assets/images/invest/portfolio1.png",
+            "title":"120 Meridian Way",
+            "location":"Pelham, ON",
+            "address":"<p>Commencement – Q3 2025 166 Apartments <br/> Total: $61.1m | Equity: $12.2m</>", 
+            "link":"/",
+            "cta":"Learn More"
+        },
+        {
+            "img":"/assets/images/invest/portfolio2.png",
+            "title":"Station 60",
+            "location":"Brantford, ON",
+            "address":"Commencement – Q3 2025 242 Apartments <br/> Total: $80.9m | Equity: $16.2m", 
+            "link":"/",
+            "cta":"Learn More"
+        },
+        {
+            "img":"/assets/images/invest/portfolio3.png",
+            "title":"570 Upper Ottawa",
+            "location":"Hamilton, ON",
+            "address":"<p>Commencement – Q4 2025 346 Apartments <br/> Total: $157.0m | Equity: $31.5</>", 
+            "link":"/",
+            "cta":"Learn More"
+        },
+        {
+            "img":"/assets/images/invest/portfolio4.png",
+            "title":"148 Niagara",
+            "location":"St. Catherines, ON",
+            "address":"<p>Commencement – Q4 2025 179 Apartments</>", 
+            "link":"/",
+            "cta":"Learn More"
+        }
+    ],
+    "projectsHead":"Exclusive Pipeline of 45+ projects",
+    "projects":[
+        {
+          "title":"1.  81-87 Rymal",
+          "location":"Hamilton, ON",
+          "address":"Commencement – Q4 2025 <br/> 210 Apartments | 10 Town Homes"
+        },
+        {
+            "title":"2.  570 Upper Ottawa",
+            "location":"Hamilton, ON",
+            "address":"Commencement – Q4 2025 <br/> 346 Apartments"
+          },
+          {
+            "title":"3.  Station 60",
+            "location":"Brantford, ON",
+            "address":"Commencement – Q3 2025  <br/> 242 Apartments"
+          },
+          {
+            "title":"4.  148 Niagara",
+            "location":"St. Catherines, ON",
+            "address":"Commencement – Q4 2025 <br/> 179 Apartments"
+          },
+          {
+            "title":"5.  4th Avenue – Phase 1 ",
+            "location":"St. Catherines, ON",
+            "address":"Commencement – Q1 2026  <br/> 259 Apartments"
+          },
+          {
+            "title":"6.  120 Meridian Way",
+            "location":"Pelham, ON",
+            "address":"Commencement – Q3 2025  <br/> 166 Apartments"
+          }
+    ]
+}

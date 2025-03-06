@@ -4,9 +4,9 @@ import Header from "@/components/Header";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Contact from "@/components/Homepage/Contact";
+import Diversify from "@/components/Homepage/Diversify";
 import Hero from "@/components/Homepage/Hero";
 import Portfolio from "@/components/Homepage/Portfolio";
-
 import SectionBreak from "@/components/Homepage/SectionBreak";
 import Stats from "@/components/Homepage/Stats";
 import Values from "@/components/Homepage/Values";
@@ -27,7 +27,9 @@ export default function Home() {
       <Stats />
       <Values />
       <Advantage />
-      <SectionBreak />
+      <Diversify/>
+      <SectionBreak/>
+      {/* <SectionBreak /> */}
       {/* <MarqueeScroll/> */}
       <Portfolio/>
       <Contact/>

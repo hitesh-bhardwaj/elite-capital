@@ -53,9 +53,9 @@ const Portfolio = () => {
                     <>
                         <div key={index} className={`slide absolute w-full h-full flex items-center justify-center opacity-0 overflow-hidden ${index === current ? "slide--current" : ""}`}>
                             <img src={item.image} alt={item.text1} className="absolute w-full h-full object-cover slide__img" />
-                            <div className="slide__content relative z-[2] text-white left-[-25%] top-[-30%]">
+                            <div className="slide__content relative z-[2] text-white left-[3%] top-[-30%]">
                                 <h2
-                                    className="slide__heading text-[5vw] font-display leading-[1.2]"
+                                    className="slide__heading text-[5vw] w-[60%]  font-display leading-[1.2]"
                                     dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
                                 />
                                 <p className="slide__text">{t('portfolioSub')}</p>
