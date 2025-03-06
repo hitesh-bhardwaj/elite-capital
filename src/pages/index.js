@@ -6,7 +6,7 @@ import Advantage from "@/components/Homepage/Advantage";
 import Contact from "@/components/Homepage/Contact";
 import Hero from "@/components/Homepage/Hero";
 import Portfolio from "@/components/Homepage/Portfolio";
-import MarqueeScroll from "@/components/Homepage/SampleMarquee";
+
 import SectionBreak from "@/components/Homepage/SectionBreak";
 import Stats from "@/components/Homepage/Stats";
 import Values from "@/components/Homepage/Values";

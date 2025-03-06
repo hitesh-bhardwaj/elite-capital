@@ -19,8 +19,8 @@ const Hero = () => {
                 />
                 <div className="relative z-10 px-[5vw] flex items-center justify-start h-screen">
                     <div className="py-[10%] text-white w-[45%]">
-                        <h1 className="text-[5vw] font-display leading-1.15 font-bold mb-[3vw]">{t('hero')}</h1>
-                        <LinkButton href={"/about"} text={t('cta')} />
+                        <h1 data-title-anim className="text-[5vw] font-display leading-1.15 font-bold mb-[3vw]">{t('hero')}</h1>
+                        <LinkButton href={"/about"} text={t('cta')} className="fadein" />
                     </div>
                 </div>
             </section>

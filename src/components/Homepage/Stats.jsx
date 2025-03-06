@@ -49,14 +49,14 @@ const Stats = () => {
   };
 
   const counterClasses = [
-    { selector: ".counter-3", top: "-1030px", delay: 0.1 },
-    { selector: ".counter-2", top: "-826px", delay: -1.3 },
+    { selector: ".counter-3", top: "-1020px", delay: 0.1 },
+    { selector: ".counter-2", top: "-815px", delay: -1.3 },
     { selector: ".counter-1", top: "-215px", delay: -1.3 },
   ];
 
   const countClasses = [
-    { selector: ".count-3", top: "-520px", delay: 0.1 },
-    { selector: ".count-2", top: "-420px", delay: -1.3 },
+    { selector: ".count-3", top: "-510px", delay: 0.1 },
+    { selector: ".count-2", top: "-410px", delay: -1.3 },
   ];
   const countFourthClasses = [
     { selector: ".counter-4", top: "-510px", delay: 0.1 },
@@ -126,7 +126,7 @@ const Stats = () => {
                   </div>
                   <div className="counter-4 digit ">
                   </div>
-                    <div className="num font-semibold leading-[1.2]">+</div>
+                    <div className="num font-semibold mt-[0.1vw]">+</div>
                 </div>
               </div>
               <p
@@ -207,7 +207,7 @@ const Stats = () => {
                   <div className="num">4</div>
                   <div className="num">5</div>
                 </div>
-                <div className="counter-5 digit font-semibold ">
+                <div className="counter-3 digit font-semibold ">
                   <div className="num">0</div>
                   <div className="num">1</div>
                   <div className="num">2</div>

@@ -42,7 +42,7 @@ const SectionBreak = () => {
     };
   }, [currentScroll, isScrollingDown]);
   useEffect(() => {
-    const marquee = marqueeRef.current;
+
    
     gsap.fromTo(
       ".break-image",

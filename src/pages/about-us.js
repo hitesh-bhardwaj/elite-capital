@@ -6,9 +6,13 @@ import SectionBreak from '@/components/AboutUs/SectionBreak';
 import Stats from '@/components/AboutUs/Stats';
 import Team from '@/components/AboutUs/Team';
 import Footer from '@/components/Footer';
+import { fadeIn, fadeUp, paraAnim, titleAnim } from "@/components/gsapAnimations";
 
 export default function AboutPage() {
-
+  fadeUp()
+   paraAnim()
+   titleAnim()
+   fadeIn()
   return (
     <>
     <Header/>
