@@ -32,24 +32,24 @@ const Footer = () => {
                                 width={100}
                                 height={100}
                                 alt="Logo"
-                                className="w-[35vw] h-auto"
+                                className="w-[35vw] h-auto fadeUp"
                             />
                         </div>
                         <div className="uppercase mt-4 font-medium flex items-end justify-end gap-[5vw]">
                         <Link href="#" className="">
-                                <span>Who We Are</span>
+                                <span data-para-anim>Who We Are</span>
                             </Link>
                             <Link href="#" className="">
-                                <span>Invest With Us</span>
+                                <span data-para-anim>Invest With Us</span>
                             </Link>
                             <Link href="/contact" className="">
-                                <span>Contact Us</span>
+                                <span data-para-anim>Contact Us</span>
                             </Link>
                         </div>
                     </div>
                     <div className="flex justify-start items-end flex-col">
                         <div className="w-1/4 h-[15vw]">
-                            <p className="text-xl">Subscribe for our Newsletter to Receive Updates and Content.</p>
+                            <p className="text-lg">Subscribe for our Newsletter to Receive Updates and Content.</p>
                         </div>
                     </div>
                 </div>

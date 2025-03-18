@@ -8,7 +8,7 @@ const Portfolio = () => {
     const slidesRef = useRef(null);
     const [current, setCurrent] = useState(0);
     const isAnimating = useRef(false);
-   const { t } = useTranslation('common');
+   const { t } = useTranslation('home');
    const portfolio = t('portfolio', { returnObjects: true });
     const slidesTotal = portfolio.length;
 
@@ -54,17 +54,17 @@ const Portfolio = () => {
                         <div key={index} className={`slide absolute w-full h-full flex items-center justify-center opacity-0 overflow-hidden ${index === current ? "slide--current" : ""}`}>
                             <img src={item.image} alt={item.text1} className="absolute w-full h-full object-cover slide__img" />
                             <div className="slide__content relative z-[2] text-white left-[3%] top-[-30%]">
-                                <h2
+                                <h2 data-title-anim
                                     className="slide__heading text-[5vw] w-[60%]  font-display leading-[1.2]"
                                     dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
                                 />
-                                <p className="slide__text">{t('portfolioSub')}</p>
+                                <p data-para-anim className="slide__text">{t('portfolioSub')}</p>
 
                                 <div className='address-container absolute bottom-[-120%] left-[0%]'>
-                                    <p className='text-[2.9vw] text-white'>
+                                    <p data-para-anim className='text-[2.9vw] text-white'>
                                         {item.text1}
                                     </p>
-                                    <p className='text-white'>{item.text2}</p>
+                                    <p data-para-anim className='text-white'>{item.text2}</p>
 
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ const Portfolio = () => {
                 ))}
             </div>
 
-            <div className="progress-container absolute top-[40%] left-[3%] w-[50%] flex items-center">
+            <div className="progress-container absolute top-[40%] left-[3%] w-[50%] flex items-center fadeUp">
                 <span className="text-white text-[1.2vw]">
                     {(current + 1).toString().padStart(2, "0")}
                 </span>
@@ -89,15 +89,15 @@ const Portfolio = () => {
             </div>
 
             <div className='absolute bottom-[10%] left-[3%]'>
-                <LinkButton href={"/"} text={"All Portfolio"} />
+                <LinkButton href={"/"} text={"All Portfolio"}  className='fadeUp'/>
             </div>
 
 
 
             <div className="slides-nav absolute top-[70%] left-[3%] flex items-center justify-center gap-[2vw]">
-                <button className="slides-nav__item slides-nav__item--prev border  w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4" onClick={() => navigate(-1)}><div>
+                <button className="slides-nav__item slides-nav__item--prev border  w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4 fadeUp" onClick={() => navigate(-1)}><div>
                     <Image src="/icons/left-arrow.svg" height={30} width={30} alt='left-aerrow' /></div></button>
-                <button className="slides-nav__item slides-nav__item--next border w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4" onClick={() => navigate(1)}><div>
+                <button className="slides-nav__item slides-nav__item--next border w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4 fadeUp" onClick={() => navigate(1)}><div>
                     <Image src="/icons/right-arrow.svg" height={30} width={30} alt='right-aerrow' /></div></button>
             </div>
         </section>

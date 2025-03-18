@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { Form, Input, Checkbox, Textarea } from "@heroui/react";
 import LinkButton from "@/components/ui/LinkButton";
-import ContactForm from "./ContactForm";
+import ContactForm from "../Homepage/ContactForm";
+
 
 const Contact = () => {
   const [action, setAction] = useState(null);
-  const { t } = useTranslation("home");
+  const { t } = useTranslation("common");
 
    const [submitted, setSubmitted] = React.useState(null);
       const [errors, setErrors] = React.useState({});

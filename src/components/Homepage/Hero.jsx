@@ -5,7 +5,7 @@ import LinkButton from "../ui/LinkButton";
 import { useRouter } from "next/router";
 
 const Hero = () => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation('home');
 
     return (
         <>
@@ -19,10 +19,10 @@ const Hero = () => {
                     loading="lazy"
                 />
                 <div className="relative z-10 px-[5vw] flex items-center justify-start h-screen">
-                    <div className="py-[10%] text-white w-[60%]">
-                        <h1 data-title-anim className="text-[5vw] font-display leading-1.15 font-bold mb-[3vw]">{t('hero')}</h1>
-                        <p data-para-anim className="text-[1.7vw] mb-[3vw] ">{t('heroSub')}</p>
-                        <LinkButton href={"/about-us"} text={t('cta')} className="fadein" />
+                    <div className="py-[10%] text-white w-[92%]">
+                        <h1 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[3vw]">{t('hero')}</h1>
+                        <p data-para-anim className="text-[1.7vw] mb-[3vw] w-[80%]">{t('heroSub')}</p>
+                        <LinkButton href={"/about-us"} text={t('cta')} className="fadeUp" />
                     </div>
                 </div>
             </section>

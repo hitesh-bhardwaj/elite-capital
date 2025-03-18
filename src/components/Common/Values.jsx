@@ -8,7 +8,7 @@ const Values = () => {
         <section className="bg-[#B1C3B7] py-[5vw]"> 
             <div className="px-[8%]">
                 <div className="">
-                    <h3 data-title-anim className="text-[5vw] font-display font-bold mb-[4vw]">{t('valuesHead')}</h3>
+                    <h3 data-title-anim className="text-[5vw] font-display  mb-[4vw]">{t('valuesHead')}</h3>
                     <div className="grid grid-cols-3 gap-x-[4vw] gap-y-[5vw]">
                         {values.map((item, index) => (
                             <div key={index}>

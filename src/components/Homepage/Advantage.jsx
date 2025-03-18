@@ -27,7 +27,7 @@ const Advantage = () => {
         })
         return()=>ctx.revert()
     },[])
-    const { t } = useTranslation('common');
+    const { t } = useTranslation('home');
     const advantage = t('advantage', { returnObjects: true });
 
     return (

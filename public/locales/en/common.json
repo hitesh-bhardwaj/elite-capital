@@ -1,33 +1,10 @@
 {
-    "hero": "A United Vision for Real Estate Investing",
-    "heroSub": "We deliver premium real estate developments that contribute to thriving communities and generate exceptional returns.",
-    "cta": "Learn More",
-    "aboutHead": "Who We Are",
-    "aboutSub": "We are a DFSA-authorised private equity firm that combines deep, local knowledge with global fund management and investment expertise, providing international investors access to high-growth real estate investment opportunities in Canada. Our success is rooted in fostering long-lasting partnerships with our investors to deliver Real Assets with Real Returns.  ",
-    "stats": [
-        {
-            "number": "80+",
-            "text": "Years of Combined Experience"
-        },
-        {
-            "number": "$50B",
-            "text": "Investment & advisory experience"
-        },
-        {
-            "number": "45+",
-            "text": "Premium Developments"
-        },
-        {
-            "number": "CA$1.5B+",
-            "text": "Equity investment potential of our exclusive pipeline"
-        }
-    ],
     "valuesHead": "Our Values",
     "values": [
             {
                 "number": "01",
                 "sub": "Partnership",
-                "text":"We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success. "
+                "text":"We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
             },
             {
                 "number": "02",
@@ -47,59 +24,11 @@
             {
                 "number":"05",
                 "sub" : "Sustainability ",
-                "text": "We invest in responsibly designed developments to alleviate Canada’s housing shortage and deliver lasting environmental and social benefits to communities.  "
+                "text": "WWe invest in responsibly designed developments to alleviate Canada’s housing shortage and deliver lasting environmental and social benefits to communities.  "
             }
     ],
-    "advantageHead": "Canada’s Real Estate Investment Opportunity ",
-    "advantage": [
-        {
-            "text": "<p class='!font-medium'>One of the world’s most stable and successful economies.</p>"
-        },
-        {
-            "text": "Canada stands out as a prime investment destination in the G7 because of its fast-growing and stable economy, abundant natural resources, AAA credit rating, rapidly rising population and high housing demand.  Canada’s population is forecast to grow to 6.5million by 2030 at a compounded annual growth rate of 3%.  With a housing shortage of more than 3.45 million homes expected by the year 2030, the Canadian residential real estate market is a highly attractive investment opportunity."
-        }
-    ],
-    "advantageCta": "View More",
-    "diversifyHead":"Diversify your portfolio with highly attractive Canadian real estate ",
-    "diversify": "<p data-para-anim> Our investors can access varied investment opportunities including our exclusive pipeline of 45+ premium, community-centred developments in Ontario, Canada. This pipeline includes many purpose built developments for the rental market that have gone through an extensive development and permitting process and are shovel ready.</p><p data-para-anim>This exclusive pipeline of investment opportunities, combined with our thorough due diligence and hands-on asset management, helps us deliver superior risk adjusted returns to our investors. </p>",
-    "sectionBreak": "Highly attractive risk adjusted returns by providing access to an attractive real estate market ",
-    "portfolioHead": "Our Select Pipeline of Investment Opportunities ",
-    "portfolioSub": "Diversified portfolio of purpose-built residential developments in Ontario ",
-    "portfolioCta": "All Portfolio",
-    "portfolio": [
-        {
-            "image":"/assets/images/homepage/portfolio-1.png",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
-        },
-        {
-            "image":"/assets/images/homepage/hero-bg.jpg",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
-        },
-        {
-            "image":"/assets/images/homepage/portfolio-1.png",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
-        },
-        {
-            "image":"/assets/images/homepage/hero-bg.jpg",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
-        }
-    ],
     "contactHead": "Invest  With Us",
-    "contactSub": "Unlock Real Assets with Real Returns",
-    "form": {
-        "head": "Get In Touch",
-        "firstName": "First Name",
-        "lastName": "Last Name",
-        "email": "Email",
-        "phone": "Phone",
-        "message": "Message",
-        "submit": "Submit",
-        "terms": "Yes, I would like to receive communications about my selected communities from Elite Developments. * We will only use this information as described in our privacy policy."
-    },
+    "contactSub": "Unlock real assets with real returns",
     "footerCopy": "Copyright © 2025 All Rights Reserved. Elite Developments",
     "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
     "footerEmailText": "Enter Your Email",

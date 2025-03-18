@@ -44,7 +44,6 @@ const About = () => {
                     <div className="text-black1 w-[50%]  px-[3vw] py-[3vw]">
                         <h2 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[6vw]">{t('aboutHead')}</h2>
                         <p data-para-anim className="mb-[3vw] w-[98%] text-[1.8vw]">{t('aboutSub')}</p>
-                        <p data-para-anim className="mb-[3vw] w-[98%] text-[1.8vw]">{t('aboutPara')}</p>
                     </div>
                 </div>
 

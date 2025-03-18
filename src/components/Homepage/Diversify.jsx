@@ -8,12 +8,12 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger)
 
 const Diversify = () => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation('home');
     const advantage = t('diversify', { returnObjects: true });
 
     return (
         <section className="bg-[#F2F2E9] overflow-hidden p-[6vw] ">
-             <h3 data-title-anim className="text-[2.5vw]  font-display mb-[4vw] leading-[1]">{t('diversifyHead')}</h3>
+             <h3 data-title-anim className="text-[2.9vw] tracking-tight  font-display mb-[4vw] leading-[1]">{t('diversifyHead')}</h3>
             <div className="flex items-center justify-between">   
             <div className="w-[35%] overflow-hidden advantage-block">
                     <Image

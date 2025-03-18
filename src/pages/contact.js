@@ -3,10 +3,15 @@ import Header from "@/components/Header";
 import Hero from '@/components/Contact/Hero';
 import Location from '@/components/Contact/Location';
 import Footer from '@/components/Footer';
-import Contact from '@/components/Homepage/Contact';
+import Contact from '@/components/Common/Contact';
+import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
 
 
 export default function AboutPage() {
+  fadeUp()
+     paraAnim()
+     titleAnim()
+     fadeIn()
   return (
     <>
     <Header/>

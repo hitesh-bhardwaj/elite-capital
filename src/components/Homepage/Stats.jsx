@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Stats = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("home");
   useEffect(() => {
     const ctx = gsap.context(() => {
       const lineDraws = document.querySelectorAll(".vlineDraw");
@@ -88,7 +88,7 @@ const Stats = () => {
                     {text.map((item, index) => (
                         <React.Fragment key={index}>
                             <div className="text-center w-[25%]">
-                                <h3 className="text-[4vw] font-display font-bold mb-6">{item.number}</h3>
+                                <h3 data-para-anim className="text-[4vw] font-display font-bold mb-6">{item.number}</h3>
                                 <p data-para-anim className="w-[75%] mx-auto">{item.text}</p>
                             </div>
                             <span className="block h-[25vw] w-[1.5px] bg-black1 last:hidden mx-[2%] vlineDraw" />

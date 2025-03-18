@@ -10,25 +10,25 @@ const About = () => {
     const { t } = useTranslation('invest');
     const aboutsub = t('aboutsub', { returnObjects: true });
 
-    // useEffect(()=>{
-    //     const ctx = gsap.context(()=>{
-    //        gsap.from(".about-image",{
-    //         scale:1.3,
-    //         // yPercent:-10,
-    //         ease:"none",
-    //         scrollTrigger:{
-    //             trigger:"#who-we-are",
-    //             start:"top bottom",
-    //             end:"bottom top",
-    //             scrub:true,
-    //             // markers:true
+    useEffect(()=>{
+        const ctx = gsap.context(()=>{
+           gsap.from(".about-image",{
+            scale:1.3,
+            // yPercent:-10,
+            ease:"none",
+            scrollTrigger:{
+                trigger:"#who-we-are",
+                start:"top bottom",
+                end:"bottom top",
+                scrub:true,
+                // markers:true
 
-    //         }
-    //        })
+            }
+           })
 
-    //     })
-    //     return()=>ctx.revert()
-    // },[])
+        })
+        return()=>ctx.revert()
+    },[])
 
     return (
         <>
