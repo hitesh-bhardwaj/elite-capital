@@ -13,6 +13,7 @@ import Factors from '@/components/InvestWithUs/Factors';
 import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
 
 
+
 export default function Invest() {
    fadeUp()
      paraAnim()
@@ -31,6 +32,7 @@ export default function Invest() {
    <Projects/>
    <Contact/>
     <Footer/>
+  
     </>
   );
 }

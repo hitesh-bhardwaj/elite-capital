@@ -5,7 +5,7 @@ export default function LinkButton({ className = "", href, text, ...props }) {
     const { locale } = useRouter();
 
     return (
-        <Link {...props} href={href} className={`font-body block font-medium w-fit text-[1.2vw] bg-white text-black1 rounded-full px-8 py-[1.15vw] ${className}`}>
+        <Link {...props} href={href} className={`font-body block font-medium w-fit text-[1.2vw] bg-white text-black1 rounded-full px-8 py-[1.15vw] ${className} mobile:text-[4.5vw] mobile:py-[4.5vw] tablet:text-[2.5vw] tablet:py-[2vw]`}>
             <div className="flex gap-2 items-center">
                 <span className="">{text}</span>
                 <svg className={`w-4 ${locale === 'ae' ? 'rotate-180' : ''}`} viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">

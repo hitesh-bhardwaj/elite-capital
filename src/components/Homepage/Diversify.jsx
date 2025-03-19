@@ -13,9 +13,9 @@ const Diversify = () => {
 
     return (
         <section className="bg-[#F2F2E9] overflow-hidden p-[6vw] ">
-             <h3 data-title-anim className="text-[2.9vw] tracking-tight  font-display mb-[4vw] leading-[1]">{t('diversifyHead')}</h3>
-            <div className="flex items-center justify-between">   
-            <div className="w-[35%] overflow-hidden advantage-block">
+             <h3 data-title-anim className="text-[2.9vw] tracking-tight  font-display mb-[4vw] leading-[1] mobile:text-[8.2vw] mobile:mb-[8vw] mobile:leading-[1.3]">{t('diversifyHead')}</h3>
+            <div className="flex items-center justify-between mobile:flex-col mobile:gap-[8vw]">   
+            <div className="w-[35%] overflow-hidden advantage-block mobile:w-full">
                     <Image
                         className="object-cover w-full h-full "
                         src={image}
@@ -24,8 +24,8 @@ const Diversify = () => {
                         loading="lazy"
                     />
                 </div>
-                <div className="text-black1 w-3/5 pl-[4vw] pr-[3vw]">
-                     <div className="space-y-[2vw] mb-[3vw]"   dangerouslySetInnerHTML={{__html:t('diversify')}}/>
+                <div className="text-black1 w-3/5 pl-[4vw] pr-[3vw] mobile:text-[4.6vw] mobile:w-full mobile:pl-0 mobile:pr-0 mobile:px-[5vw]">
+                     <div className="space-y-[2vw] mb-[3vw] mobile:space-y-[4vw]"   dangerouslySetInnerHTML={{__html:t('diversify')}}/>
                 </div>
                
             </div>

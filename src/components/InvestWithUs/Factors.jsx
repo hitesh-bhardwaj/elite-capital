@@ -32,8 +32,8 @@ const Factors = () => {
     return (
         <>
             <section className="relative h-full bg-[#F2F2E9] overflow-hidden" id="factors">
-                <div className="relative z-10  flex  items-center justify-between h-full">
-                <div className="w-1/2 flex items-start justify-between overflow-hidden">
+                <div className="relative z-10  flex  items-center justify-between h-full mobile:block mobile:space-y-[5vw]">
+                <div className="w-1/2 flex items-start justify-between overflow-hidden mobile:w-full">
                         <Image 
                             className="factor-image"
                             src={factorImage} 
@@ -42,8 +42,8 @@ const Factors = () => {
                             loading="lazy" 
                         />
                     </div>
-                    <div className=" mb-[3vw] text-black1 w-1/2  px-[5vw] py-[3vw]">
-                      <div data-para-anim className="space-y-[2vw] " dangerouslySetInnerHTML={{__html: t('factorsSub')}}/>
+                    <div className=" mb-[3vw] text-black1 w-1/2  px-[5vw] py-[3vw] mobile:text-[4.6vw] mobile:w-full">
+                      <div data-para-anim className="space-y-[2vw] mobile:space-y-[4vw]" dangerouslySetInnerHTML={{__html: t('factorsSub')}}/>
                     </div>
                     
                 </div>

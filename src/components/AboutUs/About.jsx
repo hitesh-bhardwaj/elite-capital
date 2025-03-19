@@ -30,9 +30,9 @@ const About = () => {
 
     return (
         <>
-            <section className="relative min-h-screen bg-[#F2F2E9] overflow-hidden" id="who-we-are">
-                <div className="relative z-10  flex  items-center justify-between h-full">
-                    <div className="w-1/2 flex items-start justify-between overflow-hidden">
+            <section className="relative min-h-screen bg-[#F2F2E9] overflow-hidden mobile:pt-[10vw]" id="who-we-are">
+                <div className="relative z-10  flex  items-center justify-between h-full mobile:flex-col-reverse mobile:gap-[10vw]">
+                    <div className="w-1/2 flex items-start justify-between overflow-hidden mobile:w-full">
                         <Image 
                             className="w-[95%] about-image scale-[1.1]"
                             src={aboutImage} 
@@ -41,9 +41,9 @@ const About = () => {
                             loading="lazy" 
                         />
                     </div>
-                    <div className="text-black1 w-[50%]  px-[3vw] py-[3vw]">
-                        <h2 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[6vw]">{t('aboutHead')}</h2>
-                        <p data-para-anim className="mb-[3vw] w-[98%] text-[1.8vw]">{t('aboutSub')}</p>
+                    <div className="text-black1 w-[50%]  px-[3vw] py-[3vw] mobile:w-full mobile:space-y-[5vw] mobile:px-[5vw]">
+                        <h2 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[6vw] mobile:text-[12.5vw]">{t('aboutHead')}</h2>
+                        <p data-para-anim className="mb-[3vw] w-[98%] text-[1.8vw] mobile:text-[4.6vw]">{t('aboutSub')}</p>
                     </div>
                 </div>
 

@@ -27,16 +27,16 @@ const About = () => {
 
     return (
         <>
-            <section className="relative min-h-screen bg-[#B1C3B7] overflow-hidden">
-                <div className="relative z-10 px-[5vw] flex items-center justify-between h-screen">
-                    <div className="text-black1 w-[55%]">
-                        <h2 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[3vw]">{t('aboutHead')}</h2>
-                        <p data-para-anim className="mb-[3vw]">{t('aboutSub')}</p>
+            <section className="relative min-h-screen bg-[#B1C3B7] overflow-hidden  mobile:min-h-fit mobile:pt-[10vw] tablet:min-h-fit tablet:pt-[10vw]" >
+                <div className="relative z-10 px-[5vw] flex items-center justify-between h-screen mobile:flex-col mobile:justify-center mobile:h-full tablet:h-full">
+                    <div className="text-black1 w-[55%] mobile:w-full tablet:w-full tablet:pb-[10vw]">
+                        <h2 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[3vw] mobile:text-[12.5vw] tablet:text-[7vw]">{t('aboutHead')}</h2>
+                        <p data-para-anim className="mb-[3vw] mobile:text-[4.6vw] tablet:text-[2.5vw]">{t('aboutSub')}</p>
                         <LineButton href={"/about-us"} text={t('cta')} className="fadeUp"/>
                     </div>
-                    <div className="w-1/2 flex h-full items-end justify-end about-image">
+                    <div className="w-1/2 flex h-full items-end justify-end about-image mobile:w-full tablet:w-full">
                         <Image 
-                            className="w-[80%]"
+                            className="w-[80%] tablet:w-full"
                             src={aboutImage} 
                             alt="about image" 
                             // placeholder="blur" 

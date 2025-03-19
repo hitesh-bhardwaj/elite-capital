@@ -8,7 +8,7 @@ const Hero = () => {
 
     return (
         <>
-            <section className="relative min-h-screen">
+            <section className="relative min-h-screen mobile:h-full mobile:py-[10vw]">
                 <Image
                     src={bg}
                     alt="Hero Background"
@@ -17,10 +17,10 @@ const Hero = () => {
                     placeholder="blur"
                     loading="lazy"
                 />
-                <div className="relative z-10 px-[5vw] flex items-center justify-start h-screen">
-                    <div className="py-[10%] text-white w-[95%]">
-                        <h1 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[1vw]">{t('hero')}</h1>
-                        <LinkButton href={"/about"} text={t('cta')} className="mt-[3vw] fadeUp" />
+                <div className="relative z-10 px-[5vw] flex items-center justify-start h-screen mobile:pt-[10vw]">
+                    <div className="py-[10%] text-white w-[95%] mobile:w-full">
+                        <h1 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[1vw] mobile:text-[12.5vw]">{t('hero')}</h1>
+                        <LinkButton href={"/about"} text={t('cta')} className="mt-[3vw] fadeUp mobile:mt-[10vw]" />
                     </div>
                 </div>
             </section>

@@ -9,7 +9,7 @@ const Projects = () => {
   return (
    <section className='w-screen h-full bg-[#F2F2E9] p-[5vw]'>
     <div>
-    <h2 data-title-anim className="text-[5vw] w-[50%] font-display leading-1.15 py-[3vw] mb-[3vw]">{t('projectsHead')}</h2>
+    <h2 data-title-anim className="text-[5vw] w-[50%] font-display leading-1.15 py-[3vw] mb-[3vw] mobile:text-[13.5vw] mobile:w-full">{t('projectsHead')}</h2>
     <Image src={projectsMap} alt="map-image" loading="lazy" width={1760} height={1235} className='fadeUp'/>
     </div>
 

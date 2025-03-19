@@ -29,7 +29,6 @@ export default function Home() {
       <Advantage />
       <Diversify/>
       <SectionBreak />
-      {/* <MarqueeScroll/> */}
       <Portfolio/>
       <Contact/>
       <Footer />

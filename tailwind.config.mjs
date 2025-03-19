@@ -9,6 +9,10 @@ const config = {
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}", // ✅ Include all HERO UI components
   ],
   theme: {
+	screens: {
+		'mobile': { 'max': '540px' },
+		'tablet': { 'min': '541px', 'max': '1024px' }
+	  },
   	extend: {
   		colors: {
   			golden: '#D8AF00',
