@@ -44,13 +44,6 @@ const Location = () => {
                                 <p data-para-anim className=" w-[60%] text-white  mobile:text-[4.6vw] mobile:pl-[3vw]">{t('mail')}</p>
 
                             </div>
-                            <div className="flex items-center justify-start gap-[1vw] py-[0.5vw] ">
-                                <div className="">
-                                    <Image src="/icons/mail-icon.svg" height={35} width={35} alt="mail" className="fadein"/>
-                                </div>
-                                <p data-para-anim className=" w-[60%] text-white  mobile:text-[4.6vw] mobile:pl-[3vw]">{t('mail2')}</p>
-
-                            </div>
                         </div>
                     </div>
                 </div>

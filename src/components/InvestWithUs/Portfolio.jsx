@@ -94,23 +94,23 @@ const Portfolio = () => {
       </div> 
       
       <div className='flex justify-between mobile:flex-col mobile:space-y-4'>
-        <div>
+        <div className='border-b border-black'>
           <input 
             type="text" 
             placeholder="Search"
             value={filters.search}
             onChange={handleSearchInput}
-            className="w-[20vw] p-2 border border-b-3 !outline-none bg-transparent mobile:w-full"
+            className="w-[20vw] p-2 border-none border-b-3 !outline-0 bg-transparent mobile:w-full focus-visible:ring-0 focus:!border-none focus:!outline-0 "
           />
         </div>
         
-        <div>
-          <Select onValueChange={(value) => handleFilterChange(value, "propertyName")}>
-            <SelectTrigger className="w-[10vw] mobile:w-full">
+        <div className="border-b border-black">
+          <Select onValueChange={(value) => handleFilterChange(value, "propertyName")} >
+            <SelectTrigger className="w-[15vw] mobile:w-full ">
               <SelectValue placeholder="Property Name" />
             </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
+            <SelectContent className='bg-[#F2F2E9]'>
+              <SelectGroup >
                 <SelectLabel>Properties</SelectLabel>
                 <SelectItem value="B">All Properties</SelectItem>
                 {propertyNames.map((name, index) => (
@@ -121,12 +121,12 @@ const Portfolio = () => {
           </Select>
         </div>
         
-        <div>
+        <div className='border-b border-black'>
           <Select onValueChange={(value) => handleFilterChange(value, "location")}>
-            <SelectTrigger className="w-[10vw] mobile:w-full">
+            <SelectTrigger className="w-[15vw] mobile:w-full">
               <SelectValue placeholder="Location" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className='bg-[#F2F2E9]'>
               <SelectGroup>
                 <SelectLabel>Locations</SelectLabel>
                 <SelectItem value="C">All Locations</SelectItem>
@@ -138,12 +138,12 @@ const Portfolio = () => {
           </Select>
         </div>
         
-        <div>
+        <div className='border-b border-black'>
           <Select onValueChange={(value) => handleFilterChange(value, "metrics")}>
-            <SelectTrigger className="w-[10vw] mobile:w-full">
+            <SelectTrigger className="w-[15vw] mobile:w-full">
               <SelectValue placeholder="Metrics" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className='bg-[#F2F2E9]'>
               <SelectGroup>
                 <SelectLabel>Metrics</SelectLabel>
                 <SelectItem value="D">All Metrics</SelectItem>

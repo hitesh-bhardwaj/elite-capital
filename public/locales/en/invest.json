@@ -8,8 +8,8 @@
     ],
     "stats": [
         {
-            "number": "45",
-            "text": "Active projects in Canada"
+            "number": "45+",
+            "text": "Pipeline of projects in Canada"
         },
         {
             "number": "10K+",
@@ -20,7 +20,7 @@
             "text": "of residential development"
         },
         {
-            "number": "CA$1.5B+",
+            "number": "$1.5B+",
             "text": "Equity investment opportunity"
         }
     ],
@@ -77,8 +77,7 @@
             "cta":"Learn More"
         }
     ],
-    "projectsHead":"Exclusive Pipeline of 45+ projects" ,
-    "whyUsHead":"Why Invest with Elite Capital?",
+    "whyUsHead":"Why invest with Elite Capital?",
     "whyUs":[
         {
             "num":"01",
@@ -88,7 +87,7 @@
         {
             "num":"02",
             "title":"Proven Expertise",
-            "para":"Leverage our 80+ years of combined experience in global fund management and real estate investment."
+            "para":"Leverage our 80+ years of combined professional experience with encompassing global fund management and real estate investment."
         },
         {
             "num":"03",

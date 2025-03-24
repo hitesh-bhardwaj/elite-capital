@@ -1,34 +1,29 @@
 {
-    "valuesHead": "Our Values",
+    "valuesHead": "Our values",
     "values": [
             {
-                "number": "01",
                 "sub": "Partnership",
                 "text":"We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
             },
             {
-                "number": "02",
                 "sub": "Integrity ",
                 "text":"With 80+ years of combined experience, we are committed to highest standards of transparency, honesty and ethics in all our business dealings. "
             },
             {
-                "number": "03",
                 "sub": "Knowledge ",
                 "text":"We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-led and reliable.  Our team consistently delivers a best-in-class approach to seeking superior risk-adjusted returns in the Canadian real estate markets. "
             },
             {
-                "number": "04",
                 "sub": "Trust ",
                 "text":"We build and maintain trust through transparency, consistency and collaboration in our dealings with all our stakeholders. "
             },
             {
-                "number":"05",
                 "sub" : "Sustainability ",
-                "text": "WWe invest in responsibly designed developments to alleviate Canada’s housing shortage and deliver lasting environmental and social benefits to communities.  "
+                "text": "We invest in responsibly designed developments to alleviate Canada’s housing shortage and deliver lasting environmental and social benefits to communities.  "
             }
     ],
     "contactHead": "Invest  With Us",
-    "contactSub": "Unlock real assets with real returns",
+    "contactSub": "Unlock Real Assets with Real Returns",
     "footerCopy": "Copyright © 2025 All Rights Reserved. Elite Developments",
     "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
     "footerEmailText": "Enter Your Email",

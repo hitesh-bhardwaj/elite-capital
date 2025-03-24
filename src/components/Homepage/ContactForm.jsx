@@ -90,7 +90,7 @@ export default function ContactForm() {
             data-para-anim
             className="aeonik text-[2.8vw] mobile:text-[8.2vw]  tablet:text-[4.5vw]"
           >
-            Get In Touch
+            Get in touch
           </h3>
           <Form {...form}>
             <form
@@ -176,7 +176,7 @@ export default function ContactForm() {
               <Checkbox id="terms" />
               <p
                 htmlFor="terms"
-                className="text-[0.9vw] mobile:text-[4.5vw]"
+                className="text-[0.9vw] mobile:text-[4.5vw] capitalize"
               >
                 Yes, I would like to receive communications about my selected communities from Elite Developments. * We will only use this information as described in our privacy policy.
               </p>

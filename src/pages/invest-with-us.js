@@ -5,7 +5,6 @@ import Hero from '@/components/InvestWithUs/Hero';
 import About from '@/components/InvestWithUs/About';
 import Stats from '@/components/InvestWithUs/Stats';
 import Portfolio from '@/components/InvestWithUs/Portfolio';
-import Projects from '@/components/InvestWithUs/Projects';
 import Contact from '@/components/Common/Contact';
 import WhyUs from '@/components/InvestWithUs/WhyUs';
 import Residential from '@/components/InvestWithUs/Residential';
@@ -29,7 +28,6 @@ export default function Invest() {
     <Residential/>
     <Factors/>
    <Portfolio/>
-   <Projects/>
    <Contact/>
     <Footer/>
   

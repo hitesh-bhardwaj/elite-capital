@@ -9,7 +9,7 @@ import Hero from "@/components/Homepage/Hero";
 import Portfolio from "@/components/Homepage/Portfolio";
 import SectionBreak from "@/components/Homepage/SectionBreak";
 import Stats from "@/components/Homepage/Stats";
-import Values from "@/components/Common/Values";
+import Values from "@/components/Homepage/Values";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
       <Hero />
       <About />
       <Stats />
-      <Values />
+      <Values/>
       <Advantage />
       <Diversify/>
       <SectionBreak />

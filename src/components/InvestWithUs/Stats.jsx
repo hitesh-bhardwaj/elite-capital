@@ -37,11 +37,11 @@ const Stats = () => {
                     {text.map((item, index) => (
                         <React.Fragment key={index}>
                             <div className="text-center w-[25%] mobile:w-full mobile:flex mobile:items-center mobile:gap-[5vw] mobile:py-[5vw] mobile:px-[2vw]">
-                                <h3 data-para-anim className="text-[4vw] font-display font-bold mb-6 mobile:text-[11.2vw] mobile:mb-0 mobile:w-1/2 mobile:text-left mobile:leading-[1.2]">{item.number}</h3>
+                                <h3 data-para-anim className="text-[4vw] font-display  mb-6 mobile:text-[11.2vw] mobile:mb-0 mobile:w-1/2 mobile:text-left mobile:leading-[1.2]">{item.number}</h3>
                                 <p data-para-anim className="w-[75%] mx-auto mobile:text-[4.6vw] mobile:w-1/2  mobile:text-left">{item.text}</p>
                             </div>
-                            <span className="block h-[25vw] w-[1.5px] bg-black1 last:hidden mx-[2%] vlineDraw mobile:hidden" />
-                            <span className=" w-[90vw] hidden h-[1.5px] bg-black1 last:hidden mx-[2%]  mobile:block" />
+                            <span className="block h-[25vw] w-[1.5px] bg-black1 last:hidden mx-[1%] vlineDraw mobile:hidden" />
+                            <span className=" w-[90vw] hidden h-[1.5px] bg-black1 last:hidden mx-[1%]  mobile:block" />
 
                         </React.Fragment>
                     ))}

@@ -31,16 +31,16 @@ const Advantage = () => {
     const advantage = t('advantage', { returnObjects: true });
 
     return (
-        <section className="bg-[#93AE79] overflow-hidden  mobile:pb-[10vw]">
+        <section className="bg-[#747977] overflow-hidden  mobile:pb-[10vw]">
             <div className="flex items-center mobile:flex-col-reverse mobile:gap-[8vw]">
-                <div className="text-black1 w-1/2 pl-[4vw] pr-[3.5vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw]">
+                <div className="text-white w-1/2 pl-[4vw] pr-[3.5vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw]">
                     <h3 data-title-anim className="text-[5vw] capitalize font-display mb-[4vw] leading-[1] mobile:text-[12.5vw] mobile:mb-[8vw]">{t('advantageHead')}</h3>
                     <div className="space-y-[2vw] mb-[3vw] mobile:text-[4.6vw] mobile:space-y-[4vw]">
                         {advantage.map((item, index) => (
                             <div data-para-anim key={index}  dangerouslySetInnerHTML={{__html:item.text}}/>
                         ))}
                     </div>
-                    <LineButton text={t('advantageCta')} href="#" className="fadein "/>
+                    <LineButton text={t('advantageCta')} href="#" className="fadein text-white"/>
                 </div>
                 <div className="w-1/2 overflow-hidden advantage-block mobile:w-full ">
                     <Image

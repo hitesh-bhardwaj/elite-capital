@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 
 const Values = () => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation('home');
     const values = t('values', { returnObjects: true });
 
     return (
@@ -12,8 +12,9 @@ const Values = () => {
                     <div className="grid grid-cols-3 gap-x-[4vw] gap-y-[5vw] mobile:block mobile:space-y-[10vw]">
                         {values.map((item, index) => (
                             <div key={index}>
-                                <h4 data-para-anim className="text-[2.9vw] font-display font-bold mb-4 mobile:text-[8.2vw]">{item.sub}</h4>
-                                <p data-para-anim className="text-[1.25vw] mobile:text-[4.6vw]">{item.text}</p>
+                             
+                                <h4 data-para-anim className="text-[2.9vw] font-display font-bold mb-4 mobile:text-[8.2vw]">{item.name}</h4>
+                               
                             </div>
                         ))}
                     </div>

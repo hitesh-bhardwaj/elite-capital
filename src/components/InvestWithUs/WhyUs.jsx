@@ -33,7 +33,7 @@ const WhyUS = () => {
         <section className="bg-[#B1C3B7] py-[7vw] mobile:py-[10vw]"> 
             <div className="px-[8%] mobile:px-[5%]">
                 <div className="">
-                    <h3 data-title-anim className="text-[5vw] font-display capitalize  mb-[6vw] mobile:text-[12.5vw] mobile:leading-[1.2]">{t('whyUsHead')}</h3>
+                    <h3 data-title-anim className="text-[5vw] font-display   mb-[6vw] mobile:text-[12.5vw] mobile:leading-[1.2]">{t('whyUsHead')}</h3>
                     <div className="flex flex-col  gap-y-[4vw] mobile:gap-y-[8vw]">
                         {whyus.map((item, index) => (
                             <>
