@@ -77,7 +77,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="flex items-center gap-10">
-                    <LanguageButton />
+                    {/* <LanguageButton /> */}
                     <div>
                         <svg className="w-[2vw] mobile:w-[5vw]" viewBox="0 0 43 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.211914" width="42" height="3" fill="white" />
