@@ -68,7 +68,7 @@ const Header = () => {
                 <div>
                     <Link href="/">
                         <Image
-                            className="w-[16vw] mobile:w-[40vw]"
+                            className="w-[16vw] mobile:w-[40vw] tablet:w-[25vw]"
                             src={logo}
                             alt="Elite Logo"
                             width={220}
@@ -79,7 +79,7 @@ const Header = () => {
                 <div className="flex items-center gap-10">
                     {/* <LanguageButton /> */}
                     <div>
-                        <svg className="w-[2vw] mobile:w-[5vw]" viewBox="0 0 43 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-[2vw] mobile:w-[5vw] tablet:w-[4vw]" viewBox="0 0 43 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.211914" width="42" height="3" fill="white" />
                             <rect x="0.211914" y="12" width="42" height="3" fill="white" />
                             <rect x="0.211914" y="24" width="42" height="3" fill="white" />

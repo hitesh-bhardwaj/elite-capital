@@ -31,9 +31,9 @@ const Advantage = () => {
     const advantage = t('advantage', { returnObjects: true });
 
     return (
-        <section className="bg-[#747977] overflow-hidden  mobile:pb-[10vw]">
-            <div className="flex items-center mobile:flex-col-reverse mobile:gap-[8vw]">
-                <div className="text-white w-1/2 pl-[4vw] pr-[3.5vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw]">
+        <section className="bg-[#747977] overflow-hidden  mobile:pb-[10vw] tablet:pt-[7%]">
+            <div className="flex items-center mobile:flex-col-reverse mobile:gap-[8vw] tablet:flex-col tablet:gap-[7vw]">
+                <div className="text-white w-1/2 pl-[4vw] pr-[3.5vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw] tablet:w-full">
                     <h2 data-title-anim className="heading-1 !leading-[1] mb-[4vw] mobile:mb-[8vw]">{t('advantageHead')}</h2>
                     <div className=" content space-y-[2vw] mb-[3vw] mobile:space-y-[4vw]">
                         {advantage.map((item, index) => (
@@ -42,7 +42,7 @@ const Advantage = () => {
                     </div>
                     <LineButton text={t('advantageCta')} href="#" className="fadein text-white"/>
                 </div>
-                <div className="w-1/2 overflow-hidden advantage-block mobile:w-full ">
+                <div className="w-1/2 overflow-hidden advantage-block mobile:w-full  tablet:w-full tablet:h-[70vw]">
                     <Image
                         className="object-cover w-full h-full advantage-image translate-y-[5%]"
                         src={image}

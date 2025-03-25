@@ -9,16 +9,15 @@ const Hero = () => {
 
     return (
         <>
-            <section className="relative min-h-screen">
+            <section className="relative h-screen tablet:h-[80vh] overflow-hidden">
                 <Image
                     src={bg}
                     alt="Hero Background"
                     fill
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                     placeholder="blur"
-                    loading="lazy"
                 />
-                <div className="relative z-10 px-[5vw] flex items-center justify-start h-screen">
+                <div className="relative z-10 px-[5vw] flex items-center justify-start h-full tablet:h-full">
                     <div className="py-[10%] text-white w-[92%] mobile:space-y-[10vw]">
                         <h1 data-title-anim className="heading-1 mb-[3vw]">{t('hero')}</h1>
                         <p data-para-anim className="content mb-[3vw] w-[80%] mobile:w-full">{t('heroSub')}</p>

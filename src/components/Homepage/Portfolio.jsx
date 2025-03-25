@@ -47,7 +47,7 @@ const Portfolio = () => {
     };
 
     return (
-        <section className='h-screen w-screen relative'>
+        <section className='h-screen w-screen relative tablet:h-[100vw]'>
             <div className="slides relative w-full h-full overflow-hidden" ref={slidesRef}>
                 {portfolio.map((item, index) => (
                     <>
@@ -57,7 +57,7 @@ const Portfolio = () => {
                             
                             <div className="slide__content relative z-[2] text-white left-[3%] rtl:right-[3%] top-[-30%]">
                                 <h2 data-title-anim
-                                    className="slide__heading heading-1 w-[70%] mobile:w-[80%]"
+                                    className="slide__heading heading-1 w-[70%] mobile:w-[80%] tablet:w-[90%]"
                                     dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
                                 />
                                 <p data-para-anim className="slide__text content pt-[3vw]">{t('portfolioSub')}</p>
@@ -78,7 +78,7 @@ const Portfolio = () => {
                 ))}
             </div>
 
-            <div className="progress-container absolute top-[45%] z-[2] left-[3%] w-[50%] flex items-center fadeUp rtl:right-[3%] mobile:w-full">
+            <div className="progress-container absolute top-[45%] z-[2] left-[3%] w-[50%] flex items-center fadeUp rtl:right-[3%] mobile:w-full tablet:top-[60%]">
                 <span className="text-white content">
                     {(current + 1).toString().padStart(2, "0")}
                 </span>

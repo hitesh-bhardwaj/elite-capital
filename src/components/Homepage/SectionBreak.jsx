@@ -6,7 +6,7 @@ const SectionBreak = () => {
   const { t } = useTranslation("home");
 
   return (
-    <section className="h-screen overflow-hidden bg-black relative " id="section-break">
+    <section className="h-screen overflow-hidden bg-black relative tablet:h-[100vw] " id="section-break">
       <div className="w-full h-full overflow-hidden relative">
         <Image
           src={image}

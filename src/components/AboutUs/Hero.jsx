@@ -8,7 +8,7 @@ const Hero = () => {
 
     return (
         <>
-            <section className="relative min-h-screen">
+            <section className="relative h-screen tablet:h-[80vh]">
                 <Image
                     src={bg}
                     alt="Hero Background" 
@@ -17,7 +17,7 @@ const Hero = () => {
                     placeholder="blur"
                     loading="lazy"
                 />
-                <div className="relative z-10 px-[5vw] flex items-center justify-start h-screen">
+                <div className="relative z-10 px-[5vw] flex items-center justify-start h-full tablet:h-full">
                     <div className="py-[10%] text-white w-[90%] mobile:w-full">
                         <h1 data-title-anim className="text-[5vw] font-display leading-1.15  mb-[3vw] mobile:text-[12.5vw]">{t('hero')}</h1>
                         <LinkButton href={"/about"} text={t('cta')} className="fadeUp mobile:mt-[10vw]" />

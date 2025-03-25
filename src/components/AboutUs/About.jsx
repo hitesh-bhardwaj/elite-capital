@@ -30,9 +30,9 @@ const About = () => {
 
     return (
         <>
-            <section className="relative min-h-screen bg-[#F2F2E9] overflow-hidden mobile:pt-[10vw]" id="who-we-are">
+            <section className="relative h-screen bg-[#F2F2E9] overflow-hidden mobile:pt-[10vw] tablet:h-full" id="who-we-are">
                 <div className="relative z-10  flex  items-center justify-between h-full mobile:flex-col-reverse mobile:gap-[10vw]">
-                    <div className="w-1/2 flex items-start justify-between overflow-hidden mobile:w-full">
+                    <div className="w-1/2 flex items-start justify-between overflow-hidden mobile:w-full tablet:h-[70vw]">
                         <Image 
                             className="w-[95%] about-image scale-[1.1]"
                             src={aboutImage} 

@@ -83,7 +83,7 @@ const Portfolio = () => {
 
   return (
     <section className='w-screen h-full bg-[#F2F2E9] p-[4vw] py-[7vw] space-y-[3vw]'>
-      <div className='space-y-[2vw] mobile:space-y-[4vw]'>
+      <div className='space-y-[2vw] mobile:space-y-[4vw] tablet:space-y-[3vw]'>
         <h2 
           data-title-anim
           className="heading-1 w-[90%]"
@@ -93,20 +93,20 @@ const Portfolio = () => {
         <p data-para-anim className="pt-[4vw] w-[95%] content">{t('portfolioText')}</p>
       </div> 
       
-      <div className='flex justify-between mobile:flex-col mobile:space-y-4 mobile:py-[5vw]'>
+      <div className='flex justify-between mobile:flex-col mobile:space-y-4 mobile:py-[5vw] tablet:flex-wrap tablet:gap-[4vw] tablet:justify-start'>
         <div className='border-b border-black'>
           <input 
             type="text" 
             placeholder="Search"
             value={filters.search}
             onChange={handleSearchInput}
-            className="w-[20vw] p-2 border-none border-b-3 !outline-0 bg-transparent mobile:w-full focus-visible:ring-0 focus:!border-none focus:!outline-0 "
+            className="w-[20vw] p-2 border-none border-b-3 !outline-0 bg-transparent mobile:w-full focus-visible:ring-0 focus:!border-none focus:!outline-0 tablet:w-[30vw] "
           />
         </div>
         
         <div className="border-b border-black">
           <Select onValueChange={(value) => handleFilterChange(value, "propertyName")} >
-            <SelectTrigger className="w-[15vw] mobile:w-full ">
+            <SelectTrigger className="w-[15vw] mobile:w-full tablet:w-[30vw] ">
               <SelectValue placeholder="Property Name" />
             </SelectTrigger>
             <SelectContent className='bg-[#F2F2E9]'>
@@ -123,7 +123,7 @@ const Portfolio = () => {
         
         <div className='border-b border-black'>
           <Select onValueChange={(value) => handleFilterChange(value, "location")}>
-            <SelectTrigger className="w-[15vw] mobile:w-full">
+            <SelectTrigger className="w-[15vw] mobile:w-full tablet:w-[30vw]">
               <SelectValue placeholder="Location" />
             </SelectTrigger>
             <SelectContent className='bg-[#F2F2E9]'>
@@ -140,7 +140,7 @@ const Portfolio = () => {
         
         <div className='border-b border-black'>
           <Select onValueChange={(value) => handleFilterChange(value, "metrics")}>
-            <SelectTrigger className="w-[15vw] mobile:w-full">
+            <SelectTrigger className="w-[15vw] mobile:w-full tablet:w-[30vw]">
               <SelectValue placeholder="Metrics" />
             </SelectTrigger>
             <SelectContent className='bg-[#F2F2E9]'>
@@ -156,7 +156,7 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div className='space-y-[3vw] pt-[3vw] mobile:space-y-[13vw]'>
+      <div className='space-y-[3vw] pt-[3vw] mobile:space-y-[13vw] tablet:pt-[7vw] tablet:space-y-[5vw]'>
         {filteredPortfolios.length > 0 ? (
           filteredPortfolios.map((item, index) => (
             <div key={index} className='w-full flex items-center justify-between mobile:flex-col-reverse'>

@@ -12,10 +12,10 @@ const Diversify = () => {
     const advantage = t('diversify', { returnObjects: true });
 
     return (
-        <section className="bg-[#F2F2E9] overflow-hidden p-[6vw] ">
-             <h3 data-title-anim className="heading-2 tracking-tight  mb-[4vw] leading-[1] mobile:mb-[8vw] mobile:leading-[1.3]">{t('diversifyHead')}</h3>
+        <section className="bg-[#F2F2E9] overflow-hidden p-[6vw] tablet:py-[7%] ">
+             <h3 data-title-anim className="heading-2 tracking-tight  mb-[4vw] leading-[1] mobile:mb-[8vw] mobile:leading-[1.3] tablet:mb-[7vw]">{t('diversifyHead')}</h3>
             <div className="flex items-center justify-between mobile:flex-col mobile:gap-[8vw]">   
-            <div className="w-[35%] overflow-hidden advantage-block mobile:w-full">
+            <div className="w-[35%] overflow-hidden advantage-block mobile:w-full tablet:h-[70vw] tablet:w-[40%]">
                     <Image
                         className="object-cover w-full h-full "
                         src={image}
