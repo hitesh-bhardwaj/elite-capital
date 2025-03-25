@@ -43,7 +43,7 @@ const Factors = () => {
                         />
                     </div>
                     <div className=" mb-[3vw] text-black1 w-1/2  px-[5vw] py-[3vw] mobile:text-[4.6vw] mobile:w-full">
-                      <div data-para-anim className="space-y-[2vw] mobile:space-y-[4vw]" dangerouslySetInnerHTML={{__html: t('factorsSub')}}/>
+                      <div data-para-anim className="content space-y-[2vw] mobile:space-y-[4vw]" dangerouslySetInnerHTML={{__html: t('factorsSub')}}/>
                     </div>
                     
                 </div>

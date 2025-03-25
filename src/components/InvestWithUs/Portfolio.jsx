@@ -86,14 +86,14 @@ const Portfolio = () => {
       <div className='space-y-[2vw] mobile:space-y-[4vw]'>
         <h2 
           data-title-anim
-          className="text-[5vw] w-[80%] font-display leading-[1.2] mobile:text-[12.5vw]"
+          className="heading-1 w-[90%]"
           dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
         ></h2>
-        <p data-para-anim className="text-[1.87vw] mobile:text-[4.8vw]">{t('portfolioSub')}</p>
-        <p data-para-anim className="pt-[4vw] w-[95%] mobile:text-[4.6vw]">{t('portfolioText')}</p>
+        <p data-para-anim className="content">{t('portfolioSub')}</p>
+        <p data-para-anim className="pt-[4vw] w-[95%] content">{t('portfolioText')}</p>
       </div> 
       
-      <div className='flex justify-between mobile:flex-col mobile:space-y-4'>
+      <div className='flex justify-between mobile:flex-col mobile:space-y-4 mobile:py-[5vw]'>
         <div className='border-b border-black'>
           <input 
             type="text" 
@@ -162,13 +162,13 @@ const Portfolio = () => {
             <div key={index} className='w-full flex items-center justify-between mobile:flex-col-reverse'>
               <div className='w-1/2 space-y-[2vw] text-black1 font-body px-[3vw] mobile:w-full mobile:px-1'>
                 <div className='mobile:space-y-[3vw] mobile:pt-[3vw]'>
-                  <p data-para-anim className='text-[2.5vw] font-display font-medium mobile:text-[8.2vw]'>{item.title}</p>
-                  <p data-para-anim className='mobile:text-[4.6vw]'>{item.location}</p>
+                  <h3 data-para-anim className='heading-2 font-medium '>{item.title}</h3>
+                  <p data-para-anim className='content'>{item.location}</p>
                 </div>
                 <div 
                   data-para-anim 
                   dangerouslySetInnerHTML={{__html: item.address}} 
-                  className='mobile:text-[4.6vw] mobile:pb-[5vw]'
+                  className='content mobile:pb-[5vw]'
                 />
                 <LinkButton 
                   href={item.link} 

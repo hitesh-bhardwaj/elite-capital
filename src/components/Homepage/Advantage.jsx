@@ -34,8 +34,8 @@ const Advantage = () => {
         <section className="bg-[#747977] overflow-hidden  mobile:pb-[10vw]">
             <div className="flex items-center mobile:flex-col-reverse mobile:gap-[8vw]">
                 <div className="text-white w-1/2 pl-[4vw] pr-[3.5vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw]">
-                    <h3 data-title-anim className="text-[5vw] capitalize font-display mb-[4vw] leading-[1] mobile:text-[12.5vw] mobile:mb-[8vw]">{t('advantageHead')}</h3>
-                    <div className="space-y-[2vw] mb-[3vw] mobile:text-[4.6vw] mobile:space-y-[4vw]">
+                    <h2 data-title-anim className="heading-1 !leading-[1] mb-[4vw] mobile:mb-[8vw]">{t('advantageHead')}</h2>
+                    <div className=" content space-y-[2vw] mb-[3vw] mobile:space-y-[4vw]">
                         {advantage.map((item, index) => (
                             <div data-para-anim key={index}  dangerouslySetInnerHTML={{__html:item.text}}/>
                         ))}

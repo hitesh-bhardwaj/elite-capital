@@ -17,7 +17,7 @@ const SectionBreak = () => {
           className="absolute z-[1] top-0 left-0 object-cover w-full h-full break-image"
         />
         <div className="absolute top-0 z-[10] h-full w-full overflow-hidden flex items-center justify-start">
-           <div  className="text-white text-[5vw] leading-[1.2] font-display flex  px-[5vw] fadeUp mobile:text-[12.5vw]"   
+           <div  className="text-white  heading-1  px-[5vw] fadeUp "   
                   > {t("sectionBreak")} </div>
           </div>
       </div>

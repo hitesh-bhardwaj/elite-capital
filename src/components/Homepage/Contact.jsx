@@ -64,10 +64,10 @@ const Contact = () => {
       <section className="bg-[#F2F2E9] w-screen h-full py-[5%] mobile:py-[10vw]" id="contact">
         <div className="px-[5vw] w-full h-full flex justify-between mobile:flex-col">
           <div className="w-[45%] flex flex-col pt-[2vw] mobile:w-full">
-            <h3 data-title-anim className="text-[5vw] font-display mb-[3vw] leading-[1] mobile:text-[12.5vw]">
+            <h2 data-title-anim className="heading-1 mb-[3vw] ">
               {t("contactHead")}
-            </h3>
-            <p data-para-anim className="mb-[3vw] w-[80%] text-[1.8vw] mobile:text-[4.6vw] mobile:w-full mobile:mb-[10vw]">{t("contactSub")}</p>
+            </h2>
+            <p data-para-anim className="content mb-[3vw] w-[90%]  mobile:w-full mobile:mb-[10vw]">{t("contactSub")}</p>
           </div>
           <div className="w-[45%] h-fit bg-[#E5E5DC] rounded-[1vw] border border-black/5 p-[4vw] fadeUp mobile:w-full mobile:rounded-[2vw]">
             <ContactForm/>

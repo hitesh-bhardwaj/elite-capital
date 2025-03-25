@@ -51,22 +51,22 @@ const Portfolio = () => {
             <div className="slides relative w-full h-full overflow-hidden" ref={slidesRef}>
                 {portfolio.map((item, index) => (
                     <>
-                        <div key={index} className={`slide absolute w-full h-full flex items-center justify-center opacity-0 overflow-hidden ${index === current ? "slide--current" : ""}`}>
+                        <div key={index} className={`slide absolute w-full h-full flex items-center justify-center py-[5vw] opacity-0 overflow-hidden ${index === current ? "slide--current" : ""}`}>
                             <img src={item.image} alt={item.text1} className="absolute w-full h-full object-cover slide__img" />
                 <span className="h-full w-full bg-black/30 z-[1] absolute top-0 left-0"/>
                             
                             <div className="slide__content relative z-[2] text-white left-[3%] rtl:right-[3%] top-[-30%]">
                                 <h2 data-title-anim
-                                    className="slide__heading text-[5vw] w-[60%]  font-display leading-[1.2] mobile:text-[12.5vw] mobile:w-full"
+                                    className="slide__heading heading-1 w-[70%] mobile:w-[80%]"
                                     dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
                                 />
-                                <p data-para-anim className="slide__text mobile:text-[4.6vw]">{t('portfolioSub')}</p>
+                                <p data-para-anim className="slide__text content pt-[3vw]">{t('portfolioSub')}</p>
 
-                                <div className='address-container absolute bottom-[-120%] left-[0%] rtl:right-[1%] mobile:bottom-[-50%]'>
-                                    <p data-para-anim className='text-[2.9vw] text-white mobile:text-[8.2vw]'>
+                                <div className='address-container absolute bottom-[-80%] left-[0%] rtl:right-[1%] mobile:bottom-[-90%]'>
+                                    <h3 data-para-anim className='heading-2 text-white '>
                                         {item.text1}
-                                    </p>
-                                    <p data-para-anim className='text-white mobile:text-[4.6vw]'>{item.text2}</p>
+                                    </h3>
+                                    <p data-para-anim className='text-white content'>{item.text2}</p>
 
                                 </div>
                             </div>
@@ -78,14 +78,14 @@ const Portfolio = () => {
                 ))}
             </div>
 
-            <div className="progress-container absolute top-[40%] z-[2] left-[3%] w-[50%] flex items-center fadeUp rtl:right-[3%] mobile:w-full">
-                <span className="text-white text-[1.2vw] mobile:text-[4vw]">
+            <div className="progress-container absolute top-[45%] z-[2] left-[3%] w-[50%] flex items-center fadeUp rtl:right-[3%] mobile:w-full">
+                <span className="text-white content">
                     {(current + 1).toString().padStart(2, "0")}
                 </span>
                 <div className="progress-bar relative w-[20%] h-[3px] bg-gray-500 mx-[1vw] rounded-full overflow-hidden mobile:w-[80%]">
                     <div className="progress-fill h-full bg-white transition-all duration-500" style={{ width: `${((current + 1) / slidesTotal) * 100}%` }}></div>
                 </div>
-                <span className="text-white text-[1.2vw] mobile:text-[4vw]">
+                <span className="text-white content">
                     {slidesTotal.toString().padStart(2, "0")}
                 </span>
             </div>
@@ -98,9 +98,9 @@ const Portfolio = () => {
 
             <div className="slides-nav absolute top-[70%] left-[3%] z-[2] flex items-center justify-center gap-[2vw] rtl:right-[-80%]">
                 <button className="slides-nav__item slides-nav__item--prev border  w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4 fadeUp" onClick={() => navigate(-1)}><div>
-                    <Image src="/icons/left-arrow.svg" height={30} width={30} alt='left-aerrow' /></div></button>
+                    <Image src="/icons/left-arrow.svg" height={30} width={30} alt='left-arrow' /></div></button>
                 <button className="slides-nav__item slides-nav__item--next border w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4 fadeUp" onClick={() => navigate(1)}><div>
-                    <Image src="/icons/right-arrow.svg" height={30} width={30} alt='right-aerrow' /></div></button>
+                    <Image src="/icons/right-arrow.svg" height={30} width={30} alt='right-arrow' /></div></button>
             </div>
         </section>
     );

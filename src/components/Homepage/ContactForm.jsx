@@ -88,7 +88,7 @@ export default function ContactForm() {
         <div className="w-full flex flex-col gap-[2vw] mobile:w-full  mobile:rounded-[10vw] mobile:px-[1vw] mobile:py-[5vw] mobile:border mobile:gap-[5vw]  tablet:w-full">
           <h3
             data-para-anim
-            className="aeonik text-[2.8vw] mobile:text-[8.2vw]  tablet:text-[4.5vw]"
+            className="heading-2 !font-body"
           >
             Get in touch
           </h3>

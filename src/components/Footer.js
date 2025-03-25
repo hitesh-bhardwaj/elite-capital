@@ -22,20 +22,19 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="bg-[#121212] text-white">
-            <div className="px-[5vw]">
-                <div className="pt-[5vw] mobile:pt-[10vw]">
+        <footer className="bg-[#121212] text-white mobile:py-[10vw]">
+            <div className="px-[5vw] ">
+                <div className="pt-[5vw]  ">
                     <div className="flex items-start justify-between mobile:flex-col">
-                        <div>
                             <Image 
                                 src="/elite-logo.svg"
                                 width={100}
                                 height={100}
                                 alt="Logo"
                                 className="w-[35vw] h-auto fadeUp mobile:w-[70vw]"
-                            />
-                        </div>
-                        <div className="uppercase mt-4 font-medium flex items-end justify-end gap-[5vw] mobile:flex-col mobile:text-[6.7vw] mobile:items-start mobile:my-[8vw] mobile:gap-[4vw]">
+                            /> 
+                    </div>
+                    <div className="uppercase mt-4 content font-medium flex items-end justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:my-[8vw] mobile:gap-[4vw] ">
                         <Link href="/about-us" className="">
                                 <span data-para-anim>Who We Are</span>
                             </Link>
@@ -46,18 +45,17 @@ const Footer = () => {
                                 <span data-para-anim>Contact Us</span>
                             </Link>
                         </div>
-                    </div>
-                    <div className="flex justify-start items-end flex-col  pb-[5vw]">
+                    <div className="flex justify-start items-end flex-col  pb-[5vw] ">
                         <div className="w-[25vw]  mobile:w-full">
                             <p className="text-lg">Subscribe for our Newsletter to Receive Updates and Content.</p>
                         </div>
-                        <div className="w-[25vw] pb-[0.5vw] relative flex justify-end items-start border-b-[1.5px] border-white pt-[5vw]">
+                        <div className="w-[25vw] pb-[0.5vw] relative flex justify-end items-start border-b-[1.5px] border-white pt-[5vw] mobile:w-full mobile:px-[3vw]">
                 <input
                   type="email"
                   placeholder="Enter Your Email"
-                  className="w-[80%] placeholder:px-[0.5vw] focus-visible:ring-0 focus:!border-none focus:!outline-0 bg-transparent outline-0 mt-[0.5vw] tablet:mt-5 p-[0.5vw] pl-0 border-none placeholder:text-white placeholder:text-[1.25vw] tablet:w-full tablet:placeholder:text-[2.5vw] tablet:text-[2.5vw]"
+                  className="w-[80%] placeholder:px-[0.5vw] focus-visible:ring-0 focus:!border-none focus:!outline-0 bg-transparent outline-0 mt-[0.5vw] tablet:mt-5 p-[0.5vw] pl-0 border-none placeholder:text-white placeholder:text-[1.25vw] mobile:placeholder:text-[4vw] tablet:w-full tablet:placeholder:text-[2.5vw] tablet:text-[2.5vw]"
                 />
-                <div className="text-[1.25vw] mt-[0.7vw] text-[#D8AF00] cursor-pointer flex items-center gap-[0.5vw]">
+                <div className="text-[1.25vw] mobile:text-[4.6vw] mt-[0.7vw] text-[#D8AF00] cursor-pointer flex items-center gap-[0.5vw]">
                     <p className="">
                     SUBSCRIBE 
                     </p>
@@ -94,7 +92,7 @@ const Footer = () => {
                             <Link
                                 target="_blank"
                                 href={social.link}
-                                className="group flex items-center justify-center border-[1.5px] border-white rounded-full p-[1vw] hover:bg-white duration-300 mobile:items-start mobile:p-[2vw]" 
+                                className="group flex items-center justify-center border-[1.5px] border-white rounded-full p-[1vw] hover:bg-white duration-300 mobile:items-start mobile:p-[3.5vw]" 
                                 key={index}>
                                 <Image
                                     className="w-[1.8rem] h-[1.8rem] group-hover:invert duration-300"
