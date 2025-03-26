@@ -1,7 +1,6 @@
 import { useTranslation } from "next-i18next";
 import bg from "../../../public/assets/images/contact/hero-bg.png"
 import Image from "next/image";
-import LinkButton from "../ui/LinkButton";
 
 const Hero = () => {
     const { t } = useTranslation('contact');
@@ -13,7 +12,7 @@ const Hero = () => {
                     src={bg}
                     alt="Hero Background"
                     fill
-                    className="object-cover "
+                    className="object-cover"
                     placeholder="blur"
                     loading="lazy"
                 />
