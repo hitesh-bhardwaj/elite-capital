@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
+import Image from "next/image";
 
 const Content = () => {
   const { t } = useTranslation("cookie");
@@ -18,7 +19,9 @@ const Content = () => {
       ))}
       <div className="w-full h-[1px] bg-black my-[5vw] "></div>
       <div className="w-full flex gap-[1vw]">
-        <div className="w-[5%]"></div>
+        <div className="w-[8%] h-fit">
+          <Image src={"/icons/yellow-rectangle-mask.svg"} alt="" className="w-full h-full object-contain" width={70} height={30}/>
+        </div>
         <div className="flex flex-col gap-[1.5vw] w-[95%]">
           <h2 className="heading-2 ">{t("cookie2title")}</h2>
           <div>
@@ -30,7 +33,7 @@ const Content = () => {
                   https://allaboutcookies.org
                 </Link>{" "}
                 and{" "}
-                <Link href={"https://allaboutcookies.org"}>
+                <Link href={"https://youronlinechoices"}>
                   https://youronlinechoices
                 </Link>{" "}
               </span>
@@ -42,7 +45,9 @@ const Content = () => {
       </div>
       <div className="w-full h-[1px] bg-black my-[5vw] "></div>
       <div className="w-full flex gap-[1vw]">
-        <div className="w-[5%]"></div>
+      <div className="w-[8%] h-fit">
+          <Image src={"/icons/yellow-rectangle-mask.svg"} alt="" className="w-full h-full object-contain" width={70} height={30}/>
+        </div>
         <div className="flex flex-col gap-[1.5vw] w-[95%]">
           <h2 className="heading-2 ">{t("cookie3title")}</h2>
           <div>
@@ -75,7 +80,9 @@ const Content = () => {
       </div>
       <div className="w-full h-[1px] bg-black my-[5vw] "></div>
       <div className="flex w-full gap-[1.5vw]">
-      <div className="w-[5%]"></div>
+      <div className="w-[8%] h-fit">
+          <Image src={"/icons/yellow-rectangle-mask.svg"} alt="" className="w-full h-full object-contain" width={70} height={30}/>
+        </div>
       <div className="w-[95%] flex flex-col gap-[1.5vw]">
       <h2 className="heading-2 ">{t("cookie4title")}</h2>
       <div>
