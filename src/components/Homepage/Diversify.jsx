@@ -8,26 +8,46 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger)
 
 const Diversify = () => {
+    useEffect(()=>{
+        const ctx = gsap.context(()=>{
+           gsap.from(".diversify-image",{
+            scale:1.2,
+            yPercent:-20,
+            ease:"none",
+            scrollTrigger:{
+                trigger:".diversify-block",
+                start:"top bottom",
+                end:"bottom top",
+                scrub:true,
+                // markers:true
+
+            }
+           })
+
+        })
+        return()=>ctx.revert()
+    },[])
     const { t } = useTranslation('home');
-    const advantage = t('diversify', { returnObjects: true });
 
     return (
-        <section className="bg-[#F2F2E9] overflow-hidden p-[6vw] tablet:py-[7%] ">
-             <h3 data-title-anim className="heading-2 tracking-tight  mb-[4vw] leading-[1] mobile:mb-[8vw] mobile:leading-[1.3] tablet:mb-[7vw]">{t('diversifyHead')}</h3>
-            <div className="flex items-center justify-between mobile:flex-col mobile:gap-[8vw]">   
-            <div className="w-[35%] overflow-hidden advantage-block mobile:w-full tablet:h-[70vw] tablet:w-[40%]">
+        <section className="bg-[#F2F2E9] overflow-hidden h-full mobile:pb-[10vw] tablet:pt-[7%]">
+            <div className="flex items-center mobile:flex-col-reverse mobile:gap-[8vw] tablet:flex-col tablet:gap-[7vw]">
+            <div className="w-1/2 overflow-hidden diversify-block mobile:w-full  tablet:w-full tablet:h-[70vw]">
                     <Image
-                        className="object-cover w-full h-full "
+                        className="object-cover w-full h-full diversify-image translate-y-[5%]"
                         src={image}
                         alt="advantage image"
                         placeholder="blur"
                         loading="lazy"
                     />
                 </div>
-                <div className="text-black1 w-3/5 pl-[4vw] pr-[3vw] mobile:text-[4.6vw] mobile:w-full mobile:pl-0 mobile:pr-0 mobile:px-[5vw]">
-                     <div className="content space-y-[2vw] mb-[3vw] mobile:space-y-[4vw]"   dangerouslySetInnerHTML={{__html:t('diversify')}}/>
+                <div className="text-black1 w-1/2 pl-[4vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw] tablet:w-full">
+                    <h3 data-title-anim className="heading-2  !leading-[1] mb-[4vw] mobile:mb-[8vw]">{t('diversifyHead')}</h3>
+                    <div className=" content space-y-[4vw] pr-[4.5vw]   mb-[3vw] mobile:space-y-[4vw]">
+                  <div className=" content space-y-[4vw]"  dangerouslySetInnerHTML={{__html:t('diversify')}}/> 
+                    </div>
                 </div>
-               
+                
             </div>
         </section>
     )

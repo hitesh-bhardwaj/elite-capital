@@ -91,7 +91,7 @@ const Portfolio = () => {
             </div>
 
             <div className='absolute bottom-[10%] left-[3%] rtl:right-[3%] z-[2]'>
-                <LinkButton href={"/"} text={"All Portfolio"}  className='fadeUp'/>
+                <LinkButton href={"/"} text={t('portfolioCta')}  className='fadeUp'/>
             </div>
 
 

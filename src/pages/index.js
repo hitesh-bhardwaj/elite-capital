@@ -3,11 +3,11 @@ import { fadeIn, fadeUp, paraAnim, titleAnim, verticalLineAnim } from "@/compone
 import Header from "@/components/Header";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
+import Assets from "@/components/Homepage/Assets";
 import Contact from "@/components/Homepage/Contact";
 import Diversify from "@/components/Homepage/Diversify";
 import Hero from "@/components/Homepage/Hero";
 import Portfolio from "@/components/Homepage/Portfolio";
-import SectionBreak from "@/components/Homepage/SectionBreak";
 import Stats from "@/components/Homepage/Stats";
 import Values from "@/components/Homepage/Values";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -28,7 +28,7 @@ export default function Home() {
       <Values/>
       <Advantage />
       <Diversify/>
-      <SectionBreak />
+      <Assets/>
       <Portfolio/>
       <Contact/>
       <Footer />

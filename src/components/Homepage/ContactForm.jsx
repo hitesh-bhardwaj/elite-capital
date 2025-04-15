@@ -18,6 +18,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Label } from "../ui/label";
 import { Checkbox } from "../ui/checkbox";
+import { useTranslation } from "next-i18next";
 
 const formSchema = z.object({
   name: z.string().min(3, {
@@ -41,6 +42,7 @@ const formSchema = z.object({
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
+    const { t } = useTranslation("home");
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -178,7 +180,7 @@ export default function ContactForm() {
                 htmlFor="terms"
                 className="text-[0.9vw] mobile:text-[4.5vw] capitalize tablet:text-[2vw]"
               >
-                Yes, I would like to receive communications about my selected communities from Elite Developments. * We will only use this information as described in our privacy policy.
+               Yes, I would like to receive communications from Elite Capital. * We will only use this information as described in our privacy policy.
               </p>
 
               </div>
