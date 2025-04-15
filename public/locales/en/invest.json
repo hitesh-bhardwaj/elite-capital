@@ -31,75 +31,63 @@
             "img":"/assets/images/invest/portfolio-1.png",
             "title":"81-87 Rymal",
             "location":"Hamilton, ON",
-            "address":"<p>Commencement – Q4 2025  <br/> 210 Apartments | 10 Town Homes</p>", 
-            "link":"/",
-            "cta":"Learn More"
+            "address":"<p>Commencement – Q4 2025  <br/> 210 Apartments | 10 Town Homes</p>"
         },
         {
             "img":"/assets/images/invest/portfolio-2.png",
             "title":"570 Upper Ottawa",
             "location":"Hamilton, ON",
-            "address":"<p> Commencement – Q4 2025 <br/> 346 Apartments</p>", 
-            "link":"/",
-            "cta":"Learn More"
+            "address":"<p> Commencement – Q4 2025 <br/> 346 Apartments</p>"
         },
         {
             "img":"/assets/images/invest/portfolio-3.png",
             "title":"Station 60",
             "location":"Brantford, ON",
-            "address":"<p>Commencement – Q3 2025<br/> 242 Apartments</p>", 
-            "link":"/",
-            "cta":"Learn More"
+            "address":"<p>Commencement – Q3 2025<br/> 242 Apartments</p>"
         },
         {
             "img":"/assets/images/invest/portfolio-4.png",
             "title":"148 Niagara",
             "location":"St. Catherines, ON",
-            "address":"<p>Commencement – Q4 2025 <br/> 179 Apartments</p>", 
-            "link":"/",
-            "cta":"Learn More"
+            "address":"<p>Commencement – Q4 2025 <br/> 179 Apartments</p>"
         },
         {
             "img":"/assets/images/invest/portfolio-5.png",
             "title":"4th Avenue – Phase 1 ",
             "location":"St. Catherines, ON",
-            "address":"<p>Commencement – Q1 2026  <br/> 259 Apartments</p>", 
-            "link":"/",
-            "cta":"Learn More"
+            "address":"<p>Commencement – Q1 2026  <br/> 259 Apartments</p>"
         },
         {
             "img":"/assets/images/invest/portfolio-6.png",
             "title":"120 Meridian Way",
             "location":"Pelham, ON",
-            "address":"<p>Commencement – Q3 2025 <br/> 166 Apartments</p>", 
-            "link":"/",
-            "cta":"Learn More"
+            "address":"<p>Commencement – Q3 2025 <br/> 166 Apartments</p>"
         }
     ],
     "whyUsHead":"Why invest with Elite Capital?",
     "whyUs":[
         {
-            "num":"01",
+            "num":"01.",
             "title":"Access to exclusive  opportunities ",
             "para":"Opportunity to invest in our pipeline of 45+ premium developments in Ontario, carefully selected for their superior risk adjusted return."
         },
         {
-            "num":"02",
+            "num":"02.",
             "title":"Proven Expertise",
             "para":"Leverage our 80+ years of combined professional experience with encompassing global fund management and real estate investment."
         },
         {
-            "num":"03",
+            "num":"03.",
             "title":"Rigorous Due Diligence",
             "para":"Benefit from our comprehensive investment process and institutional-grade oversight."
         },
         {
-            "num":"04",
+            "num":"04.",
             "title":"Sustainable Investments",
             "para":"Contribute to alleviating Canada’s housing shortage and support responsible community development."
         },
         {
-            "num":"05",
+            "num":"05.",
             "title":"DFSA-Authorized",
             "para":"Invest with confidence, knowing you’re partnering with a regulated and reputable firm."
         }

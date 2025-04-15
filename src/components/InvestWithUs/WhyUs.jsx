@@ -26,7 +26,7 @@ const WhyUS = () => {
                         
                           <span className="w-full h-full absolute top-0 left-0 opacity-0 bg-[#F2F2E9] group-hover:opacity-[1] transition-all duration-500 ease"></span>
                           <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-[1] transition-all duration-500 ease py-[1vw] flex flex-col justify-between h-full pr-[1.5vw]">
-                            <div className="flex justify-center gap-[10vw]">
+                            <div className="flex justify-center gap-[10vw] px-[1vw]">
                             <p>{item.num}</p>
                             <span className="rounded-full border p-3 h-10 w-10 flex items-center border-black1 justify-end">
                               <Image src={"/icons/plus.svg"} height={20} width={20} alt="plus"/>
