@@ -68,7 +68,7 @@ const Contact = () => {
             <h2 data-title-anim className="heading-1 mb-[3vw]">
               {t("contactHead")}
             </h2>
-            <p data-para-anim className="mb-[3vw] w-[80%] content">{t("contactSub")}</p>
+            <p data-para-anim className="mb-[3vw] w-[80%] text-[1.8vw]">{t("contactSub")}</p>
           </div>
           <div className="w-[45%] h-fit bg-[#E5E5DC] rounded-[1vw] border border-black/5 p-[4vw] fadeUp mobile:w-full mobile:rounded-[2vw] tablet:w-full tablet:p-0 tablet:rounded-[3vw]">
             <ContactForm/>

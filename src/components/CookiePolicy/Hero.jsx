@@ -1,9 +1,9 @@
 import { useTranslation } from "next-i18next";
-import bg from "../../../public/assets/images/contact/hero-bg.png";
+import bg from "../../../public/assets/images/cookiepolicy/cookie-policy-hero.png";
 import Image from "next/image";
 
 const Hero = () => {
-  const { t } = useTranslation("contact");
+  const { t } = useTranslation("cookie");
 
   return (
     <>

@@ -5,8 +5,9 @@ import About from '@/components/AboutUs/About';
 import Team from '@/components/AboutUs/Team';
 import Footer from '@/components/Footer';
 import { fadeIn, fadeUp, paraAnim, titleAnim } from "@/components/gsapAnimations";
-import Values from '@/components/Common/Values';
+// import Values from '@/components/Common/Values';
 import Contact from '@/components/Common/Contact';
+import Values from '@/components/AboutUs/Values';
 
 export default function AboutPage() {
   
@@ -20,7 +21,8 @@ export default function AboutPage() {
       <Header />
       <Hero />
       <About />
-      <Values />
+      <Values/>
+      {/* <Values /> */}
       <Team />
       <Contact />
       <Footer />
