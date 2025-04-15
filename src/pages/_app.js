@@ -1,4 +1,4 @@
-import { Bodoni_Moda, Bricolage_Grotesque } from "next/font/google";
+import { Barlow, Bodoni_Moda} from "next/font/google";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -11,11 +11,11 @@ const bodoni_moda = Bodoni_Moda({
   variable: '--font-display',
   display: 'swap',
 })
-
-const bricolage_grotesque = Bricolage_Grotesque({
+const barlow = Barlow({
   subsets: ["latin"],
   variable: '--font-body',
   display: 'swap',
+  weight: ["300","400","500","600"]
 })
 
 const App = ({ Component, pageProps }) => {
@@ -40,7 +40,7 @@ const App = ({ Component, pageProps }) => {
         <meta name="description" content="Real Assets, Real Returns" />
       </Head>
       <ReactLenis root>
-      <main className={`${bodoni_moda.variable} ${bricolage_grotesque.variable} font-body text-[1.55vw] text-black1`}>
+      <main className={`${bodoni_moda.variable} ${barlow.variable} font-body text-[1.55vw] text-black1`}>
         <Component {...pageProps} />
       </main>
       </ReactLenis>
