@@ -4,6 +4,14 @@ import Image from "next/image";
 
 const Hero = () => {
     const { t } = useTranslation('privacy');
+    const scrollToNext = () => {
+        const nextSection = document.getElementById("privacy-content");
+        if (nextSection) {
+          nextSection.scrollIntoView({ behavior: "smooth" });
+          console.log("scrollll")
+        }
+      };
+    
 
     return (
         <> 
@@ -22,6 +30,15 @@ const Hero = () => {
                         <h1 data-title-anim className="heading-1  mb-[1vw]">{t('hero')}</h1>
                     </div>
                 </div>
+                 <div className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition hover:scale-110 z-[20]" onClick={scrollToNext}>
+                          <Image
+                            src={"/icons/left-arrow.svg"}
+                            alt=""
+                            width={20}
+                            height={20}
+                            className="invert -rotate-90"
+                          />
+                        </div>
             </section>
         </>
     )

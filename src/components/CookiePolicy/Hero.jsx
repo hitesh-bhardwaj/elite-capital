@@ -4,6 +4,14 @@ import Image from "next/image";
 
 const Hero = () => {
   const { t } = useTranslation("cookie");
+  const scrollToNext = () => {
+    const nextSection = document.getElementById("cookie-content");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+      console.log("scrollll")
+    }
+  };
+
 
   return (
     <>
@@ -24,7 +32,7 @@ const Hero = () => {
             </h1>
           </div>
         </div>
-        <div className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20">
+        <div className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition hover:scale-110 z-[20]" onClick={scrollToNext}>
           <Image
             src={"/icons/left-arrow.svg"}
             alt=""

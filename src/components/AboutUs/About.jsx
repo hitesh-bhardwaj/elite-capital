@@ -28,7 +28,7 @@ const About = () => {
 
     return (
         <>
-            <section className="relative h-fit pt-[7vw] overflow-hidden mobile:pt-[10vw] tablet:h-full" id="who-we-are">
+            <section className="relative h-fit pt-[7vw] overflow-hidden mobile:pt-[10vw] tablet:h-full" id="about">
                 <div className="relative z-10  flex  items-center justify-between h-full mobile:flex-col-reverse mobile:gap-[10vw]">
 
                     <div className="text-black1 w-full  px-[5vw] py-[3vw] mobile:w-full mobile:space-y-[5vw] mobile:px-[5vw]">

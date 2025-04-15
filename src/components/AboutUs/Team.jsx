@@ -44,13 +44,13 @@ const Team = () => {
                   </div>
                   <div className=" mobile:space-y-[2vw] flex flex-col absolute bottom-0 h-[30vw] group-hover:translate-y-[0%] translate-y-[70%] transition-all duration-500 ease-in-out  rounded-tl-[0.5vw] rounded-tr-[0.5vw] w-full px-[2vw] pt-[1vw] bg-[#F2F2E9] left-0">
                     <p
-                      data-para-anim
+                  
                       className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]"
                     >
                       {item.name}
                     </p>
                     <p
-                      data-para-anim
+                      
                       className="h-[5vw] mobile:text-[4.6vw] tablet:text-[2vw] text-[1.2vw]"
                     >
                       {item.des}

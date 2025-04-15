@@ -5,6 +5,14 @@ import LinkButton from "../ui/LinkButton";
 
 const Hero = () => {
     const { t } = useTranslation('about');
+    const scrollToNext = () => {
+        const nextSection = document.getElementById("about");
+        if (nextSection) {
+          nextSection.scrollIntoView({ behavior: "smooth" });
+          console.log("scrollll")
+        }
+      };
+    
 
     return (
         <>
@@ -23,7 +31,7 @@ const Hero = () => {
                         {/* <LinkButton href={"/about"} text={t('cta')} className="fadeUp mobile:mt-[10vw]" /> */}
                     </div>
                 </div>
-                <div className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20">
+                <div className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 z-[13] cursor-pointer transition hover:scale-110"     onClick={scrollToNext}>
                      <Image src={"/icons/left-arrow.svg"} alt="" width={20} height={20} className="invert -rotate-90"/>
                                 </div>
             </section>

@@ -9,7 +9,7 @@ const Content = () => {
 
     
   return (
-   <section className='w-screen h-full py-[8%] px-[5vw]'>
+   <section className='w-screen h-full py-[8%] px-[5vw]' id='privacy-content'>
     <div className=''>
         <div>
         <p className='content'>{t('heroSub')}</p>

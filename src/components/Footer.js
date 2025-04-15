@@ -42,11 +42,11 @@ const Footer = () => {
          
         </div>
         <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[8vw] mobile:mt-[10vw] tablet:mt-[7vw]">
-          <h6 className="text-[1.25rem] tablet:w-[50%]">
-            Copyright © 2025 All Rights Reserved. Elite Developments
+          <h6 className="text-[1.15rem] tablet:w-[50%]">
+            Copyright © 2025 All Rights Reserved. Elite Capital
           </h6>
-          <div className="flex gap-[2.5vw]">
-           <div className="flex items-center justify-center gap-[1vw]">
+          <div className="flex gap-[2.5vw] text-[1.3vw]">
+           <div className="flex items-center justify-center gap-[0.7vw]">
               <Link href={"/"}>Privacy Policy</Link>
               <span className="h-1 w-1 bg-white rounded-full block"/>
              <Link href={"/"}>Cookie Policy</Link>
@@ -60,7 +60,7 @@ const Footer = () => {
                 key={index}
               >
                 <Image
-                  className="w-[1.8rem] h-[1.8rem] group-hover:invert duration-300"
+                  className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300"
                   src={social.icon}
                   alt={social.alt}
                   width={25}
