@@ -5,6 +5,13 @@ import LinkButton from "../ui/LinkButton";
 
 const Hero = () => {
     const { t } = useTranslation('invest');
+    const scrollToNext = () => {
+        const nextSection = document.getElementById("about");
+        if (nextSection) {
+          nextSection.scrollIntoView({ behavior: "smooth" });
+          console.log("scrollll")
+        }
+      };
 
     return (
         <>
@@ -22,6 +29,18 @@ const Hero = () => {
                         <h1 data-title-anim className="heading-1 mb-[1vw]">{t('hero')}</h1>
                     </div>
                 </div>
+                 <div
+                          onClick={scrollToNext}
+                          className="w-[3vw] h-[3vw] flex justify-center items-center  z-[20] rounded-full bg-white absolute bottom-10 right-20 down-arrow cursor-pointer transition hover:scale-110"
+                        >
+                          <Image
+                            src={"/icons/left-arrow.svg"}
+                            alt="Scroll down"
+                            width={20}
+                            height={20}
+                            className="invert -rotate-90"
+                          />
+                        </div>
             </section>
         </>
     )

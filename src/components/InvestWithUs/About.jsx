@@ -33,7 +33,7 @@ const About = () => {
 
     return (
         <>
-            <section className="relative h-full bg-[#FFFFFF] overflow-hidden mobile:py-[10vw]" id="who-we-are">
+            <section className="relative h-full bg-[#FFFFFF] overflow-hidden mobile:py-[10vw]" id="about">
                 <div className="relative z-10 px-[5vw] py-[5%] flex flex-col  items-center justify-between h-full mobile:flex-col-reverse mobile:gap-[5vw]">
                     <div className="w-full flex items-center pl-[3vw] justify-start">
                         <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" />

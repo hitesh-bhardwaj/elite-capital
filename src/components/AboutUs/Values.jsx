@@ -9,7 +9,7 @@ const Values = () => {
         <section className=" py-[5vw] mobile:py-[10vw]"> 
             <div className="px-[5vw]">
                 <div className="">
-                    <h3 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw]">{t('valueHead')}</h3>
+                    <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw]">{t('valueHead')}</h2>
                     <div className=" w-full mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
                        
                             <Accordion type="single" collapsible defaultValue="item-1" className="w-full flex flex-wrap justify-between gap-y-[3vw]">

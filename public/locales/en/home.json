@@ -24,26 +24,27 @@
     ],
     "valuesHead": "Our values",
     "values": [
-        {
+        {   
             "valueTitle": "Partnership",
-            "valuePara": "We strive to be partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
-        },
-        {
-            "valueTitle": "Trust",
-            "valuePara": "We build and maintain trust through transparency, consistency and collaboration in our dealings with all our stakeholders."
+            "valueContent": "We strive to be partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
         },
         {
             "valueTitle": "Integrity",
-            "valuePara": "With 80+ years of combined experience, we are committed to the highest standards of transparency, honesty and ethics in all our business dealings."
-        },
-        {
-            "valueTitle": "Sustainability",
-            "valuePara": "We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities."
+            "valueContent": "With 80+ years of combined experience, we are committed to the highest standards of transparency, honesty and ethics in all our business dealings."
         },
         {
             "valueTitle": "Knowledge",
-            "valuePara": "We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk-adjusted returns."
+            "valueContent": "We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk-adjusted returns."
+        },
+        {
+            "valueTitle": "Trust",
+            "valueContent": "We build and maintain trust through transparency, consistency and collaboration in our dealings with all our stakeholders."
+        },
+        {
+            "valueTitle": "Sustainability",
+            "valueContent": "We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities."
         }
+        
     ],
     "advantageHead": "Canada’s real estate investment opportunity ",
     "advantage": [
