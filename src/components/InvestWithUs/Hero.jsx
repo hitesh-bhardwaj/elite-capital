@@ -20,7 +20,6 @@ const Hero = () => {
                 <div className="relative z-10 px-[5vw] flex items-center justify-start h-full mobile:pt-[10vw]">
                     <div className="py-[10%] text-white w-[95%] mobile:w-full">
                         <h1 data-title-anim className="heading-1 mb-[1vw]">{t('hero')}</h1>
-                        <LinkButton href={"/about"} text={t('cta')} className="mt-[3vw] fadeUp mobile:mt-[10vw]" />
                     </div>
                 </div>
             </section>

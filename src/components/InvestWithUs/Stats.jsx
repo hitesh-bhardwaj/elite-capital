@@ -2,54 +2,65 @@ import React, { useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import statsImg from "../../../public/assets/images/invest/stats-img.png"
+import yellowRectangle from "../../../public/assets/images/homepage/yellow-rectangle.png"
 gsap.registerPlugin(ScrollTrigger);
 
 const Stats = () => {
-    const { t } = useTranslation('invest');
+  const { t } = useTranslation('invest');
 
-    const text = t('stats', { returnObjects: true });
+  const text = t('stats', { returnObjects: true });
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-          const lineDraws = document.querySelectorAll(".vlineDraw");
-          lineDraws.forEach((lineDraw) => {
-            gsap.from(lineDraw, {
-              scrollTrigger: {
-                trigger: lineDraw,
-                start: "top 80%",
-              },
-              scaleY: 0,
-              transformOrigin: "top",
-              duration: 2,
-              // yPercent: 100,
-              stagger: 1,
-              ease: "power4.out",
-            });
-          });
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const lineDraws = document.querySelectorAll(".vlineDraw");
+      lineDraws.forEach((lineDraw) => {
+        gsap.from(lineDraw, {
+          scrollTrigger: {
+            trigger: lineDraw,
+            start: "top 80%",
+          },
+          scaleY: 0,
+          transformOrigin: "top",
+          duration: 2,
+          // yPercent: 100,
+          stagger: 1,
+          ease: "power4.out",
         });
-        return () => ctx.revert();
-      }, []);
+      });
+    });
+    return () => ctx.revert();
+  }, []);
 
-    return (
-        <>
-            <section className="relative bg-[#F2F2E9] overflow-hidden py-[5%] mobile:pb-[10%] tablet:py-[7%]">
-                <div className="px-[3vw] flex items-center justify-between mobile:block tablet:flex-wrap tablet:gap-y-[2vw] ">
-                    {text.map((item, index) => (
-                        <React.Fragment key={index}>
-                            <div className="text-center w-[25%] mobile:w-full mobile:flex mobile:items-center mobile:gap-[5vw] mobile:py-[10vw] mobile:px-[2vw] tablet:w-[49%]">
-                                <p data-para-anim className=" heading-1 mb-6 !leading-[1] mobile:mb-0 mobile:w-1/2 mobile:text-left mobile:leading-[1.2]">{item.number}</p>
-                                <p data-para-anim className="content w-[75%] mx-auto  mobile:w-1/2  mobile:text-left">{item.text}</p>
-                            </div>
-                            <span className=" w-[90vw] hidden h-[1.5px] bg-black1 last:hidden   mobile:block" />
-                            <span className={`block h-[25vw] w-[1.5px] bg-black1 last:hidden vlineDraw mobile:hidden  ${index==1?"tablet:hidden":""}`} />
-                           
+  return (
+    <>
+      <section className="relative bg-[#F4F4F4] h-[45vw] overflow-hidden  mobile:pb-[10%] tablet:py-[7%]">
+        <div className="flex items-center justify-between h-full">
+          <div className="w-1/2 h-full">
+<Image src={statsImg} height={1280} width={929} alt="stats-img" className="h-full"/>
+          </div>
 
-                        </React.Fragment>
-                    ))}
+          <div className="px-[3vw] w-1/2 flex flex-wrap items-center justify-between mobile:block tablet:flex-wrap tablet:gap-y-[2vw] ">
+            {text.map((item, index) => (
+              <React.Fragment key={index}>
+                <div className="text-center w-[45%] mobile:w-full mobile:flex mobile:items-center mobile:gap-[5vw] mobile:py-[10vw] mobile:px-[2vw] tablet:w-[49%]">
+                  <p data-para-anim className=" heading-1 mb-6 !leading-[1] !font-body !font-semibold mobile:mb-0 mobile:w-1/2 mobile:text-left mobile:leading-[1.2]">{item.number}</p>
+                  <p data-para-anim className="content w-[75%] mx-auto  mobile:w-1/2  mobile:text-left">{item.text}</p>
                 </div>
-            </section>
-        </>
-    )
+                {/* <span className="w-full h-[1.5px] bg-black1 block"/> */}
+                {/* <span className=" w-[90vw] hidden h-[1.5px] bg-black1 last:hidden   mobile:block" />
+                <span className={`block h-[25vw] w-[1.5px] bg-black1 last:hidden vlineDraw mobile:hidden  ${index == 1 ? "tablet:hidden" : ""}`} /> */}
+              </React.Fragment>
+            ))}
+          </div>
+           <div className="w-[10%] flex items-end justify-end pr-[3vw] h-full pb-[3vw]">
+                                  <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" />
+                              </div>
+        </div>
+      </section>
+    </>
+  )
 }
 
 export default Stats;

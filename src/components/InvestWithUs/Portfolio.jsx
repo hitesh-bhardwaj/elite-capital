@@ -90,71 +90,9 @@ const Portfolio = () => {
           dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
         ></h2>
         <p data-para-anim className="content">{t('portfolioSub')}</p>
-        <p data-para-anim className="pt-[4vw] w-[95%] content">{t('portfolioText')}</p>
       </div> 
       
-      <div className='flex justify-between mobile:flex-col mobile:space-y-4 mobile:py-[5vw] tablet:flex-wrap tablet:gap-[4vw] tablet:justify-start'>
-        <div className='border-b border-black'>
-          <input 
-            type="text" 
-            placeholder="Search"
-            value={filters.search}
-            onChange={handleSearchInput}
-            className="w-[20vw] p-2 border-none border-b-3 !outline-0 bg-transparent mobile:w-full focus-visible:ring-0 focus:!border-none focus:!outline-0 tablet:w-[30vw] "
-          />
-        </div>
-        
-        <div className="border-b border-black">
-          <Select onValueChange={(value) => handleFilterChange(value, "propertyName")} >
-            <SelectTrigger className="w-[15vw] mobile:w-full tablet:w-[30vw] ">
-              <SelectValue placeholder="Property Name" />
-            </SelectTrigger>
-            <SelectContent className='bg-[#F2F2E9]'>
-              <SelectGroup >
-                <SelectLabel>Properties</SelectLabel>
-                <SelectItem value="B">All Properties</SelectItem>
-                {propertyNames.map((name, index) => (
-                  <SelectItem key={index} value={name}>{name}</SelectItem>
-                ))}
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
-        
-        <div className='border-b border-black'>
-          <Select onValueChange={(value) => handleFilterChange(value, "location")}>
-            <SelectTrigger className="w-[15vw] mobile:w-full tablet:w-[30vw]">
-              <SelectValue placeholder="Location" />
-            </SelectTrigger>
-            <SelectContent className='bg-[#F2F2E9]'>
-              <SelectGroup>
-                <SelectLabel>Locations</SelectLabel>
-                <SelectItem value="C">All Locations</SelectItem>
-                {locations.map((location, index) => (
-                  <SelectItem key={index} value={location}>{location}</SelectItem>
-                ))}
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
-        
-        <div className='border-b border-black'>
-          <Select onValueChange={(value) => handleFilterChange(value, "metrics")}>
-            <SelectTrigger className="w-[15vw] mobile:w-full tablet:w-[30vw]">
-              <SelectValue placeholder="Metrics" />
-            </SelectTrigger>
-            <SelectContent className='bg-[#F2F2E9]'>
-              <SelectGroup>
-                <SelectLabel>Metrics</SelectLabel>
-                <SelectItem value="D">All Metrics</SelectItem>
-                {metricsOptions.map((metric, index) => (
-                  <SelectItem key={index} value={metric}>{metric}</SelectItem>
-                ))}
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
+     
 
       <div className='space-y-[3vw] pt-[3vw] mobile:space-y-[13vw] tablet:pt-[7vw] tablet:space-y-[5vw]'>
         {filteredPortfolios.length > 0 ? (

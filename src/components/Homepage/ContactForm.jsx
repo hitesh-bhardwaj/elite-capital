@@ -174,11 +174,11 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              <div className="flex gap-[0.5vw] mobile:gap-[5vw] tablet:gap-[1.5vw]">
+              <div className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw]">
               <Checkbox id="terms" />
               <p
                 htmlFor="terms"
-                className="text-[0.9vw] mobile:text-[4.5vw] capitalize tablet:text-[2vw]"
+                className="text-[1vw] mobile:text-[4.5vw]  tablet:text-[2vw] w-[80%]"
               >
                Yes, I would like to receive communications from Elite Capital. * We will only use this information as described in our privacy policy.
               </p>

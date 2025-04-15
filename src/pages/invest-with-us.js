@@ -8,7 +8,7 @@ import Portfolio from '@/components/InvestWithUs/Portfolio';
 import Contact from '@/components/Common/Contact';
 import WhyUs from '@/components/InvestWithUs/WhyUs';
 import Residential from '@/components/InvestWithUs/Residential';
-import Factors from '@/components/InvestWithUs/Factors';
+import Factors from '@/components/InvestWithUs/Exclusive';
 import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
 
 

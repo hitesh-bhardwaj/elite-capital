@@ -16,8 +16,8 @@
             "text": "Residential and commercial units"
         },
         {
-            "number": "26M+ sqft.",
-            "text": "of residential development"
+            "number": "26M+",
+            "text": "Sqft. of residential development"
         },
         {
             "number": "$1.5B+",
@@ -26,7 +26,6 @@
     ],
     "portfolioHead":"Explore select opportunities from our investment pipeline",
     "portfolioSub":"Diversified portfolio of purpose-built residential developments in Ontario ",
-    "portfolioText":"Elite Capital’s portfolio features a curated selection of premium residential developments in key locations across Ontario. We focus on purpose-built projects designed to address the region’s growing housing needs and deliver exceptional risk adjusted returns to our investors.",
     "portfolios":[
         {
             "img":"/assets/images/invest/portfolio-1.png",
@@ -108,6 +107,7 @@
     "residentialHead":"Canadian residential real estate is an attractive investment opportunity",
     "residentialPara":"Canada presents a compelling investment opportunity within the G7, driven by its robust and stable economy, rich natural resources, and exceptional AAA credit rating. This foundation, coupled with a rapidly expanding population and significant housing demand, creates an ideal environment for real estate investment.",
     "residentialSub":"Key factors driving growth:",
+    "residentialSub2":"The following factors make Canada’s residential real estate market exceptionally attractive for investors seeking diversification and good risk adjusted returns.",
     "features":[
         {
             "num":"01",
@@ -125,5 +125,5 @@
             "para":"A strong and reliable economy, coupled with a stable political environment, provides a secure foundation for long-term investment."
         }
     ],
-    "factorsSub": "<p>These factors make Canada’s residential real estate market exceptionally attractive for investors seeking diversification and good risk adjusted returns.</p> <p>Our exclusive pipeline of 45+ premium, community-centered developments is strategically located within Ontario, the largest province in Canada by size of the economy and population, capitalising on its dynamic growth and strong market fundamentals.</p>"
+    "exclusiveSub": "Our exclusive pipeline of 45+ premium, community-centered developments are strategically located within Ontario, the largest province in Canada by size of the economy and population, capitalising on its dynamic growth and strong market fundamentals."
 }
