@@ -1,33 +1,34 @@
 import { useTranslation } from "next-i18next";
-import bg from "../../../public/assets/images/privacy/hero.png"
 import Image from "next/image";
 
-const Hero = () => {
-    const { t } = useTranslation('privacy');
+const Hero = ({img, translation, heading, para, nextSectionId}) => {
+    const { t } = useTranslation(`${translation}`);
     const scrollToNext = () => {
-        const nextSection = document.getElementById("privacy-content");
+        const nextSection = document.getElementById(`${nextSectionId}`);
         if (nextSection) {
           nextSection.scrollIntoView({ behavior: "smooth" });
           console.log("scrollll")
         }
       };
-    
 
     return (
-        <> 
-            <section className="relative h-screen tablet:h-[80vh]">
+        <>
+            <section className="relative min-h-screen tablet:h-[80vh]">
                 <Image
-                    src={bg}
+                    src={img}
                     alt="Hero Background"
                     fill
                     className="object-cover"
                     placeholder="blur"
                     loading="lazy"
+                    quality={90}
                 />
-                <span className="h-full w-full bg-black/30 z-[10] absolute top-0 left-0"/>
-                <div className="relative z-10 px-[5vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%]">
-                    <div className="py-[10%] text-white w-[45%] mobile:w-full">
-                        <h1 data-title-anim className="heading-1  mb-[1vw]">{t('hero')}</h1>
+                <div className="relative z-10 px-[5vw] pt-[8vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%]">
+                    <div className="py-[10%] text-white w-full mobile:w-full">
+                        <h1 className="heading-1 w-full font-display leading-1.15  mb-[3vw]">{heading}</h1>
+                        {para && (
+  <p className="text-[1.7vw] mb-[3vw] w-[80%]">{para}</p>
+)}
                     </div>
                 </div>
                  <div className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition hover:scale-110 z-[20]" onClick={scrollToNext}>

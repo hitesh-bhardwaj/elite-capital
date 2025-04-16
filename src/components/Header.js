@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import logo from "../../public/elite-logo.svg";
 import {useLenis} from 'lenis/react'
 import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
 
 const LanguageButton = () => {
@@ -22,72 +23,130 @@ const LanguageButton = () => {
 };
 
 const Header = () => {
-    const lenis = useLenis()
-    const [isHidden, setIsHidden] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
-    const[openMenu, setOpenMenu] = useState(false);
-    const headerRef = useRef();
+const headerRef = useRef();
+const textRef = useRef(null);
+const iconRef = useRef(null);
+const [scrollDirection, setScrollDirection] = useState(null);
+const lastScrollY = useRef(0);
+const animating = useRef(false);
+
+const handleScroll = () => {
+    const currentScroll = window.scrollY;
+    const direction = currentScroll > lastScrollY.current ? "down" : "up";
+    lastScrollY.current = currentScroll;
+
+    if (!animating.current) {
+      if (direction === "down" && scrollDirection !== "down") {
+        setScrollDirection("down");
+        animating.current = true;
   
-    useEffect(() => {
-      const handleScroll = () => {
-        const currentScrollY = window.scrollY;
+        gsap.to(textRef.current, {
+          x: 100, 
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          onComplete: () => {
+            gsap.to(iconRef.current, {
+              opacity: 1,
+              duration: 0.4,
+              ease: "power2.out",
+              pointerEvents: "auto",
+              onComplete: () => (animating.current = false),
+            });
+          },
+        });
+      } else if (direction === "up" && currentScroll <= 0 && scrollDirection !== "up") {
+        setScrollDirection("up");
+        animating.current = true;
   
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          setIsHidden(true);
-        } else {
-          setIsHidden(false);
-        }
+        gsap.to(iconRef.current, {
+          opacity: 0,
+          duration: 0.4,
+          ease: "power2.out",
+        //   pointerEvents: "none",
+        });
   
-        setLastScrollY(currentScrollY);
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, [lastScrollY]);
-  
-    const openHam =()=>{
-     setOpenMenu(prev=>!prev) 
+        gsap.to(textRef.current, {
+          x: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+        //   pointerEvents:"auto",
+          onComplete: () => (animating.current = false),
+        });
+      }
     }
-    useEffect(()=>{
-     if(openMenu){
-      lenis&&lenis.stop()
-      
+  };
   
-     }
-     else{
-      lenis&&lenis.start()
-     }
-    },[openMenu])
+useEffect(() => {
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [scrollDirection]);
+
+const handleMouseEnter = () => {
+  gsap.to(textRef.current, {
+    x: 0,
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
+  });
+};
+
+const handleMouseLeave = () => {
+  gsap.to(textRef.current, {
+    x: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+  });
+};
+
     return (
-        <header  ref={headerRef} className={`fixed top-0 left-0 w-screen z-50  transition-all ease duration-500 ${
-        isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism" } ${openMenu?"!translate-y-0":""}`}>
-            <div className="w-full px-[5vw] py-12 flex justify-between items-center"  >
-                <div>
-                    <Link href="/">
-                        <Image
-                            className="w-[16vw] mobile:w-[40vw] tablet:w-[25vw]"
-                            src={logo}
-                            alt="Elite Logo"
-                            width={220}
-                            height={100}
-                        />
-                    </Link>
-                </div>
-                <div className="flex items-center gap-10">
-                    {/* <LanguageButton /> */}
-                    <div>
-                        <svg className="w-[2vw] mobile:w-[5vw] tablet:w-[4vw]" viewBox="0 0 43 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.211914" width="42" height="3" fill="white" />
-                            <rect x="0.211914" y="12" width="42" height="3" fill="white" />
-                            <rect x="0.211914" y="24" width="42" height="3" fill="white" />
-                        </svg>
-                    </div>
-                </div>
+        <header
+        ref={headerRef}
+        className={`fixed top-0 left-0 w-screen z-50 transition-all ease duration-500 `}
+      >
+        <div className="w-full px-[5vw] py-12 flex justify-between items-center">
+          <div>
+            <Link href="/">
+              <Image
+                className="w-[16vw] mobile:w-[40vw] tablet:w-[25vw]"
+                src={logo}
+                alt="Elite Logo"
+                width={220}
+                height={100}
+              />
+            </Link>
+          </div>
+          <div className="flex flex-row-reverse items-center gap-8">
+            <div
+              ref={iconRef}
+              className="cursor-pointer opacity-0 relative z-[100]"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <svg
+                className="w-[2vw] mobile:w-[5vw] tablet:w-[4vw]"
+                viewBox="0 0 43 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="0.211914" width="42" height="3" fill="white" />
+                <rect x="0.211914" y="12" width="42" height="3" fill="white" />
+                <rect x="0.211914" y="24" width="42" height="3" fill="white" />
+              </svg>
             </div>
-        </header>
+            <div ref={textRef} className="w-full h-full flex items-center gap-5 text-white uppercase">
+              <div>Who we are.</div>
+              <div>Invest with us.</div>
+              <div>Contact.</div>
+            </div>
+          </div>
+        </div>
+      </header>
     )
 }
 

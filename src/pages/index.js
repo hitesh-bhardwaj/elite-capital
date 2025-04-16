@@ -6,22 +6,28 @@ import Advantage from "@/components/Homepage/Advantage";
 import Assets from "@/components/Homepage/Assets";
 import Contact from "@/components/Homepage/Contact";
 import Diversify from "@/components/Homepage/Diversify";
-import Hero from "@/components/Homepage/Hero";
 import Portfolio from "@/components/Homepage/Portfolio";
 import Stats from "@/components/Homepage/Stats";
 import Values from "@/components/Homepage/Values";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
+import { useTranslation } from "next-i18next";
+import Hero from "@/components/Common/Hero";
+
 
 export default function Home() {
-  fadeUp();
-  paraAnim();
-  titleAnim();
-  fadeIn();
+  fadeUp()
+  paraAnim()
+  titleAnim()
+  fadeIn()
+    const { t } = useTranslation('home');
+  
+ 
 
   return (
     <>
       <Header />
-      <Hero />
+      <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
       <About />
       <Stats />
       <Values/>
