@@ -2,19 +2,44 @@ import { useTranslation } from "next-i18next";
 import valuesBg from "../../../public/assets/images/homepage/values-bg.png"
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+// import { parllaxAnim } from "../gsapAnimations";
 
 
 const Values = () => {
+  // parllaxAnim("#values")
     const { t } = useTranslation('home');
     const values = t('values', { returnObjects: true });
+    useEffect(()=>{
+      const ctx = gsap.context(() => {
+       
+        gsap.to(".values-img",{
+          yPercent:100,
+          ease:"none",
+          scrollTrigger:{
+            trigger:"#values",
+            start:"top bottom",
+            end:"bottom top",
+            scrub:true,
+
+          }
+        })
+
+      });
+      return () => ctx.revert();
+    })
 
     return (
-        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:py-[10vw]"> 
+        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:py-[10vw] overflow-hidden" id="values"> 
         <div className="absolute top-0 left-0 h-full w-full z-0">
             <Image
               src={valuesBg}
               alt="stats-bg"
               layout="fill"
+              className="values-img translate-y-[-50%]"
               objectFit="cover"
               quality={100}
             />

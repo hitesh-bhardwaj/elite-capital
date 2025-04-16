@@ -3,6 +3,7 @@ import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Assets from "@/components/Homepage/Assets";
 import Diversify from "@/components/Homepage/Diversify";
+import Numbers from "@/components/Homepage/Numbers";
 import Portfolio from "@/components/Homepage/Portfolio";
 import Stats from "@/components/Homepage/Stats";
 import Values from "@/components/Homepage/Values";
@@ -24,6 +25,7 @@ export default function Home() {
       <Layout>
       <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
       <About />
+      {/* <Numbers/> */}
       <Stats />
       <Values/>
       <Advantage />

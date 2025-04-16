@@ -22,8 +22,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#121212] text-white !font-body mobile:py-[10vw] tablet:pb-[7%]">
-      <div className="px-[5vw] ">
+    <footer className=" bg-transparent h-[30vw] text-white !font-body mobile:py-[10vw] tablet:pb-[7%] "  
+    style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
+      <div className="px-[5vw] w-full bg-[#121212] fixed bottom-0">
         <div className=" pb-[10vw] h-[25vw] flex  justify-between ">
           <div className="flex items-start justify-between pt-[5vw] mobile:flex-col ">
             <Image
