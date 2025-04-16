@@ -1,6 +1,4 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Header from "@/components/Header";
-import Footer from '@/components/Footer';
 import About from '@/components/InvestWithUs/About';
 import Stats from '@/components/InvestWithUs/Stats';
 import Portfolio from '@/components/InvestWithUs/Portfolio';
@@ -12,6 +10,7 @@ import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations
 import { useTranslation } from 'next-i18next';
 import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/invest/invest-hero.png"
+import Layout from '@/components/Common/Layout';
 
 export default function Invest() {
    fadeUp()
@@ -22,7 +21,7 @@ export default function Invest() {
      
   return (
     <>
-    <Header/>
+    <Layout>
     <Hero img={heroBg} translation={'invest'} heading={t('hero')} nextSectionId={"about"}/>
     <About/>
     <Stats/>
@@ -31,7 +30,7 @@ export default function Invest() {
     <Factors/>
    <Portfolio/>
    <Contact/>
-    <Footer/>
+   </Layout>
     </>
   );
 }

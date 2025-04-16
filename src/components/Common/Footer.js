@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation('common');
+    const footerNav = t('footerNav', { returnObjects: true });
+    const footerNavBottom = t('footerNavBottom', { returnObjects: true });
+
+  
   const socials = [
     {
       icon: "/icons/linkedin.svg",
@@ -28,28 +34,26 @@ const Footer = () => {
               className="w-[35vw] h-auto fadeUp mobile:w-[70vw]"
             />
           </div>
+          
           <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:my-[8vw] mobile:gap-[4vw] tablet:justify-start tablet:mt-[5vw] ">
-            <Link href="/about-us" className="">
-              <span data-para-anim>Who We Are</span>
+          {footerNav.map((item,index)=>(
+            <Link key={index} href={item.link} className="">
+              <span data-para-anim>{item.text}</span>
             </Link>
-            <Link href="/invest-with-us" className="">
-              <span data-para-anim>Invest With Us</span>
-            </Link>
-            <Link href="/contact" className="">
-              <span data-para-anim>Contact Us</span>
-            </Link>
+))}
           </div>
          
         </div>
         <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[8vw] mobile:mt-[10vw] tablet:mt-[7vw]">
-          <h6 className="text-[1.15rem] tablet:w-[50%]">
-            Copyright © 2025 All Rights Reserved. Elite Capital
-          </h6>
+          <h6 className="text-[1.15rem] tablet:w-[50%]">{t('footerCopy')}</h6>
           <div className="flex gap-[2.5vw] text-[1.3vw]">
            <div className="flex items-center justify-center gap-[0.7vw]">
-              <Link href="privacy-policy" prefetch={false}>Privacy Policy</Link>
-              <span className="h-1 w-1 bg-white rounded-full block"/>
-             <Link href="cookie-policy" prefetch={false}>Cookie Policy</Link>
+            {footerNavBottom.map((item,index)=>(
+              <>
+              <Link key={index} href={item.link} prefetch={false}>{item.text}</Link>
+              <span className="h-1 w-1 bg-white rounded-full block last:hidden"/>
+              </>
+            ))}
               </div>
           <div className="flex items-center gap-4">
             {socials.map((social, index) => (

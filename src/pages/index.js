@@ -1,6 +1,4 @@
-import Footer from "@/components/Footer";
 import { fadeIn, fadeUp, paraAnim, titleAnim } from "@/components/gsapAnimations";
-import Header from "@/components/Header";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Assets from "@/components/Homepage/Assets";
@@ -13,6 +11,7 @@ import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
 import { useTranslation } from "next-i18next";
 import Hero from "@/components/Common/Hero";
 import Contact from "@/components/Common/Contact";
+import Layout from "@/components/Common/Layout";
 
 export default function Home() {
   fadeUp();
@@ -22,7 +21,7 @@ export default function Home() {
   const { t } = useTranslation('home');
   return (
     <>
-      <Header />
+      <Layout>
       <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
       <About />
       <Stats />
@@ -32,7 +31,7 @@ export default function Home() {
       <Assets/>
       <Portfolio/>
      <Contact translation={'home'} heading= {t("contactHead")} para={t("contactSub")}/>
-      <Footer />
+     </Layout>
     </>
   );
 }

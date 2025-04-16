@@ -7,7 +7,6 @@ const Hero = ({img, translation, heading, para, nextSectionId}) => {
         const nextSection = document.getElementById(`${nextSectionId}`);
         if (nextSection) {
           nextSection.scrollIntoView({ behavior: "smooth" });
-          console.log("scrollll")
         }
       };
 

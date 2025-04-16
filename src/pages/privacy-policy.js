@@ -1,11 +1,10 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Header from "@/components/Header";
-import Footer from '@/components/Footer';
 import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
 import Content from '@/components/Privacy/Content';
 import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/privacy/hero.png"
 import { useTranslation } from 'next-i18next';
+import Layout from '@/components/Common/Layout';
 
 export default function Privacy() {
   fadeUp();
@@ -16,10 +15,10 @@ export default function Privacy() {
      
   return (
     <>
-    <Header/>
+    <Layout>
     <Hero img={heroBg} heading={t('hero')} translation={'privacy'} nextSectionId={"privacy-content"}/>
     <Content/>
-    <Footer/>
+    </Layout>
     </>
   );
 }

@@ -1,14 +1,13 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Header from "@/components/Header";
 import About from '@/components/AboutUs/About';
 import Team from '@/components/AboutUs/Team';
-import Footer from '@/components/Footer';
 import { fadeIn, fadeUp, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import Values from '@/components/AboutUs/Values';
 import Hero from '@/components/Common/Hero';
 import { useTranslation } from 'next-i18next';
 import heroBg from "../../public/assets/images/about/hero-bg.png"
 import Contact from '@/components/Common/Contact';
+import Layout from '@/components/Common/Layout';
 
 export default function AboutPage() {
   fadeUp();
@@ -19,13 +18,13 @@ export default function AboutPage() {
   
   return (
     <>
-      <Header />
+      <Layout>
       <Hero img={heroBg} translation={'about'} heading={t('hero')} nextSectionId={"about"}/>
       <About />
       <Values/>
       <Team />
       <Contact translation={'about'} heading={t('contactHead')} para={t('contactSub')} />
-      <Footer />
+      </Layout>
     </>
   );
 }

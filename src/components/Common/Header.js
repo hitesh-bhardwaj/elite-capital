@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import logo from "../../public/elite-logo.svg";
+import logo from "../../../public/elite-logo.svg";
 import {useLenis} from 'lenis/react'
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-
+import { useTranslation } from "next-i18next";
 
 const LanguageButton = () => {
     const { locale, asPath } = useRouter();
@@ -29,6 +29,9 @@ const iconRef = useRef(null);
 const [scrollDirection, setScrollDirection] = useState(null);
 const lastScrollY = useRef(0);
 const animating = useRef(false);
+  const { t } = useTranslation('common');
+  const footerNav = t('footerNav', { returnObjects: true });
+
 
 const handleScroll = () => {
     const currentScroll = window.scrollY;
@@ -129,7 +132,7 @@ const handleMouseLeave = () => {
               onMouseLeave={handleMouseLeave}
             >
               <svg
-                className="w-[2vw] mobile:w-[5vw] tablet:w-[4vw]"
+                className="w-[1.7vw] mobile:w-[5vw] tablet:w-[4vw]"
                 viewBox="0 0 43 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -139,10 +142,10 @@ const handleMouseLeave = () => {
                 <rect x="0.211914" y="24" width="42" height="3" fill="white" />
               </svg>
             </div>
-            <div ref={textRef} className="w-full h-full flex items-center gap-5 text-white uppercase">
-              <Link href="about-us" prefetch={false}>Who we are.</Link>
-              <Link href="invest-with-us" prefetch={false}>Invest with us.</Link>
-              <Link href="contact" prefetch={false}>Contact.</Link>
+            <div ref={textRef} className="w-full h-full text-[1.2vw] flex items-center gap-5 text-white uppercase">
+              {footerNav.map((item,index)=>(
+                <Link key={index} href={item.link} prefetch={false} >{item.text}</Link>
+              ))}
             </div>
           </div>
         </div>

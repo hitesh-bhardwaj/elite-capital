@@ -1,27 +1,4 @@
 {
-    "valuesHead": "Our values",
-    "values": [
-            {
-                "sub": "Partnership",
-                "text":"We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
-            },
-            {
-                "sub": "Integrity ",
-                "text":"With 80+ years of combined experience, we are committed to highest standards of transparency, honesty and ethics in all our business dealings. "
-            },
-            {
-                "sub": "Knowledge ",
-                "text":"We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-led and reliable.  Our team consistently delivers a best-in-class approach to seeking superior risk-adjusted returns in the Canadian real estate markets. "
-            },
-            {
-                "sub": "Trust ",
-                "text":"We build and maintain trust through transparency, consistency and collaboration in our dealings with all our stakeholders. "
-            },
-            {
-                "sub" : "Sustainability ",
-                "text": "We invest in responsibly designed developments to alleviate Canada’s housing shortage and deliver lasting environmental and social benefits to communities.  "
-            }
-    ],
     "contactHead": "Invest  with us",
     "contactSub": "Unlock Real Assets with Real Returns",
     "footerCopy": "Copyright © 2025 All Rights Reserved. Elite Developments",
@@ -30,12 +7,26 @@
     "footerEmailButton": "Subscribe",
     "footerNav": [
         {
+             "text": "Who We are",
+            "link": "/invest-with-us"
+        },
+        {
             "text": "Invest With Us",
             "link": "/invest-with-us"
         },
         {
             "text": "Contact Us",
             "link": "/contact"
+        }
+    ],
+    "footerNavBottom": [
+        {
+             "text": "Privacy Policy",
+            "link": "/privacy-policy"
+        },
+        {
+            "text": "Cookie Policy",
+            "link": "/cookie-policy"
         }
     ]
 }
