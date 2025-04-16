@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
     const { t } = useTranslation('about');

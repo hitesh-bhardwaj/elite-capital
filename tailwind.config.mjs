@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const { heroui } = require("@heroui/theme");
 
 const config = {
   content: [

@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import { fadeIn, fadeUp, paraAnim, titleAnim, verticalLineAnim } from "@/components/gsapAnimations";
+import { fadeIn, fadeUp, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import Header from "@/components/Header";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
@@ -13,11 +13,10 @@ import Values from "@/components/Homepage/Values";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Home() {
-  fadeUp()
-  paraAnim()
-  titleAnim()
-  fadeIn()
- 
+  fadeUp();
+  paraAnim();
+  titleAnim();
+  fadeIn();
 
   return (
     <>
