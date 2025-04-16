@@ -142,7 +142,8 @@ const handleMouseLeave = () => {
                 <rect x="0.211914" y="24" width="42" height="3" fill="white" />
               </svg>
             </div>
-            <div ref={textRef} className="w-full h-full text-[1.2vw] flex items-center gap-5 text-white uppercase">
+            <div ref={textRef} className="w-full h-full text-[1.2vw] flex items-center gap-5 text-white uppercase"  onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}>
               {footerNav.map((item,index)=>(
                 <Link key={index} href={item.link} prefetch={false} >{item.text}</Link>
               ))}

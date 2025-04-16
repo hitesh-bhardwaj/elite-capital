@@ -5,32 +5,12 @@ import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
+import ImageComponent from "../Common/ImageComponent";
 gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
     const { t } = useTranslation('invest');
     const aboutsub = t('aboutsub', { returnObjects: true });
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.from(".about-image", {
-                scale: 1.3,
-                // yPercent:-10,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: "#who-we-are",
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: true,
-                    // markers:true
-
-                }
-            })
-
-        })
-        return () => ctx.revert()
-    }, [])
-
     return (
         <>
             <section className="relative h-full bg-[#FFFFFF] overflow-hidden mobile:py-[10vw]" id="about">
@@ -43,15 +23,9 @@ const About = () => {
                             <div className="content" data-para-anim key={index} dangerouslySetInnerHTML={{ __html: item.text }} />
                         ))}
                     </div>
-                    <div className="w-full flex items-center justify-end pr-[5vw] overflow-hidden mobile:w-[90%] mobile:h-full ">
-                        <Image
-                            className="about-image tablet:h-[70vw]"
-                            src={aboutImage}
-                            alt="about image"
-                            placeholder="blur"
-                            loading="lazy"
-                        />
-                    </div>
+                    
+                       <ImageComponent imgsrc={aboutImage} width={"W-full"}/>
+                    
                 </div>
 
             </section>

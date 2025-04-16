@@ -5,26 +5,13 @@ import Image from "next/image";
 import LineButton from "../ui/LineButton";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useEffect } from "react";
+import ImageComponent from "../Common/ImageComponent";
 gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
     const { t } = useTranslation('home');
-    useEffect(()=>{
-        const ctx = gsap.context(()=>{
-           gsap.from(".about-image",{
-            opacity:0,
-            duration:2,
-            ease:"power3.out",
-            scrollTrigger:{
-                trigger:".about-image",
-                start:"top 40%",
-            }
-           })
+   
 
-        })
-        return()=>ctx.revert()
-    },[])
 
     return (
         <>
@@ -33,21 +20,13 @@ const About = () => {
                     <div className="text-black1 w-[65%] mobile:w-full tablet:w-full tablet:pb-[10vw]">
                         <h2 data-title-anim className="heading-1  mb-[3vw]">{t('aboutHead')}</h2>
                         <p data-para-anim className="content mb-[3vw]">{t('aboutSub')}</p>
-                        <LineButton href={"/about-us"} text={t('cta')} className="fadeUp"/>
+                        <LineButton href={"/about-us"} text={t('cta')} className="fadeUp" />
                     </div>
                     <div className="flex flex-col items-end justify-end w-1/2 gap-[3vw] h-full">
-                    <div className="w-full flex h-[30%] about-image mobile:w-full tablet:w-full ">
-                        <Image 
-                            className="w-full tablet:w-full"
-                            src={aboutImage} 
-                            alt="about image" 
-                            // placeholder="blur" 
-                            loading="lazy" 
-                        />
-                        </div>
+                        <ImageComponent imgsrc={aboutImage} width={"w-full"}/>
                         <div className="w-full flex items-center justify-start">
-                        <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle"/>
-                    </div>
+                            <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" />
+                        </div>
                     </div>
                 </div>
 
