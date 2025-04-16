@@ -6,25 +6,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
     const { t } = useTranslation('about');
-    useEffect(()=>{
-        const ctx = gsap.context(()=>{
-           gsap.from(".about-image",{
-            scale:1.3,
-            yPercent:-10,
-            ease:"none",
-            scrollTrigger:{
-                trigger:"#who-we-are",
-                start:"top bottom",
-                end:"bottom top",
-                scrub:true,
-                // markers:true
-
-            }
-           })
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(".about-image", {
+                scale: 1.3,
+                yPercent: -10,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#who-we-are",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true,
+                }
+            })
 
         })
-        return()=>ctx.revert()
-    },[])
+        return () => ctx.revert()
+    }, [])
 
     return (
         <>
@@ -36,7 +34,6 @@ const About = () => {
                         <p data-para-anim className="mb-[3vw] w-[98%] content mobile:text-[4.6vw]">{t('aboutSub')}</p>
                     </div>
                 </div>
-
             </section>
         </>
     )
