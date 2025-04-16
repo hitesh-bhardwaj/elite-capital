@@ -9,23 +9,21 @@ import heroBg from "../../public/assets/images/contact/hero-bg.png";
 import { useTranslation } from 'next-i18next';
 
 export default function AboutPage() {
-  fadeUp()
-     paraAnim()
-     titleAnim()
-     fadeIn()
-       const { t } = useTranslation("contact");
-     
+  fadeUp();
+  paraAnim();
+  titleAnim();
+  fadeIn();
+  const { t } = useTranslation("contact");  
   return (
     <>
     <Header/>
     <Hero img={heroBg} heading={t("hero")} translation={'contact'} nextSectionId={"location"}/>
     <Location/>
-    <Contact/>
+    <Contact translation={'contact'} heading={t('contactFormHead')} para={t('contactSub')} />
     <Footer/>
     </>
   );
 }
-
 export async function getStaticProps({ locale }) {
   return {
     props: {

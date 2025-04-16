@@ -47,9 +47,9 @@ const Footer = () => {
           </h6>
           <div className="flex gap-[2.5vw] text-[1.3vw]">
            <div className="flex items-center justify-center gap-[0.7vw]">
-              <Link href={"/"}>Privacy Policy</Link>
+              <Link href="privacy-policy" prefetch={false}>Privacy Policy</Link>
               <span className="h-1 w-1 bg-white rounded-full block"/>
-             <Link href={"/"}>Cookie Policy</Link>
+             <Link href="cookie-policy" prefetch={false}>Cookie Policy</Link>
               </div>
           <div className="flex items-center gap-4">
             {socials.map((social, index) => (

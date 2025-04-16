@@ -7,14 +7,12 @@ import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/privacy/hero.png"
 import { useTranslation } from 'next-i18next';
 
-
-
 export default function Privacy() {
-  fadeUp()
-     paraAnim()
-     titleAnim()
-     fadeIn()
-         const { t } = useTranslation('privacy');
+  fadeUp();
+  paraAnim();
+  titleAnim();
+  fadeIn();
+  const { t } = useTranslation('privacy');
      
   return (
     <>

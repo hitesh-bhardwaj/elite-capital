@@ -140,9 +140,9 @@ const handleMouseLeave = () => {
               </svg>
             </div>
             <div ref={textRef} className="w-full h-full flex items-center gap-5 text-white uppercase">
-              <div>Who we are.</div>
-              <div>Invest with us.</div>
-              <div>Contact.</div>
+              <Link href="about-us" prefetch={false}>Who we are.</Link>
+              <Link href="invest-with-us" prefetch={false}>Invest with us.</Link>
+              <Link href="contact" prefetch={false}>Contact.</Link>
             </div>
           </div>
         </div>
