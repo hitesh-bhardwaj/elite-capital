@@ -14,7 +14,7 @@ const Contact = ({translation, heading, para}) => {
             </h2>
             <p data-para-anim className="mb-[3vw] w-[80%] text-[1.8vw]">{para}</p>
           </div>
-          <div className="w-[45%] h-fit bg-[#E5E5DC] rounded-[1vw] border border-black/5 p-[4vw] fadeUp mobile:w-full mobile:rounded-[2vw] tablet:w-full tablet:p-0 tablet:rounded-[3vw]">
+          <div className="w-[45%] h-fit bg-[#E5E5DC] rounded-[1vw] border border-black/5 p-[4vw] fadeUp mobile:w-full mobile:rounded-[2vw] tablet:w-full tablet:p-0 tablet:rounded-[3vw] fadeUp">
             <ContactForm/>
           </div>
         </div>

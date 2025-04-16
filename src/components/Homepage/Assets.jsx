@@ -23,7 +23,7 @@ const Assets = () => {
                     </div>
                 </div>
                 <div className='w-1/2 flex items-center justify-center'>
-                    <h3 className='text-black1 heading-1 !font-body w-[90%]'>{t('realHead')}
+                    <h3 data-title-anim className='text-black1 heading-1 !font-body w-[90%]'>{t('realHead')}
                         <br/>
                         <span className='!font-semibold'>{t('realHeadSub')}</span>
                     </h3>

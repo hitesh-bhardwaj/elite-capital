@@ -86,7 +86,7 @@ export default function ContactForm() {
 
   return (
     <section className=" mobile:pt-0" id="formoem">
-      <div className="w-full h-full mobile:p-0 mobile:bg-transparent mobile:hover:bg-transparent mobile:hover:shadow-none mobile:border-none tablet:p-[6.5vw] fadeUp">
+      <div className="w-full h-full mobile:p-0 mobile:bg-transparent mobile:hover:bg-transparent mobile:hover:shadow-none mobile:border-none tablet:p-[6.5vw]">
         <div className="w-full flex flex-col gap-[2vw] mobile:w-full  mobile:rounded-[10vw] mobile:px-[1vw] mobile:py-[5vw] mobile:border mobile:gap-[5vw]  tablet:w-full">
           <h3
             data-para-anim
