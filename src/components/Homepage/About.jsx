@@ -25,7 +25,7 @@ const About = () => {
                     <div className="flex flex-col items-end justify-end w-1/2 gap-[3vw] h-full">
                         <ImageComponent imgsrc={aboutImage} width={"w-full"}/>
                         <div className="w-full flex items-center justify-start">
-                            <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" />
+                            <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" className="blockAnim"/>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,6 @@ import { useTranslation } from "next-i18next";
 
 const Team = () => {
   const { t } = useTranslation("about");
-  const [opened, setopened] = useState(false);
   const [openedIndex, setOpenedIndex] = useState(null);
   const [openedIndexinvestment, setOpenedIndexinvestment] = useState(null);
   const [openedIndexadviser, setOpenedIndexadviser] = useState(null);
@@ -43,16 +42,10 @@ const Team = () => {
                     />
                   </div>
                   <div className=" mobile:space-y-[2vw] flex flex-col absolute bottom-0 h-[30vw] group-hover:translate-y-[0%] translate-y-[70%] transition-all duration-500 ease-in-out  rounded-tl-[0.5vw] rounded-tr-[0.5vw] w-full px-[2vw] pt-[1vw] bg-[#F2F2E9] left-0">
-                    <p
-                  
-                      className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]"
-                    >
+                    <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]">
                       {item.name}
                     </p>
-                    <p
-                      
-                      className="h-[5vw] mobile:text-[4.6vw] tablet:text-[2vw] text-[1.2vw]"
-                    >
+                    <p className="h-[5vw] mobile:text-[4.6vw] tablet:text-[2vw] text-[1.2vw]">
                       {item.des}
                     </p>
 
@@ -123,7 +116,9 @@ const Team = () => {
                       {item.features.map((feature, i) => (
                         <p
                           key={i}
-                          className={`text-[1.3vw]  ${i === 0 ? "mt-[2vw]" : ""}`}
+                          className={`text-[1.3vw]  ${
+                            i === 0 ? "mt-[2vw]" : ""
+                          }`}
                         >
                           {feature}
                         </p>
@@ -132,14 +127,15 @@ const Team = () => {
 
                     {/* Toggle Button */}
                     <p
-                      className="text-[1.3vw] cursor-pointer mt-[2vw]"
+                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative "
                       onClick={() =>
                         setOpenedIndex(openedIndex === index ? null : index)
                       }
                     >
-                      {openedIndex === index ? "Read less -" : "Read more +"}
+                      <span className="after:absolute relative after:left-0 after:bottom-[-10%] after:w-full after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                        {openedIndex === index ? "Read less -" : "Read more +"}
+                      </span>
                     </p>
-
                   </div>
                 </div>
               ))}
@@ -207,16 +203,18 @@ const Team = () => {
                     </div>
 
                     <p
-                      className="text-[1.3vw] cursor-pointer mt-[2vw]"
+                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative"
                       onClick={() =>
                         setOpenedIndexadviser(
                           openedIndexadviser === index ? null : index
                         )
                       }
                     >
-                      {openedIndexadviser === index
-                        ? "Read less -"
-                        : "Read more +"}
+                      <span className="after:absolute relative after:left-0 after:bottom-[-10%] after:w-full after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                        {openedIndexadviser === index
+                          ? "Read less -"
+                          : "Read more +"}
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -287,16 +285,18 @@ const Team = () => {
                     </div>
 
                     <p
-                      className="text-[1.3vw] cursor-pointer mt-[2vw]"
+                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative"
                       onClick={() =>
                         setOpenedIndexinvestment(
                           openedIndexinvestment === index ? null : index
                         )
                       }
                     >
-                      {openedIndexinvestment === index
-                        ? "Read less -"
-                        : "Read more +"}
+                      <span className="after:absolute relative after:left-0 after:bottom-[-10%] after:w-full after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                        {openedIndexinvestment === index
+                          ? "Read less -"
+                          : "Read more +"}
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -349,22 +349,26 @@ const Team = () => {
 
                       {openedIndex !== index ? (
                         <p
-                          className="text-[1.3vw] cursor-pointer mt-[2vw]"
+                          className="text-[1.3vw] cursor-pointer mt-[2vw] relative"
                           onClick={() => setOpenedIndex(index)}
                         >
-                          Read more +
+                          <span className="after:absolute relative after:left-0 after:bottom-[-10%] after:w-full after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                            Read more +
+                          </span>
                         </p>
                       ) : (
                         <p
-                          className="text-[1.3vw] cursor-pointer mt-[2vw]"
+                          className="text-[1.3vw] cursor-pointer mt-[2vw] relative"
                           onClick={() => setOpenedIndex(null)}
                         >
-                          Read less -
+                          <span className="after:absolute relative after:left-0 after:bottom-[-10%] after:w-full after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                            Read less -
+                          </span>
                         </p>
                       )}
                     </div>
                   </div>
-                  <div className="w-full h-[1px] bg-black my-[1.5vw]"></div>
+                  <div className="w-full h-[1px] bg-black my-[1.5vw] lineDraw"></div>
                 </>
               ))}
             </div>

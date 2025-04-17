@@ -206,11 +206,10 @@ const Stats = () => {
             <p data-para-anim className="content w-[75%] mx-auto text-center mobile:w-1/2  mobile:text-left">{t('stats4')}</p>
             </div>
           </div>
-        
-        <div className="w-[10%] flex items-end justify-end pr-[3vw] h-full pb-[3vw]">
-                                          <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" />
-                                      </div>
-                                      </div>
+           <div className="w-[10%] flex items-end justify-end pr-[3vw] h-full pb-[3vw]">
+                                  <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" className="blockAnim"/>
+                              </div>
+        </div>
         <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] "/>
         <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[68%]  "/>
         </section>

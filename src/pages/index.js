@@ -1,4 +1,4 @@
-import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
+import { blockAnim, fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Assets from "@/components/Homepage/Assets";
@@ -19,6 +19,7 @@ export default function Home() {
   titleAnim();
   lineAnim();
   fadeIn();
+  blockAnim()
   const { t } = useTranslation('home');
   return (
     <>

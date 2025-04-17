@@ -6,7 +6,7 @@ import Contact from '@/components/Common/Contact';
 import WhyUs from '@/components/InvestWithUs/WhyUs';
 import Residential from '@/components/InvestWithUs/Residential';
 import Factors from '@/components/InvestWithUs/Exclusive';
-import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
+import { blockAnim, fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
 import { useTranslation } from 'next-i18next';
 import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/invest/invest-hero.png"
@@ -17,6 +17,7 @@ export default function Invest() {
    paraAnim()
    titleAnim()
    fadeIn()
+   blockAnim()
    const { t } = useTranslation('invest');
      
   return (
@@ -29,7 +30,7 @@ export default function Invest() {
     <Residential/>
     <Factors/>
    <Portfolio/>
-   <Contact/>
+   <Contact translation={'invest'} heading={t('contactHead')} para={t('contactSub')}/>
    </Layout>
     </>
   );

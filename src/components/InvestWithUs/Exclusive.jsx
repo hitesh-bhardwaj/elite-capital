@@ -8,6 +8,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Exclusive = () => {
+    useEffect(()=>{
+        const ctx = gsap.context(()=>{
+          gsap.from(".exclusive-img", 
+             {
+                scale:1.3,
+                ease:"none",
+                scrollTrigger:{
+                    trigger:"#factors",
+                    start:"top bottom",
+                    end:"bottom top",
+                    scrub:true
+                }
+
+            }
+          )
+        })
+        return()=>ctx.revert()
+
+    },[])
     const { t } = useTranslation('invest');
     return (
         <>
@@ -15,7 +34,7 @@ const Exclusive = () => {
                 <div className="relative z-10  flex  items-center justify-between h-full mobile:block mobile:space-y-[5vw] tablet:items-start">
                 <div className="w-1/2 flex items-start justify-between overflow-hidden mobile:w-full">
                         <Image 
-                            className="factor-image tablet:h-[60vw]"
+                            className="factor-image tablet:h-[60vw] exclusive-img"
                             src={factorImage} 
                             alt="factor image" 
                             placeholder="blur" 

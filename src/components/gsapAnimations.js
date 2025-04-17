@@ -124,6 +124,27 @@ export function lineAnim() {
     return () => ctx.revert()
   }, []);
 }
+export function blockAnim() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const blockAnims = document.querySelectorAll(".blockAnim");
+      blockAnims.forEach((blockAnim) => {
+        gsap.from(blockAnim, {
+          scrollTrigger: {
+            trigger: blockAnim,
+            start: "top 80%",
+          },
+          scaleX: 0,
+          transformOrigin: "left",
+          duration: 1,
+          stagger: 0.07,
+          ease: "power3.out",
+        });
+      });
+    })
+    return () => ctx.revert()
+  }, []);
+}
 
 // export function parllaxAnim({sectionId}){
 //   useEffect(() => {
