@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import Head from "next/head";
 import { appWithTranslation } from 'next-i18next'
 import { ReactLenis } from "lenis/react";
+import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion"; 
+
 
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
@@ -19,8 +21,9 @@ const barlow = Barlow({
 })
 
 const App = ({ Component, pageProps }) => {
-
   const { locale } = useRouter();
+  const router = useRouter();
+
 
   useEffect(() => {
     const dir = locale === "ae" ? "rtl" : "ltr";
@@ -30,7 +33,11 @@ const App = ({ Component, pageProps }) => {
       swiper.setAttribute("dir", dir);
     });
   }, [locale]); 
-
+  const pageVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
   return (
     <>
       <Head>
@@ -40,9 +47,22 @@ const App = ({ Component, pageProps }) => {
         <meta name="description" content="Real Assets, Real Returns" />
       </Head>
       <ReactLenis root>
+      <LazyMotion features={domAnimation}>
+      <AnimatePresence mode="wait">
+              <m.div
+                key={router.pathname}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={pageVariants}
+                transition={{ duration: 0.6 }}
+              >
       <main className={`${bodoni_moda.variable} ${barlow.variable} font-body text-[1.55vw] text-black1`}>
         <Component {...pageProps} />
       </main>
+      </m.div>
+            </AnimatePresence>
+            </LazyMotion>
       </ReactLenis>
     </>
   )

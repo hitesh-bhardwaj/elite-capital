@@ -23,8 +23,9 @@ const About = () => {
                             <div className="content" data-para-anim key={index} dangerouslySetInnerHTML={{ __html: item.text }} />
                         ))}
                     </div>
-                    
-                       <ImageComponent imgsrc={aboutImage} width={"W-full"}/>
+                    <div className="w-full h-full translate-x-[55%]">
+                       <ImageComponent imgsrc={aboutImage} width={"w-full"}/>
+                       </div>
                     
                 </div>
 

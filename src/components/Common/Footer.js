@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { lineAnim } from "../gsapAnimations";
 
 const Footer = () => {
     const { t } = useTranslation('common');
     const footerNav = t('footerNav', { returnObjects: true });
     const footerNavBottom = t('footerNavBottom', { returnObjects: true });
-
-  
   const socials = [
     {
       icon: "/icons/linkedin.svg",
@@ -38,8 +37,10 @@ const Footer = () => {
           
           <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:my-[8vw] mobile:gap-[4vw] tablet:justify-start tablet:mt-[5vw] ">
           {footerNav.map((item,index)=>(
-            <Link key={index} href={item.link} className="">
-              <span data-para-anim>{item.text}</span>
+            <Link key={index} href={item.link} className="group" >
+               <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                <span  className="">{item.text}</span>
+            </div>
             </Link>
 ))}
           </div>
@@ -51,7 +52,10 @@ const Footer = () => {
            <div className="flex items-center justify-center gap-[0.7vw]">
             {footerNavBottom.map((item,index)=>(
               <>
-              <Link key={index} href={item.link} prefetch={false}>{item.text}</Link>
+              <Link key={index} href={item.link} prefetch={false} className="group">
+              <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                <span  className="">{item.text}</span>
+            </div></Link>
               <span className="h-1 w-1 bg-white rounded-full block last:hidden"/>
               </>
             ))}

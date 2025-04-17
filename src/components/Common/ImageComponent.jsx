@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ImageComponent = ({ imgsrc ,width}) => {
+const ImageComponent = ({ imgsrc , width}) => {
   const wrapperRef = useRef(null);
 
   useEffect(() => {

@@ -145,7 +145,10 @@ const handleMouseLeave = () => {
             <div ref={textRef} className="w-full h-full text-[1.2vw] flex items-center gap-5 text-white uppercase"  onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}>
               {footerNav.map((item,index)=>(
-                <Link key={index} href={item.link} prefetch={false} >{item.text}</Link>
+                <Link key={index} href={item.link} prefetch={false} className="group">
+                 <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                <span  className="">{item.text}</span>
+            </div></Link>
               ))}
             </div>
           </div>

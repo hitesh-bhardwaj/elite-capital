@@ -48,7 +48,7 @@ const Values = () => {
                 <div className="space-y-[6vw]">
                     <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw]">{t('valuesHead')}</h2>
                     <div className=" w-full relative z-10 mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
-                       <Accordion type="single" collapsible defaultValue="item-1" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw]">
+                       <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw]">
                         <div className="flex w-full gap-[5vw]">
                        <div className="flex flex-col w-[50%]">
                         {values.map((item,index) => (

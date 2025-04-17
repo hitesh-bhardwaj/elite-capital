@@ -24,7 +24,7 @@ const Values = () => {
             <Accordion
               type="single"
               collapsible
-              defaultValue="item-1"
+              defaultValue="item-0"
               className="w-[95%] flex flex-wrap justify-between gap-y-[3vw]"
             >
               <div className="flex w-full gap-[15vw]">

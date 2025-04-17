@@ -228,10 +228,12 @@ body {
   overflow: hidden;
 }
 
+
 .counter-1,
 .counter-2,
 .counter-3,
 .counter-4,
+.count-1,
 .count-2,
 .count-3,
 .count-4,
@@ -239,6 +241,8 @@ body {
 .countlast-2,
 .countlast-3,
 .countlast-4,
+.countlast-5,
+.countlast-6,
 .countnew-1,
 .countnew-2,
 .countnew-3,

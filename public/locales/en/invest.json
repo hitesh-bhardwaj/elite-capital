@@ -6,24 +6,10 @@
             "text":"As a DFSA-authorised private equity firm, we provide access to investment in a carefully curated pipeline of premium real estate investments in Ontario, Canada. Our investment strategy is rooted in thorough due diligence, deep local knowledge, and global fund management expertise. We focus on investing in purpose-built residential shovel-ready projects that have undergone extensive planning and permitting. This meticulous approach ensures that our investors benefit from reduced risk and enhanced potential for strong, sustainable returns."
         }
     ],
-    "stats": [
-        {
-            "number": "45+",
-            "text": "Pipeline of projects in Canada"
-        },
-        {
-            "number": "10K+",
-            "text": "Residential and commercial units"
-        },
-        {
-            "number": "26M+",
-            "text": "Sqft. of residential development"
-        },
-        {
-            "number": "$1.5B+",
-            "text": "Equity investment opportunity"
-        }
-    ],
+    "stats1":"Pipeline of projects in Canada",
+    "stats2":"Residential and commercial units",
+    "stats3":"Sqft. of residential development",
+    "stats4":"Equity investment opportunity",
     "portfolioHead":"Explore select opportunities from our investment pipeline",
     "portfolioSub":"Diversified portfolio of purpose-built residential developments in Ontario ",
     "portfolios":[

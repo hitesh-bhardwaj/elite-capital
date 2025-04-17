@@ -25,7 +25,6 @@ const Content = () => {
                     <div>
                <div className='heading-2 pb-[1vw]' dangerouslySetInnerHTML={{__html: item.title}}/>
                <div className='content space-y-[1.5vw]' dangerouslySetInnerHTML={{__html: item.para}}/>
-               
                </div>
                 </div>
                 <span className='bg-black1 w-full h-[1px] block mt-[1vw]' />

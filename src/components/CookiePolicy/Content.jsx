@@ -1,104 +1,38 @@
-import React from "react";
-import { useTranslation } from "next-i18next";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react'
+import { useTranslation } from 'next-i18next';
+import yellowRectangleMask from "../../../public/icons/yellow-rectangle-mask.svg"
+import Image from 'next/image';
 
 const Content = () => {
-  const { t } = useTranslation("cookie");
-  const des = t("des", { returnObjects: true });
-  const cookie2description = t("cookie2description", { returnObjects: true });
-  const cookie3description = t("cookie3description", { returnObjects: true });
-  const cookie4description = t("cookie4description", { returnObjects: true });
-  const cookie3content = t("cookie3content", { returnObjects: true });
-  // console.log(des)
+        const { t } = useTranslation('cookie');
+  const content = t('content', { returnObjects: true });
 
+    
   return (
-    <div className="w-screen h-full py-[5vw] px-[5vw]" id="cookie-content">
-      {des.map((des, index) => (
-        <p key={index}>{des}</p>
-      ))}
-      <div className="w-full h-[1px] bg-black my-[5vw] "></div>
-      <div className="w-full flex gap-[1vw]">
-        <div className="w-[8%] h-fit">
-          <Image src={"/icons/yellow-rectangle-mask.svg"} alt="" className="w-full h-full object-contain" width={70} height={30}/>
+   <section className='w-screen h-full py-[8%] px-[5vw]' id='cookie-content'>
+    <div className=''>
+        <div className='content' dangerouslySetInnerHTML={{__html: t('heroSub') }}/>
+        <span className='bg-black1 w-full h-[1px] block my-[3vw]' />
+        <div className='space-y-[4vw] w-full'>
+            {content.map((item,index)=>(
+                <>
+                <div key={index} className=' flex items-start w-full gap-[1vw] '>
+                    <div className='h-full w-[20%]'>
+                        <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={130} height={36}/>
+                    </div>
+                    <div>
+               <div className='heading-2 pb-[1vw]' dangerouslySetInnerHTML={{__html: item.title}}/>
+               <div className='content space-y-[1.5vw]' dangerouslySetInnerHTML={{__html: item.para}}/>
+               </div>
+                </div>
+                <span className='bg-black1 w-full h-[1px] block mt-[1vw]' />
+                </>
+            ))}
         </div>
-        <div className="flex flex-col gap-[1.5vw] w-[95%]">
-          <h2 className="heading-2 ">{t("cookie2title")}</h2>
-          <div>
-          {cookie2description.map((cookie, index) => (
-            <p key={index} className="mb-[2vw]">
-              {cookie}
-              <span className={`${index == 1 ? "" : "hidden"}`}>
-                <Link href={"https://allaboutcookies.org"}>
-                  https://allaboutcookies.org
-                </Link>{" "}
-                and{" "}
-                <Link href={"https://youronlinechoices"}>
-                  https://youronlinechoices
-                </Link>{" "}
-              </span>
-            </p>
-          ))}
-
-          </div>
-        </div>
-      </div>
-      <div className="w-full h-[1px] bg-black my-[5vw] "></div>
-      <div className="w-full flex gap-[1vw]">
-      <div className="w-[8%] h-fit">
-          <Image src={"/icons/yellow-rectangle-mask.svg"} alt="" className="w-full h-full object-contain" width={70} height={30}/>
-        </div>
-        <div className="flex flex-col gap-[1.5vw] w-[95%]">
-          <h2 className="heading-2 ">{t("cookie3title")}</h2>
-          <div>
-          {cookie3description.map((cookie, index) => (
-            <p key={index} className="mb-[2vw]">
-              {cookie}
-              
-            </p>
-          ))}
-
-          </div>
-          <div className="pl-[10vw] ">
-
-          {
-            cookie3content.map((content,index)=>(
-              <div key={index} className="flex flex-col gap-[1.5vw] mb-[4vw]">
-                <h3 className="heading-2">{content.title}</h3>
-                {
-                  content.description.map((des,index)=>(<p>
-                    {des} <Link href={"https://policies.google.com/privacy"} className={`${index==2?"":"hidden"}`}>https://policies.google.com/privacy</Link>
-                  </p>))
-                }
-                
-
-              </div>
-            ))
-          }
-          </div>
-        </div>
-      </div>
-      <div className="w-full h-[1px] bg-black my-[5vw] "></div>
-      <div className="flex w-full gap-[1.5vw]">
-      <div className="w-[8%] h-fit">
-          <Image src={"/icons/yellow-rectangle-mask.svg"} alt="" className="w-full h-full object-contain" width={70} height={30}/>
-        </div>
-      <div className="w-[95%] flex flex-col gap-[1.5vw]">
-      <h2 className="heading-2 ">{t("cookie4title")}</h2>
-      <div>
-          {cookie4description.map((cookie, index) => (
-            <p key={index} className="mb-[2vw]">
-              {cookie}
-              <Link className={`${index>=0?"":"hidden"}`} href={`${index==0?"https://www.allaboutcookies.org":"https://tools.google.com/dlpage/gaoptout"}`}>{index==0?(<span>https://www.allaboutcookies.org</span>):(<span>https://tools.google.com/dlpage/gaoptout</span>)}</Link>
-            </p>
-          ))}
-     </div>
-
-      </div>
-
-      </div>
     </div>
-  );
-};
 
-export default Content;
+   </section>
+  )
+}
+
+export default Content

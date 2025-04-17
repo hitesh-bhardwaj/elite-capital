@@ -19,7 +19,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
       gsap.from(".hero-img", {
         scale: 1.1,
         duration: 1,
-        ease: "power3.inOut",
+        ease: "power3.out",
       });
       gsap.to(".hero-img", {
         yPercent: 50,
