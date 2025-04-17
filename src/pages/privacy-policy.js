@@ -1,5 +1,5 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
+import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from '@/components/gsapAnimations';
 import Content from '@/components/Privacy/Content';
 import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/privacy/hero.png"
@@ -11,6 +11,7 @@ export default function Privacy() {
   paraAnim();
   titleAnim();
   fadeIn();
+  lineAnim();
   const { t } = useTranslation('privacy');
      
   return (

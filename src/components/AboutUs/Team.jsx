@@ -27,7 +27,7 @@ const Team = () => {
             <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[3vw] mobile:flex-nowrap mobile:w-fit">
               {members.map((item, index) => (
                 <div
-                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[70vw] cursor-pointer transition-transform hover:scale-[1.02] tablet:w-[43vw] overflow-hidden ${
+                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[70vw] transition-transform hover:scale-[1.02] tablet:w-[43vw] overflow-hidden ${
                     index < 2 ? "w-[43vw]" : "w-[28vw]"
                   }`}
                   key={index}
@@ -75,7 +75,7 @@ const Team = () => {
             <div className="w-full h-full flex flex-wrap justify-start mobile:w-fit mobile:flex-nowrap mobile:pb-[5vw] tablet:gap-y-[7vw] ">
               {boardMembers.map((item, index) => (
                 <div
-                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw] cursor-pointer transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
+                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
                     index % 2 == 0 ? "bg-[#BCBCBC]" : ""
                   }`}
                   key={index}
@@ -109,14 +109,14 @@ const Team = () => {
 
                     {/* Feature List - animated height */}
                     <div
-                      className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                      className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
                         openedIndex === index ? "h-[20vw]" : "h-[10vw]"
                       }`}
                     >
                       {item.features.map((feature, i) => (
                         <p
                           key={i}
-                          className={`text-[1.3vw]  ${
+                          className={`text-[1.3vw] space-y-[1vw]  ${
                             i === 0 ? "mt-[2vw]" : ""
                           }`}
                         >
@@ -153,7 +153,7 @@ const Team = () => {
             <div className="w-full h-full flex flex-wrap justify-start mobile:w-fit mobile:flex-nowrap mobile:pb-[5vw] tablet:gap-y-[7vw] ">
               {adviserMembers.map((item, index) => (
                 <div
-                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw] cursor-pointer transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
+                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
                     index % 2 == 0 ? "bg-[#BCBCBC]" : ""
                   }`}
                   key={index}
@@ -186,14 +186,14 @@ const Team = () => {
                     </p>
 
                     <div
-                      className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                      className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
                         openedIndexadviser === index ? "h-[25vw]" : "h-[10vw]"
                       }`}
                     >
                       {item.features.map((feature, i) => (
                         <p
                           key={i}
-                          className={`text-[1.3vw]  ${
+                          className={`text-[1.3vw] space-y-[1vw] ${
                             i === 0 ? "mt-[2vw]" : ""
                           }`}
                         >
@@ -233,7 +233,7 @@ const Team = () => {
             <div className="w-full h-fit flex flex-wrap justify-start mobile:w-fit mobile:flex-nowrap mobile:pb-[5vw] tablet:gap-y-[7vw] ">
               {investmentMembers.map((item, index) => (
                 <div
-                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw] cursor-pointer transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
+                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
                     index % 2 == 0 ? "bg-[#BCBCBC]" : ""
                   }`}
                   key={index}
@@ -266,7 +266,7 @@ const Team = () => {
                     </p>
 
                     <div
-                      className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                      className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
                         openedIndexinvestment === index
                           ? "h-[25vw]"
                           : "h-[10vw]"
@@ -275,7 +275,7 @@ const Team = () => {
                       {item.features.map((feature, i) => (
                         <p
                           key={i}
-                          className={`text-[1.3vw] ${
+                          className={`text-[1.3vw] space-y-[1vw] ${
                             i === 0 ? "mt-[2vw]" : ""
                           }`}
                         >
@@ -317,7 +317,7 @@ const Team = () => {
               {shariahMembers.map((item, index) => (
                 <>
                   <div
-                    className="w-full h-full flex justify-between gap-[1vw] fadeUp mobile:w-[70vw]  cursor-pointer tablet:w-[43vw]"
+                    className="w-full h-full flex justify-between gap-[1vw] fadeUp mobile:w-[70vw]  tablet:w-[43vw]"
                     key={index}
                   >
                     <div className="space-y-[0.5vw] w-[30%]">
@@ -336,12 +336,12 @@ const Team = () => {
                     </div>
                     <div key={index} className="w-[55%]">
                       <div
-                        className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                        className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
                           openedIndex === index ? "h-[35vw]" : "h-[10vw]"
                         }`}
                       >
                         {item.features.map((feature, i) => (
-                          <p key={i} className="text-[1.3vw]">
+                          <p key={i} className="text-[1.3vw] ">
                             {feature}
                           </p>
                         ))}

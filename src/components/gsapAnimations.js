@@ -136,9 +136,9 @@ export function blockAnim() {
           },
           scaleX: 0,
           transformOrigin: "left",
-          duration: 1,
+          duration: 0.7,
           stagger: 0.07,
-          ease: "power3.out",
+          ease: "power3.inOut",
         });
       });
     })

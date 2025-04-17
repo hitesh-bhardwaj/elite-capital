@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation } from 'next-i18next';
 import yellowRectangleMask from "../../../public/icons/yellow-rectangle-mask.svg"
 import Image from 'next/image';
+import gsap from "gsap";
 
-const Content = () => {
+const Content = () => { 
+    
+    useEffect(() => {
+    const ctx = gsap.context(() => {
+        const yellowCovers = document.querySelectorAll(".yellow-block-cover")
+        yellowCovers.forEach((yellowCover)=>{
+
+            gsap.to(yellowCover,{
+                scaleX:0,
+                duration:0.7,
+                ease:"power3.inOut",
+                scrollTrigger:{
+                    trigger:yellowCover,
+                    start:"top 70%"
+                }
+            })
+
+        })
+
+    });
+    return () => ctx.revert();
+  });
         const { t } = useTranslation('cookie');
   const content = t('content', { returnObjects: true });
 
@@ -17,7 +39,8 @@ const Content = () => {
             {content.map((item,index)=>(
                 <>
                 <div key={index} className=' flex items-start w-full gap-[1vw] '>
-                    <div className='h-full w-[20%]'>
+                    <div className='h-full w-[20%] relative'>
+                    <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
                         <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={130} height={36}/>
                     </div>
                     <div>
