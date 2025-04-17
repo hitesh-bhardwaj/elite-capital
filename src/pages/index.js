@@ -12,6 +12,8 @@ import { useTranslation } from "next-i18next";
 import Hero from "@/components/Common/Hero";
 import Contact from "@/components/Common/Contact";
 import Layout from "@/components/Common/Layout";
+import Loader from "@/components/Loader";
+import Loader2 from "@/components/Loader2";
 
 export default function Home() {
   fadeUp();
@@ -19,10 +21,11 @@ export default function Home() {
   titleAnim();
   lineAnim();
   fadeIn();
-  blockAnim()
+  blockAnim();
   const { t } = useTranslation('home');
   return (
     <>
+    <Loader2/>
       <Layout>
       <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
       <About />
