@@ -20,7 +20,7 @@ const ImageComponent = ({ imgsrc ,width}) => {
           scrollTrigger: {
             trigger: wrapper,
             start: "top 70%",
-            markers: true,
+            // markers: true,
           }
         });
 
