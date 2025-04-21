@@ -46,7 +46,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
           src={img}
           alt="Hero Background"
           fill
-          className="object-cover hero-img"
+          className="object-cover hero-img mobile:brightness-75"
           placeholder="blur"
           loading="lazy"
           quality={90}

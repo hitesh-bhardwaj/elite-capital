@@ -31,10 +31,10 @@ const Content = () => {
   return (
     <section className="w-screen h-full py-[8%] px-[5vw]" id="privacy-content">
       <div className="">
-        <div>
-          <p className="content">{t("heroSub")}</p>
+        <div className="mobile:py-[7vw]">
+          <p className="content mobile:text-justify ">{t("heroSub")}</p>
         </div>
-        <span className="bg-black1 w-full h-[1px] block my-[3vw] lineDraw" />
+        <span className="bg-black1 w-full h-[1px] block my-[3vw] lineDraw mobile:my-[10vw]" />
         <div className="space-y-[4vw] w-full">
           {content.map((item, index) => (
             <>
@@ -46,15 +46,16 @@ const Content = () => {
                     alt="yellow-rectamngle-mask"
                     width={130}
                     height={36}
+                    className="mobile:h-[8vw] mobile:w-[5vw]"
                   />
                 </div>
-                <div>
+                <div className="mobile:py-[5vw] mobile:pb-[10vw]">
                   <div
-                    className="heading-2 pb-[1vw]"
+                    className="heading-2 pb-[1vw] mobile:py-[5vw] "
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
                   <div
-                    className="content space-y-[1.5vw]"
+                    className="content space-y-[1.5vw] mobile:space-y-[5vw]"
                     dangerouslySetInnerHTML={{ __html: item.para }}
                   />
                 </div>

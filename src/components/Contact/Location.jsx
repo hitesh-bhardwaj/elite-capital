@@ -22,18 +22,18 @@ const Location = () => {
 
                 {/* Image with parallax effect */}
                 <div
-                    className="w-[50%] flex h-[50vw] items-center justify-between mobile:w-full tablet:w-full overflow-hidden"
+                    className="w-[50%] flex h-[50vw]  mobile:h-[100vw]  items-center justify-between mobile:w-full tablet:w-full overflow-hidden mobile:rounded-[2vw]"
                     onMouseMove={handleMouseMove}
                     onMouseLeave={handleMouseLeave}
                 >
                     <Image
-                        className="w-[90%] fadeUp mobile:w-full tablet:w-full tablet:h-[50vw] object-cover h-full scale-[1.3]"
+                        className="w-[90%] fadeUp mobile:w-full tablet:w-full tablet:h-[50vw] object-cover h-full scale-[1.3] mobile:scale-[2]"
                         src={"/assets/images/contactpage/contact-map.png"}
                         width={1920}
                         height={1080}
                         alt="about image"
                         style={{
-                            transform: `translate(${offset.x}px, ${offset.y}px) scale(1.3)`,
+                            transform: `translate(${offset.x}px, ${offset.y}px) scale(1.3) `,
                             transition: 'transform 0.2s ease-out',
                         }}
                         loading="lazy"

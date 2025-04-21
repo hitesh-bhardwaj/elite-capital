@@ -31,10 +31,10 @@ const Content = () => {
 
     
   return (
-   <section className='w-screen h-full py-[8%] px-[5vw]' id='cookie-content'>
+   <section className='w-screen h-full py-[8%] px-[5vw] ' id='cookie-content'>
     <div className=''>
-        <div className='content' dangerouslySetInnerHTML={{__html: t('heroSub') }}/>
-        <span className='bg-black1 w-full h-[1px] block my-[3vw] lineDraw' />
+        <div className='content mobile:py-[7vw] mobile:text-justify' dangerouslySetInnerHTML={{__html: t('heroSub') }}/>
+        <span className='bg-black1 w-full h-[1px] block my-[3vw] lineDraw mobile:my-[10vw]' />
         <div className='space-y-[4vw] w-full'>
             {content.map((item,index)=>(
                 <>
@@ -43,9 +43,9 @@ const Content = () => {
                     <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
                         <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={130} height={36}/>
                     </div>
-                    <div>
-               <div className='heading-2 pb-[1vw]' dangerouslySetInnerHTML={{__html: item.title}}/>
-               <div className='content space-y-[1.5vw]' dangerouslySetInnerHTML={{__html: item.para}}/>
+                    <div className='w-full'>
+               <div className='heading-2 pb-[1vw] mobile:py-[5vw]' dangerouslySetInnerHTML={{__html: item.title}}/>
+               <div className='content space-y-[1.5vw] mobile:space-y-[5vw]' dangerouslySetInnerHTML={{__html: item.para}}/>
                </div>
                 </div>
                 <span className='bg-black1 w-full h-[1px] block mt-[1vw] lineDraw' />
