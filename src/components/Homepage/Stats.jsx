@@ -107,7 +107,7 @@ const Stats = () => {
 
   return (
     <>
-      <section className="relative h-[72vw] overflow-hidden py-[5%]" id="stats">
+      <section className="relative h-[72vw] overflow-hidden py-[5%] mobile:h-[120vh]" id="stats">
         <div className="absolute top-0 left-0 h-full w-full z-0">
           <Image
             src={statsBg}
@@ -118,21 +118,7 @@ const Stats = () => {
             quality={100}
           />
         </div>
-        {/* <div className="relative z-10 px-[3vw] flex items-center justify-between mobile:block tablet:flex-wrap tablet:gap-y-[4vw] ">
-                            {text.map((item, index) => (
-                                <React.Fragment key={index}>
-                                    <div className="text-center w-[25%] text-white   mobile:w-full mobile:flex  mobile:items-center mobile:gap-[5vw] mobile:py-[10vw] mobile:px-[2vw] tablet:w-[48.5%]">
-                                        <p data-para-anim className="heading-1 mb-6 !font-body font-semibold mobile:font-bold  mobile:mb-0 mobile:w-[35%] mobile:text-left">{item.number}</p>
-                                        <p data-para-anim className="content w-[85%] mx-auto  mobile:w-[65%] mobile:text-left">{item.text}</p>
-                                    </div>
-                                    <span className={` w-[80vw] hidden h-[1.5px] bg-white last:hidden mx-[1%]  mobile:block `}/>
-                                    <span className={`block h-[20vw] w-[1.5px] bg-white last:hidden mx-[1%] vlineDraw mobile:hidden ${index==1?"tablet:hidden":""}`} />
-                                    
-        
-                                </React.Fragment>
-                            ))}
-                        </div> */}
-        <div className="flex text-white w-full px-[7vw] pl-[7vw] items-center justify-between gap-[2vw] mobile:grid mobile:grid-cols-2 mobile:items-start mobile:space-between mobile:w-full mobile:gap-y-[5vw]">
+        <div className="flex text-white w-full px-[7vw] pl-[7vw] items-center justify-between gap-[2vw] mobile:flex-col mobile:items-start">
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%]">
             <div className="flex flex-col items-center gap-[2vw]">
               <div className="counter">
@@ -160,7 +146,7 @@ const Stats = () => {
                   <div className="num">9</div>
                   <div className="num">0</div>
                 </div>
-                <div className="counter-3 translate-y-[100%] digit font-semibold">
+                <div className="counter-3 translate-y-[100%] digit font-semibold ">
                   <div className="num">+</div>
                 </div>
               </div>

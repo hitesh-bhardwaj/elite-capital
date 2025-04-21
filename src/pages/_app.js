@@ -24,6 +24,18 @@ const App = ({ Component, pageProps }) => {
   const { locale } = useRouter();
   const router = useRouter();
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener("beforeunload", handleRouteChange);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleRouteChange);
+    };
+  }, []);
+
 
   useEffect(() => {
     const dir = locale === "ae" ? "rtl" : "ltr";

@@ -11,11 +11,10 @@ const ImageComponent = ({ imgsrc , width}) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const wrappers = document.querySelectorAll('.about-image-wrapper');
-
       wrappers.forEach(wrapper => {
         const overlay = wrapper.querySelector('.image-overlay');
         const image = wrapper.querySelector('.about-image');
-
+  
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: wrapper,
@@ -23,22 +22,24 @@ const ImageComponent = ({ imgsrc , width}) => {
             // markers: true,
           }
         });
-
+  
         tl.fromTo(overlay,
           { scaleX: 0, transformOrigin: "right" },
-          { scaleX: 1, duration: 0.8, ease: "power3.out" }
+          { scaleX: 1, duration: 0.5, ease: "power3.out" }
         )
         .to(overlay,
-          { scaleX: 0, transformOrigin: "left", duration: 0.8, ease: "power3.out" }
+          { scaleX: 0, transformOrigin: "left", duration: 0.5, ease: "power3.out" }
         )
         .to(image,
-          { opacity: 1, duration: 0.8, ease: "power3.out" }, "-=1"
+          { opacity: 1, duration: 0.5, ease: "power3.out" },
+          "-=0.38" 
         );
       });
     });
-
+  
     return () => ctx.revert();
   }, []);
+  
 
   return (
     <div

@@ -34,7 +34,7 @@ const Content = () => {
    <section className='w-screen h-full py-[8%] px-[5vw]' id='cookie-content'>
     <div className=''>
         <div className='content' dangerouslySetInnerHTML={{__html: t('heroSub') }}/>
-        <span className='bg-black1 w-full h-[1px] block my-[3vw]' />
+        <span className='bg-black1 w-full h-[1px] block my-[3vw] lineDraw' />
         <div className='space-y-[4vw] w-full'>
             {content.map((item,index)=>(
                 <>
@@ -48,7 +48,7 @@ const Content = () => {
                <div className='content space-y-[1.5vw]' dangerouslySetInnerHTML={{__html: item.para}}/>
                </div>
                 </div>
-                <span className='bg-black1 w-full h-[1px] block mt-[1vw]' />
+                <span className='bg-black1 w-full h-[1px] block mt-[1vw] lineDraw' />
                 </>
             ))}
         </div>

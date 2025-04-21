@@ -20,11 +20,11 @@ const Portfolio = () => {
       <div className='w-full gap-y-[5vw] flex  flex-wrap gap-[1.5vw] pt-[3vw] mobile:space-y-[13vw] tablet:pt-[7vw] tablet:space-y-[5vw]'>
          {allPortfolios.map((item, index) => (
             <div key={index} className='w-[32%] flex flex-col items-center gap-[2vw] mobile:flex-col-reverse'>
-              <div className='mobile:w-full '>
+              <div className='mobile:w-full group fadeup transition-all duration-500 ease overflow-hidden'>
                 <Image 
                   src={item.img} 
                   alt={`${item.title} image`} 
-                  className='fadeUp object-cover h-[25vw]'
+                  className=' object-cover h-[25vw] group-hover:scale-[1.1] transition-all duration-500 ease'
                   loading="lazy" 
                   width={555} 
                   height={397} 

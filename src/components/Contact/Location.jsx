@@ -8,15 +8,14 @@ const Location = () => {
 
     const handleMouseMove = (e) => {
         const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-        const x = -((e.clientX - left) / width - 0.5) * 50; // Range from -10 to 10
-        const y = -((e.clientY - top) / height - 0.5) * 50;
+        const x = -((e.clientX - left) / width - 0.5) * 80; 
+        const y = -((e.clientY - top) / height - 0.5) * 80;
         setOffset({ x, y });
     };
 
     const handleMouseLeave = () => {
         setOffset({ x: 0, y: 0 });
     };
-
     return (
         <section className="relative h-fit bg-[#747977] py-[3vw] overflow-hidden mobile:py-[15vw] mobile:min-h-full mobile:h-full tablet:h-full tablet:py-[7%]" id="location">
             <div className="relative z-10 px-[5vw]  flex items-center justify-between h-screen mobile:flex-col-reverse mobile:gap-[10vw] mobile:h-full tablet:h-full tablet:flex-col-reverse tablet:gap-[7vw]">

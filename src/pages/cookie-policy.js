@@ -1,6 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import bg from "../../public/assets/images/cookiepolicy/cookie-policy-hero.png";
-import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
+import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from '@/components/gsapAnimations';
 import Content from '@/components/CookiePolicy/Content';
 import Hero from '@/components/Common/Hero';
 import { useTranslation } from 'next-i18next';
@@ -11,6 +11,7 @@ export default function Cookie() {
   paraAnim();
   titleAnim();
   fadeIn();
+  lineAnim();
   const { t } = useTranslation("cookie"); 
   return (
     <>

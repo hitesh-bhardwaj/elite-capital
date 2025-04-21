@@ -8,3 +8,9 @@ export function SplitInWord(element) {
     types: 'words',
   });
 }
+export function SplitInChar(element) {
+  if (!element) return null;
+  return new SplitType(element, {
+    types: 'chars',
+  });
+}

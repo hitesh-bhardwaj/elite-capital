@@ -25,7 +25,7 @@ export default function Home() {
   const { t } = useTranslation('home');
   return (
     <>
-    <Loader2/>
+    {/* <Loader2/> */}
       <Layout>
       <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
       <About />

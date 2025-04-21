@@ -32,13 +32,13 @@ const Team = () => {
                   }`}
                   key={index}
                 >
-                  <div className="h-full w-full bg-white">
+                  <div className="h-full w-full bg-white group overflow-hidden transition-all duration-500 ease">
                     <Image
                       src={item.img}
                       height={626}
                       width={535}
                       alt="team"
-                      className={`object-contain w-full h-full`}
+                      className={`object-contain w-full h-full group-hover:scale-[0.95] transition-all duration-500 ease`}
                     />
                   </div>
                   <div className=" mobile:space-y-[2vw] flex flex-col absolute bottom-0 h-[30vw] group-hover:translate-y-[0%] translate-y-[70%] transition-all duration-500 ease-in-out  rounded-tl-[0.5vw] rounded-tr-[0.5vw] w-full px-[2vw] pt-[1vw] bg-[#F2F2E9] left-0">
@@ -51,7 +51,7 @@ const Team = () => {
 
                     <div className="flex flex-col gap-[1vw] ">
                       {item.features.map((list, index) => (
-                        <div className="flex gap-[2vw] w-full pl-[2vw]">
+                        <div key={index} className="flex gap-[2vw] w-full pl-[2vw]">
                           <span className="w-[2vw] h-[1vw] bg-[#CE8000] block"></span>
                           <p className="text-[1vw] w-[80%] ">{list}</p>
                         </div>
@@ -80,13 +80,13 @@ const Team = () => {
                   }`}
                   key={index}
                 >
-                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden">
+                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease">
                     <Image
                       src={item.img}
                       height={626}
                       width={535}
                       alt="team"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-all duration-500 ease group-hover:scale-[1.1]"
                     />
                   </div>
                   <div
@@ -158,13 +158,13 @@ const Team = () => {
                   }`}
                   key={index}
                 >
-                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden">
+                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease">
                     <Image
                       src={item.img}
                       height={626}
                       width={535}
                       alt="team"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-all duration-500 ease group-hover:scale-[1.1]"
                     />
                   </div>
                   <div
@@ -238,13 +238,13 @@ const Team = () => {
                   }`}
                   key={index}
                 >
-                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden">
+                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease">
                     <Image
                       src={item.img}
                       height={626}
                       width={535}
                       alt="team"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-all duration-500 ease group-hover:scale-[1.1]"
                     />
                   </div>
                   <div
