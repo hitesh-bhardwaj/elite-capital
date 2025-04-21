@@ -12,8 +12,7 @@ import { useTranslation } from "next-i18next";
 import Hero from "@/components/Common/Hero";
 import Contact from "@/components/Common/Contact";
 import Layout from "@/components/Common/Layout";
-import Loader from "@/components/Loader";
-import Loader2 from "@/components/Loader2";
+
 
 export default function Home() {
   fadeUp();

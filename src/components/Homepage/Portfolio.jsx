@@ -1,109 +1,200 @@
-import React, { useState, useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import Image from 'next/image';
+import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Controller, Autoplay, Parallax } from "swiper/modules";
 import { useTranslation } from "next-i18next";
-import LinkButton from '../ui/LinkButton';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/controller";
+import "swiper/css/parallax";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import gsap from "gsap";
+import LinkButton from "@/components/ui/LinkButton";
 
-const Portfolio = () => {
-    const slidesRef = useRef(null);
-    const [current, setCurrent] = useState(0);
-    const isAnimating = useRef(false);
-   const { t } = useTranslation('home');
-   const portfolio = t('portfolio', { returnObjects: true });
-    const slidesTotal = portfolio.length;
+const slides = [
+  {
+    image: "/assets/images/homepage/portfolio-1.png",  
+  },
+  {
+    image: "/assets/images/homepage/hero-bg.jpg",
+  },
+  {
+    image: "/assets/images/homepage/portfolio-1.png",
+  },
+  {
+    image: "/assets/images/homepage/hero-bg.jpg",
+  },
+  {
+    image: "/assets/images/homepage/portfolio-1.png",
+  },
+  {
+    image: "/assets/images/homepage/hero-bg.jpg",
+  },
+];
 
-    const navigate = (direction) => {
-        if (isAnimating.current) return;
-        isAnimating.current = true;
+export default function SwiperSlider() {
+  const swiperRef = useRef(null);
+  const progressRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(1);
+  const { t } = useTranslation("home");
+  const portfolio = t("portfolio", { returnObjects: true });
+  useEffect(()=>{
+    const ctx = gsap.context(()=>{
+      gsap.from(".swiper-content-fadeup",{
+        y:30,
+        duration:1,
+        ease:"power3.out",
+        delay:0.7,
+      })
+      gsap.from(".swiper-content-fadeup",{
+        opacity:0,
+        duration:1,
+        ease:"power1.in",
+        delay:0.7,
+      })
+    })
+    return()=>ctx.revert()
 
-        const previous = current;
-        const next = direction === 1 ? (current < slidesTotal - 1 ? current + 1 : 0) : (current > 0 ? current - 1 : slidesTotal - 1);
-        setCurrent(next);
+  },[activeIndex])
 
-        const currentSlide = slidesRef.current.children[previous];
-        const upcomingSlide = slidesRef.current.children[next];
+  const updateProgressBar = (realIndex) => {
+    const totalSlides = slides.length;
+    const progress = ((realIndex + 1) / totalSlides) * 100;
 
-        const currentInner = currentSlide.querySelector('.slide__img');
-        const upcomingInner = upcomingSlide.querySelector('.slide__img');
+    if (progressRef.current) {
+      progressRef.current.style.width = `${progress}%`;
+    }
 
-        const currentContent = currentSlide.querySelector('.slide__content');
-        const upcomingContent = upcomingSlide.querySelector('.slide__content');
+    setActiveIndex(realIndex + 1); // display index as 1-based
+  };
 
-        gsap.timeline({
-            defaults: { duration: 1.5, ease: 'power3.out' },
-            onComplete: () => {
-                gsap.set(currentSlide, { opacity: 1 });
-                isAnimating.current = false;
-            }
-        })
-            .set(upcomingSlide, { opacity: 1, x: direction * 100 + "%" })
-            .set(upcomingContent, { opacity: 0, y: 30 }, "-=0.5")
-            .to(currentSlide, { x: -direction * 100 + "%" }, 0)
-            .to(currentInner, { x: direction * 60 + "%" }, 0)
-            .to(currentContent, { y: -30, opacity: 1 }, 0)
-            .to(upcomingSlide, { x: "0%" }, 0)
-            .to(upcomingInner, { x: "0%" }, 0)
-            .to(upcomingContent, { y: 0, opacity: 1 }, "-=0.9");
-    };
+  const handleNext = () => {
+    if (swiperRef.current) swiperRef.current.slideNext();
+  };
 
-    return (
-        <section className='h-screen w-screen relative tablet:h-[100vw]'>
-            <div className="slides relative w-full h-full overflow-hidden" ref={slidesRef}>
-                {portfolio.map((item, index) => (
-                    <>
-                        <div key={index} className={`slide absolute w-full h-full flex items-center justify-center py-[5vw] opacity-0 overflow-hidden ${index === current ? "slide--current" : ""}`}>
-                            <img src={item.image} alt={item.text1} className="absolute w-full h-full object-cover slide__img" />
-                <span className="h-full w-full bg-black/30 z-[1] absolute top-0 left-0"/>
-                            
-                            <div className="slide__content relative z-[2] text-white left-[3%] rtl:right-[3%] top-[-30%]">
-                                <h2 data-title-anim
-                                    className="slide__heading heading-1 w-[70%] mobile:w-[80%] tablet:w-[90%]"
-                                    dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
-                                />
-                                <p data-para-anim className="slide__text content pt-[3vw]">{t('portfolioSub')}</p>
+  const handlePrev = () => {
+    if (swiperRef.current) swiperRef.current.slidePrev();
+  };
 
-                                <div className='address-container absolute bottom-[-80%] left-[0%] rtl:right-[1%] mobile:bottom-[-90%]'>
-                                    <h3 data-para-anim className='heading-2 text-white '>
-                                        {item.text1}
-                                    </h3>
-                                    <p data-para-anim className='text-white content'>{item.text2}</p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </>
-                ))}
+  return (
+    <div className="relative w-full h-[54vw]">
+      <Swiper
+        loop={true}
+        speed={1000}
+        parallax={true}
+        modules={[Controller, Parallax, Autoplay]}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+          updateProgressBar(swiper.realIndex); // set initial progress
+        }}
+        onRealIndexChange={(swiper) => updateProgressBar(swiper.realIndex)}
+        className="swiper-container main-slider"
+      >
+        {slides.map((slide, id) => (
+          <SwiperSlide key={id}>
+            <figure className="relative w-full h-full" data-swiper-parallax="50%">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  filter: "brightness(0.7)",
+                  backgroundImage: `url(${slide.image})`,
+                }}
+              />
+            </figure>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+        {portfolio.map((item, idx) => (
+          <div
+            key={idx}
+            className="slide absolute w-full h-full flex items-center justify-start top-0 left-0 px-[5vw] overflow-hidden"
+          >
+            <div className="slide__content relative z-[2] text-white top-[-30%] w-[70%]">
+              <h2
+                className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[3vw] swiper-content-fadeup"
+               
+              >{t('portfolioHead')}</h2>
+              <p className="slide__text swiper-content-fadeup">{t("portfolioSub")}</p>
+              <div className="address-container absolute top-[150%] left-[0] mt-[2vw]">
+                <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup">{item.text1}</p>
+                <p className="text-white font-light swiper-content-fadeup">{item.text2}</p>
+              </div>
             </div>
+          </div>
+        ))}
 
-            <div className="progress-container absolute top-[45%] z-[2] left-[3%] w-[50%] flex items-center fadeUp rtl:right-[3%] mobile:w-full tablet:top-[60%]">
-                <span className="text-white content">
-                    {(current + 1).toString().padStart(2, "0")}
-                </span>
-                <div className="progress-bar relative w-[20%] h-[3px] bg-gray-500 mx-[1vw] rounded-full overflow-hidden mobile:w-[80%]">
-                    <div className="progress-fill h-full bg-white transition-all duration-500" style={{ width: `${((current + 1) / slidesTotal) * 100}%` }}></div>
-                </div>
-                <span className="text-white content">
-                    {slidesTotal.toString().padStart(2, "0")}
-                </span>
-            </div>
+      {/* Progress Bar */}
+      <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%]">
+        <p>{String(activeIndex).padStart(2, "0")}</p>
+        <div className="w-[15vw] h-fit bg-white/20">
+        <div  ref={progressRef} className="w-[15vw] h-[2px] bg-white rounded-full relative overflow-hidden transistion-all duration-300" style={{ width: "20%" }}>
+          <span
+           
+            className="absolute top-0 left-0 h-full transition-all duration-500"
+            
+          ></span>
+        </div>
 
-            <div className='absolute bottom-[10%] left-[3%] rtl:right-[3%] z-[2] fadeUp'>
-                <LinkButton href={"/"} text={t('portfolioCta')} />
-            </div>
+        </div>
+        <p>{String(slides.length).padStart(2, "0")}</p>
+      </div>
+    
 
+      {/* Next Button */}
+      <div
+        className="absolute z-[5] bottom-[25%] left-[10%] w-[3.5vw] h-[3.5vw] overflow-hidden group rounded-full next-button hover:bg-white cursor-pointer border border-white transition-colors duration-300"
+        onClick={handleNext}
+      >
+        <div className="w-full h-full relative z-[6] flex justify-center items-center">
+          <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+            <svg
+              width="24"
+              height="19"
+              viewBox="0 0 24 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23.2189 10.1367L14.5942 18.2363C14.4144 18.4051 14.1705 18.5 13.9162 18.5C13.6619 18.5 13.418 18.4051 13.2382 18.2363C13.0584 18.0674 12.9574 17.8384 12.9574 17.5995C12.9574 17.3607 13.0584 17.1317 13.2382 16.9628L20.2278 10.3999L1.4583 10.3999C1.20414 10.3999 0.960397 10.3051 0.78068 10.1364C0.600964 9.96759 0.5 9.73868 0.5 9.5C0.5 9.26132 0.600964 9.03241 0.78068 8.86364C0.960397 8.69486 1.20414 8.60005 1.4583 8.60005L20.2278 8.60005L13.2382 2.03716C13.0584 1.8683 12.9574 1.63926 12.9574 1.40045C12.9574 1.16164 13.0584 0.932603 13.2382 0.763736C13.418 0.594869 13.6619 0.5 13.9162 0.5C14.1705 0.5 14.4144 0.594869 14.5942 0.763736L23.2189 8.86328C23.308 8.94686 23.3787 9.04612 23.427 9.15537C23.4752 9.26462 23.5 9.38173 23.5 9.5C23.5 9.61827 23.4752 9.73537 23.427 9.84462C23.3787 9.95388 23.308 10.0531 23.2189 10.1367Z"
+                fill="white"
+                className="group-hover:fill-black group-hover:stroke-black"
+                stroke="white"
+                strokeWidth="0.3"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
 
+      {/* Prev Button */}
+      <div
+        className="absolute z-[5] bottom-[25%] left-[5%] w-[3.5vw] h-[3.5vw] overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer border border-white"
+        onClick={handlePrev}
+      >
+        <div className="w-full h-full flex justify-center items-center rotate-180">
+          <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+            <svg
+              width="24"
+              height="19"
+              viewBox="0 0 24 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23.2189 10.1367L14.5942 18.2363C14.4144 18.4051 14.1705 18.5 13.9162 18.5C13.6619 18.5 13.418 18.4051 13.2382 18.2363C13.0584 18.0674 12.9574 17.8384 12.9574 17.5995C12.9574 17.3607 13.0584 17.1317 13.2382 16.9628L20.2278 10.3999L1.4583 10.3999C1.20414 10.3999 0.960397 10.3051 0.78068 10.1364C0.600964 9.96759 0.5 9.73868 0.5 9.5C0.5 9.26132 0.600964 9.03241 0.78068 8.86364C0.960397 8.69486 1.20414 8.60005 1.4583 8.60005L20.2278 8.60005L13.2382 2.03716C13.0584 1.8683 12.9574 1.63926 12.9574 1.40045C12.9574 1.16164 13.0584 0.932603 13.2382 0.763736C13.418 0.594869 13.6619 0.5 13.9162 0.5C14.1705 0.5 14.4144 0.594869 14.5942 0.763736L23.2189 8.86328C23.308 8.94686 23.3787 9.04612 23.427 9.15537C23.4752 9.26462 23.5 9.38173 23.5 9.5C23.5 9.61827 23.4752 9.73537 23.427 9.84462C23.3787 9.95388 23.308 10.0531 23.2189 10.1367Z"
+                fill="white"
+                className="group-hover:fill-black group-hover:stroke-black"
+                stroke="white"
+                strokeWidth="0.3"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
 
-            <div className="slides-nav absolute top-[70%] left-[3%] z-[2] flex items-center justify-center gap-[2vw] rtl:right-[-80%]">
-                <button className="slides-nav__item slides-nav__item--prev border  w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4 fadeUp" onClick={() => navigate(-1)}><div>
-                    <Image src="/icons/left-arrow.svg" height={30} width={30} alt='left-arrow' /></div></button>
-                <button className="slides-nav__item slides-nav__item--next border w-[50px] h-[50px] rounded-full grid items-center cursor-pointer border-white p-4 fadeUp" onClick={() => navigate(1)}><div>
-                    <Image src="/icons/right-arrow.svg" height={30} width={30} alt='right-arrow' /></div></button>
-            </div>
-        </section>
-    );
-};
+      <div className="absolute bottom-[10%] z-[5] left-[5%]">
+        <LinkButton href={"/"} text={"View Portfolio"}/>
 
-export default Portfolio;
+      </div>
+    </div>
+  );
+}

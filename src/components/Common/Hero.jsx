@@ -19,6 +19,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
       gsap.from(".hero-img", {
         scale: 1.1,
         duration: 1,
+        delay:0.2,
         ease: "power3.out",
       });
       gsap.to(".hero-img", {
@@ -54,7 +55,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
           <div className="py-[10%] text-white w-full mobile:w-full">
             <h1
               data-title-anim
-              className="heading-1 w-full font-display leading-1.15  mb-[3vw]"
+              className="heading-1 w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw]"
             >
               {heading}
             </h1>
@@ -62,7 +63,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
           </div>
         </div>
         <div
-          className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition hover:scale-110 z-[20] group hover:bg-black  duration-500 ease hover:text-white"
+          className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition hover:scale-110 z-[20] group hover:bg-black  duration-500 ease hover:text-white mobile:w-[15vw] mobile:h-[15vw] mobile:right-5"
           onClick={scrollToNext}
         >
           <svg className="rotate-90"  width="20" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -132,7 +132,7 @@ const Header = () => {
         <div>
           <Link href="/">
             <Image
-              className="w-[16vw] mobile:w-[40vw] tablet:w-[25vw]"
+              className="w-[16vw] mobile:w-[46vw] tablet:w-[25vw]"
               src={logo}
               alt="Elite Logo"
               width={220}
@@ -141,7 +141,7 @@ const Header = () => {
           </Link>
         </div>
         <div
-          className="flex flex-row-reverse items-center "
+          className="flex flex-row-reverse items-center mobile:hidden"
           
           onMouseLeave={handleMouseLeave}
         >
@@ -178,6 +178,25 @@ const Header = () => {
               </Link>
             ))}
           </div>
+        </div>
+        <div className="hidden mobile:block">
+        <div
+            // ref={iconRef}
+            // onMouseEnter={handleMouseEnter}
+            className="cursor-pointer relative z-[100]"
+          >
+            <svg
+              className="mobile:w-[9vw] tablet:w-[4vw]"
+              viewBox="0 0 43 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="0.211914" width="42" height="3" fill="white" />
+              <rect x="0.211914" y="12" width="42" height="3" fill="white" />
+              <rect x="0.211914" y="24" width="42" height="3" fill="white" />
+            </svg>
+          </div>
+
         </div>
       </div>
     </header>

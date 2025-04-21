@@ -31,7 +31,7 @@ const Stats = () => {
         });
 
         gsap.to(".stats-img",{
-          yPercent:50,
+          yPercent:70,
           ease:"none",
           scrollTrigger:{
             trigger:"#stats",
@@ -113,7 +113,7 @@ const Stats = () => {
             src={statsBg}
             alt="stats-bg"
             layout="fill"
-            className="translate-y-[-50%] stats-img"
+            className="translate-y-[-30%] stats-img"
             objectFit="cover"
             quality={100}
           />

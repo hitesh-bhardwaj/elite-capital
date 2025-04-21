@@ -17,7 +17,7 @@ const Values = () => {
       const ctx = gsap.context(() => {
        
         gsap.to(".values-img",{
-          yPercent:100,
+          yPercent:120,
           ease:"none",
           scrollTrigger:{
             trigger:"#values",
@@ -39,8 +39,8 @@ const Values = () => {
               src={valuesBg}
               alt="stats-bg"
               layout="fill"
-              className="values-img translate-y-[-50%]"
-              objectFit="cover"
+              className="values-img translate-y-[-60%] w-full h-full object-cover"
+              // objectFit="cover"
               quality={100}
             />
           </div>
