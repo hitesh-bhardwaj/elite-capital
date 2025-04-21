@@ -15,42 +15,44 @@ const Values = () => {
     const values = t('values', { returnObjects: true });
     useEffect(()=>{
       const ctx = gsap.context(() => {
-       
-        gsap.to(".values-img",{
-          yPercent:120,
-          ease:"none",
-          scrollTrigger:{
-            trigger:"#values",
-            start:"top bottom",
-            end:"bottom top",
-            scrub:true,
+       if(globalThis.innerWidth>1024){
+         gsap.to(".values-img",{
+           yPercent:120,
+           ease:"none",
+           scrollTrigger:{
+             trigger:"#values",
+             start:"top bottom",
+             end:"bottom top",
+             scrub:true,
+ 
+           }
+         })
 
-          }
-        })
+       }
 
       });
       return () => ctx.revert();
     })
 
     return (
-        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:py-[10vw] overflow-hidden" id="values"> 
-        <div className="absolute top-0 left-0 h-full w-full z-0">
+        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:pb-[0vw] mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex" id="values"> 
+        <div className="absolute top-0 left-0 h-full w-full z-0 mobile:relative mobile:h-[60vh] ">
             <Image
               src={valuesBg}
               alt="stats-bg"
               layout="fill"
-              className="values-img translate-y-[-60%] w-full h-full object-cover"
+              className="values-img translate-y-[-60%] w-full h-full object-cover mobile:translate-y-0 "
               // objectFit="cover"
               quality={100}
             />
           </div>
-            <div className="px-[8%] ">
+            <div className="px-[8%] mobile:py-[15%] ">
                 <div className="space-y-[6vw]">
                     <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw]">{t('valuesHead')}</h2>
                     <div className=" w-full relative z-10 mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
-                       <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw]">
-                        <div className="flex w-full gap-[5vw]">
-                       <div className="flex flex-col w-[50%]">
+                       <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full">
+                        <div className="flex w-full gap-[5vw] mobile:flex-col">
+                       <div className="flex flex-col w-[50%] mobile:w-full">
                         {values.map((item,index) => (
                          <SingleAccordion
                            key={index}
@@ -63,7 +65,7 @@ const Values = () => {
                        ))}
                         
                         </div>
-                        <div className="flex flex-col w-[50%]">
+                        <div className="flex flex-col w-[50%] mobile:w-full">
                         {values.map((item,index) => (
                          <SingleAccordion
                            key={index}
@@ -93,7 +95,7 @@ const SingleAccordion = ({ id, title, content , className}) => {
     <AccordionItem value={id} className={`w-full  ${className}`}>
       {/* <AccordionLine className="relative z-[-1] my-[1vw] tablet:hidden mobile:hidden" linecenter={1.38} /> */}
       
-      <AccordionTrigger data-para-anim className="heading-2 text-left mobile:text-[5vw] mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left  font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white">
+      <AccordionTrigger data-para-anim className="heading-2 text-left mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left  font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white">
         {title}
       </AccordionTrigger>
       <AccordionContent className="text-[1.25vw] tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-full  mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[1vw]">

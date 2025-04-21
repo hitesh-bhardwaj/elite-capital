@@ -12,23 +12,43 @@ const Stats = () => {
   const { t } = useTranslation("home");
   const statsContent = t('stats',{returnObjects:true});
   useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
+  
       const ctx = gsap.context(() => {
         const lineDraws = document.querySelectorAll(".vlineDraw");
-        lineDraws.forEach((lineDraw) => {
-          gsap.from(lineDraw, {
-            scrollTrigger: {
-              trigger: lineDraw,
-              start: "top 80%",
-            },
-            scaleY: 0,
-            transformOrigin: "top",
-            duration: 2,
-            // yPercent: 100,
-            stagger: 1,
-            ease: "power4.out",
+        if(globalThis.innerWidth>1024){
+          lineDraws.forEach((lineDraw) => {
+            gsap.from(lineDraw, {
+              scrollTrigger: {
+                trigger: lineDraw,
+                start: "top 80%",
+              },
+              scaleY: 0,
+              transformOrigin: "top",
+              duration: 2,
+              // yPercent: 100,
+              stagger: 1,
+              ease: "power4.out",
+            });
           });
-        });
+
+        }
+        else{
+          lineDraws.forEach((lineDraw) => {
+            gsap.from(lineDraw, {
+              scrollTrigger: {
+                trigger: lineDraw,
+                start: "top 80%",
+              },
+              scaleX: 0,
+              transformOrigin: "left",
+              duration: 2,
+              // yPercent: 100,
+              stagger: 1,
+              ease: "power4.out",
+            });
+          });
+
+        }
 
         gsap.to(".stats-img",{
           yPercent:70,
@@ -44,7 +64,7 @@ const Stats = () => {
 
       });
       return () => ctx.revert();
-    }
+   
   }, []);
   const createTimeline = (triggerClass, countClasses, start, end) => {
     useEffect(() => {
@@ -99,15 +119,16 @@ const Stats = () => {
     createTimeline(".count", countNewClasses, "top 90%", null);
     createTimeline(".count", countClasses, "top 90%", null);
   } else {
+    createTimeline(".countlast", countLastClasses, "top 90%", null);
     createTimeline(".counter", counterClasses, "top 90%", null);
-    createTimeline(".count", countNewClasses, "top 80%", "bottom 80%");
-    createTimeline(".count", countClasses, "top 80%", "bottom 80%");
+    createTimeline(".count", countNewClasses, "top 90%", null);
+    createTimeline(".count", countClasses, "top 90%", null);
   }
   const text = t("stats", { returnObjects: true });
 
   return (
     <>
-      <section className="relative h-[72vw] overflow-hidden py-[5%] mobile:h-[120vh]" id="stats">
+      <section className="relative h-[72vw] overflow-hidden py-[5%] mobile:h-[100vh] mobile:flex mobile:items-center mobile:justify-center" id="stats">
         <div className="absolute top-0 left-0 h-full w-full z-0">
           <Image
             src={statsBg}
@@ -119,10 +140,10 @@ const Stats = () => {
           />
         </div>
         <div className="flex text-white w-full px-[7vw] pl-[7vw] items-center justify-between gap-[2vw] mobile:flex-col mobile:items-start">
-          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%]">
-            <div className="flex flex-col items-center gap-[2vw]">
-              <div className="counter">
-                <div className="counter-1 digit font-semibold">
+          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+            <div className="flex flex-col items-center gap-[2vw] mobile:flex-row  ">
+              <div className="counter mobile:w-[40%]">
+                <div className="counter-1 digit font-semibold mobile:text-[12vw]">
                   <div className="num">0</div>
                   <div className="num">1</div>
                   <div className="num">2</div>
@@ -133,7 +154,7 @@ const Stats = () => {
                   <div className="num">7</div>
                   <div className="num">8</div>
                 </div>
-                <div className="counter-2 digit font-semibold ">
+                <div className="counter-2 digit font-semibold mobile:text-[12vw]">
                   <div className="num">0</div>
                   <div className="num">1</div>
                   <div className="num">2</div>
@@ -146,22 +167,22 @@ const Stats = () => {
                   <div className="num">9</div>
                   <div className="num">0</div>
                 </div>
-                <div className="counter-3 translate-y-[100%] digit font-semibold ">
+                <div className="counter-3 translate-y-[100%] digit font-semibold mobile:text-[12vw] ">
                   <div className="num">+</div>
                 </div>
               </div>
-              <p data-para-anim className="relative content z-[2] text-center ">{statsContent[0].text}</p>
+              <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[50%]">{statsContent[0].text}</p>
             </div>
           </div>
-          <div className="w-[1px] h-[22vw] bg-white relative z-[2]" />
+          <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
 
-          <div className="flex flex-col gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%]">
-            <div className="flex flex-col gap-[2vw] items-center">
-            <div className="countnew">
-              <div className="countnew-1 digit font-semibold translate-y-[100px]">
+          <div className="flex flex-col gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+            <div className="flex flex-col gap-[2vw] items-center mobile:flex-row mobile:gap-[3vw]">
+            <div className="countnew mobile:w-[40%]">
+              <div className="countnew-1 digit font-semibold translate-y-[100px] mobile:text-[12vw]">
                 <div className="num">$</div>
               </div>
-              <div className="countnew-2 digit font-semibold">
+              <div className="countnew-2 digit font-semibold mobile:text-[12vw]">
                 <div className="num">0</div>
                 <div className="num text-center">1</div>
                 <div className="num">2</div>
@@ -169,7 +190,7 @@ const Stats = () => {
                 <div className="num">4</div>
                 <div className="num">5</div>
               </div>
-              <div className="countnew-3 digit font-semibold">
+              <div className="countnew-3 digit font-semibold mobile:text-[12vw]">
                 <div className="num">0</div>
                 <div className="num">1</div>
                 <div className="num">2</div>
@@ -182,19 +203,19 @@ const Stats = () => {
                 <div className="num">9</div>
                 <div className="num">0</div>
               </div>
-              <div className="countnew-4 digit font-semibold">
+              <div className="countnew-4 digit font-semibold mobile:text-[12vw]">
                 <div className="num ">A</div>
                 <div className="num ">B</div>
               </div>
             </div>
-            <p data-para-anim className="relative content z-[2] text-center ">{statsContent[1].text}</p>
+            <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[60%] ">{statsContent[1].text}</p>
 
             </div>
           </div>
-          <div className="w-[1px] h-[22vw] bg-white relative z-[2]" />
-          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%]">
-            <div className="flex flex-col gap-[2vw] items-center">
-            <div className="count">
+          <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
+          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+            <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
+            <div className="count mobile:w-[40%] mobile:text-[12vw]">
               <div className="count-2 digit font-semibold">
                 <div className="num">0</div>
                 <div className="num">1</div>
@@ -219,15 +240,15 @@ const Stats = () => {
                 <div className="num">+</div>
               </div>
             </div>
-            <p data-para-anim className="relative content z-[2] text-center ">{statsContent[2].text}</p>
+            <p data-para-anim className="relative content z-[2] text-center mobile:text-left  mobile:w-[60%]">{statsContent[2].text}</p>
             
 
             </div>
           </div>
-          <div className="w-[1px] h-[22vw] bg-white relative z-[2]" />
-          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%]">
-            <div className="flex flex-col gap-[2vw] items-center">
-            <div className="countlast">
+          <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
+          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+            <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
+            <div className="countlast mobile:text-[12vw] mobile:w-[40%]">
               <div className="countlast-1 digit font-semibold translate-y-[100px]">
                 <div className="num">$</div>
               </div>
@@ -243,9 +264,11 @@ const Stats = () => {
                 <div className="num">+</div>
               </div>
             </div>
-            <p data-para-anim className="relative content z-[2] text-center ">{statsContent[3].text}</p>
+            <p data-para-anim className="relative content z-[2] text-center mobile:text-left mobile:w-[60%] ">{statsContent[3].text}</p>
 
             </div>
+          <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw hidden mobile:block" />
+
           </div>
         </div>
       </section>

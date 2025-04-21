@@ -76,7 +76,7 @@ export default function SwiperSlider() {
   };
 
   return (
-    <div className="relative w-full h-[54vw]">
+    <div className="relative w-screen overflow-hidden h-[54vw] mobile:h-screen">
       <Swiper
         loop={true}
         speed={1000}
@@ -108,25 +108,25 @@ export default function SwiperSlider() {
             key={idx}
             className="slide absolute w-full h-full flex items-center justify-start top-0 left-0 px-[5vw] overflow-hidden"
           >
-            <div className="slide__content relative z-[2] text-white top-[-30%] w-[70%]">
+            <div className="slide__content relative z-[2] text-white top-[-30%] w-[70%] mobile:w-full mobile:top-[-25%]">
               <h2
-                className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[3vw] swiper-content-fadeup"
+                className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[3vw] swiper-content-fadeup mobile:text-[13.8vw] mobile:mb-[8vw]"
                
               >{t('portfolioHead')}</h2>
-              <p className="slide__text swiper-content-fadeup">{t("portfolioSub")}</p>
+              <p className="slide__text swiper-content-fadeup mobile:text-[4.1vw] mobile:tracking-wider">{t("portfolioSub")}</p>
               <div className="address-container absolute top-[150%] left-[0] mt-[2vw]">
-                <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup">{item.text1}</p>
-                <p className="text-white font-light swiper-content-fadeup">{item.text2}</p>
+                <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup mobile:text-[7vw]">{item.text1}</p>
+                <p className="text-white font-light swiper-content-fadeup mobile:text-[4.1vw]">{item.text2}</p>
               </div>
             </div>
           </div>
         ))}
 
       {/* Progress Bar */}
-      <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%]">
+      <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%] mobile:w-full mobile:text-[4.1vw] mobile:gap-[2vw] mobile:top-[55%]">
         <p>{String(activeIndex).padStart(2, "0")}</p>
-        <div className="w-[15vw] h-fit bg-white/20">
-        <div  ref={progressRef} className="w-[15vw] h-[2px] bg-white rounded-full relative overflow-hidden transistion-all duration-300" style={{ width: "20%" }}>
+        <div className="w-[15vw] h-fit bg-white/20 mobile:w-[75vw]">
+        <div  ref={progressRef} className="w-[15vw] h-[2px] bg-white rounded-full relative overflow-hidden transistion-all duration-300 mobile:h-[3px]" style={{ width: "20%" }}>
           <span
            
             className="absolute top-0 left-0 h-full transition-all duration-500"
@@ -141,11 +141,11 @@ export default function SwiperSlider() {
 
       {/* Next Button */}
       <div
-        className="absolute z-[5] bottom-[25%] left-[10%] w-[3.5vw] h-[3.5vw] overflow-hidden group rounded-full next-button hover:bg-white cursor-pointer border border-white transition-colors duration-300"
+        className="absolute z-[5] bottom-[25%] left-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group rounded-full next-button hover:bg-white cursor-pointer border border-white transition-colors duration-300 mobile:bottom-[20%] mobile:left-[20%]"
         onClick={handleNext}
       >
         <div className="w-full h-full relative z-[6] flex justify-center items-center">
-          <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+          <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center">
             <svg
               width="24"
               height="19"
@@ -167,11 +167,11 @@ export default function SwiperSlider() {
 
       {/* Prev Button */}
       <div
-        className="absolute z-[5] bottom-[25%] left-[5%] w-[3.5vw] h-[3.5vw] overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer border border-white"
+        className="absolute z-[5] bottom-[25%] left-[5%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%]"
         onClick={handlePrev}
       >
         <div className="w-full h-full flex justify-center items-center rotate-180">
-          <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+          <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center">
             <svg
               width="24"
               height="19"
@@ -191,7 +191,7 @@ export default function SwiperSlider() {
         </div>
       </div>
 
-      <div className="absolute bottom-[10%] z-[5] left-[5%]">
+      <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%]">
         <LinkButton href={"/"} text={"View Portfolio"}/>
 
       </div>
