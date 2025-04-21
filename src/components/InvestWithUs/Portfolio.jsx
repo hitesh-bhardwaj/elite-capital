@@ -17,14 +17,14 @@ const Portfolio = () => {
         <p data-para-anim className="content">{t('portfolioSub')}</p>
       </div> 
 
-      <div className='w-full gap-y-[5vw] flex  flex-wrap gap-[1.5vw] pt-[3vw] mobile:space-y-[13vw] tablet:pt-[7vw] tablet:space-y-[5vw]'>
+      <div className='w-full gap-y-[5vw] flex  flex-wrap gap-[1.5vw] pt-[3vw] mobile:space-y-[13vw] tablet:pt-[7vw] tablet:space-y-[5vw] mobile:flex-col'>
          {allPortfolios.map((item, index) => (
-            <div key={index} className='w-[32%] flex flex-col items-center gap-[2vw] mobile:flex-col-reverse'>
+            <div key={index} className='w-[32%] flex flex-col mobile:w-full items-center gap-[2vw] mobile:flex-col'>
               <div className='mobile:w-full group fadeup transition-all duration-500 ease overflow-hidden'>
                 <Image 
                   src={item.img} 
                   alt={`${item.title} image`} 
-                  className=' object-cover h-[25vw] group-hover:scale-[1.1] transition-all duration-500 ease'
+                  className=' object-cover h-[25vw] group-hover:scale-[1.1] transition-all duration-500 ease mobile:h-[65vw]'
                   loading="lazy" 
                   width={555} 
                   height={397} 

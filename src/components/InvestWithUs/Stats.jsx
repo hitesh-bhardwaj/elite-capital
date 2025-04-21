@@ -88,9 +88,9 @@ const Stats = () => {
   }
   return (
     <>
-      <section className="relative bg-[#F4F4F4] h-[48vw] my-[3vw] overflow-hidden  mobile:pb-[10%] tablet:py-[7%]" id="stats">
-        <div className="flex items-center justify-between h-full">
-          <div className="w-1/2 h-full overflow-hidden">
+      <section className="relative bg-[#F4F4F4] h-[48vw] my-[3vw] overflow-hidden  mobile:pb-[10%] tablet:py-[7%] mobile:h-full" id="stats">
+        <div className="flex items-center justify-between h-full mobile:flex-col mobile:pt-[10vw]">
+          <div className="w-1/2 h-full overflow-hidden mobile:w-full mobile:h-[100vw]">
             <Image
               src={statsImg}
               height={1280}
@@ -100,11 +100,11 @@ const Stats = () => {
             />
           </div>
 
-          <div className="flex pl-[3vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw]">
-            <div className="w-[45%]">
-              <div className="flex w-full items-center justify-center gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0">
+          <div className="flex pl-[3vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw]">
+            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
+              <div className="flex w-full items-center justify-center gap-[8px] mobile:w-[35%] mobile:justify-start">
                 <div className="">
-                  <div className="counter !text-[#111111]">
+                  <div className="counter !text-[#111111] mobile:text-[12vw] ">
                     <div className="counter-1 digit font-semibold">
                       <div className="num">0</div>
                       <div className="num">1</div>
@@ -128,15 +128,16 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] text-center mx-auto  mobile:w-1/2  mobile:text-left"
+                className="content w-[75%] text-center mx-auto  mobile:text-left mobile:w-[60%]"
               >
                 {t("stats1")}
               </p>
+              
             </div>
-            <div className="w-[45%]">
-              <div className="flex w-full  items-center justify-center gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0">
-                <div className="countnew !text-[#111111]">
-                  <div className="countnew-1 digit font-semibold">
+            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
+              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[35%]  mobile:justify-start">
+                <div className="countnew !text-[#111111] mobile:text-[12vw]">
+                  <div className="countnew-1 digit font-semibold ">
                     <div className="num">0</div>
                     <div className="num text-center">1</div>
                   </div>
@@ -163,14 +164,14 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mx-auto  mobile:w-1/2  mobile:text-left"
+                className="content w-[75%] mx-auto  mobile:text-left mobile:w-[60%]"
               >
                 {t("stats2")}
               </p>
             </div>
-            <div className="w-[45%]">
-              <div className="flex w-full  items-center justify-center gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0">
-                <div className="count !text-[#111111]">
+            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
+              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[35%]  mobile:justify-start">
+                <div className="count !text-[#111111] mobile:text-[12vw]">
                   <div className="count-1 digit font-semibold">
                     <div className="num">0</div>
                     <div className="num">1</div>
@@ -195,14 +196,14 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mx-auto text-center  mobile:w-1/2  mobile:text-left"
+                className="content w-[75%] mx-auto text-center mobile:text-left mobile:w-[60%]"
               >
                 {t("stats3")}
               </p>
             </div>
-            <div className="w-[45%]">
-              <div className="flex w-full  items-center justify-center gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0">
-                <div className="countlast !text-[#111111]">
+            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
+              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[35%]  mobile:justify-start">
+                <div className="countlast !text-[#111111] mobile:text-[12vw]">
                   <div className="countlast-1 digit font-semibold translate-y-[100px]">
                     <div className="num">$</div>
                   </div>
@@ -232,13 +233,13 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mx-auto text-center mobile:w-1/2  mobile:text-left"
+                className="content w-[75%] mx-auto text-center mobile:text-left mobile:w-[60%]"
               >
                 {t("stats4")}
               </p>
             </div>
           </div>
-          <div className="w-[10%] flex items-end justify-end pr-[3vw] h-full pb-[3vw]">
+          <div className="w-[10%] flex items-end justify-end pr-[3vw] h-full pb-[3vw] mobile:hidden">
             <Image
               src={yellowRectangle}
               height={32}
@@ -248,8 +249,8 @@ const Stats = () => {
             />
           </div>
         </div>
-        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] " />
-        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[68%]  " />
+        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden " />
+        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[68%]  mobile:hidden" />
       </section>
     </>
   );
