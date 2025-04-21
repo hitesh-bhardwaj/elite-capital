@@ -27,12 +27,12 @@ const Team = () => {
             <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[3vw] mobile:flex-nowrap mobile:w-fit">
               {members.map((item, index) => (
                 <div
-                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[70vw] transition-transform hover:scale-[1.02] tablet:w-[43vw] overflow-hidden ${
+                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[70vw] mobile:h-[90vw] transition-transform hover:scale-[1.02] tablet:w-[43vw] overflow-hidden ${
                     index < 2 ? "w-[43vw]" : "w-[28vw]"
                   }`}
                   key={index}
                 >
-                  <div className="h-full w-full bg-white group overflow-hidden transition-all duration-500 ease">
+                  <div className="h-full w-full bg-white group overflow-hidden transition-all duration-500 ease mobile:h-[65vw]">
                     <Image
                       src={item.img}
                       height={626}
@@ -41,7 +41,7 @@ const Team = () => {
                       className={`object-contain w-full h-full group-hover:scale-[0.95] transition-all duration-500 ease`}
                     />
                   </div>
-                  <div className=" mobile:space-y-[2vw] flex flex-col absolute bottom-0 h-[30vw] group-hover:translate-y-[0%] translate-y-[70%] transition-all duration-500 ease-in-out  rounded-tl-[0.5vw] rounded-tr-[0.5vw] w-full px-[2vw] pt-[1vw] bg-[#F2F2E9] left-0">
+                  <div className=" mobile:space-y-[2vw] flex flex-col absolute bottom-0 h-[30vw] mobile:h-[32vw] group-hover:translate-y-[0%] translate-y-[70%] transition-all duration-500 ease-in-out  rounded-tl-[0.5vw] rounded-tr-[0.5vw] w-full px-[2vw] pt-[1vw] bg-[#F2F2E9] left-0">
                     <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]">
                       {item.name}
                     </p>
@@ -312,15 +312,15 @@ const Team = () => {
           >
             {t("teamSub3")}
           </h2>
-          <div className="mobile:overflow-x-scroll mobile:px-0 mobile:w-screen mobile:h-full mobile:pb-[5vw]">
-            <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[2vw] mobile:w-fit mobile:flex-nowrap">
+          <div className=" mobile:px-0 mobile:w-screen mobile:h-full mobile:pb-[5vw]">
+            <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[2vw] mobile:w-fit mobile:flex-nowrap mobile:flex-col">
               {shariahMembers.map((item, index) => (
                 <>
                   <div
-                    className="w-full h-full flex justify-between gap-[1vw] fadeUp mobile:w-[70vw]  tablet:w-[43vw]"
+                    className="w-full h-full flex justify-between gap-[1vw] fadeUp mobile:flex-col tablet:w-[43vw] mobile:w-full"
                     key={index}
                   >
-                    <div className="space-y-[0.5vw] w-[30%]">
+                    <div className="space-y-[0.5vw] w-[30%] mobile:w-full">
                       <p
                         data-para-anim
                         className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]"
@@ -334,14 +334,14 @@ const Team = () => {
                         {item.des}
                       </p>
                     </div>
-                    <div key={index} className="w-[55%]">
+                    <div key={index} className="w-[55%] mobile:w-[90%]">
                       <div
                         className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
                           openedIndex === index ? "h-[35vw]" : "h-[10vw]"
                         }`}
                       >
                         {item.features.map((feature, i) => (
-                          <p key={i} className="text-[1.3vw] ">
+                          <p key={i} className="text-[1.3vw] mobile:text-[4.6vw]">
                             {feature}
                           </p>
                         ))}

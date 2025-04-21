@@ -27,8 +27,8 @@ const Values = () => {
               defaultValue="item-0"
               className="w-[95%] flex flex-wrap justify-between gap-y-[3vw]"
             >
-              <div className="flex w-full gap-[15vw]">
-                <div className="flex flex-col w-[50%]">
+              <div className="flex w-full gap-[15vw] mobile:flex-col mobile:gap-0">
+                <div className="flex flex-col w-[50%] mobile:w-full">
                   {values.map((item, index) => (
                     <SingleAccordion
                       key={index}
@@ -40,7 +40,7 @@ const Values = () => {
                     />
                   ))}
                 </div>
-                <div className="flex flex-col w-[50%]">
+                <div className="flex flex-col w-[50%] mobile:w-full">
                   {values.map((item, index) => (
                     <SingleAccordion
                       key={index}

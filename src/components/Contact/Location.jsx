@@ -22,7 +22,7 @@ const Location = () => {
 
                 {/* Image with parallax effect */}
                 <div
-                    className="w-[50%] flex h-[50vw]  mobile:h-[100vw]  items-center justify-between mobile:w-full tablet:w-full overflow-hidden mobile:rounded-[2vw]"
+                    className="w-[50%] flex h-[50vw]  mobile:h-[100vw]  items-center justify-between mobile:w-full tablet:w-full overflow-hidden "
                     onMouseMove={handleMouseMove}
                     onMouseLeave={handleMouseLeave}
                 >

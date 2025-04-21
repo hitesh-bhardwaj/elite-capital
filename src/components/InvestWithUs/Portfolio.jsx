@@ -7,7 +7,7 @@ const Portfolio = () => {
   const allPortfolios = t('portfolios', { returnObjects: true });
   
   return (
-    <section className='w-screen h-full bg-[#F2F2E9] p-[4vw] py-[7vw] space-y-[3vw]'>
+    <section className='w-screen h-full bg-white p-[4vw] py-[7vw] space-y-[3vw]'>
       <div className='space-y-[2vw] mobile:space-y-[4vw] tablet:space-y-[3vw]'>
         <h2 
           data-title-anim
