@@ -31,7 +31,7 @@ const Content = () => {
 
     
   return (
-   <section className='w-screen h-full py-[8%] px-[5vw] ' id='cookie-content'>
+   <section className='w-screen h-full py-[8%] px-[5vw] overflow-hidden ' id='cookie-content'>
     <div className=''>
         <div className='content mobile:py-[7vw] mobile:text-justify' dangerouslySetInnerHTML={{__html: t('heroSub') }}/>
         <span className='bg-black1 w-full h-[1px] block my-[3vw] lineDraw mobile:my-[10vw]' />
@@ -43,12 +43,12 @@ const Content = () => {
                     <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
                         <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={130} height={36}/>
                     </div>
-                    <div className='w-full'>
-               <div className='heading-2 pb-[1vw] mobile:py-[5vw]' dangerouslySetInnerHTML={{__html: item.title}}/>
-               <div className='content space-y-[1.5vw] mobile:space-y-[5vw]' dangerouslySetInnerHTML={{__html: item.para}}/>
+                    <div className='w-full mobile:w-[80%]'>
+               <div className='heading-2 pb-[1vw] mobile:pb-[5vw]' dangerouslySetInnerHTML={{__html: item.title}}/>
+               <div className='content space-y-[1.5vw] mobile:space-y-[5vw] mobile:ml-[-18vw]' dangerouslySetInnerHTML={{__html: item.para}}/>
                </div>
                 </div>
-                <span className='bg-black1 w-full h-[1px] block mt-[1vw] lineDraw' />
+                <span className='bg-black1 w-full h-[1px] block mt-[1vw] lineDraw mobile:!my-[15vw]' />
                 </>
             ))}
         </div>
