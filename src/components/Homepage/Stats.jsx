@@ -139,8 +139,8 @@ const Stats = () => {
             quality={100}
           />
         </div>
-        <div className="flex text-white w-full px-[7vw] pl-[7vw] items-center justify-between gap-[2vw] mobile:flex-col mobile:items-start">
-          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+        <div className="flex text-white w-full px-[5vw] items-center justify-between gap-[1vw] mobile:flex-col mobile:items-start">
+          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full">
             <div className="flex flex-col items-center gap-[2vw] mobile:flex-row  ">
               <div className="counter mobile:w-[40%]">
                 <div className="counter-1 digit font-semibold mobile:text-[12vw]">
@@ -176,7 +176,7 @@ const Stats = () => {
           </div>
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
 
-          <div className="flex flex-col gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+          <div className="flex flex-col gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row mobile:gap-[3vw]">
             <div className="countnew mobile:w-[40%]">
               <div className="countnew-1 digit font-semibold translate-y-[100px] mobile:text-[12vw]">
@@ -213,7 +213,7 @@ const Stats = () => {
             </div>
           </div>
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
-          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
             <div className="count mobile:w-[40%] mobile:text-[12vw]">
               <div className="count-2 digit font-semibold">
@@ -246,7 +246,7 @@ const Stats = () => {
             </div>
           </div>
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
-          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[20%] mobile:w-full">
+          <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
             <div className="countlast mobile:text-[12vw] mobile:w-[40%]">
               <div className="countlast-1 digit font-semibold translate-y-[100px]">

@@ -41,22 +41,22 @@ const About = () => {
 
     return (
         <>
-            <section className="relative h-full bg-[#FFFFFF] overflow-hidden mobile:py-[10vw]" id="about">
-                <div className="relative z-10 px-[5vw] py-[5%] flex flex-col items-center justify-between h-full mobile:flex-col mobile:gap-[5vw]">
+            <section className="relative h-full bg-[#FFFFFF] overflow-hidden mobile:py-[10vw] dark" id="about">
+                <div className="relative z-10 px-[5vw] py-[5%] flex flex-col mobile:items-center justify-between h-full mobile:flex-col mobile:gap-[5vw]">
                     <div className="w-full flex items-center pl-[3vw] justify-start">
-                        <Image src={yellowRectangle} height={32} width={67} alt="yellow-rectangle" className="blockAnim" />
+                        <Image src={yellowRectangle} height={52} width={77} alt="yellow-rectangle" className="blockAnim mobile:w-[10vw] mobile:h-[8vw]" />
                     </div>
 
-                    <div className="space-y-[2vw] w-[65%] mb-[3vw] px-[3vw] text-black1 py-[3vw] mobile:w-full mobile:text-[4.6vw] mobile:px-[5vw] tablet:w-[60%] tablet:pl-[4vw] tablet:pr-[3vw]">
+                    <div className="space-y-[2vw] w-[80%] mb-[3vw] pr-[3vw] pl-[10vw] text-black1 py-[3vw] mobile:w-[85%] mobile:text-[4.6vw] mobile:px-[5vw] tablet:w-[60%] tablet:pl-[4vw] tablet:pr-[3vw]">
                         {aboutsub.map((item, index) => (
-                            <div className="content about-content mobile:text-justify" key={index}>
+                            <div className="content about-content text-justify" key={index}>
                                 {item.text}
                             </div>
                         ))}
                     </div>
 
-                    <div className="w-full h-full translate-x-[55%] mobile:translate-x-[20%]">
-                        <ImageComponent imgsrc={aboutImage} width={"w-full mobile:w-[80%]"} />
+                    <div className="w-full h-full translate-x-[65%] mobile:translate-x-[20%]">
+                        <ImageComponent imgsrc={aboutImage} width={"w-[80%] mobile:w-[80%]"} />
                     </div>
                 </div>
             </section>

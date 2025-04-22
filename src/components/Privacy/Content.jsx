@@ -29,7 +29,7 @@ const Content = () => {
   });
 
   return (
-    <section className="w-screen h-full py-[8%] px-[5vw] overflow-hidden" id="privacy-content">
+    <section className="w-screen h-full py-[8%] px-[5vw] overflow-hidden dark" id="privacy-content">
       <div className="">
         <div className="mobile:py-[7vw]">
           <p className="content mobile:text-justify ">{t("heroSub")}</p>
@@ -39,12 +39,12 @@ const Content = () => {
           {content.map((item, index) => (
             <>
               <div key={index} className=" flex items-start w-full gap-[1vw]">
-                <div className="h-full w-[20%] relative mobile:w-[20%]">
+                <div className="h-full w-[20%] relative mobile:w-[20%] mt-[0.5vw]">
                   <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
                   <Image
                     src={yellowRectangleMask}
                     alt="yellow-rectamngle-mask"
-                    width={130}
+                    width={100}
                     height={36}
                     className="mobile:h-[8vw] mobile:w-[15vw]"
                   />

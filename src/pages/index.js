@@ -9,9 +9,11 @@ import Values from "@/components/Homepage/Values";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
 import { useTranslation } from "next-i18next";
-import Hero from "@/components/Common/Hero";
+// import Hero from "@/components/Common/Hero";
 import Contact from "@/components/Common/Contact";
 import Layout from "@/components/Common/Layout";
+import Loader2 from "@/components/Loader2";
+import Hero from "@/components/Homepage/Hero";
 
 
 export default function Home() {
@@ -24,7 +26,7 @@ export default function Home() {
   const { t } = useTranslation('home');
   return (
     <>
-    {/* <Loader2/> */}
+    <Loader2/>
       <Layout>
       <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
       <About />

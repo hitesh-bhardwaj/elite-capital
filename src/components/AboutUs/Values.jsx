@@ -11,12 +11,12 @@ const Values = () => {
   const values = t("values", { returnObjects: true });
 
   return (
-    <section className=" py-[5vw] mobile:py-[10vw]">
+    <section className=" pb-[5vw] mobile:py-[10vw] dark">
       <div className="px-[5vw]">
         <div className="">
           <h2
             data-title-anim
-            className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw]"
+            className="text-[4.6vw] font-display  mb-[4vw] mobile:text-[12.5vw]"
           >
             {t("valueHead")}
           </h2>
@@ -67,7 +67,7 @@ const SingleAccordion = ({ id, title, content ,className}) => {
 
       <AccordionTrigger
         data-para-anim
-        className="text-[2.5vw] text-left mobile:text-[5vw] mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
+        className="text-[2.5vw] text-left mobile:text-[7.2vw] mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
       >
         {title}
       </AccordionTrigger>

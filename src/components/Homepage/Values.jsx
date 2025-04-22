@@ -98,7 +98,7 @@ const SingleAccordion = ({ id, title, content , className}) => {
       <AccordionTrigger data-para-anim className="heading-2 text-left mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left  font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white">
         {title}
       </AccordionTrigger>
-      <AccordionContent className="text-[1.25vw] tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-full  mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[1vw]">
+      <AccordionContent className="text-[1.25vw] tracking-[0.5px] leading-[1.4] space-y-[1.5vw] w-full  mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[2vw]">
         <div
           className="fadein"
           dangerouslySetInnerHTML={{ __html: content }}

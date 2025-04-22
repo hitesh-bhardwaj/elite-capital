@@ -11,13 +11,13 @@ const Residential = () => {
    
 
     return (
-        <section className="bg-[#FFFFFF] overflow-hidden py-[5vw] mobile:py-[10vw]">
+        <section className="bg-[#FFFFFF] overflow-hidden py-[5vw] mobile:py-[10vw] dark">
             <div className="flex items-center">
                 <div className="text-black1  pl-[4vw] pr-[3.5vw] mobile:space-y-[5vw]">
-                    <h2 data-title-anim className="heading-1 mb-[4vw] leading-[1]  mobile:leading-[1.2]">{t('residentialHead')}</h2>
+                    <h2 data-title-anim className="text-[4.5vw] font-display mb-[4vw] leading-[1.2] mobile:text-[10.8vw] mobile:mb-[7vw]  mobile:leading-[1.2]">{t('residentialHead')}</h2>
                     <p data-para-anim className="w-[95%] content mobile:text-[4.9vw]">{t('residentialPara')}</p>
-                    <h2 data-title-anim className="heading-1 tracking-tight pt-[7vw] mb-[1.5vw] ">{t('residentialSub')}</h2>
-                    <p data-para-anim className="w-[95%] content mobile:text-[4.9vw] pb-[5vw]">{t('residentialSub2')}</p>
+                    <h2 data-title-anim className="text-[4.5vw] font-display tracking-tight mobile:text-[10.8vw]  pt-[7vw] mb-[1.5vw]  mobile:leading-[1.2] ">{t('residentialSub')}</h2>
+                    <p data-para-anim className="w-[98%] content mobile:text-[4.9vw] pb-[5vw]">{t('residentialSub2')}</p>
                     <div className="flex justify-between mobile:block mobile:space-y-[15vw] tablet:flex-wrap tablet:gap-y-[5vw]">
                       {features.map((item,index)=>(
                         <div className="flex flex-col gap-[1vw] w-[32%] mobile:w-full tablet:w-[45%]  mobile:gap-[3vw]" key={index}>

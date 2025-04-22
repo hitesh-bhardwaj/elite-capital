@@ -7,11 +7,11 @@ const Portfolio = () => {
   const allPortfolios = t('portfolios', { returnObjects: true });
   
   return (
-    <section className='w-screen h-full bg-white p-[4vw] py-[7vw] space-y-[3vw]'>
+    <section className='w-screen h-full bg-white p-[4vw] py-[7vw] space-y-[3vw] dark'>
       <div className='space-y-[2vw] mobile:space-y-[4vw] tablet:space-y-[3vw]'>
         <h2 
           data-title-anim
-          className="heading-1 w-[90%]"
+          className="text-[4.5vw] mobile:text-[10.8vw] font-display leading-[1.2] w-[80%]"
           dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
         ></h2>
         <p data-para-anim className="content">{t('portfolioSub')}</p>

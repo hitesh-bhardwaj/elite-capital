@@ -32,10 +32,10 @@ const BoardofDirectors = () => {
   return (
     <>
       <section className="w-screen h-full bg-[#ffffff]  pb-[5vw] mobile:overflow-hidden mobile:space-y-[8vw] tablet:pb-[7%]">
-        <div className="py-[5vw] mobile:space-y-[5vw]">
+        <div className=" mobile:space-y-[5vw]">
           <h2
             data-title-anim
-            className="text-[5vw] font-display mb-[2vw] mobile:text-[13.8vw] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
+            className="text-[4.6vw] font-display mb-[2vw] mobile:text-[10.8vw] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
           >
             {t("teamSub")}
           </h2>
@@ -112,7 +112,7 @@ const BoardofDirectors = () => {
         <div className="py-[5vw] mobile:space-y-[5vw]">
           <h2
             data-title-anim
-            className="text-[5vw] font-display  mobile:text-[13.8vw] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
+            className="text-[4.6vw] font-display  mobile:text-[10.8vw] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
           >
             {t("teamSub1")}
           </h2>
@@ -195,7 +195,7 @@ const BoardofDirectors = () => {
         <div className="py-[5vw] mobile:space-y-[5vw]">
           <h2
             data-title-anim
-            className="text-[5vw] font-display  mb-[2vw] mobile:text-[13.8vw] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
+            className="text-[4.6vw] font-display  mb-[2vw] mobile:text-[10.8vw] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
           >
             {t("teamSub2")}
           </h2>
@@ -346,7 +346,7 @@ const MobileSwiper = ({ members }) => {
           </div>
         </SwiperSlide>
       ))}
-       <div className='flex gap-6 mt-6 items-end justify-end pr-[3vw]'> 
+       <div className='flex gap-2 mt-6 items-end justify-end pr-[3vw]'> 
             <PreviousButton onClick={handlePrev} />
             <NextButton onClick={handleNext} />
           </div>

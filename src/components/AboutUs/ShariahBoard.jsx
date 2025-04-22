@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import {
@@ -32,7 +32,7 @@ const ShariahBoard = () => {
         <div className="p-[5vw] mobile:space-y-[12vw]">
           <h2
             data-title-anim
-            className="text-[5vw] font-display mb-[5vw] mobile:text-[10vw] tablet:text-[5vw] tablet:mt-[5vw] tablet:mb-0"
+            className="text-[4.6vw] font-display mb-[5vw] mobile:text-[10vw] tablet:text-[5vw] tablet:mt-[5vw] tablet:mb-0 mobile:leading-[1.2]"
           >
             {t("teamSub3")}
           </h2>
@@ -142,15 +142,15 @@ const SingleAccordion = ({ id, title,des,content ,className}) => {
 
       <AccordionTrigger
         data-para-anim
-        className="text-[2.5vw] text-left mobile:text-[7.2vw] mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:pt-[10%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
+        className="text-left mobile:text-[6.2vw] mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:pt-[10%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
       >
         {title}
       </AccordionTrigger>
       <AccordionContent className="text-[1.2vw] tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-[70%] mb-[20px] mobile:pl-[2vw] mobile:w-full mobile:text-[4.1vw] mobile:font-normal mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[3vw] mobile:leading-[1.2] font-body">
       <div className="fadeIn mobile:text-[4.8vw]">{des}</div>
-        <div className="fadeIn mobile:text-[4.1vw]" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="fadeIn mobile:text-[4.1vw] !space-y-[4vw]" dangerouslySetInnerHTML={{ __html: content }} />
       </AccordionContent>
-      <div className="w-full bg-black lineDraw h-[1px] my-[2vw] mobile:block tablet:block"></div>
+      <div className="w-full bg-black lineDraw h-[1px] !mt-[7vw] mobile:block tablet:block"></div>
     </AccordionItem>
   );
 };

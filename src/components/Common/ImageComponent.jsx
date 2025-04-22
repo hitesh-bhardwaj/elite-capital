@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ImageComponent = ({ imgsrc , width}) => {
+const ImageComponent = ({ imgsrc , width , height}) => {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
@@ -44,14 +44,14 @@ const ImageComponent = ({ imgsrc , width}) => {
   return (
     <div
       ref={wrapperRef}
-      className="relative overflow-hidden h-[30%] inline-block w-full max-w-xl about-image-wrapper"
-      style={{ clipPath: 'polygon(0 0, 100% 0%, 80% 100%, 0% 100%)' }}w
+      className="relative overflow-hidden h-[40%] inline-block w-full max-w-xl about-image-wrapper"
+      style={{ clipPath: 'polygon(0 0, 100% 0%, 80% 100%, 0% 100%)' }}
     >
-      <span className={`absolute top-0 left-0 h-full bg-[#CE8000] z-20 image-overlay ${width}`}  style={{
+      <span className={`absolute top-0 left-0 h-full bg-[#CE8000] z-20 image-overlay ${width} ${height}`}  style={{
       clipPath: 'polygon(0 0, 100% 0%, 80% 100%, 0% 100%)'
     }}></span>
       <Image
-        className={`about-image relative z-10 opacity-0 ${width}`}
+        className={`about-image relative z-10 opacity-0 ${width} ${height}`}
         src={imgsrc}
         alt="about image"
         loading="lazy"

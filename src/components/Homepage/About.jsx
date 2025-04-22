@@ -15,18 +15,18 @@ const About = () => {
 
     return (
         <>
-            <section className="relative  overflow-hidden h-[50vw] py-[5vw] mobile:h-full mobile:py-[15vw] tablet:min-h-fit tablet:pt-[10vw]" id="about" >
+            <section className="relative  overflow-hidden h-[55vw] py-[5vw] pb-[8vw] mobile:h-full mobile:py-[15vw] tablet:min-h-fit tablet:pt-[10vw] dark" id="about" >
                 <div className="relative z-10 px-[5vw] flex items-start justify-between h-full mobile:flex-col mobile:justify-center mobile:h-full tablet:h-full mobile:gap-[10vw]">
                     <div className="text-black1 w-[65%] mobile:w-full tablet:w-full tablet:pb-[10vw] mobile:space-y-[4vw] ">
                         <h2 data-title-anim className="heading-1  mb-[3vw] mobile:mb-[4vw]">{t('aboutHead')}</h2>
-                        <p data-para-anim className="content mb-[3vw] mobile:!mb-[7vw]">{t('aboutSub')}</p>
+                        <p data-para-anim className="content mb-[3vw] mobile:!mb-[7vw] text-justify mobile:text-left">{t('aboutSub')}</p>
                         <LineButton href={"/about-us"} text={t('cta')} className="fadeUp" />
                     </div>
                     
-                    <div className="flex flex-col items-end justify-end w-1/2 gap-[3vw] h-full mobile:w-[90%] mobile:ml-[5vw] mobile:relative">
-                        <ImageComponent imgsrc={aboutImage} width={"w-full"}/>
-                        <div className="w-full flex items-center justify-start  mobile:absolute mobile:left-[-5%] mobile:bottom-[-20%]">
-                            <Image src={yellowRectangle} height={32} width={67} alt="yelllow-rectangle" className="blockAnim mobile:w-[8vw] mobile:h-[3.5vw]"/>
+                    <div className="flex flex-col relative justify-end w-1/2 gap-[3vw] h-full mobile:w-[90%] mobile:ml-[5vw]">
+                        <ImageComponent imgsrc={aboutImage} width={"w-full"} height={"h-[15vw]"}/>
+                        <div className="w-full absolute left-[-5%] bottom-[-2%] mobile:absolute mobile:left-[-5%] mobile:bottom-[-20%]">
+                            <Image src={yellowRectangle} height={22} width={47} alt="yelllow-rectangle" className="blockAnim mobile:w-[8vw] mobile:h-[3.5vw]"/>
                         </div>
                     </div>
                 </div>

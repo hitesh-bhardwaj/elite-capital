@@ -16,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .heading-1 {
-  font-size: 5.2vw;
+  font-size: 4.6vw;
   line-height: 1.15;
   font-family: var(--font-display);
 }
