@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Controller, Autoplay, Parallax } from "swiper/modules";
 import { useTranslation } from "next-i18next";
@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/controller";
 import "swiper/css/parallax";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import gsap from "gsap";
 import LinkButton from "@/components/ui/LinkButton";
 

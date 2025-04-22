@@ -20,77 +20,40 @@ const WhyUS = () => {
 
   const text = t("whyUs", { returnObjects: true });
 
-  const handleClose = () => {
-    setActive(null);
+  const handleClose = (e) => {
+    e.stopPropagation();
+    setActive(false);
     setCurrentIndex(null);
-    console.log(active)
   };
 
   return (
     <section className="bg-[#FFFFFF] py-[7vw] mobile:py-[10vw]">
       <div className="px-[5%] mobile:px-[5%]">
-        <div>
-          <h2
-            data-title-anim
-            className="heading-1 mb-[6vw] mobile:leading-[1.2] tablet:!text-[5vw]"
-          >
-            {t("whyUsHead")}
-          </h2>
-
-          <div className="flex items-center gap-[2vw] mobile:gap-y-[8vw]">
-            {text.map((item, index) => (
+        <h2 data-title-anim className="heading-1 mb-[6vw] mobile:leading-[1.2] tablet:!text-[5vw]">
+          {t("whyUsHead")}
+        </h2>
+        <div className="flex gap-[1.3vw] mobile:gap-y-[8vw] overflow-hidden">
+          {text.map((item, index) => (
+            <div
+              // Main Card
+              key={index}
+              className="w-[17vw] h-[22vw] relative group duration-500 transition-transform"
+              style={{
+                zIndex: index === currentIndex && active ? '20' : '0',
+                transform: index === currentIndex && active
+                  ? `translateX(-${(17 * currentIndex + 1.265 * currentIndex)}vw)`
+                  : "translateX(0)",
+              }}
+            >
               <div
-                key={index}
-                className="w-[22vw] h-full relative group transition-all duration-500 ease cursor-pointer"
+                className="w-full h-full overflow-hidden relative cursor-pointer"
                 onClick={() => {
                   setActive(true);
                   setCurrentIndex(index);
                 }}
               >
-                <Image
-                  src={images[index]}
-                  alt={`invest-${index + 1}`}
-                  height={446}
-                  width={324}
-                  className="relative z-[4]"
-                />
-
-                {/* MODAL PANEL */}
-                {/* <div className="w-full flex"> */}
-                  <div
-                    className={`w-[55vw] bg-[#747977] h-full absolute right-[-5%] top-0 z-[20] translate-x-[100%] cursor-auto transition-all duration-300 ${
-                      index === currentIndex && active ? "block" : "hidden"
-                    }`}
-                  >
-                    <div className="w-full h-full relative flex flex-col justify-end gap-[1vw] p-[1.5vw] text-white">
-                      <p>{item.num}</p>
-                      <p className="text-[2.2vw] !leading-[1.2] !font-display">
-                        {item.title}
-                      </p>
-                      <p>{item.para}</p>
-
-                      {/* CLOSE BUTTON */}
-                      <div
-                        className="rounded-full border p-3 absolute top-5 right-5 z-[20] h-[3vw] w-[3vw] flex items-center border-white justify-end cursor-pointer"
-                        onClick={handleClose}
-                      >
-                        <Image
-                          src={"/icons/plus.svg"}
-                          className="w-full h-full object-contain invert rotate-45"
-                          height={20}
-                          width={20}
-                          alt="plus"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                {/* </div> */}
-
-                {/* HOVER OVERLAY */}
-                <span className="w-full h-full absolute top-0 left-0 z-[19] opacity-0 bg-[#F2F2E9] group-hover:opacity-[1] transition-all duration-500 ease"></span>
-
-                {/* HOVER TEXT BLOCK */}
-                <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-[1]  z-[19] transition-all duration-500 ease py-[1vw] flex flex-col justify-between h-full pr-[1.5vw] px-[1vw] w-full">
+                <Image className="w-full h-full object-cover" placeholder="blur" src={images[index]} alt="Image" />
+                <div className="absolute bg-[#F2F2E9] top-0 left-0 bottom-0 right-0 opacity-0 group-hover:opacity-100 z-[5] transition-all duration-500 ease py-[1vw] flex flex-col justify-between h-full pr-[1.5vw] px-[1vw] w-full">
                   <div className="flex justify-between">
                     <p>{item.num}</p>
                     <div className="rounded-full border p-3 h-[3vw] w-[3vw] flex items-center border-black1 justify-end">
@@ -108,9 +71,34 @@ const WhyUS = () => {
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
+              <div
+                className={`bg-[#747977] absolute top-0 left-[calc(17vw+1.3vw)] w-[calc(17vw*4+3.9vw)] h-full duration-500 ${index === currentIndex && active ? "opacity-100 z-20" : "opacity-0"}`}
+              >
+                <div className="w-full h-full relative flex flex-col justify-end gap-[1vw] p-[1.5vw] text-white">
+                  <p>{item.num}</p>
+                  <p className="text-[2.2vw] !leading-[1.2] !font-display">
+                    {item.title}
+                  </p>
+                  <p>{item.para}</p>
+
+                  <div
+                    className="rounded-full border p-3 absolute top-5 right-5 z-[20] h-[3vw] w-[3vw] flex items-center border-white justify-end cursor-pointer"
+                    onClick={handleClose}
+                  >
+                    <Image
+                      src={"/icons/plus.svg"}
+                      className="w-full h-full object-contain invert rotate-45"
+                      height={20}
+                      width={20}
+                      alt="plus"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );

@@ -96,14 +96,14 @@ const config = {
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-down': 'accordion-down 0.5s ease-out',
+				'accordion-up': 'accordion-up 0.5s ease-out'
 			}
 		}
 	},
 	darkMode: ["class", "class"],
 	plugins: [
-		require("@tailwindcss/forms"), // ✅ Optional: Improves form styling
+		require("@tailwindcss/forms"), 
 		require("tailwindcss-animate")
 	],
 };
