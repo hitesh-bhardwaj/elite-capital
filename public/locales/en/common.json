@@ -7,15 +7,15 @@
     "footerEmailButton": "Subscribe",
     "footerNav": [
         {
-             "text": "Who We are",
+             "text": "WHO WE ARE",
             "link": "/about-us"
         },
         {
-            "text": "Invest With Us",
+            "text": "INVEST WITH US",
             "link": "/invest-with-us"
         },
         {
-            "text": "Contact Us",
+            "text": "CONTACT US",
             "link": "/contact"
         }
     ],

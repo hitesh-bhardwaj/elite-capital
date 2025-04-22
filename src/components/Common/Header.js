@@ -166,7 +166,7 @@ const Header = () => {
                 className="group"
               >
                 <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-                  <span className="">{item.text}</span>
+                  <span className="group-hover:scale-[0.98] transition-all duration-300 ease">{item.text}</span>
                 </div>
               </Link>
             ))}

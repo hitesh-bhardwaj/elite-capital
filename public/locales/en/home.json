@@ -1,8 +1,8 @@
 {
     "hero": "Providing investors with access to Real Assets with Real Returns.",
-    "heroSub": "A real-estate focussed fund manager delivering premium investment opportunities in real estate that generate exceptional risk-adjusted returns from developments that contribute to thriving communities.",
+    "heroSub": "A real-estate focused fund manager delivering premium investment opportunities in real estate that generate exceptional risk-adjusted returns from developments that contribute to thriving communities.",
     "aboutHead": "Who we are",
-    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm, offering international investors access to attractive investment opportunities in Real Assets  by combining in-depth local knowledge with global fund management and strategic investment expertise. Our success is built on creating long-lasting partnerships with our investors to offer Real Assets with Real Returns.",
+    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm, offering international investors access to attractive investment opportunities in Real Assets by combining in-depth local knowledge with global fund management and strategic investment expertise. Our success is built on creating long-lasting partnerships with our investors to offer Real Assets with Real Returns.",
     "cta":"Learn More",
     "stats": [
         {
@@ -14,7 +14,7 @@
             "text": "Aggregate investment & advisory experience"
         },
         {
-            "number": "40+",
+            "number": "45+",
             "text": "Real estate projects exclusive to Elite Capital"
         },
         {
@@ -26,7 +26,7 @@
     "values": [
         {   
             "valueTitle": "Partnership",
-            "valueContent": "We strive to be partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
+            "valueContent": "We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
         },
         {
             "valueTitle": "Integrity",
@@ -49,25 +49,35 @@
     "advantageHead": "Canada’s real estate investment opportunity ",
     "advantage": [
         {
-            "text": "Canada stands out as a prime investment destination in the G7 due to its fast-growing, stable economy, abundant natural resources, AAA credit rating, rapidly rising population, and high housing demand. Canada’s population is forecast to grow 6.5 million by 2050, with a compounded annual growth rate of 3%."
+            "text": "Canada stands out as a prime investment destination in the G7 due to its fast-growing, stable economy, abundant natural resources, AAA credit rating, rapidly rising population, and high housing demand. Canada's population is forecast to grow 11.6 million by 2050."
         },
         {
-            "text":"This rapid growth, combined with a projected housing shortage of over 3.5 million homes by 2030, makes the Canadian residential real estate market a highly attractive investment opportunity."
+            "text":"This rapid growth, combined with a projected housing shortage of over 3.5 million homes by 2030,makes the Canadian residential real estate market a highly attractive investment opportunity."
         }
     ],
     "advantageCta": "View more",
     "diversifyHead":"Diversify your portfolio with highly attractive Canadian real estate ",
     "diversify": "<p data-para-anim> Our investors can access varied investment opportunities including our exclusive pipeline of 45+ premium, community-centred developments in Ontario, Canada. This pipeline includes many purpose-built developments for the rental market that have gone through an extensive development and permitting process and are shovel ready.</p><p data-para-anim>This exclusive pipeline of investment opportunities, combined with our thorough due diligence and hands-on asset management is geared to deliver superior risk adjusted returns to our investors.</p>",
-    "realHead": "REAL ASSETS WITH ",
-    "realHeadSub":"REAL RETURNS",
+    "realHead": "Real Assets with",
+    "realHeadSub":"Real Returns",
     "portfolioHead": "Our select pipeline of investment opportunities ",
-    "portfolioSub": "Diversified portfolio of purpose-built residential developments in Ontario ",
-    "portfolioCta": "View Portfolio",
+    "portfolioSub": "Diversified portfolio of purpose-built residential developments in Ontario",
+    "portfolioCta": "View portfolio",
     "portfolio": [
         {
             "image":"/assets/images/homepage/portfolio-1.png",
-            "text1": "148, Niagara",
+            "text1": "81-87 Rymal,",
             "text2": "Hamilton, ON"
+        },
+        {
+            "image":"/assets/images/homepage/hero-bg.jpg",
+            "text1": "570 Upper Ottawa,",
+            "text2": "Hamilton, ON"
+        },
+        {
+            "image":"/assets/images/homepage/portfolio-1.png",
+            "text1": "Station 60,",
+            "text2": "Brantford, ON"
         },
         {
             "image":"/assets/images/homepage/hero-bg.jpg",
@@ -76,49 +86,15 @@
         },
         {
             "image":"/assets/images/homepage/portfolio-1.png",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
+            "text1": "4th Avenue - Phase 1,",
+            "text2": "St. Catharines, ON"
         },
         {
             "image":"/assets/images/homepage/hero-bg.jpg",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
-        },
-        {
-            "image":"/assets/images/homepage/portfolio-1.png",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
-        },
-        {
-            "image":"/assets/images/homepage/hero-bg.jpg",
-            "text1": "148, Niagara",
-            "text2": "Hamilton, ON"
+            "text1": "120 Meridian Way,",
+            "text2": "Pelham, ON"
         }
     ],
     "contactHead": "Invest  with us",
-    "contactSub": "Contact us to learn more about our investment opportunities.",
-    "form": {
-        "head": "Get in touch",
-        "firstName": "First Name",
-        "lastName": "Last Name",
-        "email": "Email",
-        "phone": "Phone",
-        "message": "Message",
-        "submit": "Submit",
-        "terms": "Yes, I would like to receive communications from Elite Capital. * We will only use this information as described in our privacy policy."
-    },
-    "footerCopy": "Copyright © 2025 All Rights Reserved. Elite Developments",
-    "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
-    "footerEmailText": "Enter Your Email",
-    "footerEmailButton": "Subscribe",
-    "footerNav": [
-        {
-            "text": "Invest With Us",
-            "link": "/invest-with-us"
-        },
-        {
-            "text": "Contact Us",
-            "link": "/contact"
-        }
-    ]
+    "contactSub": "Contact us to learn more about our investment opportunities."
 }

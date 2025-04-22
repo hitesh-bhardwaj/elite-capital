@@ -2,11 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { lineAnim } from "../gsapAnimations";
+import { useCallback, useRef } from "react";
 
 const Footer = () => {
     const { t } = useTranslation('common');
     const footerNav = t('footerNav', { returnObjects: true });
     const footerNavBottom = t('footerNavBottom', { returnObjects: true });
+   
+          
+    function handleMouseMove(e) {
+      const hoverCircle = e.currentTarget.querySelector('.hover-circle');
+      if (hoverCircle) {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        hoverCircle.style.left = `${x}px`;
+        hoverCircle.style.top = `${y}px`;
+      }
+    }
   const socials = [
     {
       icon: "/icons/linkedin.svg",
@@ -27,7 +40,7 @@ const Footer = () => {
         <div className=" pb-[10vw] h-[25vw] flex  justify-between mobile:flex-col mobile:h-[100vw] mobile:py-[5vw]">
           <div className="flex items-start justify-between pt-[5vw] mobile:flex-col ">
             <Image
-              src="/elite-logo.svg"
+              src="/elite-logo-2.svg"
               width={100}
               height={100}
               alt="Logo"
@@ -37,9 +50,9 @@ const Footer = () => {
           
           <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw] mobile:my-[10vw] mobile:gap-[4vw] tablet:justify-start tablet:mt-[5vw] mobile:text-[6.65vw]">
           {footerNav.map((item,index)=>(
-            <Link key={index} href={item.link} className="group" >
+            <Link key={index} href={item.link} className="group transition-all duration-300 ease" >
                <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-                <span  className="">{item.text}</span>
+                <span  className="group-hover:scale-[0.98] transition-all duration-300 ease">{item.text}</span>
             </div>
             </Link>
 ))}
@@ -51,23 +64,33 @@ const Footer = () => {
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
            <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[6vw]">
             {footerNavBottom.map((item,index)=>(
-              <div key={index}>
-              <Link  href={item.link} prefetch={false} className="group">
-              <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-                <span  className="mobile:text-[5.1vw]">{item.text}</span>
+             <>
+              <Link key={index}  href={item.link} prefetch={false} className="group">
+              <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                <span  className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease">{item.text}</span>
             </div></Link>
               <span className="h-1 w-1 bg-white rounded-full block last:hidden mobile:hidden"/>
-              </div>
+             </>
             ))}
               </div>
           <div className="flex items-center gap-4">
             {socials.map((social, index) => (
-              <Link
+              <Link 
+              
+              onMouseMove={(e) => handleMouseMove(e)}
                 target="_blank"
                 href={social.link}
-                className="group flex items-center justify-center border-[1.5px] border-white rounded-full p-[1vw] hover:bg-white duration-300 mobile:items-start mobile:p-[3.5vw]"
+                className="group flex items-center relative justify-center border-[1.5px] border-white overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw]"
                 key={index}
               >
+                <span 
+                    className="hover-circle absolute aspect-square rounded-full bg-white 
+                    transition-all duration-500 ease transform -translate-x-1/2 -translate-y-1/2 
+                    pointer-events-none opacity-1 scale-0  group-hover:scale-100"
+                    style={{
+                        width: '200%', 
+                    }}
+                ></span>
                 <Image
                   className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300"
                   src={social.icon}

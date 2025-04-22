@@ -99,10 +99,9 @@ export default function ContactForm() {
               onSubmit={form.handleSubmit(onSubmit)}
               className="space-y-[2vw] mobile:space-y-[10vw] tablet:space-y-[5vw] mobile:w-full tablet:mt-[5vw] "
             >
-              {/* <Label>First name</Label> */}
               <FormField
                 control={form.control}
-                name="firstname"
+                name="fullname"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -180,7 +179,8 @@ export default function ContactForm() {
                 htmlFor="terms"
                 className="text-[1vw] mobile:text-[4.5vw]  tablet:text-[2vw] w-[80%]"
               >
-               Yes, I would like to receive communications from Elite Capital. * We will only use this information as described in our privacy policy.
+              Yes, I would like to receive communications from Elite Capital. *We will
+              only use this information as described in our privacy policy.
               </p>
 
               </div>

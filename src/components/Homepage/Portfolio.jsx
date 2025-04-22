@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Controller, Autoplay, Parallax } from "swiper/modules";
 import { useTranslation } from "next-i18next";
@@ -63,7 +63,7 @@ export default function SwiperSlider() {
       progressRef.current.style.width = `${progress}%`;
     }
 
-    setActiveIndex(realIndex + 1); // display index as 1-based
+    setActiveIndex(realIndex + 1); 
   };
 
   const handleNext = () => {
@@ -74,6 +74,21 @@ export default function SwiperSlider() {
     if (swiperRef.current) swiperRef.current.slidePrev();
   };
 
+  const buttonRef = useRef(null);
+        
+        const handleMouseMove = useCallback((e) => {
+            if (!buttonRef.current) return;
+            
+            const rect = buttonRef.current.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            if (buttonRef.current.querySelector('.hover-circle')) {
+                buttonRef.current.querySelector('.hover-circle').style.left = `${x}px`;
+                buttonRef.current.querySelector('.hover-circle').style.top = `${y}px`;
+            }
+        }, []);
+
   return (
     <div className="relative w-screen overflow-hidden h-[54vw] mobile:h-screen">
       <Swiper
@@ -83,7 +98,7 @@ export default function SwiperSlider() {
         modules={[Controller, Parallax, Autoplay]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          updateProgressBar(swiper.realIndex); // set initial progress
+          updateProgressBar(swiper.realIndex); 
         }}
         onRealIndexChange={(swiper) => updateProgressBar(swiper.realIndex)}
         className="swiper-container main-slider"
@@ -140,9 +155,19 @@ export default function SwiperSlider() {
 
       {/* Next Button */}
       <div
-        className="absolute z-[5] bottom-[25%] left-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group rounded-full next-button hover:bg-white cursor-pointer border border-white transition-colors duration-300 mobile:bottom-[20%] mobile:left-[20%]"
+       ref={buttonRef}
+       onMouseMove={handleMouseMove}
+        className="absolute z-[5] bottom-[25%] left-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:left-[20%]"
         onClick={handleNext}
       >
+         <span 
+                    className="hover-circle absolute aspect-square rounded-full bg-white
+                    transition-all duration-500 ease transform -translate-x-1/2 -translate-y-1/2 
+                    pointer-events-none opacity-1 scale-0  group-hover:scale-100"
+                    style={{
+                        width: '300%', 
+                    }}
+                ></span>
         <div className="w-full h-full relative z-[6] flex justify-center items-center">
           <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center">
             <svg
@@ -166,9 +191,19 @@ export default function SwiperSlider() {
 
       {/* Prev Button */}
       <div
-        className="absolute z-[5] bottom-[25%] left-[5%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%]"
+       ref={buttonRef}
+       onMouseMove={handleMouseMove}
+        className="absolute z-[5] bottom-[25%] left-[5%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%]"
         onClick={handlePrev}
       >
+         <span 
+                    className="hover-circle absolute aspect-square rounded-full bg-white
+                    transition-all duration-500 ease transform -translate-x-1/2 -translate-y-1/2 
+                    pointer-events-none opacity-1 scale-0  group-hover:scale-100"
+                    style={{
+                        width: '300%', 
+                    }}
+                ></span>
         <div className="w-full h-full flex justify-center items-center rotate-180">
           <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center">
             <svg

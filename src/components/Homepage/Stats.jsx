@@ -96,7 +96,7 @@ const Stats = () => {
 
   const countClasses = [
     { selector: ".count-4", top: "-120px", delay: 0.1 },
-    { selector: ".count-3", top: "-1035px", delay: -1.2 },
+    { selector: ".count-3", top: "-525px", delay: -1.2 },
     { selector: ".count-2", top: "-423px", delay: -1.3 },
   ];
 
@@ -230,11 +230,7 @@ const Stats = () => {
                 <div className="num">3</div>
                 <div className="num">4</div>
                 <div className="num">5</div>
-                <div className="num">6</div>
-                <div className="num">7</div>
-                <div className="num">8</div>
-                <div className="num">9</div>
-                <div className="num">0</div>
+               
               </div>
               <div className="count-4 digit font-semibold translate-y-[100px]">
                 <div className="num">+</div>
