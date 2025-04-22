@@ -16,7 +16,7 @@ const Values = () => {
         <div className="">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display  mb-[4vw] mobile:text-[12.5vw]"
+            className="text-[4.6vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]"
           >
             {t("valueHead")}
           </h2>
@@ -27,8 +27,8 @@ const Values = () => {
               defaultValue="item-0"
               className="w-[95%] flex flex-wrap justify-between gap-y-[3vw]"
             >
-              <div className="flex w-full gap-[15vw] mobile:flex-col mobile:gap-0">
-                <div className="flex flex-col w-[50%] mobile:w-full">
+              <div className="flex w-full gap-[15vw] mobile:flex-col mobile:gap-0 tablet:flex-col tablet:gap-0">
+                <div className="flex flex-col w-[50%] mobile:w-full tablet:w-full">
                   {values.map((item, index) => (
                     <SingleAccordion
                       key={index}
@@ -40,7 +40,7 @@ const Values = () => {
                     />
                   ))}
                 </div>
-                <div className="flex flex-col w-[50%] mobile:w-full">
+                <div className="flex flex-col w-[50%] mobile:w-full tablet:flex-col tablet:w-full">
                   {values.map((item, index) => (
                     <SingleAccordion
                       key={index}
@@ -67,7 +67,7 @@ const SingleAccordion = ({ id, title, content ,className}) => {
 
       <AccordionTrigger
         data-para-anim
-        className="text-[2.5vw] text-left mobile:text-[7.2vw] mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
+        className="text-[2.5vw] text-left mobile:text-[7.2vw]  mobile:flex mobile:w-full tablet:text-[5vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
       >
         {title}
       </AccordionTrigger>

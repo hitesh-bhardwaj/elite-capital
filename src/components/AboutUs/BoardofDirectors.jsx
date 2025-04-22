@@ -20,7 +20,7 @@ const BoardofDirectors = () => {
   
     useEffect(() => {
       const checkMobile = () => {
-        setIsMobileWidth(globalThis.innerWidth <= 1024);
+        setIsMobileWidth(globalThis.innerWidth <= 1023);
       };
   
       checkMobile(); 
@@ -302,7 +302,7 @@ const MobileSwiper = ({ members }) => {
       {members.map((item, index) => (
         <SwiperSlide key={index}>
           <div
-            className={`h-full flex gap-[5vw] fadeUp mobile:w-full transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[10vw] bg-[#BCBCBC] mobile:flex-col mobile:items-center mobile:h-full mobie:py-[4vw]`}
+            className={`h-full flex gap-[5vw] fadeUp mobile:w-full transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[10vw] bg-[#BCBCBC] mobile:flex-col mobile:items-center mobile:h-full mobie:py-[4vw] `}
           >
             <div className="h-[28vw] w-[22vw] mobile:w-[82vw] mobile:h-[87vw]  overflow-hidden group transition-all duration-500 ease rounded-[2vw]">
               <Image

@@ -32,11 +32,11 @@ const ShariahBoard = () => {
         <div className="p-[5vw] mobile:space-y-[12vw]">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display mb-[5vw] mobile:text-[10vw] tablet:text-[5vw] tablet:mt-[5vw] tablet:mb-0 mobile:leading-[1.2]"
+            className="text-[4.6vw] font-display mb-[5vw] mobile:text-[10vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2]"
           >
             {t("teamSub3")}
           </h2>
-          <div className=" mobile:px-0 mobile:w-screen mobile:h-full mobile:pb-[5vw] mobile:hidden">
+          <div className=" mobile:px-0 mobile:w-screen mobile:h-full mobile:pb-[5vw] mobile:hidden tablet:hidden">
             <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[2vw] mobile:w-fit mobile:flex-nowrap mobile:flex-col">
               {shariahMembers.map((item, index) => (
                 <>
@@ -99,7 +99,7 @@ const ShariahBoard = () => {
           </div>
           {mobileWidth && (
           <div className="pb-[2vw] mobile:block text-black text-[5vw] font-bold">
-             <div className=" w-full mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
+             <div className=" w-full mobile:block mobile:space-y-[10vw] tablet:grid-cols-2 tablet:space-y-[5vw]">
             <Accordion
               type="single"
               collapsible
@@ -124,7 +124,7 @@ const ShariahBoard = () => {
           </div>
         )}
           <div
-            className="text-[1.9vw] mt-[5vw] space-y-[2vw] fadeUp mobile:space-y-[4vw] mobile:text-[4.6vw] mobile:w-[90%] tablet:mt-[7vw]"
+            className="text-[1.9vw] mt-[5vw] space-y-[2vw] fadeUp mobile:space-y-[4vw] mobile:text-[4.6vw] mobile:w-[90%] tablet:mt-[7vw] tablet:!text-[3vw]"
             dangerouslySetInnerHTML={{ __html: t("shariahSub") }}
           />
         </div>
@@ -137,18 +137,18 @@ const ShariahBoard = () => {
 
 const SingleAccordion = ({ id, title,des,content ,className}) => {
   return (
-    <AccordionItem value={id} className={`w-full ${className} mobile:space-y-[2vw]`}>
+    <AccordionItem value={id} className={`w-full ${className} mobile:space-y-[2vw] tablet:space-y-[4vw] tablet:mt-[5vw]`}>
       {/* <AccordionLine className="relative z-[-1] my-[1vw] tablet:hidden mobile:hidden" linecenter={1.38} /> */}
 
       <AccordionTrigger
         data-para-anim
-        className="text-left mobile:text-[6.2vw] mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:pt-[10%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
+        className="text-left mobile:text-[6.2vw] mobile:flex mobile:w-full tablet:text-[5vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:pt-[10%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
       >
         {title}
       </AccordionTrigger>
-      <AccordionContent className="text-[1.2vw] tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-[70%] mb-[20px] mobile:pl-[2vw] mobile:w-full mobile:text-[4.1vw] mobile:font-normal mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[3vw] mobile:leading-[1.2] font-body">
+      <AccordionContent className="text-[1.2vw] tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-[70%] mb-[20px] mobile:pl-[2vw] mobile:w-full mobile:text-[4.1vw] mobile:font-normal mobile:space-y-[4vw] tablet:text-[2.7vw]  pt-[3vw] mobile:leading-[1.2] font-body tablet:font-normal tablet:w-full">
       <div className="fadeIn mobile:text-[4.8vw]">{des}</div>
-        <div className="fadeIn mobile:text-[4.1vw] !space-y-[4vw]" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="fadeIn mobile:text-[4.1vw] !space-y-[4vw] tablet:text-[2.5vw]  tablet:leading-[1.4]" dangerouslySetInnerHTML={{ __html: content }} />
       </AccordionContent>
       <div className="w-full bg-black lineDraw h-[1px] !mt-[7vw] mobile:block tablet:block"></div>
     </AccordionItem>
