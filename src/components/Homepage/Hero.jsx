@@ -96,7 +96,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
           quality={90}
         />
         <div className="relative z-10 px-[5vw] pt-[8vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%]">
-          <div className="py-[10%] text-white w-full mobile:w-full">
+          <div className="py-[10%] text-white w-full mobile:w-full tablet:space-y-[2vw]">
             <h1 className="heading-1 w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw] hero-title-anim">
               {heading}
             </h1>
@@ -110,7 +110,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
         <div
           ref={buttonRef}
           onMouseMove={handleMouseMove}
-          className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition hover:scale-110 z-[20] group duration-500 ease hover:text-white mobile:w-[15vw] mobile:h-[15vw] mobile:right-5 overflow-hidden"
+          className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition hover:scale-110 z-[20] group duration-500 ease hover:text-white mobile:w-[15vw] mobile:h-[15vw] mobile:right-5 overflow-hidden tablet:w-[7vw] tablet:h-[7vw] tablet:right-5"
           onClick={scrollToNext}
         >
           <span

@@ -35,22 +35,22 @@ const Values = () => {
     })
 
     return (
-        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:pb-[0vw] mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex" id="values"> 
-        <div className="absolute top-0 left-0 h-full w-full z-0 mobile:relative mobile:h-[60vh] ">
+        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:pb-[0vw] mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex tablet:h-full tablet:pt-0" id="values"> 
+        <div className="absolute top-0 left-0 h-full w-full z-0 mobile:relative mobile:h-[60vh] tablet:relative tablet:h-[50vw] ">
             <Image
               src={valuesBg}
               alt="stats-bg"
               layout="fill"
-              className="values-img translate-y-[-60%] w-full h-full object-cover mobile:translate-y-0 "
+              className="values-img translate-y-[-60%] w-full h-full object-cover mobile:translate-y-0 tablet:translate-y-0 "
               // objectFit="cover"
               quality={100}
             />
           </div>
-            <div className="px-[8%] mobile:py-[15%] ">
+            <div className="px-[8%] mobile:py-[15%] tablet:py-[10%] ">
                 <div className="space-y-[6vw]">
-                    <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw]">{t('valuesHead')}</h2>
+                    <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]">{t('valuesHead')}</h2>
                     <div className=" w-full relative z-10 mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
-                       <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full">
+                       <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full tablet:w-full">
                         <div className="flex w-full gap-[5vw] mobile:flex-col">
                        <div className="flex flex-col w-[50%] mobile:w-full">
                         {values.map((item,index) => (

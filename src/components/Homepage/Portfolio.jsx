@@ -11,7 +11,7 @@ import LinkButton from "@/components/ui/LinkButton";
 
 const slides = [
   {
-    image: "/assets/images/homepage/portfolio-1.png",  
+    image: "/assets/images/homepage/portfolio-1.png",
   },
   {
     image: "/assets/images/homepage/hero-bg.jpg",
@@ -37,23 +37,40 @@ export default function SwiperSlider() {
   const { t } = useTranslation("home");
   const portfolio = t("portfolio", { returnObjects: true });
   useEffect(()=>{
-    const ctx = gsap.context(()=>{
-      gsap.from(".swiper-content-fadeup",{
-        y:30,
-        duration:1,
-        ease:"power3.out",
-        delay:0.7,
-      })
-      gsap.from(".swiper-content-fadeup",{
+    const ctx = gsap.context(() => {
+      gsap.from("#portfolio", {
+        y: 30,
         opacity:0,
-        duration:1,
-        ease:"power1.in",
-        delay:0.7,
-      })
-    })
-    return()=>ctx.revert()
+        duration: 2,
+        ease: "power3.out",
+        scrollTrigger:{
+          trigger:"#portfolio",
+          start:"top 60%"
+        }
+      
+      });
+   
+    });
+    return () => ctx.revert();
 
-  },[activeIndex])
+  },[])
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".swiper-content-fadeup", {
+        y: 30,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.7,
+      });
+      gsap.from(".swiper-content-fadeup", {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.in",
+        delay: 0.7,
+      });
+    });
+    return () => ctx.revert();
+  }, [activeIndex]);
 
   const updateProgressBar = (realIndex) => {
     const totalSlides = slides.length;
@@ -63,7 +80,7 @@ export default function SwiperSlider() {
       progressRef.current.style.width = `${progress}%`;
     }
 
-    setActiveIndex(realIndex + 1); 
+    setActiveIndex(realIndex + 1);
   };
 
   const handleNext = () => {
@@ -75,22 +92,24 @@ export default function SwiperSlider() {
   };
 
   const buttonRef = useRef(null);
-        
-        const handleMouseMove = useCallback((e) => {
-            if (!buttonRef.current) return;
-            
-            const rect = buttonRef.current.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            if (buttonRef.current.querySelector('.hover-circle')) {
-                buttonRef.current.querySelector('.hover-circle').style.left = `${x}px`;
-                buttonRef.current.querySelector('.hover-circle').style.top = `${y}px`;
-            }
-        }, []);
+
+  const handleMouseMove = useCallback((e) => {
+    if (!buttonRef.current) return;
+
+    const rect = buttonRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    if (buttonRef.current.querySelector(".hover-circle")) {
+      buttonRef.current.querySelector(".hover-circle").style.left = `${x}px`;
+      buttonRef.current.querySelector(".hover-circle").style.top = `${y}px`;
+    }
+  }, []);
+
+  // console.log(portfolio);
 
   return (
-    <div className="relative w-screen overflow-hidden h-[54vw] mobile:h-screen">
+    <div className="relative w-screen overflow-hidden h-[54vw] mobile:h-screen tablet:h-[100vw]" id="portfolio">
       <Swiper
         loop={true}
         speed={1000}
@@ -98,78 +117,85 @@ export default function SwiperSlider() {
         modules={[Controller, Parallax, Autoplay]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          updateProgressBar(swiper.realIndex); 
+          updateProgressBar(swiper.realIndex);
         }}
         onRealIndexChange={(swiper) => updateProgressBar(swiper.realIndex)}
         className="swiper-container main-slider"
       >
-        {slides.map((slide, id) => (
-          <SwiperSlide key={id}>
-            <figure className="relative w-full h-full" data-swiper-parallax="50%">
+        {portfolio.map((item, idx) => (
+          <>
+            <SwiperSlide key={idx}>
+              <figure
+                className="relative w-full h-full"
+                data-swiper-parallax="50%"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    filter: "brightness(0.7)",
+                    backgroundImage: `url(${item.image})`,
+                  }}
+                />
+              </figure>
+
               <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  filter: "brightness(0.7)",
-                  backgroundImage: `url(${slide.image})`,
-                }}
-              />
-            </figure>
-          </SwiperSlide>
+                key={idx}
+                className="slide absolute w-full h-full flex items-center justify-start top-0 left-0 px-[5vw] overflow-hidden"
+              >
+                <div className="slide__content relative z-[2] text-white top-[-30%] w-[70%] mobile:w-full mobile:top-[-25%] tablet:w-[75%] tablet:top-[-25%]">
+                  <h2 className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[3vw] swiper-content-fadeup mobile:text-[13.8vw] mobile:mb-[8vw] tablet:text-[7vw]">
+                    {t("portfolioHead")}
+                  </h2>
+                  <p className="slide__text swiper-content-fadeup mobile:text-[4.1vw] mobile:tracking-wider tablet:text-[2.5vw]">
+                    {t("portfolioSub")}
+                  </p>
+                  <div className="address-container absolute top-[150%] left-[0] mt-[2vw] tablet:top-[140%]">
+                    <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup mobile:text-[7vw] tablet:text-[4vw]">
+                      {item.text1}
+                    </p>
+                    <p className="text-white font-light swiper-content-fadeup mobile:text-[4.1vw] tablet:text-[2.5vw]">
+                      {item.text2}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </>
         ))}
       </Swiper>
-        {portfolio.map((item, idx) => (
-          <div
-            key={idx}
-            className="slide absolute w-full h-full flex items-center justify-start top-0 left-0 px-[5vw] overflow-hidden"
-          >
-            <div className="slide__content relative z-[2] text-white top-[-30%] w-[70%] mobile:w-full mobile:top-[-25%]">
-              <h2
-                className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[3vw] swiper-content-fadeup mobile:text-[13.8vw] mobile:mb-[8vw]"
-               
-              >{t('portfolioHead')}</h2>
-              <p className="slide__text swiper-content-fadeup mobile:text-[4.1vw] mobile:tracking-wider">{t("portfolioSub")}</p>
-              <div className="address-container absolute top-[150%] left-[0] mt-[2vw]">
-                <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup mobile:text-[7vw]">{item.text1}</p>
-                <p className="text-white font-light swiper-content-fadeup mobile:text-[4.1vw]">{item.text2}</p>
-              </div>
-            </div>
-          </div>
-        ))}
 
       {/* Progress Bar */}
-      <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%] mobile:w-full mobile:text-[4.1vw] mobile:gap-[2vw] mobile:top-[55%]">
+      <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%] mobile:w-full mobile:text-[4.1vw] mobile:gap-[2vw] mobile:top-[55%] tablet:top-[50%] tablet:text-[3vw] tablet:w-[30vw] tablet:gap-[2vw]">
         <p>{String(activeIndex).padStart(2, "0")}</p>
-        <div className="w-[15vw] h-fit bg-white/20 mobile:w-[75vw]">
-        <div  ref={progressRef} className="w-[15vw] h-[2px] bg-white rounded-full relative overflow-hidden transistion-all duration-300 mobile:h-[3px]" style={{ width: "20%" }}>
-          <span
-           
-            className="absolute top-0 left-0 h-full transition-all duration-500"
-            
-          ></span>
-        </div>
-
+        <div className="w-[15vw] h-fit bg-white/20 mobile:w-[75vw] tablet:w-[25vw]">
+          <div
+            ref={progressRef}
+            className="w-[15vw] h-[2px] bg-white rounded-full relative overflow-hidden transistion-all duration-300 mobile:h-[3px]"
+            style={{ width: "20%" }}
+          >
+            <span className="absolute top-0 left-0 h-full transition-all duration-500"></span>
+          </div>
         </div>
         <p>{String(slides.length).padStart(2, "0")}</p>
       </div>
-    
 
       {/* Next Button */}
       <div
-       ref={buttonRef}
-       onMouseMove={handleMouseMove}
-        className="absolute z-[5] bottom-[25%] left-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:left-[20%]"
+        ref={buttonRef}
+        onMouseMove={handleMouseMove}
+        className="absolute z-[5] bottom-[25%] left-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:left-[20%] tablet:bottom-[20%] tablet:left-[15%]"
         onClick={handleNext}
       >
-         <span 
-                    className="hover-circle absolute aspect-square rounded-full bg-white
+        <span
+          className="hover-circle absolute aspect-square rounded-full bg-white
                     transition-all duration-500 ease transform -translate-x-1/2 -translate-y-1/2 
                     pointer-events-none opacity-1 scale-0  group-hover:scale-100"
-                    style={{
-                        width: '300%', 
-                    }}
-                ></span>
+          style={{
+            width: "300%",
+          }}
+        ></span>
         <div className="w-full h-full relative z-[6] flex justify-center items-center">
-          <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center">
+          <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center tablet:w-[4vw] tablet:h-[4vw]">
             <svg
               width="24"
               height="19"
@@ -191,21 +217,21 @@ export default function SwiperSlider() {
 
       {/* Prev Button */}
       <div
-       ref={buttonRef}
-       onMouseMove={handleMouseMove}
-        className="absolute z-[5] bottom-[25%] left-[5%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%]"
+        ref={buttonRef}
+        onMouseMove={handleMouseMove}
+        className="absolute z-[5] bottom-[25%] left-[5%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%]"
         onClick={handlePrev}
       >
-         <span 
-                    className="hover-circle absolute aspect-square rounded-full bg-white
+        <span
+          className="hover-circle absolute aspect-square rounded-full bg-white
                     transition-all duration-500 ease transform -translate-x-1/2 -translate-y-1/2 
                     pointer-events-none opacity-1 scale-0  group-hover:scale-100"
-                    style={{
-                        width: '300%', 
-                    }}
-                ></span>
+          style={{
+            width: "300%",
+          }}
+        ></span>
         <div className="w-full h-full flex justify-center items-center rotate-180">
-          <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center">
+          <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center tablet:w-[4vw] tablet:h-[4vw]">
             <svg
               width="24"
               height="19"
@@ -225,9 +251,8 @@ export default function SwiperSlider() {
         </div>
       </div>
 
-      <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%]">
-        <LinkButton href={"/"} text={"View Portfolio"}/>
-
+      <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%] tablet:bottom-[5%]">
+        <LinkButton href={"/"} text={"View Portfolio"} />
       </div>
     </div>
   );

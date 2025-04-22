@@ -34,7 +34,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" bg-transparent h-[30vw] text-white !font-body  mobile:h-[199vw] tablet:h-[52vw]"  
+    <footer className=" bg-transparent h-[30vw] text-white !font-body  mobile:h-[199vw] tablet:h-[46vw]"  
     style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="px-[5vw] w-full bg-[#121212] fixed bottom-0 mobile:px-[7vw] mobile:py-[5vw]">
         <div className=" pb-[10vw] h-[25vw] flex  justify-between mobile:flex-col mobile:h-[100vw] mobile:py-[5vw]">
