@@ -45,7 +45,7 @@ const ImageComponent = ({ imgsrc , width}) => {
     <div
       ref={wrapperRef}
       className="relative overflow-hidden h-[30%] inline-block w-full max-w-xl about-image-wrapper"
-      style={{ clipPath: 'polygon(0 0, 100% 0%, 80% 100%, 0% 100%)' }}
+      style={{ clipPath: 'polygon(0 0, 100% 0%, 80% 100%, 0% 100%)' }}w
     >
       <span className={`absolute top-0 left-0 h-full bg-[#CE8000] z-20 image-overlay ${width}`}  style={{
       clipPath: 'polygon(0 0, 100% 0%, 80% 100%, 0% 100%)'
