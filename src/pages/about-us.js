@@ -9,6 +9,7 @@ import heroBg from "../../public/assets/images/about/hero-bg.png"
 import Contact from '@/components/Common/Contact';
 import Layout from '@/components/Common/Layout';
 
+
 export default function AboutPage() {
   fadeUp();
   paraAnim();

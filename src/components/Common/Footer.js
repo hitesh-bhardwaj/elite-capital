@@ -51,13 +51,13 @@ const Footer = () => {
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
            <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[6vw]">
             {footerNavBottom.map((item,index)=>(
-              <>
-              <Link key={index} href={item.link} prefetch={false} className="group">
+              <div key={index}>
+              <Link  href={item.link} prefetch={false} className="group">
               <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
                 <span  className="mobile:text-[5.1vw]">{item.text}</span>
             </div></Link>
               <span className="h-1 w-1 bg-white rounded-full block last:hidden mobile:hidden"/>
-              </>
+              </div>
             ))}
               </div>
           <div className="flex items-center gap-4">
