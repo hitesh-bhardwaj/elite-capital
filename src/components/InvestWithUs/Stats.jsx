@@ -89,9 +89,9 @@ const Stats = () => {
   }
   return (
     <>
-      <section className="relative bg-[#F4F4F4] h-[40vw] overflow-hidden  mobile:pb-[10%] tablet:py-[7%] mobile:h-full dark" id="stats">
+      <section className="relative bg-[#F4F4F4] h-[40vw] overflow-hidden  mobile:pb-[10%] tablet:py-[7%] mobile:h-full dark tablet:h-[60vw]" id="stats">
         <div className="flex items-center justify-between h-full mobile:flex-col">
-          <div className="w-1/2 h-full overflow-hidden mobile:w-full mobile:h-[100vw]">
+          <div className="w-1/2 h-full overflow-hidden mobile:w-full mobile:h-[100vw] tablet:h-[60vw]">
             <Image
               src={statsImg}
               height={1280}
@@ -129,7 +129,7 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] text-center mx-auto  mobile:text-left mobile:w-[60%]"
+                className="content w-[75%] mobile:!text-[4.7vw] text-center mx-auto  mobile:text-left mobile:w-[60%] tablet:w-full"
               >
                 {t("stats1")}
               </p>
@@ -166,7 +166,7 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] mx-auto  mobile:text-left mobile:w-[60%]"
+                className="content w-[75%] mobile:!text-[4.7vw] mx-auto  text-center mobile:text-left mobile:w-[60%] tablet:w-full"
               >
                 {t("stats2")}
               </p>
@@ -200,7 +200,7 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw]  mx-auto text-center mobile:text-left mobile:w-[60%]"
+                className="content w-[75%] mobile:!text-[4.7vw]  mx-auto text-center mobile:text-left mobile:w-[60%]  tablet:w-full "
               >
                 {t("stats3")}
               </p>
@@ -239,7 +239,7 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] mx-auto text-center mobile:text-left mobile:w-[60%]"
+                className="content w-[75%] mobile:!text-[4.7vw] mx-auto text-center mobile:text-left mobile:w-[60%] tablet:w-full"
               >
                 {t("stats4")}
               </p>
@@ -257,8 +257,8 @@ const Stats = () => {
             />
           </div>
         </div>
-        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden " />
-        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[68%]  mobile:hidden" />
+        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  " />
+        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[68%]  mobile:hidden tablet:h-[85%]" />
       </section>
     </>
   );

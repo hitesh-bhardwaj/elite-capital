@@ -47,7 +47,7 @@ const About = () => {
                         <Image src={yellowRectangle} height={52} width={77} alt="yellow-rectangle" className="blockAnim mobile:w-[10vw] mobile:h-[8vw]" />
                     </div>
 
-                    <div className="space-y-[2vw] w-[80%] mb-[3vw] pr-[3vw] pl-[10vw] text-black1 py-[3vw] mobile:w-[85%] mobile:text-[4.6vw] mobile:px-[5vw] tablet:w-[60%] tablet:pl-[4vw] tablet:pr-[3vw]">
+                    <div className="space-y-[2vw] w-[80%] mb-[3vw] pr-[3vw] pl-[10vw] text-black1 py-[3vw] mobile:w-[85%] mobile:text-[4.6vw] mobile:px-[5vw] tablet:w-full tablet:pl-[4vw] tablet:pr-[3vw]">
                         {aboutsub.map((item, index) => (
                             <div className="content about-content text-justify" key={index}>
                                 {item.text}
@@ -55,7 +55,7 @@ const About = () => {
                         ))}
                     </div>
 
-                    <div className="w-full h-full translate-x-[65%] mobile:translate-x-[20%]">
+                    <div className="w-full h-full translate-x-[65%] mobile:translate-x-[20%] tablet:translate-x-[30%]">
                         <ImageComponent imgsrc={aboutImage} width={"w-[80%] mobile:w-[80%]"} />
                     </div>
                 </div>

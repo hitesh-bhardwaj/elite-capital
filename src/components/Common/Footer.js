@@ -34,7 +34,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" bg-transparent h-[30vw] text-white !font-body tablet:pb-[7%] mobile:h-[199vw] "  
+    <footer className=" bg-transparent h-[30vw] text-white !font-body  mobile:h-[199vw] tablet:h-[52vw]"  
     style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="px-[5vw] w-full bg-[#121212] fixed bottom-0 mobile:px-[7vw] mobile:py-[5vw]">
         <div className=" pb-[10vw] h-[25vw] flex  justify-between mobile:flex-col mobile:h-[100vw] mobile:py-[5vw]">
@@ -44,30 +44,30 @@ const Footer = () => {
               width={100}
               height={100}
               alt="Logo"
-              className="w-[35vw] h-auto fadeUp mobile:w-[90vw]"
+              className="w-[35vw] h-auto fadeUp mobile:w-[90vw] tablet:w-[30vw]"
             />
           </div>
           
-          <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw] mobile:my-[10vw] mobile:gap-[4vw] tablet:justify-start tablet:mt-[5vw] mobile:text-[6.65vw]">
+          <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw] mobile:my-[10vw] mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">
           {footerNav.map((item,index)=>(
             <Link key={index} href={item.link} className="group transition-all duration-300 ease" >
-               <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-                <span  className="group-hover:scale-[0.98] transition-all duration-300 ease">{item.text}</span>
+               <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
+                <span  className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">{item.text}</span>
             </div>
             </Link>
 ))}
           </div>
          
         </div>
-        <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[8vw] mobile:mt-[10vw] tablet:mt-[7vw]">
-          <h6 className="text-[1.15rem] tablet:w-[50%] mobile:text-[5.1vw]">{t('footerCopy')}</h6>
+        <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[8vw] mobile:mt-[10vw] tablet:mt-[7vw] tablet:pb-[5vw]">
+          <h6 className="text-[1.15rem] tablet:w-[40%] mobile:text-[5.1vw]">{t('footerCopy')}</h6>
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
-           <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[6vw]">
+           <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[6vw] tablet:gap-[1vw]">
             {footerNavBottom.map((item,index)=>(
              <>
               <Link key={index}  href={item.link} prefetch={false} className="group">
               <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-                <span  className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease">{item.text}</span>
+                <span  className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.5vw]">{item.text}</span>
             </div></Link>
               <span className="h-1 w-1 bg-white rounded-full block last:hidden mobile:hidden"/>
              </>
@@ -80,7 +80,7 @@ const Footer = () => {
               onMouseMove={(e) => handleMouseMove(e)}
                 target="_blank"
                 href={social.link}
-                className="group flex items-center relative justify-center border-[1.5px] border-white overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw]"
+                className="group flex items-center relative justify-center border-[1.5px] border-white overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
                 key={index}
               >
                 <span 
@@ -92,7 +92,7 @@ const Footer = () => {
                     }}
                 ></span>
                 <Image
-                  className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300"
+                  className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300 tablet:h-[3vw] tablet:w-[3vw]"
                   src={social.icon}
                   alt={social.alt}
                   width={25}
