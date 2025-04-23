@@ -26,22 +26,22 @@ const Loader2 = () => {
       scaleX: 1,
       duration: 0.5,
       ease: 'power2.out',
-    }, 0.2)
+    }, "0.2")
       .to(path1Ref.current, {
         scaleX: 1,
         duration: 0.5,
         ease: 'power2.out',
-      }, '+=0.2')
+      }, '-=0.3')
       .to(path2Ref.current, {
         scaleX: 1,
         duration: 0.5,
         ease: 'power2.out',
-      }, '+=0.2')
+      }, '-=0.3')
       .to(svgWrapperRef.current, {
         transform: 'translateZ(1100px)',
         duration: 1.5,
         ease: 'power4.out',
-      }, '+=0.2')
+      }, '-=0.2')
       .to(loaderRef.current, {
         backgroundColor: 'black',
         duration: 0.5,

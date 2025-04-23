@@ -34,7 +34,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
       gsap.from(".hero-img", {
         scale: 1.1,
         duration: 1,
-        delay: 3,
+        delay: 1.7,
         ease: "power3.out",
       });
       gsap.to(".hero-img", {
@@ -58,7 +58,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
         opacity: 0,
         yPercent: 40,
         duration: 1,
-        delay: 3,
+        delay: 1.7,
         stagger: 0.02,
       });
 
@@ -71,7 +71,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
           start: "top 80%",
         },
         opacity: 0,
-        delay: 3,
+        delay: 1.7,
         x: 20,
         duration: 1,
         stagger: 0.05,

@@ -76,7 +76,7 @@ const BoardofDirectors = () => {
                     </p>
                     <div
                       className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
-                        openedIndex === index ? "h-[20vw] tablet:h-[65vw]" : "h-[8vw] tablet:h-[10vw]"
+                        openedIndex === index ? "h-[30vw] tablet:h-[65vw]" : "h-[8vw] tablet:h-[10vw]"
                       }`}
                     >
                       {item.features.map((feature, i) => (
