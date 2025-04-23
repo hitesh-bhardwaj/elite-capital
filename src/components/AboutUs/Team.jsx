@@ -14,7 +14,7 @@ const Team = () => {
         <div className="px-[5vw] py-[5vw] mobile:space-y-[5vw]">
           <h2
             data-title-anim
-            className="text-[4.7vw] font-display mb-[2vw] mobile:text-[12.5vw] tablet:mb-0"
+            className="text-[4.7vw] font-display mb-[2vw] mobile:text-[12.5vw] tablet:mb-0 tablet:text-[7vw]"
           >
             {t("team")}
           </h2>
@@ -36,7 +36,7 @@ const Team = () => {
                       className={`object-contain w-full h-full group-hover:scale-[0.95] transition-all duration-500 ease`}
                     />
                   </div>
-                  <div className=" mobile:space-y-[2vw] flex flex-col mobile:gap-[4vw] absolute bottom-0 h-[30vw] mobile:h-[100vw] group-hover:translate-y-[0%] translate-y-[70%] transition-all duration-500 ease-in-out  rounded-tl-[0.5vw] rounded-tr-[0.5vw] w-full px-[2vw] pt-[1vw] bg-[#F2F2E9] left-0 mobile:pt-[3vw] mobile:translate-y-[75%] mobile:rounded-tl-[2.5vw] mobile:rounded-tr-[2.5vw] mobile:px-[5vw] tablet:h-[60vw]">
+                  <div className=" mobile:space-y-[2vw] flex flex-col mobile:gap-[4vw] absolute bottom-0 h-[30vw] mobile:h-[100vw] group-hover:translate-y-[0%] translate-y-[70%] transition-all duration-500 ease-in-out  rounded-tl-[0.5vw] rounded-tr-[0.5vw] w-full px-[2vw] pt-[1vw] bg-[#F2F2E9] left-0 mobile:pt-[3vw] mobile:translate-y-[75%] mobile:rounded-tl-[2.5vw] mobile:rounded-tr-[2.5vw] mobile:px-[5vw] tablet:h-[60vw] tablet:translate-y-[75%]">
                     <div className="h-fit">
                       <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[4.5vw]">
                         {item.name}

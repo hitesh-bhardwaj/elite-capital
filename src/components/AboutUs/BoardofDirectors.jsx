@@ -20,7 +20,7 @@ const BoardofDirectors = () => {
   
     useEffect(() => {
       const checkMobile = () => {
-        setIsMobileWidth(globalThis.innerWidth <= 1023);
+        setIsMobileWidth(globalThis.innerWidth <= 541);
       };
   
       checkMobile(); 
@@ -35,20 +35,20 @@ const BoardofDirectors = () => {
         <div className=" mobile:space-y-[5vw]">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
+            className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw]"
           >
             {t("teamSub")}
           </h2>
           <div>
-            <div className="w-full h-full flex flex-wrap justify-start mobile:hidden tablet:gap-y-[7vw] ">
+            <div className="w-full h-full flex flex-wrap justify-start mobile:hidden ">
               {boardMembers.map((item, index) => (
                 <div
-                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
+                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-full w-full px-[5vw] py-[2vw] tablet:flex-col ${
                     index % 2 == 0 ? "bg-[#BCBCBC]" : ""
                   }`}
                   key={index}
                 >
-                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease">
+                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease tablet:h-[40vw] tablet:w-[30vw]">
                     <Image
                       src={item.img}
                       height={626}
@@ -59,30 +59,30 @@ const BoardofDirectors = () => {
                   </div>
                   <div
                     key={index}
-                    className="flex flex-col gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%]"
+                    className="flex flex-col gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%] tablet:w-full"
                   >
                     <p
                       data-para-anim
-                      className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]"
+                      className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]"
                     >
                       {item.name}
                     </p>
 
                     <p
                       data-para-anim
-                      className="mobile:text-[4.6vw] tablet:text-[2vw] w-[30%] leading-[1.2] "
+                      className="mobile:text-[4.6vw] tablet:text-[3vw] w-[30%] leading-[1.2] tablet:w-full "
                     >
                       {item.des}
                     </p>
                     <div
                       className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
-                        openedIndex === index ? "h-[20vw]" : "h-[8vw]"
+                        openedIndex === index ? "h-[20vw] tablet:h-[65vw]" : "h-[8vw] tablet:h-[10vw]"
                       }`}
                     >
                       {item.features.map((feature, i) => (
                         <p
                           key={i}
-                          className={`text-[1.3vw] space-y-[1vw]  ${
+                          className={`text-[1.3vw] space-y-[1vw] tablet:text-[2.5vw]  ${
                             i === 0 ? "mt-[2vw]" : ""
                           }`}
                         >
@@ -91,7 +91,7 @@ const BoardofDirectors = () => {
                       ))}
                     </div>
                     <p
-                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative "
+                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative  tablet:text-[2vw]"
                       onClick={() =>
                         setOpenedIndex(openedIndex === index ? null : index)
                       }
@@ -112,20 +112,20 @@ const BoardofDirectors = () => {
         <div className=" mobile:space-y-[5vw] pt-[8vw]">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
+            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw]"
           >
             {t("teamSub1")}
           </h2>
           <div >
-            <div className="w-full h-full flex flex-wrap justify-start mobile:hidden tablet:gap-y-[7vw] ">
+            <div className="w-full h-full flex flex-wrap justify-start mobile:hidden  ">
               {adviserMembers.map((item, index) => (
                 <div
-                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
+                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  tablet:flex-col transition-transform hover:scale-[1.02] tablet:w-full w-full px-[5vw] py-[2vw] ${
                     index % 2 == 0 ? "bg-[#BCBCBC]" : ""
                   }`}
                   key={index}
                 >
-                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease">
+                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease tablet:h-[40vw] tablet:w-[30vw]">
                     <Image
                       src={item.img}
                       height={626}
@@ -136,31 +136,31 @@ const BoardofDirectors = () => {
                   </div>
                   <div
                     key={index}
-                    className="flex flex-col mt-[2vw] gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%]"
+                    className="flex flex-col mt-[2vw] gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%] tablet:w-full"
                   >
                     <p
                       data-para-anim
-                      className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]"
+                      className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]"
                     >
                       {item.name}
                     </p>
 
                     <p
                       data-para-anim
-                      className="mobile:text-[4.6vw] tablet:text-[2vw] w-[50%] leading-[1.2]"
+                      className="mobile:text-[4.6vw] tablet:text-[3vw] w-[50%] leading-[1.2]"
                     >
                       {item.des}
                     </p>
 
                     <div
                       className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
-                        openedIndexadviser === index ? "h-[25vw]" : "h-[8vw]"
+                        openedIndexadviser === index ? "h-[25vw] tablet:h-[55vw]" : "h-[8vw] tablet:h-[10vw]"
                       }`}
                     >
                       {item.features.map((feature, i) => (
                         <p
                           key={i}
-                          className={`text-[1.3vw] space-y-[1vw] ${
+                          className={`text-[1.3vw] space-y-[1vw] tablet:text-[2.5vw] ${
                             i === 0 ? "mt-[2vw]" : ""
                           }`}
                         >
@@ -170,7 +170,7 @@ const BoardofDirectors = () => {
                     </div>
 
                     <p
-                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative"
+                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative tablet:text-[2vw]"
                       onClick={() =>
                         setOpenedIndexadviser(
                           openedIndexadviser === index ? null : index
@@ -195,20 +195,20 @@ const BoardofDirectors = () => {
         <div className="pt-[8vw] mobile:space-y-[5vw]">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[5vw] tablet:mb-0 pl-[5vw]"
+            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw]"
           >
             {t("teamSub2")}
           </h2>
           <div >
-            <div className="w-full h-fit flex flex-wrap justify-start mobile:hidden tablet:gap-y-[7vw] ">
+            <div className="w-full h-fit flex flex-wrap justify-start mobile:hidden tablet:gap-y-[7vw] tablet:flex-col">
               {investmentMembers.map((item, index) => (
                 <div
-                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[2vw] ${
+                  className={` h-full flex gap-[5vw] fadeUp mobile:w-[70vw]  transition-transform hover:scale-[1.02] tablet:w-full tablet:flex-col w-full px-[5vw] py-[2vw] ${
                     index % 2 == 0 ? "bg-[#BCBCBC]" : ""
                   }`}
                   key={index}
                 >
-                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease">
+                  <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease tablet:h-[40vw] tablet:w-[30vw]">
                     <Image
                       src={item.img}
                       height={626}
@@ -219,18 +219,18 @@ const BoardofDirectors = () => {
                   </div>
                   <div
                     key={index}
-                    className={`flex flex-col mt-[2vw] py-[2vw] mobile:space-y-[2vw] w-[70%] transition-all duration-500 ease-in-out`}
+                    className={`flex flex-col mt-[2vw] py-[2vw] mobile:space-y-[2vw] w-[70%] transition-all duration-500 ease-in-out tablet:w-full`}
                   >
                     <p
                       data-para-anim
-                      className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[3vw]"
+                      className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]"
                     >
                       {item.name}
                     </p>
 
                     <p
                       data-para-anim
-                      className="mobile:text-[4.6vw] tablet:text-[2vw] w-[30%]"
+                      className="mobile:text-[4.6vw] tablet:text-[3vw] w-[30%]"
                     >
                       {item.des}
                     </p>
@@ -238,14 +238,14 @@ const BoardofDirectors = () => {
                     <div
                       className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
                         openedIndexinvestment === index
-                          ? "h-[25vw]"
+                          ? "h-[25vw] tablet:h-[60vw]"
                           : "h-[10vw]"
                       }`}
                     >
                       {item.features.map((feature, i) => (
                         <p
                           key={i}
-                          className={`text-[1.3vw] space-y-[1vw] ${
+                          className={`text-[1.3vw] space-y-[1vw] tablet:text-[2.5vw] ${
                             i === 0 ? "mt-[2vw]" : ""
                           }`}
                         >
@@ -255,7 +255,7 @@ const BoardofDirectors = () => {
                     </div>
 
                     <p
-                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative"
+                      className="text-[1.3vw] cursor-pointer mt-[2vw] relative tablet:text-[2vw]"
                       onClick={() =>
                         setOpenedIndexinvestment(
                           openedIndexinvestment === index ? null : index
@@ -298,13 +298,26 @@ const MobileSwiper = ({ members }) => {
     }
   };
   return (
-    <Swiper navigation={true} modules={[Navigation]} className="mySwiper"  onSwiper={(swiper) => (swiperRef.current = swiper)}>
+    <Swiper navigation={true} modules={[Navigation]} className="mySwiper"  onSwiper={(swiper) => (swiperRef.current = swiper)} breakpoints={{
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1.3,
+        spaceBetween: 0,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    }}>
       {members.map((item, index) => (
         <SwiperSlide key={index}>
           <div
-            className={`h-full flex gap-[5vw] fadeUp mobile:w-full transition-transform hover:scale-[1.02] tablet:w-[43vw] w-full px-[5vw] py-[10vw] bg-[#BCBCBC] mobile:flex-col mobile:items-center mobile:h-full mobie:py-[4vw] `}
+            className={`h-full flex gap-[5vw] fadeUp mobile:w-full transition-transform hover:scale-[1.02] tablet:w-[70vw] tablet:h-[180vw] w-full px-[5vw] py-[10vw] bg-[#BCBCBC] mobile:flex-col mobile:items-center mobile:h-full mobie:py-[4vw]  tablet:flex-col `}
           >
-            <div className="h-[28vw] w-[22vw] mobile:w-[82vw] mobile:ml-[-5vw] mobile:h-[90vw] mobile:rounded-[3.5vw]  overflow-hidden group transition-all duration-500 ease">
+            <div className="h-[28vw] w-[22vw] mobile:ml-[-5vw] mobile:h-[90vw] mobile:rounded-[3.5vw] overflow-hidden group transition-all duration-500 ease rounded-[2vw] tablet:w-[50vw] tablet:h-[50vw]">
               <Image
                 src={item.img}
                 height={626}
@@ -313,17 +326,17 @@ const MobileSwiper = ({ members }) => {
                 className="w-full h-full object-cover transition-all duration-500 ease "
               />
             </div>
-            <div className="flex flex-col gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%] mobile:w-full">
+            <div className="flex flex-col gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%] mobile:w-full tablet:w-full">
               <p
                 data-para-anim
-                className="text-[2.5vw] leading-[1.2] font-display mobile:text-[7.2vw] tablet:text-[3vw]"
+                className="text-[2.5vw] leading-[1.2] font-display mobile:text-[7.2vw] tablet:text-[5vw]"
               >
                 {item.name}
               </p>
 
               <p
                 data-para-anim
-                className="mobile:text-[4.8vw] tablet:text-[2vw] w-[30%] mobile:w-full"
+                className="mobile:text-[4.8vw] tablet:text-[3vw] w-[30%] mobile:w-full tablet:w-full"
               >
                 {item.des}
               </p>
@@ -333,7 +346,7 @@ const MobileSwiper = ({ members }) => {
                 {item.features.map((feature, i) => (
                   <p
                     key={i}
-                    className={`text-[1.3vw] space-y-[1vw] mobile:text-[4.1vw] ${
+                    className={`text-[1.3vw] space-y-[1vw] mobile:text-[4.1vw] tablet:text-[2.5vw] ${
                       i === 0 ? "mt-[2vw]" : ""
                     }`}
                   >

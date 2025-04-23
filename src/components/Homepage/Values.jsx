@@ -51,8 +51,8 @@ const Values = () => {
                     <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]">{t('valuesHead')}</h2>
                     <div className=" w-full relative z-10 mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
                        <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full tablet:w-full">
-                        <div className="flex w-full gap-[5vw] mobile:flex-col">
-                       <div className="flex flex-col w-[50%] mobile:w-full">
+                        <div className="flex w-full gap-[5vw] mobile:flex-col tablet:flex-col tablet:gap-0">
+                       <div className="flex flex-col w-[50%] mobile:w-full tablet:w-full">
                         {values.map((item,index) => (
                          <SingleAccordion
                            key={index}
@@ -65,7 +65,7 @@ const Values = () => {
                        ))}
                         
                         </div>
-                        <div className="flex flex-col w-[50%] mobile:w-full">
+                        <div className="flex flex-col w-[50%] mobile:w-full tablet:w-full">
                         {values.map((item,index) => (
                          <SingleAccordion
                            key={index}
