@@ -7,8 +7,8 @@ import NewHeader from './NewHeader'
 const Layout = ({children}) => {
   return (
    <>
-   <Header/>
-   {/* <NewHeader/> */}
+   {/* <Header/> */}
+   <NewHeader/>
    <main>
     {children}
    </main>
