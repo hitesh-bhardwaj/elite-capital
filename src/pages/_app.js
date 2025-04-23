@@ -1,11 +1,12 @@
 import { Barlow, Bodoni_Moda} from "next/font/google";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import { appWithTranslation } from 'next-i18next'
 import { ReactLenis } from "lenis/react";
 import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion"; 
+import Loader2 from "@/components/Loader2";
 
 
 const bodoni_moda = Bodoni_Moda({
@@ -50,6 +51,22 @@ const App = ({ Component, pageProps }) => {
     animate: { opacity: 1 },
     exit: { opacity: 0 },
   };
+
+  const [showPreloader, setShowPreloader] = useState(true);
+
+    useEffect(() => {
+        const hasVisited = sessionStorage.getItem('hasVisited');
+        if (!hasVisited) {
+            setShowPreloader(true);
+            const preloaderTimeout = setTimeout(() => {
+                setShowPreloader(false);
+                sessionStorage.setItem('hasVisited', 'true');
+            }, 3400);
+            return () => clearTimeout(preloaderTimeout);
+        } else {
+            setShowPreloader(false);
+        }
+    }, []);
   return (
     <>
       <Head>
@@ -58,6 +75,7 @@ const App = ({ Component, pageProps }) => {
         <title>Elite Capital</title>
         <meta name="description" content="Real Assets, Real Returns" />
       </Head>
+      
       <ReactLenis root>
       <LazyMotion features={domAnimation}>
       <AnimatePresence mode="wait">
@@ -70,6 +88,7 @@ const App = ({ Component, pageProps }) => {
                 transition={{ duration: 0.6 }}
               >
       <main className={`${bodoni_moda.variable} ${barlow.variable} font-body text-[1.55vw] text-black1`}>
+      {showPreloader && <Loader2/>}
         <Component {...pageProps} />
       </main>
       </m.div>

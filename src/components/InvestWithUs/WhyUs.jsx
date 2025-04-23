@@ -75,7 +75,7 @@ const WhyUS = () => {
                     src={images[index]}
                     alt="Image"
                   />
-                  <div className="absolute bg-[#F2F2E9] top-0 left-0 bottom-0 right-0 opacity-0 group-hover:opacity-100 z-[5] transition-all duration-500 ease py-[1vw] flex flex-col justify-between h-full pr-[1.5vw] px-[1vw] w-full mobile:hidden tablet:hidden">
+                  <div className={`absolute bg-[#F2F2E9] top-0 left-0 bottom-0 right-0 opacity-0  z-[5] transition-all duration-500 ease py-[1vw] flex flex-col justify-between h-full pr-[1.5vw] px-[1vw] w-full mobile:hidden tablet:hidden ${active ? 'group-hover:opacity-0' : 'group-hover:opacity-100'}`}>
                     <div className="flex justify-between">
                       <p>{item.num}</p>
                       <div className="rounded-full border p-3 h-[3vw] w-[3vw] flex items-center border-black1 justify-end">

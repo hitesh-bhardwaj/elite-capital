@@ -3,11 +3,17 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { SplitInWord } from "../splitTextUtils";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = ({ img, translation, heading, para, nextSectionId , className}) => {
   const { t } = useTranslation(`${translation}`);
   const buttonRef = useRef(null);
+  let delayTime ="";
+  useEffect(()=>{
+    const isFirstTimeLoading = sessionStorage.getItem('hasVisited') === null;
+     delayTime = isFirstTimeLoading ? 1.7 : 0.2;
+  },[])
 
   const handleMouseMove = useCallback((e) => {
     if (!buttonRef.current) return;
@@ -33,7 +39,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId , className}) => 
       gsap.from(".hero-img", {
         scale: 1.1,
         duration: 1,
-        delay: 0.2,
+        delay: delayTime,
         ease: "power3.out",
       });
       gsap.to(".hero-img", {
@@ -45,6 +51,21 @@ const Hero = ({ img, translation, heading, para, nextSectionId , className}) => 
           end: "bottom top",
           scrub: true,
         },
+      });
+
+      const heroTitleAnimation = document.querySelector(".hero-title-anim");
+      SplitInWord(heroTitleAnimation);
+      const HeroTitle = heroTitleAnimation.querySelectorAll(".word");
+      gsap.from(HeroTitle, {
+        scrollTrigger: {
+          trigger: heroTitleAnimation,
+          start: "top 80%",
+        },
+        opacity: 0,
+        delay: delayTime,
+        x: 20,
+        duration: 1,
+        stagger: 0.05,
       });
     });
     return () => ctx.revert();
@@ -69,8 +90,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId , className}) => 
         <div className="relative z-10 px-[5vw] pt-[8vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%]">
           <div className="py-[10%] text-white w-full mobile:w-full">
             <h1
-              data-title-anim
-              className="heading-1 w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw]"
+              className="heading-1 w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw] hero-title-anim"
             >
               {heading}
             </h1>

@@ -21,40 +21,31 @@ import { Checkbox } from "../ui/checkbox";
 import { useTranslation } from "next-i18next";
 
 const formSchema = z.object({
-  name: z.string().min(3, {
-    message: "Name must be at least 3 characters.",
-  }),
-  email: z.string().email({
-    message: "Invalid email address.",
-  }),
-  number: z.string().min(10, {
-    message: "Contact number must be at least 10 digits.",
-  }),
-
-  companyName: z.string().min(1, {
-    message: "company name must be at least 2 characters.",
-  }),
-
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
+  name: z.string().min(3, { message: "Name must be at least 3 characters." }),
+  email: z.string().email({ message: "Invalid email address." }),
+  number: z.string().regex(/^\d{10,15}$/, { message: "Phone number must be 10-15 digits." }),
+  company: z.string().min(2, { message: "Company name is required." }),
+  designation: z.string().min(2,{message: "Designation is required."}),
+  message: z.string().optional(),
+  terms: z.boolean().refine((val) => val, { message: "You must agree to terms." }),
 });
 
 export default function ContactForm() {
-  const [isLoading, setIsLoading] = useState(false);
-    const { t } = useTranslation("home");
-
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
-      mobile: "",
-      companyName: "",
+      number: "",
+      company: "",
+      designation:"",
       message: "",
+      terms: false,
     },
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+    const { t } = useTranslation("home");
   const onSubmit = async (data) => {
     setIsLoading(true);
     console.log("Form Submitted:", data);

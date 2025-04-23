@@ -44,7 +44,7 @@ const Content = () => {
                         <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={100} height={36} className=' mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw]'/>
                     </div>
                     <div className='w-full mobile:w-[80%]'>
-               <div className='heading-2 pb-[1vw] mobile:pb-[5vw] tablet:pb-[5vw]' dangerouslySetInnerHTML={{__html: item.title}}/>
+               <div className='heading-2 pb-[1vw] mobile:pb-[5vw] tablet:pb-[5vw] ' dir='rtl' dangerouslySetInnerHTML={{__html: item.title}}/>
                <div className='content space-y-[1.5vw] mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] cookie' dangerouslySetInnerHTML={{__html: item.para}}/>
                </div>
                 </div>
