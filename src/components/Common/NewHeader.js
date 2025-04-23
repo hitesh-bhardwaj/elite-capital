@@ -127,7 +127,7 @@ const NewHeader = () => {
         gsap.from(".menu-link",{
           opacity:0,
           duration:1,
-          delay:0.4,
+          delay:0.3,
         })
       } else {
         gsap.from(".ham-line", {
@@ -138,7 +138,7 @@ const NewHeader = () => {
         });
         gsap.to(".menu-link",{
           opacity:0,
-          duration:0.5,
+          duration:0.3,
          
         })
       }
@@ -190,8 +190,8 @@ const NewHeader = () => {
           onMouseEnter={open}
           onMouseLeave={close}
         >
-          <div className={`absolute  right-[10%] z-[4] rtl:left-[11%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${
-            openMenu ? "w-[33vw] px-[2vw] " : "w-0"
+          <div className={`absolute right-[10%] z-[2] rtl:left-[11%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${
+            openMenu ? "w-[34vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
           } `}>
           <div
             className={`w-[40vw] flex-nowrap flex gap-[3vw]`}
@@ -212,7 +212,7 @@ const NewHeader = () => {
           </div>
 
           </div>
-          <div className={`w-[2vw] h-[2vw] flex flex-col cursor-pointer justify-center items-center gap-[0.5vw] relative z-[2] tablet:hidden mobile:hidden`}>
+          <div className={`w-[2vw] h-[2vw] flex flex-col justify-center items-center gap-[0.5vw] relative z-[2] tablet:hidden mobile:hidden `}>
             <span className={`w-full h-[1.5px]  ham-line origin-right ${isInverted?"bg-black":"bg-white"}`}></span>
             <span className={`w-full h-[1.5px]  ham-line origin-right ${isInverted?"bg-black":"bg-white"}`}></span>
             <span className={`w-full h-[1.5px] ham-line origin-right ${isInverted?"bg-black":"bg-white"}`}></span>
