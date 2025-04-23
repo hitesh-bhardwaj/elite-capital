@@ -122,7 +122,7 @@ const Stats = () => {
                       <div className="num">5</div>
                     </div>
                     <div className="counter-3 translate-y-[100%] digit font-semibold">
-                      <div className="num text-[3vw]">+</div>
+                      <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                     </div>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ const Stats = () => {
                     <div className="num">K</div>
                   </div>
                   <div className="countnew-4 digit font-semibold translate-y-[100%]">
-                    <div className="num text-[3vw]">+</div>
+                    <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                   </div>
                 </div>
               </div>
@@ -194,7 +194,7 @@ const Stats = () => {
                     <div className="num">M</div>
                   </div>
                   <div className="count-4 digit font-semibold translate-y-[100px]">
-                    <div className="num text-[3vw]">+</div>
+                    <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                   </div>
                 </div>
               </div>
@@ -233,7 +233,7 @@ const Stats = () => {
                     <div className="num">B</div>
                   </div>
                   <div className="countlast-6 digit font-semibold translate-y-[100px]">
-                    <div className="num text-[3vw]">+</div>
+                    <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                   </div>
                 </div>
               </div>

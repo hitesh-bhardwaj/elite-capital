@@ -32,10 +32,10 @@ const BoardofDirectors = () => {
   return (
     <>
       <section className="w-screen h-full bg-[#ffffff]  pb-[5vw] mobile:overflow-hidden mobile:space-y-[8vw] tablet:pb-[7%] pt-[7vw]">
-        <div className=" mobile:space-y-[5vw]">
+        <div className=" mobile:space-y-[5vw] ">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw]"
+            className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] mobile:mb-[7vw] "
           >
             {t("teamSub")}
           </h2>
@@ -317,7 +317,7 @@ const MobileSwiper = ({ members }) => {
           <div
             className={`h-full flex gap-[5vw] fadeUp mobile:w-full transition-transform hover:scale-[1.02] tablet:w-[70vw] tablet:h-[180vw] w-full px-[5vw] py-[10vw] bg-[#BCBCBC] mobile:flex-col mobile:items-center mobile:h-full mobie:py-[4vw]  tablet:flex-col `}
           >
-            <div className="h-[28vw] w-[22vw] mobile:ml-[-5vw] mobile:h-[90vw] mobile:rounded-[3.5vw] overflow-hidden group transition-all duration-500 ease rounded-[2vw] tablet:w-[50vw] tablet:h-[50vw]">
+            <div className="h-[28vw] w-[22vw] mobile:w-[80vw] mobile:ml-[-10vw] mobile:h-[90vw] mobile:rounded-[3.5vw] overflow-hidden group transition-all duration-500 ease rounded-[2vw] tablet:w-[50vw] tablet:h-[50vw]">
               <Image
                 src={item.img}
                 height={626}

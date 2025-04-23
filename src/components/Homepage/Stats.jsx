@@ -171,7 +171,7 @@ const Stats = () => {
                   <div className="num">0</div>
                 </div>
                 <div className="counter-3 translate-y-[100%] digit font-semibold mobile:text-[12vw] tablet:text-[7vw] ">
-                  <div className="num text-[3vw]">+</div>
+                  <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                 </div>
               </div>
               <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[50%]">{statsContent[0].text}</p>
@@ -236,7 +236,7 @@ const Stats = () => {
                
               </div>
               <div className="count-4 digit font-semibold translate-y-[100px]">
-                <div className="num text-[3vw]">+</div>
+                <div className="num text-[3vw] mobile:text-[10vw]">+</div>
               </div>
             </div>
             <p data-para-anim className="relative content z-[2] text-center mobile:text-left  mobile:w-[60%]">{statsContent[2].text}</p>
@@ -260,7 +260,7 @@ const Stats = () => {
                 <div className="num">B</div>
               </div>
               <div className="countlast-4 digit font-semibold translate-y-[100px]">
-                <div className="num text-[3vw]">+</div>
+                <div className="num text-[3vw] mobile:text-[10vw]">+</div>
               </div>
             </div>
             <p data-para-anim className="relative content z-[2] text-center mobile:text-left mobile:w-[60%] ">{statsContent[3].text}</p>

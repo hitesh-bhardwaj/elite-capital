@@ -50,7 +50,7 @@ const Values = () => {
                 <div className="space-y-[6vw]">
                     <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]">{t('valuesHead')}</h2>
                     <div className=" w-full relative z-10 mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
-                       <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full tablet:w-full">
+                       <Accordion dir="ltr" type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full tablet:w-full">
                         <div className="flex w-full gap-[5vw] mobile:flex-col tablet:flex-col tablet:gap-0">
                        <div className="flex flex-col w-[50%] mobile:w-full tablet:w-full">
                         {values.map((item,index) => (
@@ -98,7 +98,7 @@ const SingleAccordion = ({ id, title, content , className}) => {
       <AccordionTrigger data-para-anim className="text-[2.5vw] text-left mobile:flex mobile:w-full mobile:text-[7vw] tablet:text-[4vw] tablet:text-left  font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white">
         {title}
       </AccordionTrigger>
-      <AccordionContent className="text-[1.25vw] tracking-[0.5px] leading-[1.4] space-y-[1.5vw] w-full  mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[2vw] mobile:leading-[1.6]">
+      <AccordionContent  className="text-[1.25vw] tracking-[0.5px] leading-[1.4] space-y-[1.5vw] w-full  mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[2vw] mobile:leading-[1.6]">
         <div
           className="fadein"
           dangerouslySetInnerHTML={{ __html: content }}
