@@ -49,7 +49,7 @@ const Stats = () => {
           });
 
         }
-        if(globalThis.innerWidth>1024||globalThis.innerWidth<541){
+        if(globalThis.innerWidth>1024){
           gsap.to(".stats-img",{
             yPercent:70,
             ease:"none",
@@ -137,7 +137,7 @@ const Stats = () => {
             src={statsBg}
             alt="stats-bg"
             layout="fill"
-            className="translate-y-[-30%] stats-img tablet:translate-y-0"
+            className="translate-y-[-30%] stats-img tablet:translate-y-0 mobile:translate-y-0"
             objectFit="cover"
             quality={100}
           />

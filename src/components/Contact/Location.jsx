@@ -59,7 +59,7 @@ const Location = () => {
                                 <Image src="/icons/phone-icon.svg" height={35} width={35} alt="phone" className="fadein" />
                             </div>
                             <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
-                                <p className="w-full content mobile:pl-[3vw] tablet:w-full">{t('phone')}</p>
+                                <p className="w-full content mobile:pl-[3vw] tablet:w-full fadein">{t('phone')}</p>
                             </div>
                         </div>
                         <div className="flex items-center justify-start gap-[1vw] py-[0.5vw] group cursor-pointer">
@@ -67,7 +67,7 @@ const Location = () => {
                                 <Image src="/icons/mail-icon.svg" height={35} width={35} alt="mail" className="fadein" />
                             </div>
                             <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
-                                <p className="w-full content mobile:pl-[3vw] tablet:w-full">{t('mail')}</p>
+                                <p className="w-full content mobile:pl-[3vw] tablet:w-full fadein">{t('mail')}</p>
                             </div>
                         </div>
                     </div>

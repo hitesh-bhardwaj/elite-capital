@@ -155,7 +155,7 @@ body {
 }
 
 .cookie ul{
-  list-style: disc;
+  list-style: none;
   padding-left: 8vw !important;
 }
 ul{
