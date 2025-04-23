@@ -59,10 +59,10 @@ const Footer = () => {
           </div>
          
         </div>
-        <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[8vw] mobile:mt-[10vw] tablet:mt-[7vw] tablet:pb-[5vw]">
+        <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[4vw] mobile:mt-[10vw] tablet:mt-[7vw] tablet:pb-[5vw] mobile:pb-[10vw]">
           <h6 className="text-[1.15rem] tablet:w-[40%] mobile:text-[5.1vw]">{t('footerCopy')}</h6>
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
-           <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[6vw] tablet:gap-[1vw]">
+           <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[4vw] tablet:gap-[1vw]">
             {footerNavBottom.map((item,index)=>(
              <>
               <Link key={index}  href={item.link} prefetch={false} className="group">

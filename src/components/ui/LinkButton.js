@@ -33,7 +33,7 @@ export default function LinkButton({ className = "", href, text, ...props }) {
                     bg-white border border-white text-black1 rounded-full 
                     px-8 py-[1.15vw] transition-all duration-500 ease hover:scale-[0.95]
                     overflow-hidden
-                    ${className} mobile:text-[4.5vw] mobile:py-[4.5vw] tablet:text-[2.5vw] tablet:py-[2vw]
+                    ${className} mobile:text-[4vw] mobile:py-[4vw] tablet:text-[2.5vw] tablet:py-[2vw]
                 `}
             >
                 <span 

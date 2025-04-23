@@ -177,7 +177,7 @@ export default function ContactForm() {
               <Checkbox id="terms" />
               <p
                 htmlFor="terms"
-                className="text-[1vw] mobile:text-[4.5vw]  tablet:text-[2vw] w-[80%]"
+                className="text-[1.2vw] mobile:text-[4.5vw]  tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
               >
               Yes, I would like to receive communications from Elite Capital. *We will
               only use this information as described in our privacy policy.

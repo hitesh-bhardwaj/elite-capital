@@ -7,32 +7,32 @@ const Portfolio = () => {
   const allPortfolios = t('portfolios', { returnObjects: true });
   
   return (
-    <section className='w-screen h-full bg-white p-[4vw] py-[7vw] space-y-[3vw] dark'>
+    <section className='w-screen h-full bg-white p-[4vw] py-[7vw] space-y-[3vw] dark mobile:py-[15%]'>
       <div className='space-y-[2vw] mobile:space-y-[4vw] tablet:space-y-[3vw]'>
         <h2 
           data-title-anim
-          className="text-[4.5vw] mobile:text-[10.8vw] font-display leading-[1.2] w-[80%] tablet:text-[7vw] tablet:w-full"
+          className="text-[4.5vw] mobile:text-[12.5vw] font-display leading-[1.2] w-[80%] tablet:text-[7vw] tablet:w-full"
           dangerouslySetInnerHTML={{ __html: t('portfolioHead') }}
         ></h2>
         <p data-para-anim className="content ">{t('portfolioSub')}</p>
       </div> 
 
-      <div className='w-full gap-y-[5vw] flex tablet:justify-between  flex-wrap gap-[1.5vw] pt-[3vw] mobile:space-y-[13vw] tablet:pt-[7vw] mobile:flex-col'>
+      <div className='w-full gap-y-[5vw] flex tablet:justify-between  flex-wrap gap-[1.5vw] pt-[3vw] mobile:space-y-[5vw] tablet:pt-[7vw] mobile:flex-col'>
          {allPortfolios.map((item, index) => (
-            <div key={index} className='w-[32%] flex flex-col mobile:w-full items-center gap-[2vw] mobile:flex-col  tablet:w-[44vw]'>
+            <div key={index} className='w-[32%] flex flex-col mobile:w-full items-center gap-[1.5vw] mobile:flex-col  tablet:w-[44vw]'>
               <div className='mobile:w-full group fadeup transition-all duration-500 ease overflow-hidden'>
                 <Image 
                   src={item.img} 
                   alt={`${item.title} image`} 
-                  className=' object-cover h-[25vw] group-hover:scale-[1.1] transition-all duration-500 ease mobile:h-[65vw] tablet:h-[30vw]'
+                  className=' object-cover h-[21vw] group-hover:scale-[1.1] transition-all duration-500 ease mobile:h-[75vw] tablet:h-[30vw]'
                   loading="lazy" 
                   width={555} 
                   height={397} 
                 />
               </div>
-              <div className='w-full space-y-[2vw] text-black1 font-body  mobile:px-1 l'>
-                <div className='mobile:space-y-[3vw] mobile:pt-[3vw]'>
-                  <h3 data-para-anim className='heading-2 font-medium tablet:font-normal tablet:text-[5.5vw]'>{item.title}</h3>
+              <div className='w-full space-y-[2vw] text-black1 font-body  mobile:px-1 mobile:space-y-[5vw] '>
+                <div className='mobile:space-y-[1vw] mobile:pt-[3vw]'>
+                  <h3 data-para-anim className='text-[2.5vw] font-display mobile:text-[7vw] font-medium tablet:font-normal tablet:text-[5.5vw]'>{item.title}</h3>
                   <p data-para-anim className='content'>{item.location}</p>
                 </div>
                 <div 

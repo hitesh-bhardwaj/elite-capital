@@ -22,12 +22,12 @@ const Location = () => {
 
                 {/* Image with parallax effect */}
                 <div
-                    className="w-[50%] flex h-[50vw]  mobile:h-[100vw]  items-center justify-between mobile:w-full tablet:w-full overflow-hidden "
+                    className="w-[50%] flex h-[50vw]  mobile:h-[100vw] mobile:rounded-[3vw]  items-center justify-between mobile:w-full tablet:w-full overflow-hidden mobile:mt-[7vw] "
                     onMouseMove={handleMouseMove}
                     onMouseLeave={handleMouseLeave}
                 >
                     <Image
-                        className="w-[90%] fadeUp mobile:w-full tablet:w-full tablet:h-[50vw] object-cover h-full scale-[1.3] mobile:scale-[2]"
+                        className="w-[90%] fadeUp mobile:w-full tablet:w-full tablet:h-[50vw] object-cover h-full scale-[1.3] mobile:!scale-[2]"
                         src={"/assets/images/contactpage/contact-map.png"}
                         width={1920}
                         height={1080}
@@ -48,12 +48,12 @@ const Location = () => {
                             <Image src="/icons/location-icon.svg" height={30} width={30} alt="location" className="fadein" />
                         </div>
                         <div data-para-anim
-                            className="mb-[3vw] w-[80%] content mobile:w-[75%] mobile:pl-[3vw] tablet:w-full"
+                            className="mb-[3vw] w-[80%] content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                             dangerouslySetInnerHTML={{ __html: t('locationSub') }}
                         ></div>
                     </div>
-                    <div className="mt-[1vw] mobile:space-y-[2vw]">
-                        <h2 data-title-anim className="heading-2 mb-[1.5vw] mobile:mb-[5vw] tablet:mb-[3vw]">{t('contactHead')}</h2>
+                    <div className="mt-[1vw] mobile:space-y-[4vw]">
+                        <h2 data-title-anim className="heading-2 mb-[1.5vw] mobile:mb-[7vw] tablet:mb-[3vw]">{t('contactHead')}</h2>
                         <div className="flex items-center justify-start gap-[1vw] pb-[0.5vw] group cursor-pointer">
                             <div className="">
                                 <Image src="/icons/phone-icon.svg" height={35} width={35} alt="phone" className="fadein" />

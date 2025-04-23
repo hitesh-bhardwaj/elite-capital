@@ -35,7 +35,7 @@ const Values = () => {
     })
 
     return (
-        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:pb-[0vw] mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex tablet:h-full tablet:pt-0" id="values"> 
+        <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:pb-[0vw] mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex tablet:h-full tablet:pt-0 dark" id="values"> 
         <div className="absolute top-0 left-0 h-full w-full z-0 mobile:relative mobile:h-[60vh] tablet:relative tablet:h-[50vw] ">
             <Image
               src={valuesBg}
@@ -95,10 +95,10 @@ const SingleAccordion = ({ id, title, content , className}) => {
     <AccordionItem value={id} className={`w-full  ${className}`}>
       {/* <AccordionLine className="relative z-[-1] my-[1vw] tablet:hidden mobile:hidden" linecenter={1.38} /> */}
       
-      <AccordionTrigger data-para-anim className="heading-2 text-left mobile:flex mobile:w-full tablet:text-[4vw] tablet:text-left  font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white">
+      <AccordionTrigger data-para-anim className="text-[2.5vw] text-left mobile:flex mobile:w-full mobile:text-[7vw] tablet:text-[4vw] tablet:text-left  font-display font-normal py-[1.5%] mobile:py-[5%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white">
         {title}
       </AccordionTrigger>
-      <AccordionContent className="text-[1.25vw] tracking-[0.5px] leading-[1.4] space-y-[1.5vw] w-full  mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[2vw]">
+      <AccordionContent className="text-[1.25vw] tracking-[0.5px] leading-[1.4] space-y-[1.5vw] w-full  mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[2vw] mobile:leading-[1.6]">
         <div
           className="fadein"
           dangerouslySetInnerHTML={{ __html: content }}

@@ -71,7 +71,7 @@ const SingleAccordion = ({ id, title, content ,className}) => {
       >
         {title}
       </AccordionTrigger>
-      <AccordionContent className="text-[1.2vw] text-body tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-[70%] mb-[20px] mobile:w-full mobile:text-[4vw] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[3vw]">
+      <AccordionContent className="text-[1.2vw] text-body tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-[70%] mb-[20px] mobile:w-full mobile:text-[4.2vw] mobile:leading-[1.6] mobile:space-y-[4vw] tablet:text-[2.7vw] tablet:w-[90%] pt-[3vw]">
         <div className="fadeIn" dangerouslySetInnerHTML={{ __html: content }} />
       </AccordionContent>
       <div className="w-full bg-black lineDraw h-[1px] my-[2vw] mobile:block tablet:block"></div>

@@ -32,14 +32,14 @@ const Content = () => {
     <section className="w-screen h-full py-[8%] px-[5vw] overflow-hidden dark" id="privacy-content">
       <div className="">
         <div className="mobile:py-[7vw]">
-          <p className="content mobile:text-justify ">{t("heroSub")}</p>
+          <p className="content mobile:text-justify mobile:leading-[1.6] ">{t("heroSub")}</p>
         </div>
-        <span className="bg-black1 w-full h-[1px] block my-[3vw] lineDraw mobile:my-[10vw] tablet:my-[5vw]" />
+        <span className="bg-black1 w-full h-[1px] block mt-[8vw] mb-[5vw] lineDraw mobile:my-[10vw] tablet:my-[5vw]" />
         <div className="space-y-[4vw] w-full">
           {content.map((item, index) => (
             <>
               <div key={index} className=" flex items-start w-full gap-[1vw]">
-                <div className="h-full w-[20%] relative mobile:w-[20%] mt-[0.5vw] tablet:w-[30%]">
+                <div className="h-full w-[10%] relative mobile:w-[15%] mt-[0.5vw] tablet:w-[15%]">
                   <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
                   <Image
                     src={yellowRectangleMask}
@@ -49,13 +49,13 @@ const Content = () => {
                     className="mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw]"
                   />
                 </div>
-                <div className="mobile:pb-[10vw] mobile:w-[80%]">
+                <div className="mobile:pb-[10vw] w-full mobile:w-[80%]">
                   <div
-                    className="heading-2 pb-[1vw] mobile:pb-[8vw] tablet:pb-[5vw] "
+                    className="heading-2 pb-[1vw] mobile:pb-[8vw] tablet:pb-[5vw] mobile:ml-[2vw] "
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   /> 
                   <div
-                    className="content space-y-[1.5vw] mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-18vw] tablet:space-y-[4vw]"
+                    className="content space-y-[1.5vw] mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-14vw] tablet:space-y-[4vw] mobile:leading-[1.6]"
                     dangerouslySetInnerHTML={{ __html: item.para }}
                   />
                 </div>

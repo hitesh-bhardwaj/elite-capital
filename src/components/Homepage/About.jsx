@@ -15,7 +15,7 @@ const About = () => {
 
     return (
         <>
-            <section className="relative  overflow-hidden h-[55vw] py-[5vw] pb-[8vw] mobile:h-full mobile:py-[15vw] tablet:min-h-fit tablet:pt-[10vw] dark tablet:h-full tablet:pb-[15vw]" id="about" >
+            <section className="relative bg-[#ffffff]  overflow-hidden h-[55vw] py-[5vw] pb-[8vw] mobile:h-full mobile:py-[15vw] tablet:min-h-fit tablet:pt-[10vw] dark tablet:h-full tablet:pb-[15vw]" id="about" >
                 <div className="relative z-10 px-[5vw] flex items-start justify-between h-full mobile:flex-col mobile:justify-center mobile:h-full tablet:h-full mobile:gap-[10vw] tablet:flex-col">
                     <div className="text-black1 w-[65%] mobile:w-full tablet:w-full tablet:pb-[10vw] mobile:space-y-[4vw] ">
                         <h2 data-title-anim className="heading-1  mb-[3vw] mobile:mb-[4vw]">{t('aboutHead')}</h2>

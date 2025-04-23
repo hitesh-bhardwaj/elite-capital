@@ -49,14 +49,28 @@ const Header = () => {
   const headerRef = useRef();
   const textRef = useRef(null);
   const iconRef = useRef(null);
-  const lenis = useLenis()
+  const lenis = useLenis();
+  const router = useRouter();
   const [hide, sethide] = useState(false);
-  const [openMenu,setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
   const { t } = useTranslation("common");
   const footerNav = t("footerNav", { returnObjects: true });
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
   const [isInverted, setIsInverted] = useState(false);
+
+  
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      lenis && lenis.start();
+    };
+
+    router.events.on("routeChangeStart", handleRouteChangeStart);
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart);
+    };
+  }, [lenis, router.events]);
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -113,14 +127,14 @@ const Header = () => {
     });
   };
 
-  const openMenuMobile = ()=>{
-    setOpenMenu(true)
-    lenis&&lenis.stop()
-  }
-  const closeMenuMobile = ()=>{
-    setOpenMenu(false)
-    lenis&&lenis.start()
-  }
+  const openMenuMobile = () => {
+    setOpenMenu(true);
+    lenis && lenis.stop();
+  };
+  const closeMenuMobile = () => {
+    setOpenMenu(false);
+    lenis && lenis.start();
+  };
 
   return (
     <header
@@ -158,8 +172,8 @@ const Header = () => {
             ref={iconRef}
             onMouseEnter={handleMouseEnter}
             className={`cursor-pointer relative z-[100] w-fit h-fit ${
-              isInverted ? "invert" : ""
-            }`}
+              hide ? "pointer-events-none" : "pointer-events-auto"
+            } ${isInverted ? "invert" : ""}`}
           >
             <svg
               className={`w-[2.2vw] mobile:w-[5vw] tablet:w-[4vw] transition-all duration-300  ${
@@ -176,19 +190,21 @@ const Header = () => {
           </div>
           <div
             ref={textRef}
-            className={`w-full h-full text-[1.2vw] flex items-center gap-5 text-white uppercase translate-x-[10%] opacity-0 pointer-events-none ${hide?"pointer-events-auto":"pointer-events-none"} ${
-              isInverted ? "invert" : ""
-            }`}
+            className={`w-full h-full text-[1.2vw] flex items-center gap-5 text-white uppercase translate-x-[10%] opacity-0 pointer-events-none ${
+              hide ? "pointer-events-auto" : "pointer-events-none"
+            } ${isInverted ? "invert" : ""}`}
           >
             {footerNav.map((item, index) => (
               <Link
                 key={index}
                 href={item.link}
                 prefetch={false}
-                className="group"
+                className="group w-fit"
               >
                 <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
-                  <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">{item.text}</span>
+                  <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
+                    {item.text}
+                  </span>
                 </div>
               </Link>
             ))}
@@ -198,8 +214,7 @@ const Header = () => {
           <div
             className={`cursor-pointer relative z-[100] ${
               isInverted ? "invert" : ""
-            }`} 
-
+            }`}
             onClick={openMenuMobile}
           >
             <svg
@@ -215,50 +230,62 @@ const Header = () => {
           </div>
         </div>
         <div className="w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block">
-          <div className={`h-[40vh] bg-[#E5E5DC] w-screen relative z-[1] flex flex-col justify-between pt-[25vw] pb-[5vw] px-[5vw] transition-transform duration-500 ease-in-out pointer-events-auto ${openMenu?"translate-y-0":"-translate-y-full"}`}>
-           <div className="flex flex-col gap-[2vw]">
-           {footerNav.map((item, index) => (
-              <Link
-                key={index}
-                href={item.link}
-                prefetch={false}
-                className="group"
-              >
-                <div className="flex items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out mobile:after:bg-black mobile:after:w-0">
-                  <span className="group-hover:scale-[0.98] transition-all duration-300 ease text-[6.5vw]">{item.text}</span>
-                </div>
-              </Link>
-            ))}
-            </div> 
-            <div className="flex items-center gap-4">
-            {socials.map((social, index) => (
-              <Link 
-                target="_blank"
-                href={social.link}
-                className="group flex items-center relative justify-center border-[1.5px] border-black overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw]"
-                key={index}
-              >
-               
-                <Image
-                  className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300 invert"
-                  src={social.icon}
-                  alt={social.alt}
-                  width={25}
-                  height={25}
-                />
-              </Link>
-            ))}
-          </div>
-            <div  className="absolute right-[5%] top-[5%] border rounded-full border-black p-[3vw]" onClick={closeMenuMobile}>
-              <Image src={"/icons/cross.svg"} width={50} height={50} className="object-contain w-full h-full"/>
-
+          <div
+            className={`h-[40vh] bg-[#E5E5DC] w-screen relative z-[1] flex flex-col justify-between pt-[25vw] pb-[5vw] px-[5vw] transition-transform duration-500 ease-in-out pointer-events-auto ${
+              openMenu ? "translate-y-0" : "-translate-y-full"
+            }`}
+          >
+            <div className="flex flex-col gap-[2vw]">
+              {footerNav.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.link}
+                  prefetch={false}
+                  className="group w-fit"
+                >
+                  <div className="flex items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out mobile:after:bg-black mobile:after:w-0">
+                    <span className="group-hover:scale-[0.98] transition-all duration-300 ease text-[6.5vw]">
+                      {item.text}
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
-
+            <div className="flex items-center gap-4">
+              {socials.map((social, index) => (
+                <Link
+                  target="_blank"
+                  href={social.link}
+                  className="group flex items-center relative justify-center border-[1.5px] border-black overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw]"
+                  key={index}
+                >
+                  <Image
+                    className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300 invert"
+                    src={social.icon}
+                    alt={social.alt}
+                    width={25}
+                    height={25}
+                  />
+                </Link>
+              ))}
+            </div>
+            <div
+              className="absolute right-[5%] top-[5%] border rounded-full border-black p-[3vw]"
+              onClick={closeMenuMobile}
+            >
+              <Image
+                src={"/icons/cross.svg"}
+                width={50}
+                height={50}
+                className="object-contain w-full h-full"
+              />
+            </div>
           </div>
-          <div className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${openMenu?"opacity-100":"opacity-0"}`}>
-
-          </div>
-
+          <div
+            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${
+              openMenu ? "opacity-100" : "opacity-0"
+            }`}
+          ></div>
         </div>
       </div>
     </header>

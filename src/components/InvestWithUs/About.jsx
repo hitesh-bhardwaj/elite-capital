@@ -41,15 +41,15 @@ const About = () => {
 
     return (
         <>
-            <section className="relative h-full bg-[#FFFFFF] overflow-hidden mobile:py-[10vw] dark" id="about">
+            <section className="relative h-full bg-[#FFFFFF] overflow-hidden mobile:py-[10vw] dark pt-[5vw] pb-[3vw]" id="about">
                 <div className="relative z-10 px-[5vw] py-[5%] flex flex-col mobile:items-center justify-between h-full mobile:flex-col mobile:gap-[5vw]">
                     <div className="w-full flex items-center pl-[3vw] justify-start">
                         <Image src={yellowRectangle} height={52} width={77} alt="yellow-rectangle" className="blockAnim mobile:w-[10vw] mobile:h-[8vw]" />
                     </div>
 
-                    <div className="space-y-[2vw] w-[80%] mb-[3vw] pr-[3vw] pl-[10vw] text-black1 py-[3vw] mobile:w-[85%] mobile:text-[4.6vw] mobile:px-[5vw] tablet:w-full tablet:pl-[4vw] tablet:pr-[3vw]">
+                    <div className="space-y-[2vw] w-[80%] mb-[3vw] pr-[3vw] pl-[10vw] text-black1 py-[3vw] mobile:w-[90%] mobile:text-[4.6vw] mobile:px-[5vw] tablet:w-full tablet:pl-[4vw] tablet:pr-[3vw]">
                         {aboutsub.map((item, index) => (
-                            <div className="content about-content text-justify" key={index}>
+                            <div className="content about-content text-justify mobile:leading-[1.6]" key={index}>
                                 {item.text}
                             </div>
                         ))}
