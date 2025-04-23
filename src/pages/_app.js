@@ -24,17 +24,17 @@ const App = ({ Component, pageProps }) => {
   const { locale } = useRouter();
   const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      window.scrollTo(0, 0);
-    };
+  // useEffect(() => {
+  //   const handleRouteChange = () => {
+  //     window.scrollTo(0, 0);
+  //   };
 
-    window.addEventListener("beforeunload", handleRouteChange);
+  //   window.addEventListener("beforeunload", handleRouteChange);
 
-    return () => {
-      window.removeEventListener("beforeunload", handleRouteChange);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("beforeunload", handleRouteChange);
+  //   };
+  // }, []);
 
 
   useEffect(() => {

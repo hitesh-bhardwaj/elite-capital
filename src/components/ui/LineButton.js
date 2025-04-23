@@ -5,7 +5,7 @@ export default function LineButton({ className = "", href, text, ...props }) {
     const { locale } = useRouter();
 
     return (
-        <Link {...props} href={href} className={`font-body block font-medium w-fit text-[1.2vw] text-black1 rounded-full mobile:text-[4.5vw] tablet:text-[2.5vw] group ${className}`}>
+        <Link {...props} href={href} className={`font-body block w-fit text-[1.2vw] text-black1 tracking-wide rounded-full mobile:text-[4.5vw] tablet:text-[2.5vw] group ${className}`}>
             <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%-1.5rem)] after:h-[1.5px] after:bg-current after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
                 <span className="group-hover:scale-[0.98] transition-all duration-300 ease">{text}</span>
                 <svg className={`w-4 group-hover:translate-x-[20%] transition-all duration-300 ease-in-out   ${locale === 'ae' ? 'rotate-180' : ''}`} viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">

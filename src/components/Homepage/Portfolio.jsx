@@ -142,13 +142,8 @@ export default function SwiperSlider() {
                 key={idx}
                 className="slide absolute w-full h-full flex items-center justify-start top-0 left-0 px-[5vw] overflow-hidden"
               >
-                <div className="slide__content relative z-[2] text-white top-[-30%] w-[70%] mobile:w-full mobile:top-[-25%] tablet:w-[75%] tablet:top-[-25%]">
-                  <h2 className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[3vw] swiper-content-fadeup mobile:text-[13.8vw] mobile:mb-[8vw] tablet:text-[7vw]">
-                    {t("portfolioHead")}
-                  </h2>
-                  <p className="slide__text swiper-content-fadeup mobile:text-[4.1vw] mobile:tracking-wider tablet:text-[2.5vw]">
-                    {t("portfolioSub")}
-                  </p>
+                <div className="slide__content relative z-[2] text-white top-[0%] w-[70%] mobile:w-full mobile:top-[-25%] tablet:w-[75%] tablet:top-[-25%]">
+                 
                   <div className="address-container absolute top-[150%] left-[0] mt-[2vw] tablet:top-[140%]">
                     <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup mobile:text-[7vw] tablet:text-[4vw]">
                       {item.text1}
@@ -163,6 +158,15 @@ export default function SwiperSlider() {
           </>
         ))}
       </Swiper>
+
+      <div className="absolute top-[10%] left-[5%] z-[5] text-white">
+      <h2 className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[1.5vw]  mobile:text-[13.8vw] mobile:mb-[8vw] tablet:text-[7vw]">
+                    {t("portfolioHead")}
+                  </h2>
+                  <p className="slide__text  mobile:text-[4.1vw] mobile:tracking-wider tablet:text-[2.5vw]">
+                    {t("portfolioSub")}
+                  </p>
+      </div>
 
       {/* Progress Bar */}
       <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%] mobile:w-full mobile:text-[4.1vw] mobile:gap-[2vw] mobile:top-[55%] tablet:top-[50%] tablet:text-[3vw] tablet:w-[30vw] tablet:gap-[2vw]">

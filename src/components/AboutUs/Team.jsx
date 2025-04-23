@@ -41,12 +41,12 @@ const Team = () => {
                       <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[4.5vw]">
                         {item.name}
                       </p>
-                      <p className="h-[5vw] mobile:text-[3.8vw] tablet:text-[2.5vw] text-[1.4vw] mobile:h-fit">
+                      <p className="h-[5vw] w-[85%] mobile:text-[3.8vw] tablet:text-[2.5vw] text-[1.4vw] mobile:h-fit">
                         {item.des}
                       </p>
                     </div>
 
-                    <div className="flex flex-col gap-[1vw] mobile:gap-[3vw] tablet:gap-[3vw] tablet:mt-[5vw]">
+                    <div className="flex flex-col gap-[1vw] mt-[1vw] mobile:gap-[3vw] tablet:gap-[3vw] tablet:mt-[5vw]">
                       {item.features.map((list, index) => (
                         <div
                           key={index}

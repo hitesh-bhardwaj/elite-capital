@@ -51,11 +51,11 @@ const Content = () => {
                 </div>
                 <div className="mobile:pb-[10vw] w-full mobile:w-[80%]">
                   <div
-                    className="heading-2 pb-[1vw] mobile:pb-[8vw] tablet:pb-[5vw] mobile:ml-[2vw] "
+                    className="heading-2 pb-[2vw] mobile:pb-[8vw] tablet:pb-[5vw] mobile:ml-[2vw] "
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   /> 
                   <div
-                    className="content space-y-[1.5vw] mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-14vw] tablet:space-y-[4vw] mobile:leading-[1.6]"
+                    className="content space-y-[2vw] mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-14vw] tablet:space-y-[4vw] mobile:leading-[1.6]"
                     dangerouslySetInnerHTML={{ __html: item.para }}
                   />
                 </div>

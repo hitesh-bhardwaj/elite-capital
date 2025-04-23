@@ -61,7 +61,7 @@ const Loader2 = () => {
 
     const timeout = setTimeout(() => {
       lenis && lenis.start();
-    }, 4000);
+    }, 2200);
 
     return()=>clearTimeout(timeout)
   }, [lenis]);

@@ -92,13 +92,13 @@ const Stats = () => {
   };
 
   const counterClasses = [
-    { selector: ".counter-3", top: "-100px", delay: 0.1 },
+    { selector: ".counter-3", top: "-125px", delay: 0.1 },
     { selector: ".counter-2", top: "-1030px", delay: -1.3 },
     { selector: ".counter-1", top: "-825px", delay: -1.3 },
   ];
 
   const countClasses = [
-    { selector: ".count-4", top: "-120px", delay: 0.1 },
+    { selector: ".count-4", top: "-140px", delay: 0.1 },
     { selector: ".count-3", top: "-525px", delay: -1.2 },
     { selector: ".count-2", top: "-423px", delay: -1.3 },
   ];
@@ -113,7 +113,7 @@ const Stats = () => {
     { selector: ".countlast-1", top: "-113px", delay: -0.2 },
     { selector: ".countlast-3", top: "-115px", delay: -1.0 },
     { selector: ".countlast-2", top: "-114px", delay: -1.3 },
-    { selector: ".countlast-4", top: "-113px", delay: -1.3 },
+    { selector: ".countlast-4", top: "-135px", delay: -1.3 },
   ];
   if (globalThis.innerWidth > 1023) {
   
@@ -171,7 +171,7 @@ const Stats = () => {
                   <div className="num">0</div>
                 </div>
                 <div className="counter-3 translate-y-[100%] digit font-semibold mobile:text-[12vw] tablet:text-[7vw] ">
-                  <div className="num">+</div>
+                  <div className="num text-[3vw]">+</div>
                 </div>
               </div>
               <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[50%]">{statsContent[0].text}</p>
@@ -236,7 +236,7 @@ const Stats = () => {
                
               </div>
               <div className="count-4 digit font-semibold translate-y-[100px]">
-                <div className="num">+</div>
+                <div className="num text-[3vw]">+</div>
               </div>
             </div>
             <p data-para-anim className="relative content z-[2] text-center mobile:text-left  mobile:w-[60%]">{statsContent[2].text}</p>
@@ -260,7 +260,7 @@ const Stats = () => {
                 <div className="num">B</div>
               </div>
               <div className="countlast-4 digit font-semibold translate-y-[100px]">
-                <div className="num">+</div>
+                <div className="num text-[3vw]">+</div>
               </div>
             </div>
             <p data-para-anim className="relative content z-[2] text-center mobile:text-left mobile:w-[60%] ">{statsContent[3].text}</p>

@@ -70,7 +70,7 @@ const BoardofDirectors = () => {
 
                     <p
                       data-para-anim
-                      className="mobile:text-[4.6vw] tablet:text-[3vw] w-[30%] leading-[1.2] tablet:w-full "
+                      className="mobile:text-[4.6vw] tablet:text-[3vw] w-[60%] leading-[1.2] tablet:w-full "
                     >
                       {item.des}
                     </p>

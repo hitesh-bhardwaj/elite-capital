@@ -16,7 +16,7 @@ export default function Cookie() {
   return (
     <>
   <Layout>
-  <Hero img={bg} translation={'cookie'} heading={t("hero")} para={""} nextSectionId={"cookie-content"}/>
+  <Hero img={bg} translation={'cookie'} heading={t("hero")} para={""} nextSectionId={"cookie-content"} />
   <Content/>
   </Layout>
   </>

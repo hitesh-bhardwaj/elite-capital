@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = ({ img, translation, heading, para, nextSectionId }) => {
+const Hero = ({ img, translation, heading, para, nextSectionId , className}) => {
   const { t } = useTranslation(`${translation}`);
   const buttonRef = useRef(null);
 
@@ -53,17 +53,18 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
   return (
     <>
       <section
-        className="relative min-h-screen tablet:h-[80vh] overflow-hidden"
+        className={`relative min-h-screen tablet:h-[80vh] overflow-hidden ${className}`}
         id="hero"
       >
         <Image
           src={img}
           alt="Hero Background"
           fill
-          className="object-cover hero-img mobile:brightness-75"
+          className="object-cover hero-img brightness-75 mobile:brightness-75"
           placeholder="blur"
           loading="lazy"
           quality={90}
+          
         />
         <div className="relative z-10 px-[5vw] pt-[8vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%]">
           <div className="py-[10%] text-white w-full mobile:w-full">

@@ -50,7 +50,7 @@ const Stats = () => {
   };
 
   const counterClasses = [
-    { selector: ".counter-3", top: "-105px", delay: 0.1 },
+    { selector: ".counter-3", top: "-125px", delay: 0.1 },
     { selector: ".counter-2", top: "-521px", delay: -1.3 },
     { selector: ".counter-1", top: "-420px", delay: -1.3 },
   ];
@@ -58,7 +58,7 @@ const Stats = () => {
   const countClasses = [
     { selector: ".count-1", top: "-210px", delay: -0.2 },
     { selector: ".count-2", top: "-617px", delay: -1.3 },
-    { selector: ".count-4", top: "-108px", delay: -1.0 },
+    { selector: ".count-4", top: "-127px", delay: -1.0 },
     { selector: ".count-3", top: "-96px", delay: -1.3 },
   ];
 
@@ -66,7 +66,7 @@ const Stats = () => {
     { selector: ".countnew-1", top: "-110px", delay: -0.2 },
     { selector: ".countnew-2", top: "-1028px", delay: -1.0 },
     { selector: ".countnew-3", top: "-98px", delay: -1.3 },
-    { selector: ".countnew-4", top: "-100px", delay: -1.3 },
+    { selector: ".countnew-4", top: "-120px", delay: -1.3 },
   ];
   const countLastClasses = [
     { selector: ".countlast-1", top: "-108px", delay: -0.2 },
@@ -74,7 +74,7 @@ const Stats = () => {
     { selector: ".countlast-3", top: "-110px", delay: -1.3 },
     { selector: ".countlast-4", top: "-518px", delay: -1.3 },
     { selector: ".countlast-5", top: "-110px", delay: -1.3 },
-    { selector: ".countlast-6", top: "-110px", delay: -1.3 },
+    { selector: ".countlast-6", top: "-130px", delay: -1.3 },
   ];
   if (globalThis.innerWidth > 1023) {
     createTimeline(".countlast", countLastClasses, "top 90%", null);
@@ -122,7 +122,7 @@ const Stats = () => {
                       <div className="num">5</div>
                     </div>
                     <div className="counter-3 translate-y-[100%] digit font-semibold">
-                      <div className="num">+</div>
+                      <div className="num text-[3vw]">+</div>
                     </div>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ const Stats = () => {
                     <div className="num">K</div>
                   </div>
                   <div className="countnew-4 digit font-semibold translate-y-[100%]">
-                    <div className="num ">+</div>
+                    <div className="num text-[3vw]">+</div>
                   </div>
                 </div>
               </div>
@@ -194,7 +194,7 @@ const Stats = () => {
                     <div className="num">M</div>
                   </div>
                   <div className="count-4 digit font-semibold translate-y-[100px]">
-                    <div className="num">+</div>
+                    <div className="num text-[3vw]">+</div>
                   </div>
                 </div>
               </div>
@@ -233,7 +233,7 @@ const Stats = () => {
                     <div className="num">B</div>
                   </div>
                   <div className="countlast-6 digit font-semibold translate-y-[100px]">
-                    <div className="num">+</div>
+                    <div className="num text-[3vw]">+</div>
                   </div>
                 </div>
               </div>
@@ -258,7 +258,7 @@ const Stats = () => {
           </div>
         </div>
         <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  " />
-        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[68%]  mobile:hidden tablet:h-[85%]" />
+        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[70%]  mobile:hidden tablet:h-[85%]" />
       </section>
     </>
   );
