@@ -23,14 +23,14 @@ const socials = [
 const LanguageButton = ({inverted , setarabicMode,className}) => {
   const { locale, asPath } = useRouter();
   return (
-    <div className={`text-golden flex items-center gap-x-2 text-lg ${className}`}>
+    <div className={`text-golden flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
       <Link 
       onclick={()=>{
         setarabicMode(false)
       }}
         className={`${
           locale === "en" ? "text-white mobile:text-black" : ""
-        } hover:scale-110 block duration-150 ${inverted?"!text-black ":""}`}
+        } hover:scale-110 block duration-150 ${inverted?"!text-black rtl:!text-golden ":""}`}
         href={asPath}
         locale="en"
       >
@@ -40,7 +40,7 @@ const LanguageButton = ({inverted , setarabicMode,className}) => {
       <Link
         className={`${
           locale === "ar" ? "text-white mobile:text-black" : ""
-        } hover:scale-110 block duration-150`}
+        } hover:scale-110 block duration-150 ${inverted?"text-golden rtl:!text-black ":""}`}
         href={asPath}
         locale="ar"
       >
@@ -162,7 +162,7 @@ const NewHeader = () => {
     >
       <div className="w-full px-[5vw] py-12 flex justify-between items-center">
       <div>
-          <Link href="/" className="flex gap-[0.5vw]">
+          <Link href="/" className="flex gap-[0.5vw] rtl:flex-row-reverse">
             <Image
               className="w-[2.1vw] mobile:w-[5.5vw] tablet:w-[3.5vw]"
               src={"/icons/loader-icon.svg"}
@@ -191,7 +191,7 @@ const NewHeader = () => {
           onMouseLeave={close}
         >
           <div className={`absolute right-[10%] z-[2] rtl:left-[11%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${
-            openMenu ? "w-[34vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
+            openMenu ? "w-[32.5vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
           } `}>
           <div
             className={`w-[40vw] flex-nowrap flex gap-[3vw]`}
