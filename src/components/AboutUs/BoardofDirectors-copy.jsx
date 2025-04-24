@@ -1,40 +1,38 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 import { NextButton, PreviousButton } from "../Common/SliderButtons";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "@/components/ui/accordion"
-
-
+} from "@/components/ui/accordion";
 
 const BoardofDirectors = () => {
   const { t } = useTranslation("about");
-  const [openedIndex, setOpenedIndex] = useState(null);
+
   const [openedIndexinvestment, setOpenedIndexinvestment] = useState(null);
   const [openedIndexadviser, setOpenedIndexadviser] = useState(null);
   const boardMembers = t("boardMembers", { returnObjects: true });
   const adviserMembers = t("adviserMembers", { returnObjects: true });
   const investmentMembers = t("investmentMembers", { returnObjects: true });
-  const [mobileWidth, setIsMobileWidth] = useState(false)
-  
-    useEffect(() => {
-      const checkMobile = () => {
-        setIsMobileWidth(globalThis.innerWidth <= 541);
-      };
-  
-      checkMobile(); 
-      window.addEventListener("resize", checkMobile); 
-  
-      return () => window.removeEventListener("resize", checkMobile); 
-    }, []);
+  const [mobileWidth, setIsMobileWidth] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobileWidth(globalThis.innerWidth <= 541);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <>
@@ -47,50 +45,39 @@ const BoardofDirectors = () => {
             {t("teamSub")}
           </h2>
           <div>
-         <TeamAccordion members={boardMembers}/>
-            {mobileWidth && (
-  <MobileSwiper members={boardMembers}/>
-)}
+            <TeamAccordion members={boardMembers} />
+            {mobileWidth && <MobileSwiper members={boardMembers} />}
           </div>
-          
         </div>
 
-
-         <div className=" mobile:space-y-[5vw] pt-[8vw]">
-                  <h2
-                    data-title-anim
-                    className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
-                  >
-                    {t("teamSub1")}
-                  </h2>
-                  <div >
-                    <TeamAccordion members={adviserMembers}/>
-                    {mobileWidth && (
-          <MobileSwiper members={adviserMembers}/>
-        )}
-                  </div>
-                </div>
-                <div className="pt-[8vw] mobile:space-y-[5vw]">
-                  <h2
-                    data-title-anim
-                    className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
-                  >
-                    {t("teamSub2")}
-                  </h2>
-                  <div >
-                   <TeamAccordion members={investmentMembers}/>
-                    {mobileWidth && (
-          <MobileSwiper members={investmentMembers}/>
-        )}
-                  </div>
-                </div>
-       
-
+        <div className=" mobile:space-y-[5vw] pt-[8vw]">
+          <h2
+            data-title-anim
+            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+          >
+            {t("teamSub1")}
+          </h2>
+          <div>
+            <TeamAccordion members={adviserMembers} />
+            {mobileWidth && <MobileSwiper members={adviserMembers} />}
+          </div>
+        </div>
+        <div className="pt-[8vw] mobile:space-y-[5vw]">
+          <h2
+            data-title-anim
+            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+          >
+            {t("teamSub2")}
+          </h2>
+          <div>
+            <TeamAccordion members={investmentMembers} />
+            {mobileWidth && <MobileSwiper members={investmentMembers} />}
+          </div>
+        </div>
       </section>
     </>
   );
 };
-
 
 const MobileSwiper = ({ members }) => {
   const swiperRef = useRef(null);
@@ -106,20 +93,26 @@ const MobileSwiper = ({ members }) => {
     }
   };
   return (
-    <Swiper navigation={true} modules={[Navigation]} className="mySwiper"  onSwiper={(swiper) => (swiperRef.current = swiper)} breakpoints={{
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 1.3,
-        spaceBetween: 0,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 50,
-      },
-    }}>
+    <Swiper
+      navigation={true}
+      modules={[Navigation]}
+      className="mySwiper"
+      onSwiper={(swiper) => (swiperRef.current = swiper)}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1.3,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      }}
+    >
       {members.map((item, index) => (
         <SwiperSlide key={index}>
           <div
@@ -162,20 +155,20 @@ const MobileSwiper = ({ members }) => {
                   </p>
                 ))}
               </div>
-             
             </div>
           </div>
         </SwiperSlide>
       ))}
-       <div className='flex gap-2 mt-6 items-end justify-end pr-[3vw] rtl:flex-row-reverse rtl:justify-start rtl:pl-[3vw]'> 
-            <PreviousButton onClick={handlePrev} />
-            <NextButton onClick={handleNext} />
-          </div>
+      <div className="flex gap-2 mt-6 items-end justify-end pr-[3vw] rtl:flex-row-reverse rtl:justify-start rtl:pl-[3vw]">
+        <PreviousButton onClick={handlePrev} />
+        <NextButton onClick={handleNext} />
+      </div>
     </Swiper>
   );
 };
 
 const TeamAccordion = ({ members }) => {
+  const [openedIndex, setOpenedIndex] = useState(null);
   return (
     <Accordion
       type="single"
@@ -183,9 +176,9 @@ const TeamAccordion = ({ members }) => {
       className="w-full h-full flex flex-wrap justify-start mobile:hidden"
     >
       {members.map((item, index) => {
-        const visibleCount = Math.ceil(item.features.length / 2)
-        const firstHalf = item.features.slice(0, visibleCount)
-        const secondHalf = item.features.slice(visibleCount)
+        const visibleCount = Math.ceil(item.features.length / 2);
+        const firstHalf = item.features.slice(0, visibleCount);
+        const secondHalf = item.features.slice(visibleCount);
 
         return (
           <AccordionItem
@@ -227,21 +220,30 @@ const TeamAccordion = ({ members }) => {
 
               <AccordionContent className="space-y-[1vw] pt-[1vw]">
                 {secondHalf.map((feature, i) => (
-                  <p key={i} className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]">
+                  <p
+                    key={i}
+                    className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]"
+                  >
                     {feature}
                   </p>
                 ))}
               </AccordionContent>
 
-              <AccordionTrigger className="text-[1.3vw] mt-[2vw] tablet:text-[2vw] text-left hover:underline">
-                {({ open }) => (open ? "Read less -" : "Read more +")}
+              <AccordionTrigger
+                hide={true}
+                onClick={() => {
+                  setOpenedIndex((prev) => !prev);
+                }}
+                className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2vw] text-left font-normal "
+              >
+                {openedIndex ? <p>Read less -</p> : <p>Read more +</p>}
               </AccordionTrigger>
             </div>
           </AccordionItem>
-        )
+        );
       })}
     </Accordion>
-  )
-}
+  );
+};
 
 export default BoardofDirectors;
