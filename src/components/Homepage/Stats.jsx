@@ -145,7 +145,7 @@ const Stats = () => {
         <div className="flex text-white w-full px-[5vw] items-center justify-between gap-[1vw] mobile:flex-col mobile:items-start tablet:flex-wrap tablet:gap-y-[4vw]">
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col items-center gap-[2vw] mobile:flex-row  ">
-              <div className="counter mobile:w-[40%]">
+              <div className="counter mobile:w-[40%] mobile:flex mobile:justify-center">
                 <div className="counter-1 digit font-semibold mobile:text-[12vw] tablet:text-[7vw]">
                   <div className="num">0</div>
                   <div className="num">1</div>
@@ -181,7 +181,7 @@ const Stats = () => {
 
           <div className="flex flex-col gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row mobile:gap-[3vw]">
-            <div className="countnew mobile:w-[40%]">
+            <div className="countnew mobile:w-[40%] mobile:flex mobile:justify-center">
               <div className="countnew-1 digit font-semibold translate-y-[100px] mobile:text-[12vw] tablet:text-[7vw]">
                 <div className="num">$</div>
               </div>
@@ -218,7 +218,7 @@ const Stats = () => {
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw tablet:hidden" />
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
-            <div className="count mobile:w-[40%] mobile:text-[12vw] tablet:text-[7vw]">
+            <div className="count mobile:w-[40%] mobile:text-[12vw] tablet:text-[7vw] mobile:flex mobile:justify-center">
               <div className="count-2 digit font-semibold">
                 <div className="num">0</div>
                 <div className="num">1</div>
@@ -247,7 +247,7 @@ const Stats = () => {
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
-            <div className="countlast mobile:text-[12vw] mobile:w-[40%] tablet:text-[7vw]">
+            <div className="countlast mobile:text-[12vw] mobile:w-[40%] tablet:text-[7vw] mobile:flex mobile:justify-center">
               <div className="countlast-1 digit font-semibold translate-y-[100px]">
                 <div className="num">$</div>
               </div>

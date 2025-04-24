@@ -46,7 +46,7 @@ const Content = () => {
                     alt="yellow-rectamngle-mask"
                     width={100}
                     height={36}
-                    className="mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw]"
+                    className="mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw] rtl:scale-x-[-1]"
                   />
                 </div>
                 <div className="mobile:pb-[10vw] w-full mobile:w-[80%]">
@@ -55,7 +55,7 @@ const Content = () => {
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   /> 
                   <div
-                    className="content space-y-[2vw] mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-14vw] tablet:space-y-[4vw] mobile:leading-[1.6]"
+                    className="content space-y-[2vw] mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-14vw] tablet:space-y-[4vw] mobile:leading-[1.6] rtl:mobile:mr-[-14vw] rtl:mobile:ml-0"
                     dangerouslySetInnerHTML={{ __html: item.para }}
                   />
                 </div>

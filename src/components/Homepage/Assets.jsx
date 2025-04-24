@@ -23,8 +23,8 @@ const Assets = () => {
                 <ImageComponent imgsrc={real3} width={"w-[65%] mobile:w-[55%] tablet:w-[75%]"}/>
                 </div>
                 </div>
-                <div className='w-[50%] flex items-center  mobile:w-full tablet:w-[80%] tablet:justify-start rtl:pr-[8vw]'>
-                    <h3 data-title-anim className='text-black1 text-[5.2vw] leading-[1.2]  !font-body w-[80%] mobile:w-full font-light mobile:text-[12vw] tablet:text-[7vw]'>{t('realHead')}
+                <div className='w-[50%] flex items-center  mobile:w-full tablet:w-[60%] tablet:justify-start rtl:pr-[8vw] rtl:tablet:pr-0 '>
+                    <h3 data-title-anim className='text-black1 text-[5.2vw] leading-[1.2]  !font-body w-[80%] mobile:w-full font-light mobile:text-[12vw] tablet:text-[7vw] tablet:w-full'>{t('realHead')}
                         <br/>
                         <span className='!font-semibold'>{t('realHeadSub')}</span>
                     </h3>
