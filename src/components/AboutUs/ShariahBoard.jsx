@@ -32,7 +32,7 @@ const ShariahBoard = () => {
         <div className="p-[5vw] mobile:space-y-[12vw]">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display mb-[8vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2]"
+            className="text-[4.6vw] font-display mb-[10vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2]"
           >
             {t("teamSub3")}
           </h2>
@@ -142,7 +142,7 @@ const SingleAccordion = ({ id, title,des,content ,className}) => {
 
       <AccordionTrigger
         data-para-anim
-        className="text-left mobile:text-[6.2vw] mobile:flex mobile:w-full tablet:text-[5vw] tablet:text-left text-body font-display font-normal py-[1.5%] mobile:pt-[10%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
+        className="text-left mobile:text-[6.2vw] mobile:flex mobile:w-full tablet:text-[5vw] tablet:text-left text-body rtl:mobile:gap-[8vw] font-display font-normal py-[1.5%] mobile:pt-[10%] accordion [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:rotate-[90deg] [&[data-state=open]>.line>.line-internal>.icon-container>.icon>.minus]:rotate-90 [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:bg-body [&[data-state=open]>.line>.line-internal>.icon-container>.icon]:text-white"
       >
         {title}
       </AccordionTrigger>

@@ -33,7 +33,7 @@ const Advantage = () => {
     return (
         <section className="bg-[#747977] overflow-hidden h-full mobile:pb-[10vw] tablet:pt-[7%]">
             <div className="flex items-center mobile:flex-col-reverse mobile:gap-[8vw] tablet:flex-col tablet:gap-[7vw]">
-                <div className="text-white w-1/2 pl-[4vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw] tablet:w-full rtl:pr-[4.5vw]">
+                <div className="text-white w-1/2 pl-[4vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw] tablet:w-full rtl:pr-[4.5vw] rtl:mobile:pr-[5vw]">
                     <h2 data-title-anim className="heading-1  !leading-[1.1] mb-[5vw] mobile:mb-[8vw]">{t('advantageHead')}</h2>
                     <div className=" content space-y-[2vw] pr-[4.5vw]   mb-[5vw] mobile:space-y-[4vw] rtl:pr-0">
                         {advantage.map((item, index) => (

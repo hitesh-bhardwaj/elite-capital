@@ -147,9 +147,9 @@ export default function SwiperSlider() {
                 key={idx}
                 className="slide absolute w-full h-full flex items-center justify-start top-0 left-0 px-[5vw] overflow-hidden"
               >
-                <div className="slide__content absolute z-[2] text-white top-[50%] w-[30vw] h-[20vw] rtl:right-0 mobile:w-full mobile:top-[-25%] tablet:w-[75%] tablet:top-[-25%]">
+                <div className="slide__content absolute z-[2] text-white top-[50%] w-[30vw] h-[20vw] rtl:right-0 mobile:w-full  mobile:left-[30%] mobile:top-[60%] tablet:w-[42%] tablet:top-[55%] rtl:tablet:right-0 ">
                  
-                  <div className="address-container absolute top-0 left-[0] mt-[2vw] tablet:top-[140%]">
+                  <div className="address-container absolute top-0 left-[0] mt-[2vw] ">
                     <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup mobile:text-[7vw] tablet:text-[4vw]">
                       {item.text1}
                     </p>
@@ -192,7 +192,7 @@ export default function SwiperSlider() {
       <div
         ref={buttonRef}
         onMouseMove={handleMouseMove}
-        className="absolute z-[5] bottom-[25%] left-[10%] rtl:left-[88%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:left-[20%] tablet:bottom-[20%] tablet:left-[15%]"
+        className="absolute z-[5] bottom-[25%] left-[10%] rtl:left-[88%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:left-[20%] tablet:bottom-[20%] tablet:left-[15%] rtl:mobile:left-[80%]"
         onClick={handleNext}
       >
         <span
@@ -228,7 +228,7 @@ export default function SwiperSlider() {
       <div
         ref={buttonRef}
         onMouseMove={handleMouseMove}
-        className="absolute z-[5] bottom-[25%] left-[5%] rtl:left-[83%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%]"
+        className="absolute z-[5] bottom-[25%] left-[5%] rtl:left-[83%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%] rtl:mobile:left-[65%] rtl:tablet:left-[80%]"
         onClick={handlePrev}
       >
         <span
@@ -260,7 +260,7 @@ export default function SwiperSlider() {
         </div>
       </div>
 
-      <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:left-[80%]">
+      <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:left-[80%] rtl:mobile:left-[45%] rtl:tablet:left-[70%]">
         <LinkButton href={"/"} text={"View Portfolio"} />
       </div>
     </div>

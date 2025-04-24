@@ -3,55 +3,69 @@ import { useRouter } from "next/router";
 import { useState, useRef, useCallback } from "react";
 
 export default function LinkButton({ className = "", href, text, ...props }) {
-    const { locale } = useRouter();
-    const buttonRef = useRef(null);
-    
-    const handleMouseMove = useCallback((e) => {
-        if (!buttonRef.current) return;
-        
-        const rect = buttonRef.current.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        if (buttonRef.current.querySelector('.hover-circle')) {
-            buttonRef.current.querySelector('.hover-circle').style.left = `${x}px`;
-            buttonRef.current.querySelector('.hover-circle').style.top = `${y}px`;
-        }
-    }, []);
+  const { locale } = useRouter();
+  const buttonRef = useRef(null);
 
-    return (
-        <Link 
-            {...props} 
-            href={href} 
-            className={className}
-        >
-            <div 
-                ref={buttonRef}
-                onMouseMove={handleMouseMove}
-                className={`
+  const handleMouseMove = useCallback((e) => {
+    if (!buttonRef.current) return;
+
+    const rect = buttonRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    if (buttonRef.current.querySelector(".hover-circle")) {
+      buttonRef.current.querySelector(".hover-circle").style.left = `${x}px`;
+      buttonRef.current.querySelector(".hover-circle").style.top = `${y}px`;
+    }
+  }, []);
+
+  return (
+    <Link {...props} href={href} className={className}>
+      <div
+        ref={buttonRef}
+        onMouseMove={handleMouseMove}
+        className={`
                     group relative font-body block font-medium w-fit text-[1.2vw] 
                     bg-white border border-white text-black1 rounded-full 
                     px-8 py-[1.15vw] transition-all duration-500 ease hover:scale-[0.95]
                     overflow-hidden
-                    ${className} mobile:text-[4vw] mobile:py-[4vw] tablet:text-[2.5vw] tablet:py-[2vw]
+                    ${className} mobile:text-[4vw] mobile:py-[4.2vw] tablet:text-[2.5vw] tablet:py-[2vw]
                 `}
-            >
-                <span 
-                    className="hover-circle absolute aspect-square rounded-full bg-black 
+      >
+        <span
+          className="hover-circle absolute aspect-square rounded-full bg-black 
                     transition-all duration-500 ease transform -translate-x-1/2 -translate-y-1/2 
                     pointer-events-none opacity-1 scale-0  group-hover:scale-100"
-                    style={{
-                        width: '300%', 
-                    }}
-                ></span>
-                
-                <div className="flex gap-2 items-center relative z-10 group-hover:text-white">
-                    <span className="group-hover:text-white transition-colors duration-300">{text}</span>
-                    <svg className={`w-4 transition-colors duration-300 ${locale === 'ae' ? 'rotate-180' : ''}`} viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.3287 10.01L12.4564 17.7716C12.2922 17.9334 12.0738 18.0243 11.8493 18.0243C11.6247 18.0243 11.4122 17.9334 11.2587 17.7716C11.1052 17.6097 11.0232 17.3903 11.0307 17.1614C11.0383 16.9326 11.1347 16.7131 11.2988 16.5513L17.6787 10.2622L1.10136 10.2622C0.876884 10.2622 0.66459 10.1714 0.511176 10.0096C0.357763 9.84791 0.275797 9.62856 0.283311 9.39984C0.290824 9.17111 0.387201 8.95176 0.55124 8.79003C0.715279 8.6283 0.933542 8.53744 1.15801 8.53744H17.7353L11.7687 2.24841C11.6152 2.08659 11.5332 1.86712 11.5407 1.63827C11.5482 1.40942 11.6446 1.18994 11.8088 1.02812C11.9729 0.8663 12.1913 0.775391 12.4159 0.775391C12.6405 0.775391 12.8529 0.8663 13.0064 1.02812L20.3688 8.78969C20.4448 8.86978 20.5042 8.9649 20.5433 9.06959C20.5825 9.17428 20.6007 9.2865 20.597 9.39984C20.5933 9.51317 20.5676 9.62539 20.5216 9.73008C20.4756 9.83477 20.41 9.92989 20.3287 10.01Z" fill="currentColor" stroke="currentColor" strokeWidth="0.3" />
-                    </svg>
-                </div>
-            </div>
-        </Link>
-    );
+          style={{
+            width: "300%",
+          }}
+        ></span>
+
+        <div className="flex gap-2 items-center relative z-10 group-hover:text-white">
+          <span className="group-hover:text-white transition-colors duration-300">
+            {text}
+          </span>
+          <svg
+            className="relative -rotate-90 w-[1.2vw] h-[1.2vw] overflow-hidden mobile:w-[4.2vw] mobile:h-[4.2vw] tablet:w-[2.2vw] tablet:h-[2.2vw] rtl:rotate-90"
+            width="19"
+            height="23"
+            viewBox="0 0 19 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              className="origin-center -translate-y-[110%] scale-0 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-500 ease-out"
+              d="M9.44186 23C9.38605 22.9324 9.33953 22.8559 9.27442 22.7973C6.25116 19.8649 3.22791 16.9369 0.204652 14.009C0.139535 13.9459 0.0604662 13.8964 1.30208e-06 13.8468C0.576745 13.2973 1.12558 12.7748 1.66512 12.2613C3.82326 14.3514 6.01861 16.4775 8.2093 18.6036C8.23256 18.5901 8.26047 18.5811 8.28372 18.5676C8.28372 12.3829 8.28372 6.19369 8.28372 -4.68423e-07C9.09768 -4.32844e-07 9.87442 -3.98892e-07 10.6744 -3.63923e-07C10.6744 6.19369 10.6744 12.3784 10.6744 18.5901C12.893 16.4369 15.0884 14.3108 17.2651 12.2027C17.8465 12.7568 18.3907 13.2838 19 13.8739C18.9488 13.9009 18.8558 13.9324 18.7907 13.9955C15.7581 16.9279 12.7302 19.8649 9.70233 22.7973C9.64186 22.8559 9.5907 22.9324 9.53488 23C9.50698 23 9.47442 23 9.44186 23Z"
+              fill="currentColor"
+            />
+            <path
+              className="origin-center group-hover:scale-0 group-hover:translate-y-[110%] transition-all duration-500 ease-out"
+              d="M9.44186 23C9.38605 22.9324 9.33953 22.8559 9.27442 22.7973C6.25116 19.8649 3.22791 16.9369 0.204652 14.009C0.139535 13.9459 0.0604662 13.8964 1.30208e-06 13.8468C0.576745 13.2973 1.12558 12.7748 1.66512 12.2613C3.82326 14.3514 6.01861 16.4775 8.2093 18.6036C8.23256 18.5901 8.26047 18.5811 8.28372 18.5676C8.28372 12.3829 8.28372 6.19369 8.28372 -4.68423e-07C9.09768 -4.32844e-07 9.87442 -3.98892e-07 10.6744 -3.63923e-07C10.6744 6.19369 10.6744 12.3784 10.6744 18.5901C12.893 16.4369 15.0884 14.3108 17.2651 12.2027C17.8465 12.7568 18.3907 13.2838 19 13.8739C18.9488 13.9009 18.8558 13.9324 18.7907 13.9955C15.7581 16.9279 12.7302 19.8649 9.70233 22.7973C9.64186 22.8559 9.5907 22.9324 9.53488 23C9.50698 23 9.47442 23 9.44186 23Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+    </Link>
+  );
 }
