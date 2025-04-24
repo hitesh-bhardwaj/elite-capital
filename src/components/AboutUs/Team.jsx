@@ -18,11 +18,11 @@ const Team = () => {
           >
             {t("team")}
           </h2>
-          <div className="mobile:overflow-x-scroll mobile:w-screen mobile:h-full mobile:pr-[10vw] mobile:ml-[-5vw] mobile:pl-[5vw] tablet:overflow-x-scroll">
-            <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[3vw] mobile:flex-nowrap mobile:w-fit mobile:h-[110vw] tablet:flex-nowrap tablet:w-fit">
+          <div className="mobile:overflow-x-scroll mobile:w-screen mobile:h-full mobile:pr-[10vw] mobile:ml-[-5vw] mobile:pl-[5vw] tablet:overflow-x-scroll rtl:mobile:mr-[-5vw] rtl:mobile:pr-[5vw]">
+            <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[3vw] mobile:flex-nowrap mobile:w-fit mobile:h-[110vw] tablet:flex-nowrap tablet:w-fit tablet:h-[70vw]">
               {members.map((item, index) => (
                 <div
-                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[85vw] mobile:h-[100vw] transition-transform hover:scale-[1.02] tablet:w-[48vw] overflow-hidden mobile:rounded-[3vw] tablet:h-[60vw] mobile:mt-[-5vw] ${
+                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[85vw] mobile:h-[100vw] transition-transform hover:scale-[1.02] tablet:w-[48vw] rtl:tablet:rounded-[2vw] overflow-hidden mobile:rounded-[3vw] tablet:h-[60vw] mobile:mt-[-5vw] ${
                     index < 2 ? "w-[43vw]" : "w-[28vw]"
                   }`}
                   key={index}
@@ -53,7 +53,7 @@ const Team = () => {
                           className="flex gap-[2vw] w-full pl-[1vw] "
                         >
                           <span
-                            className="w-[3vw] h-[1vw] bg-[#CE8000] mt-[0.5vw] block mobile:w-[8vw] mobile:h-[3vw] tablet:h-[2.5vw] tablet:w-[6vw] mobile:mt-[2vw] tablet:mt-[2vw]"
+                            className="w-[3vw] h-[1vw] bg-[#CE8000] mt-[0.5vw] block mobile:w-[8vw] mobile:h-[3vw] tablet:h-[2.5vw] tablet:w-[6vw] mobile:mt-[2vw] tablet:mt-[2vw] rtl:scale-x-[-1]"
                             style={{
                               clipPath:
                                 "polygon(0 0, 100% 0%, 70% 100%, 0% 100%)",
