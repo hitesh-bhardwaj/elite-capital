@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-
 import {
   Form,
   FormControl,
@@ -15,8 +14,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import Image from "next/image";
-import { Label } from "../ui/label";
 import { Checkbox } from "../ui/checkbox";
 import { useTranslation } from "next-i18next";
 
@@ -54,12 +51,14 @@ export default function ContactForm() {
   const onSubmit = async (data) => {
     setIsLoading(true);
     console.log("Form Submitted:", data);
+
     const formData = {
       name: data.name,
       email: data.email,
       number: data.number,
       message: data.message,
-      companyName: data.companyName,
+      companyName: data.company,
+      designation: data.designation,
     };
 
     try {
@@ -77,29 +76,31 @@ export default function ContactForm() {
       form.reset();
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <section className=" mobile:pt-0" id="formoem">
-      <div className="w-full h-full mobile:p-0 mobile:bg-transparent mobile:hover:bg-transparent mobile:hover:shadow-none mobile:border-none tablet:p-[6.5vw]">
-        <div className="w-full flex flex-col gap-[2vw] mobile:w-full  mobile:rounded-[10vw] mobile:px-[1vw] mobile:py-[5vw] mobile:border mobile:gap-[5vw]  tablet:w-full">
+    <section className="mobile:pt-0" id="formoem">
+      <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
+        <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full">
           <h3 className="heading-2 !font-body">{t("formHead")}</h3>
           <Form {...form}>
             <form
               autoComplete="off"
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-[2vw] mobile:space-y-[10vw] tablet:space-y-[5vw] mobile:w-full tablet:mt-[5vw] "
+              className="space-y-[2vw] mobile:space-y-[10vw] tablet:space-y-[5vw]"
             >
               <FormField
                 control={form.control}
-                name="fullname"
+                name="name"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t('formName')}
+                        placeholder={t("formName")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -117,7 +118,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t('formEmail')}
+                        placeholder={t("formEmail")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -126,6 +127,7 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="number"
@@ -134,7 +136,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t('formPhone')}
+                        placeholder={t("formPhone")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -143,15 +145,16 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
-                name="companyname"
+                name="company"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t('formCompany')}
+                        placeholder={t("formCompany")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -160,6 +163,7 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="designation"
@@ -168,7 +172,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t('formDesignation')}
+                        placeholder={t("formDesignation")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -186,7 +190,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Textarea
                         autoComplete="off"
-                        placeholder={t('formMessage')}
+                        placeholder={t("formMessage")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -195,26 +199,40 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              <div className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw]">
-                <Checkbox id="terms" />
-                <p
-                  htmlFor="terms"
-                  className="text-[1.2vw] mobile:text-[4.5vw]  tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
-                >
-                  {t("formAgreement")}
-                </p>
-              </div>
+
+              <FormField
+                control={form.control}
+                name="terms"
+                render={({ field }) => (
+                  <FormItem className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw]">
+                    <Checkbox
+                      id="terms"
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                    <FormLabel
+                      htmlFor="terms"
+                      className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
+                    >
+                      {t("formAgreement")}
+                    </FormLabel>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
               <div className="mt-[2vw] w-full flex justify-start">
                 <Button
                   type="submit"
-                  className="font-body block font-medium group w-fit h-fit text-[1.2vw] bg-black1 text-white hover:bg-white hover:text-black1 rounded-full px-8 py-[1vw] relative mobile:w-[35vw] mobile:h-[15vw]  tablet:h-[7vw] "
+                  disabled={isLoading}
+                  className="font-body block font-medium group w-fit h-fit text-[1.2vw] bg-black1 text-white hover:bg-white hover:text-black1 rounded-full px-8 py-[1vw] mobile:w-[35vw] mobile:h-[15vw] tablet:h-[7vw]"
                 >
                   {!isLoading ? (
                     <div className="flex gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[1vw] items-center">
-                      <span className="text-[1.1vw]  mobile:text-[4.5vw] tablet:text-[2.5vw]">
-                       {t('formcta')}
+                      <span className="text-[1.1vw] mobile:text-[4.5vw] tablet:text-[2.5vw]">
+                        {t("formcta")}
                       </span>
-                      <svg
+                      {/* <svg
                         className="relative -rotate-90 w-[1.2vw] h-[1.2vw] overflow-hidden mobile:w-[4.2vw] mobile:h-[4.2vw] tablet:w-[2.2vw] tablet:h-[2.2vw] rtl:rotate-90"
                         width="19"
                         height="23"
@@ -224,26 +242,20 @@ export default function ContactForm() {
                       >
                         <path
                           className="origin-center -translate-y-[110%] scale-0 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-500 ease-out"
-                          d="M9.44186 23C9.38605 22.9324 9.33953 22.8559 9.27442 22.7973C6.25116 19.8649 3.22791 16.9369 0.204652 14.009C0.139535 13.9459 0.0604662 13.8964 1.30208e-06 13.8468C0.576745 13.2973 1.12558 12.7748 1.66512 12.2613C3.82326 14.3514 6.01861 16.4775 8.2093 18.6036C8.23256 18.5901 8.26047 18.5811 8.28372 18.5676C8.28372 12.3829 8.28372 6.19369 8.28372 -4.68423e-07C9.09768 -4.32844e-07 9.87442 -3.98892e-07 10.6744 -3.63923e-07C10.6744 6.19369 10.6744 12.3784 10.6744 18.5901C12.893 16.4369 15.0884 14.3108 17.2651 12.2027C17.8465 12.7568 18.3907 13.2838 19 13.8739C18.9488 13.9009 18.8558 13.9324 18.7907 13.9955C15.7581 16.9279 12.7302 19.8649 9.70233 22.7973C9.64186 22.8559 9.5907 22.9324 9.53488 23C9.50698 23 9.47442 23 9.44186 23Z"
+                          d="M9.44186 23C9.38605 22.9324 9.33953 22.8559 9.27442 22.7973..."
                           fill="currentColor"
                         />
                         <path
                           className="origin-center group-hover:scale-0 group-hover:translate-y-[110%] transition-all duration-500 ease-out"
-                          d="M9.44186 23C9.38605 22.9324 9.33953 22.8559 9.27442 22.7973C6.25116 19.8649 3.22791 16.9369 0.204652 14.009C0.139535 13.9459 0.0604662 13.8964 1.30208e-06 13.8468C0.576745 13.2973 1.12558 12.7748 1.66512 12.2613C3.82326 14.3514 6.01861 16.4775 8.2093 18.6036C8.23256 18.5901 8.26047 18.5811 8.28372 18.5676C8.28372 12.3829 8.28372 6.19369 8.28372 -4.68423e-07C9.09768 -4.32844e-07 9.87442 -3.98892e-07 10.6744 -3.63923e-07C10.6744 6.19369 10.6744 12.3784 10.6744 18.5901C12.893 16.4369 15.0884 14.3108 17.2651 12.2027C17.8465 12.7568 18.3907 13.2838 19 13.8739C18.9488 13.9009 18.8558 13.9324 18.7907 13.9955C15.7581 16.9279 12.7302 19.8649 9.70233 22.7973C9.64186 22.8559 9.5907 22.9324 9.53488 23C9.50698 23 9.47442 23 9.44186 23Z"
+                          d="M9.44186 23C9.38605 22.9324 9.33953 22.8559 9.27442 22.7973..."
                           fill="currentColor"
                         />
-                      </svg>
+                      </svg> */}
                     </div>
                   ) : (
-                    <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-[100]">
-                      <Image
-                        src="/button-loading.png"
-                        alt="button-loading"
-                        className="animate-spin invert "
-                        width={20}
-                        height={20}
-                      />
-                    </div>
+                    <span className="text-[1.1vw] mobile:text-[4.5vw] tablet:text-[2.5vw]">
+                      {t("formSubmitting")}
+                    </span>
                   )}
                 </Button>
               </div>
