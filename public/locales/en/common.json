@@ -7,6 +7,14 @@
     "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
     "footerEmailText": "Enter Your Email",
     "footerEmailButton": "Subscribe",
+    "formName":"Full Name*",
+    "formEmail":"Email*",
+    "formPhone":"Phone*",
+    "formCompany":"Company Name*",
+    "formDesignation":"Designation*",
+    "formMessage":"Message*",
+    "formcta":"Submit",
+    "footerline":"Real Assets. Real Returns.",
     "footerNav": [
         {
              "text": "WHO WE ARE",

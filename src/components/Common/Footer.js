@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import { lineAnim } from "../gsapAnimations";
-import { useCallback, useRef } from "react";
 
 const Footer = () => {
     const { t } = useTranslation('common');
@@ -38,14 +36,15 @@ const Footer = () => {
     style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="px-[5vw] w-full bg-[#121212] fixed bottom-0 mobile:px-[7vw] mobile:py-[5vw]">
         <div className=" pb-[10vw] h-[25vw] flex  justify-between mobile:flex-col mobile:h-[100vw] mobile:py-[5vw]">
-          <div className="flex items-start justify-between pt-[5vw] mobile:flex-col ">
+          <div className="flex flex-col items-start justify-start pt-[5vw] mobile:flex-col ">
             <Image
-              src="/elite-logo-2.svg"
+              src="/elite-logo.svg"
               width={100}
               height={100}
               alt="Logo"
               className="w-[35vw] h-auto fadeUp mobile:w-[90vw] tablet:w-[30vw]"
             />
+            <p className="text-[2.1vw] pl-[4.5vw] pt-[0.5vw] mobile:text-[6vw] mobile:pl-[13vw] mobile:pt-[2vw] tablet:text-[2.5vw] tablet:pt-[1vw]"> {t('footerline')} </p>
           </div>
           
           <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw] mobile:my-[10vw] mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">

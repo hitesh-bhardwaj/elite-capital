@@ -99,7 +99,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder="Full Name*"
+                        placeholder={t('formName')}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -117,7 +117,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder="Email*"
+                        placeholder={t('formEmail')}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -134,7 +134,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder="Phone*"
+                        placeholder={t('formPhone')}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -151,7 +151,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder="Company Name*"
+                        placeholder={t('formCompany')}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -168,7 +168,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder="Designation*"
+                        placeholder={t('formDesignation')}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -186,7 +186,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Textarea
                         autoComplete="off"
-                        placeholder="Message*"
+                        placeholder={t('formMessage')}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -212,7 +212,7 @@ export default function ContactForm() {
                   {!isLoading ? (
                     <div className="flex gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[1vw] items-center">
                       <span className="text-[1.1vw]  mobile:text-[4.5vw] tablet:text-[2.5vw]">
-                        Submit
+                       {t('formcta')}
                       </span>
                       <svg
                         className="relative -rotate-90 w-[1.2vw] h-[1.2vw] overflow-hidden mobile:w-[4.2vw] mobile:h-[4.2vw] tablet:w-[2.2vw] tablet:h-[2.2vw] rtl:rotate-90"

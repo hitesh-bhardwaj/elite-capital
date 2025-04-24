@@ -259,7 +259,7 @@ export default function SwiperSlider() {
       </div>
 
       <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:left-[80%] rtl:mobile:left-[45%] rtl:tablet:left-[70%]">
-        <LinkButton href={"/"} text={"View Portfolio"} />
+        <LinkButton href={"/"} text={t('portfolioCta')} />
       </div>
     </div>
   );

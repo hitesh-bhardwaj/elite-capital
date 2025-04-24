@@ -14,23 +14,23 @@
     "portfolioSub": "استكشف مجموعة مختارة من الفرص الاستثمارية ضمن محفظتنا:",
     "portfolio1": {
         "img": "/assets/images/invest/portfolio-1.png",
-        "title": "81-87 Rymal",
-        "location": "Hamilton, ON",
-        "address1": "Commencement – Q4 2025",
+        "title": "81-87 رايمال",
+        "location": "هاميلتون",
+        "address1": "الربع الرابع من عام 2025",
         "address2": "210 شقة | 10 منازل تاون هاوس"
     },
     "portfolio2": {
         "img": "/assets/images/invest/portfolio-2.png",
-        "title": "570 Upper Ottawa",
-        "location": "Hamilton, ON",
-        "address1": "Commencement – Q4 2025",
+        "title": "570 أبر أوتاوا، ",
+        "location": "هاميلتون",
+        "address1": "الربع الرابع من عام 2025",
         "address2": "346 شقة"
     },
     "portfolio3": {
         "img": "/assets/images/invest/portfolio-3.png",
-        "title": "Station 60",
-        "location": "Brantford, ON",
-        "address1": "Commencement – Q3 2025",
+        "title": "ستيشن 60،",
+        "location": "برانتفورد",
+        "address1": "الربع الثالث من عام 2025",
         "address2": " 242 شقة"
     },
     "portfolio4": {
@@ -42,16 +42,16 @@
     },
     "portfolio5": {
         "img": "/assets/images/invest/portfolio-5.png",
-        "title": "4th Avenue – Phase 1 ",
-        "location": "St. Catharines, ON",
-        "address1": "Commencement – Q1 2026 ",
+        "title": "المرحلة 1 - الجادة",
+        "location": "الرابعة، سانت كاثرينز",
+        "address1": " الربع الأول من عام 2026",
         "address2": "259 شقة"
     },
     "portfolio6": {
         "img": "/assets/images/invest/portfolio-6.png",
-        "title": "120 Meridian Way",
+        "title": "120 ميريديان واي، بيلاهم",
         "location": "Pelham, ON",
-        "address1": "Commencement – Q3 2025",
+        "address1": "الربع الثالث من عام 2025",
         "address2": "166 شقة"
     },
     "whyUsHead": "الوصول إلى فرص استثنائية",

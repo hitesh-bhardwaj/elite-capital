@@ -5,6 +5,9 @@
     "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
     "footerEmailText": "Enter Your Email",
     "footerEmailButton": "Subscribe",
+    "formHead":"تواصل معنا",
+    "formAgreement":"[مربع اختيار] نعم، أرغب في تلقي تحديثات من إيليت كابيتال. *سنستخدم هذه المعلومات فقط كما هو موضح في سياسة الخصوصية.**",
+    "footerline":"أصول حقيقية. عوائد حقيقية.",
     "footerNav": [
         {
              "text": "اتصل بنا",
@@ -28,5 +31,12 @@
             "text": "سياسة ملفات تعريف الارتباط",
             "link": "/cookie-policy"
         }
-    ]
+    ],
+    "formName":"الاسم بالكامل*",
+    "formEmail":"البريد الإلكتروني*",
+    "formPhone":"رقم الهاتف*",
+    "formCompany":"اسم الشركة*",
+    "formDesignation":"المسمى الوظيفي*",
+    "formMessage":"رسالتك*",
+    "formcta":"إرسال"
 }
