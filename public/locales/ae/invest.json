@@ -6,50 +6,54 @@
             "text": "As a DFSA-authorised private equity firm, we provide access to investment in a carefully curated pipeline of premium real estate investments in Ontario, Canada. Our investment strategy is rooted in thorough due diligence, deep local knowledge, and global fund management expertise. We focus on investing in purpose-built and shovel-ready residential projects that have undergone extensive planning and permitting. This meticulous approach ensures that our investors benefit from reduced risk and enhanced potential for strong, sustainable returns."
         }
     ],
-    "stats1":"Pipeline of projects in Canada",
-    "stats2":"Residential and commercial units",
-    "stats3":"Sqft. of residential development",
-    "stats4":"Equity investment opportunity",
-    "portfolioHead":"Explore select opportunities from our investment pipeline",
-    "portfolioSub":"Diversified portfolio of purpose-built residential developments in Ontario.",
-    "portfolios":[
-        {
-            "img": "/assets/images/invest/portfolio-1.png",
-            "title": "81-87 Rymal",
-            "location": "Hamilton, ON",
-            "address": "<p>Commencement – Q4 2025  <br/> 210 Apartments | 10 Town Homes</p>"
-        },
-        {
-            "img": "/assets/images/invest/portfolio-2.png",
-            "title": "570 Upper Ottawa",
-            "location": "Hamilton, ON",
-            "address": "<p> Commencement – Q4 2025 <br/> 346 Apartments</p>"
-        },
-        {
-            "img": "/assets/images/invest/portfolio-3.png",
-            "title": "Station 60",
-            "location": "Brantford, ON",
-            "address": "<p>Commencement – Q3 2025<br/> 242 Apartments</p>"
-        },
-        {
-            "img": "/assets/images/invest/portfolio-4.png",
-            "title": "148 Niagara",
-            "location": "St. Catherines, ON",
-            "address": "<p>Commencement – Q4 2025 <br/> 179 Apartments</p>"
-        },
-        {
-            "img": "/assets/images/invest/portfolio-5.png",
-            "title": "4th Avenue – Phase 1 ",
-            "location": "St. Catharines, ON",
-            "address": "<p>Commencement – Q1 2026  <br/> 259 Apartments</p>"
-        },
-        {
-            "img": "/assets/images/invest/portfolio-6.png",
-            "title": "120 Meridian Way",
-            "location": "Pelham, ON",
-            "address": "<p>Commencement – Q3 2025 <br/> 166 Apartments</p>"
-        }
-    ],
+    "stats1": "Pipeline of projects in Canada",
+    "stats2": "Residential and commercial units",
+    "stats3": "Sqft. of residential development",
+    "stats4": "Equity investment opportunity",
+    "portfolioHead": "Explore select opportunities from our investment pipeline",
+    "portfolioSub": "Diversified portfolio of purpose-built residential developments in Ontario.",
+    "portfolio1": {
+        "img": "/assets/images/invest/portfolio-1.png",
+        "title": "81-87 Rymal",
+        "location": "Hamilton, ON",
+        "address1": "Commencement – Q4 2025",
+        "address2": "210 Apartments | 10 Town Homes"
+    },
+    "portfolio2": {
+        "img": "/assets/images/invest/portfolio-2.png",
+        "title": "570 Upper Ottawa",
+        "location": "Hamilton, ON",
+        "address1": "Commencement – Q4 2025",
+        "address2": "346 Apartments"
+    },
+    "portfolio3": {
+        "img": "/assets/images/invest/portfolio-3.png",
+        "title": "Station 60",
+        "location": "Brantford, ON",
+        "address1": "Commencement – Q3 2025",
+        "address2": " 242 Apartments"
+    },
+    "portfolio4": {
+        "img": "/assets/images/invest/portfolio-4.png",
+        "title": "148 Niagara",
+        "location": "St. Catherines, ON",
+        "address1": "Commencement – Q4 2025",
+        "adddress2": "179 Apartments"
+    },
+    "portfolio5": {
+        "img": "/assets/images/invest/portfolio-5.png",
+        "title": "4th Avenue – Phase 1 ",
+        "location": "St. Catharines, ON",
+        "address1": "Commencement – Q1 2026 ",
+        "address2": "259 Apartments"
+    },
+    "portfolio6": {
+        "img": "/assets/images/invest/portfolio-6.png",
+        "title": "120 Meridian Way",
+        "location": "Pelham, ON",
+        "address1": "Commencement – Q3 2025",
+        "address2": "166 Apartments"
+    },
     "whyUsHead": "Why invest with Elite Capital?",
     "whyUs": [
         {

@@ -1,11 +1,11 @@
 import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import invest1 from "../../../public/assets/images/invest/invest-1.png";
-import invest2 from "../../../public/assets/images/invest/invest-2.png";
-import invest3 from "../../../public/assets/images/invest/invest-3.png";
-import invest4 from "../../../public/assets/images/invest/invest-4.png";
-import invest5 from "../../../public/assets/images/invest/invest-5.png";
+import invest1 from "../../../public/assets/images/invest/invest-1.jpg";
+import invest2 from "../../../public/assets/images/invest/invest-2.jpg";
+import invest3 from "../../../public/assets/images/invest/invest-3.jpg";
+import invest4 from "../../../public/assets/images/invest/invest-4.jpg";
+import invest5 from "../../../public/assets/images/invest/invest-5.jpg";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -70,7 +70,7 @@ const WhyUS = () => {
                   }}
                 >
                   <Image
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${currentIndex ? 'gray-scale-0' : 'grayscale'}  ` }
                     placeholder="blur"
                     src={images[index]}
                     alt="Image"

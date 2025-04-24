@@ -51,11 +51,35 @@ const Location = () => {
                             className="mb-[3vw] w-[80%] content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                             dangerouslySetInnerHTML={{ __html: t('locationSub') }}
                         ></div> */}
+                        <div className="w-[80%] pb-[3vw]">
+
                         <div data-para-anim
-                            className="mb-[3vw] w-[80%] content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                            
-                        >{t('locationSub')}</div>
+                        >{t('address1')}</div>
+                         <div data-para-anim
+                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                           
+                        >{t('address2')}</div>
+                         <div data-para-anim
+                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                           
+                        >{t('address3')}</div>
+                         <div data-para-anim
+                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                           
+                        >{t('address4')}</div>
+                         <div data-para-anim
+                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                           
+                        >{t('address5')}</div>
+                         <div data-para-anim
+                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                           
+                        >{t('address6')}</div>
                     </div>
+                    </div>
+                    
                     <div className="mt-[1vw] mobile:space-y-[4vw]">
                         <h2 data-title-anim className="heading-2 mb-[1.5vw] mobile:mb-[7vw] tablet:mb-[3vw]">{t('contactHead')}</h2>
                         <div className="flex items-center justify-start gap-[1vw] pb-[0.5vw] group cursor-pointer">

@@ -101,7 +101,7 @@ const Stats = () => {
             />
           </div>
 
-          <div className="flex pl-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw]">
+          <div className="flex pl-[3vw] rtl:pl-0  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw]">
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-start">
                 <div className="">
@@ -247,7 +247,7 @@ const Stats = () => {
             <div className="w-full h-[1px] hidden mobile:block bg-black"/>
 
           </div>
-          <div className="w-[10%] flex items-end justify-end pr-[3vw] h-full pb-[3vw] mobile:hidden">
+          <div className="w-[10%] flex items-end justify-end pr-[3vw] rtl:pl-[3vw] rtl:pr-0 h-full pb-[3vw] mobile:hidden">
             <Image
               src={"/icons/yellow-rectangle-mask.svg"}
               height={32}
@@ -257,8 +257,8 @@ const Stats = () => {
             />
           </div>
         </div>
-        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  " />
-        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[70%]  mobile:hidden tablet:h-[85%]" />
+        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  rtl:right-[46%] " />
+        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[70%] rtl:right-[69%]  mobile:hidden tablet:h-[85%]" />
       </section>
     </>
   );

@@ -12,7 +12,8 @@ export default function AboutPage() {
   paraAnim();
   titleAnim();
   fadeIn();
-  const { t } = useTranslation("contact");  
+  const { t } = useTranslation("contact"); 
+ 
   return (
     <>
     <Layout>
