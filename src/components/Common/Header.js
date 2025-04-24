@@ -200,7 +200,7 @@ const Header = () => {
           onMouseEnter={open}
           onMouseLeave={close}
         >
-          <div className={`absolute right-[10%] z-[2] rtl:left-[11%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${
+          <div className={`absolute right-[10%] z-[2] rtl:left-[2%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${
             openMenu ? "w-[32.5vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
           } `}>
           <div

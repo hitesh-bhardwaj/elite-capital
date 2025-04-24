@@ -147,7 +147,7 @@ export default function SwiperSlider() {
               >
                 <div className="slide__content absolute z-[2] text-white top-[50%] w-[30vw] h-[20vw] rtl:right-0 mobile:w-full  mobile:left-[5%] mobile:top-[60%] tablet:w-[42%] tablet:top-[55%] rtl:tablet:right-0 rtl:mobile:left-[30%] ">
                  
-                  <div className="address-container absolute top-0 left-[0] mt-[2vw] ">
+                  <div className="address-container absolute top-0 left-[0] mt-[2vw] rtl:right-[7vw] rtl:left-auto">
                     <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup mobile:text-[7vw] tablet:text-[4vw]">
                       {item.text1}
                     </p>

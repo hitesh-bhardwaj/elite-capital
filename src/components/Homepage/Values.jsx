@@ -41,7 +41,7 @@ const Values = () => {
               src={valuesBg}
               alt="stats-bg"
               layout="fill"
-              className="values-img translate-y-[-60%] w-full h-full object-cover mobile:translate-y-0 tablet:translate-y-0 "
+              className="values-img translate-y-[-60%] w-full h-full object-cover mobile:translate-y-0 tablet:translate-y-0  rtl:scale-x-[-1]"
               // objectFit="cover"
               quality={100}
             />
