@@ -35,9 +35,9 @@
     },
     "portfolio4": {
         "img": "/assets/images/invest/portfolio-4.png",
-        "title": "148 Niagara",
-        "location": "St. Catherines, ON",
-        "address1": "Commencement – Q4 2025",
+        "title": "148 نياجارا",
+        "location": "سانت كاثرينز",
+        "address1": "الربع الرابع من عام 2025",
         "adddress2": "179 شقة"
     },
     "portfolio5": {
@@ -49,8 +49,8 @@
     },
     "portfolio6": {
         "img": "/assets/images/invest/portfolio-6.png",
-        "title": "120 ميريديان واي، بيلاهم",
-        "location": "Pelham, ON",
+        "title": "120 ميريديان واي",
+        "location": "بيلاهم",
         "address1": "الربع الثالث من عام 2025",
         "address2": "166 شقة"
     },
