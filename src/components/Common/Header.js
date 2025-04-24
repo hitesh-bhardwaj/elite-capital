@@ -23,12 +23,12 @@ const LanguageButton = () => {
       <span className="bg-white w-[1px] block h-[18px]"></span>
       <Link
         className={`${
-          locale === "ae" ? "text-white" : ""
+          locale === "ar" ? "text-white" : ""
         } hover:scale-110 block duration-150`}
         href={asPath}
-        locale="ae"
+        locale="ar"
       >
-        AE
+        AR
       </Link>
     </div>
   );

@@ -39,12 +39,12 @@ const LanguageButton = ({inverted , setarabicMode,className}) => {
       <span className={`bg-white w-[1px] block h-[18px] mobile:bg-black ${inverted?"!bg-black":""}`}></span>
       <Link
         className={`${
-          locale === "ae" ? "text-white mobile:text-black" : ""
+          locale === "ar" ? "text-white mobile:text-black" : ""
         } hover:scale-110 block duration-150`}
         href={asPath}
-        locale="ae"
+        locale="ar"
       >
-        AE
+        AR
       </Link>
     </div>
   );

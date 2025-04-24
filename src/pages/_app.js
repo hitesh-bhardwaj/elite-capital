@@ -39,7 +39,7 @@ const App = ({ Component, pageProps }) => {
 
 
   useEffect(() => {
-    const dir = locale === "ae" ? "rtl" : "ltr";
+    const dir = locale === "ar" ? "rtl" : "ltr";
     document.documentElement.setAttribute("dir", dir);
     document.documentElement.setAttribute("lang", locale);
     document.querySelectorAll('Swiper').forEach(swiper => {
@@ -55,6 +55,7 @@ const App = ({ Component, pageProps }) => {
   const [showPreloader, setShowPreloader] = useState(true);
 
     useEffect(() => {
+      if(typeof sessionStorage !=="undefined"){
         const hasVisited = sessionStorage.getItem('hasVisited');
         if (!hasVisited) {
             setShowPreloader(true);
@@ -66,6 +67,9 @@ const App = ({ Component, pageProps }) => {
         } else {
             setShowPreloader(false);
         }
+      } else{
+        setShowPreloader(false);
+      }
     }, []);
   return (
     <>

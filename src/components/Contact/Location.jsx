@@ -47,10 +47,14 @@ const Location = () => {
                         <div className="pt-[0.5vw]">
                             <Image src="/icons/location-icon.svg" height={30} width={30} alt="location" className="fadein" />
                         </div>
-                        <div data-para-anim
+                        {/* <div data-para-anim
                             className="mb-[3vw] w-[80%] content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                             dangerouslySetInnerHTML={{ __html: t('locationSub') }}
-                        ></div>
+                        ></div> */}
+                        <div data-para-anim
+                            className="mb-[3vw] w-[80%] content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                           
+                        >{t('locationSub')}</div>
                     </div>
                     <div className="mt-[1vw] mobile:space-y-[4vw]">
                         <h2 data-title-anim className="heading-2 mb-[1.5vw] mobile:mb-[7vw] tablet:mb-[3vw]">{t('contactHead')}</h2>
