@@ -91,20 +91,18 @@ export default function SwiperSlider() {
     if (swiperRef.current) swiperRef.current.slidePrev();
   };
 
-  const buttonRef = useRef(null);
+ const buttonRef = useRef(null);
 
-  const handleMouseMove = useCallback((e) => {
-    if (!buttonRef.current) return;
-
-    const rect = buttonRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    if (buttonRef.current.querySelector(".hover-circle")) {
-      buttonRef.current.querySelector(".hover-circle").style.left = `${x}px`;
-      buttonRef.current.querySelector(".hover-circle").style.top = `${y}px`;
+  function handleMouseMove(e) {
+    const hoverCircle = e.currentTarget.querySelector('.hover-circle');
+    if (hoverCircle) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      hoverCircle.style.left = `${x}px`;
+      hoverCircle.style.top = `${y}px`;
     }
-  }, []);
+  }
 
   // console.log(portfolio);
 
@@ -191,7 +189,7 @@ export default function SwiperSlider() {
       {/* Next Button */}
       <div
         ref={buttonRef}
-        onMouseMove={handleMouseMove}
+        onMouseMove={(e) => handleMouseMove(e)}
         className="absolute z-[5] bottom-[25%] left-[10%] rtl:left-[88%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:left-[20%] tablet:bottom-[20%] tablet:left-[15%] rtl:mobile:left-[80%]"
         onClick={handleNext}
       >
@@ -227,7 +225,7 @@ export default function SwiperSlider() {
       {/* Prev Button */}
       <div
         ref={buttonRef}
-        onMouseMove={handleMouseMove}
+        onMouseMove={(e) => handleMouseMove(e)}
         className="absolute z-[5] bottom-[25%] left-[5%] rtl:left-[83%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%] rtl:mobile:left-[65%] rtl:tablet:left-[80%]"
         onClick={handlePrev}
       >

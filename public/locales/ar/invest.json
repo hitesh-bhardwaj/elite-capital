@@ -1,0 +1,109 @@
+{
+    "hero": "تعاون مع إيليت كابيتال للاستفادة من مشاريع تنموية عالية النمو تركز على المجتمعات، وتحقق عوائد قوية معدّلة حسب المخاطر.",
+    "cta": "Learn More",
+    "aboutsub": [
+        {
+            "text": "بصفتنا شركة استثمار خاص مرخصة من قبل سلطة دبي للخدمات المالية (DFSA)، نتيح لك الوصول إلى محفظة مميزة ومختارة بعناية من الاستثمارات العقارية المتميزة في أونتاريو، كندا. ترتكز استراتيجيتنا الاستثمارية على فحص دقيق، ومعرفة محلية متعمقة، وخبرة عالمية في إدارة الصناديق. نركز على الاستثمار في مشاريع سكنية مصممة خصيصًا وجاهزة للتنفيذ، وقد خضعت لخطط دقيقة وحصلت على جميع التصاريح اللازمة. هذا النهج يضمن لمستثمرينا تقليل المخاطر وزيادة فرص تحقيق عوائد قوية ومستدامة."
+        }
+    ],
+    "stats1": "محفظة مشاريع في كندا",
+    "stats2": "وحدة سكنية وتجارية",
+    "stats3": "قدم مربع من المشاريع السكنية",
+    "stats4": "رأس المال الاستثماري",
+    "portfolioHead": "استكشف مجموعة مختارة من الفرص الاستثمارية ضمن محفظتنا:",
+    "portfolioSub": "استكشف مجموعة مختارة من الفرص الاستثمارية ضمن محفظتنا:",
+    "portfolio1": {
+        "img": "/assets/images/invest/portfolio-1.png",
+        "title": "81-87 Rymal",
+        "location": "Hamilton, ON",
+        "address1": "Commencement – Q4 2025",
+        "address2": "210 شقة | 10 منازل تاون هاوس"
+    },
+    "portfolio2": {
+        "img": "/assets/images/invest/portfolio-2.png",
+        "title": "570 Upper Ottawa",
+        "location": "Hamilton, ON",
+        "address1": "Commencement – Q4 2025",
+        "address2": "346 شقة"
+    },
+    "portfolio3": {
+        "img": "/assets/images/invest/portfolio-3.png",
+        "title": "Station 60",
+        "location": "Brantford, ON",
+        "address1": "Commencement – Q3 2025",
+        "address2": " 242 شقة"
+    },
+    "portfolio4": {
+        "img": "/assets/images/invest/portfolio-4.png",
+        "title": "148 Niagara",
+        "location": "St. Catherines, ON",
+        "address1": "Commencement – Q4 2025",
+        "adddress2": "179 شقة"
+    },
+    "portfolio5": {
+        "img": "/assets/images/invest/portfolio-5.png",
+        "title": "4th Avenue – Phase 1 ",
+        "location": "St. Catharines, ON",
+        "address1": "Commencement – Q1 2026 ",
+        "address2": "259 شقة"
+    },
+    "portfolio6": {
+        "img": "/assets/images/invest/portfolio-6.png",
+        "title": "120 Meridian Way",
+        "location": "Pelham, ON",
+        "address1": "Commencement – Q3 2025",
+        "address2": "166 شقة"
+    },
+    "whyUsHead": "الوصول إلى فرص استثنائية",
+    "whyUs": [
+        {
+            "num": "01.",
+            "title": "الوصول إلى فرص استثنائية",
+            "para": "Opportunity to invest in our pipeline of 45+ premium developments in Ontario, carefully selected for their superior risk adjusted return."
+        },
+        {
+            "num": "02.",
+            "title": "خبرة مثبتة",
+            "para": "Leverage our 80+ years of combined professional experience with encompassing global fund management and real estate investment."
+        },
+        {
+            "num": "03.",
+            "title": "فحص دقيق وشامل",
+            "para": "Benefit from our comprehensive investment process and institutional-grade oversight."
+        },
+        {
+            "num": "04.",
+            "title": "استثمارات مستدامة",
+            "para": "Contribute to alleviating Canada’s housing shortage and support responsible community development."
+        },
+        {
+            "num": "05.",
+            "title": "مرخصة من سلطة دبي للخدمات المالية DFSA",
+            "para": "Invest with confidence, knowing you’re partnering with a regulated and reputable firm."
+        }
+    ],
+    "residentialHead": "بالإضافة إلى ذلك، يساهم النمو السكاني السريع والطلب الكبير على الإسكان في خلق بيئة مثالية للاستثمار العقاري.",
+    "residentialPara": "العقارات السكنية الكندية تُعد فرصة استثمارية جذابة ضمن دول مجموعة السبع، بفضل اقتصادها القوي والمستقر، ومواردها الطبيعية الغنية، وتصنيفها الائتماني الممتاز AAA.",
+    "residentialSub": "العوامل المحفزة للنمو",
+    "residentialSub2": "ما يجعل السوق العقاري السكني الكندي جذابًا للغاية للمستثمرين الباحثين عن التنويع وعوائد معدّلة حسب المخاطر:",
+    "features": [
+        {
+            "num": "01",
+            "title": "الزيادة السكانية",
+            "para": "من المتوقع أن ينمو عدد سكان كندا بمقدار 11.6 مليون نسمة بحلول عام 2050."
+        },
+        {
+            "num": "02",
+            "title": "نقص في الإسكان",
+            "para": "من المتوقع عجز يتجاوز 3.5 مليون وحدة سكنية بحلول عام 2030، ما يعزز الحاجة لتطوير مشاريع جديدة."
+        },
+        {
+            "num": "03",
+            "title": "الاستقرار الاقتصادي والسياسي",
+            "para": "اقتصاد قوي وموثوق، وبيئة سياسية مستقرة توفّر أساسًا متينًا للاستثمار طويل الأجل."
+        }
+    ],
+    "exclusiveSub": "محفظتنا الحصرية التي تضم أكثر من 45 مشروعًا مجتمعيًا، موزعة استراتيجيًا في أونتاريو، أكبر مقاطعة في كندا من حيث الاقتصاد وعدد السكان، وتستفيد من ديناميكيتها ونموها القوي.",
+   "contactHead": "استثمر معنا",
+    "contactSub": "تواصل معنا لمعرفة المزيد حول فرصنا الاستثمارية."
+}

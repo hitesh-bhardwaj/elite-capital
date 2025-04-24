@@ -19,6 +19,8 @@ const WhyUS = () => {
   const [currentIndex, setCurrentIndex] = useState(null);
   const [currentMobileIndex,setCurrentMobileIndex] =useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const isRTL = typeof window !== "undefined" && document?.documentElement?.dir === "rtl";
+
 
   const text = t("whyUs", { returnObjects: true });
 
@@ -57,8 +59,10 @@ const WhyUS = () => {
                   zIndex: index === currentIndex && active ? "20" : "0",
                   transform:
                   !isMobile && index === currentIndex && active
-                  ? `translateX(-${17 * currentIndex + 1.265 * currentIndex}vw)`
-                  : "translateX(0)",
+                    ? isRTL
+                      ? `translateX(${17 * currentIndex + 1.265 * currentIndex}vw)`
+                      : `translateX(-${17 * currentIndex + 1.265 * currentIndex}vw)`
+                    : "translateX(0)",
                 }}
               >
                 <div
@@ -94,7 +98,7 @@ const WhyUS = () => {
                   </div>
                 </div>
                 <div
-                  className={`bg-[#747977] absolute top-0 left-[calc(17vw+1.3vw)] w-[calc(17vw*4+3.9vw)] h-full duration-500 mobile:hidden tablet:hidden ${
+                  className={`bg-[#747977] absolute top-0 left-[calc(17vw+1.3vw)] w-[calc(17vw*4+3.9vw)] rtl:right-[calc(17vw+1.3vw)] h-full duration-500 mobile:hidden tablet:hidden ${
                     index === currentIndex && active
                       ? "opacity-100 z-20"
                       : "opacity-0"

@@ -1,31 +1,30 @@
 {
-    "hero": "Global experience combined with local expertise to generate Real Returns.",
+    "hero": "خبرة عالمية مدعومة بفهم محلي لتحقيق عوائد حقيقية.",
     "cta": "Learn More",
-    "aboutHead": "About us",
-    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). With 80+ years of combined experience, our success is built on combining deep global fund management and investment experience with highly local real estate expertise, coupled with a commitment to high-quality Real Assets that deliver value to both our investors and the communities they serve.",
-    "valueHead": "Our values",
+    "aboutHead": "حول الشركة",
+    "aboutSub": "إيليت كابيتال هي شركة أسهم خاصة مرخصة من قبل سلطة دبي للخدمات المالية وتقع في مركز دبي المالي العالمي. وبفضل خبرة جماعية تتجاوز 80 عامًا، تقوم رؤيتنا على الدمج بين الإدارة العالمية للصناديق والمعرفة المحلية العميقة بسوق العقارات، إلى جانب التزام قوي بتقديم أصول عالية الجودة تخلق قيمة حقيقية للمستثمرين والمجتمعات التي نخدمها.",
+    "valueHead": "قيمنا",
     "values": [
-        {   
-            "valueTitle": "Partnership",
-            "valueContent": "We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
+        {
+            "valueTitle": "الشراكة",
+            "valueContent": "نطمح لأن نكون الشريك المفضل للمستثمرين والمطورين والمجتمعات، من خلال بناء علاقات قوية تُفضي إلى حلول طويلة الأمد ونجاحات مستدامة."
         },
         {
-            "valueTitle": "Integrity",
-            "valueContent": "With 80+ years of combined experience, we are committed to the highest standards of transparency, honesty and ethics in all our business dealings."
+            "valueTitle": "النزاهة",
+            "valueContent": "بخبرة تزيد عن 80 عامًا، نلتزم بأعلى معايير الشفافية والصدق والأخلاقيات في جميع تعاملاتنا."
         },
         {
-            "valueTitle": "Knowledge",
-            "valueContent": "We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk-adjusted returns."
+            "valueTitle": "المعرفة",
+            "valueContent": "نجمع بين المعرفة المحلية المتعمقة والخبرة العالمية في الاستثمار لضمان استراتيجيات استثمارية مبتكرة ومعتمدةعلى البيانات وموثوقة. يقدّم فريقنا دائمًا نهجًا متميزًا لتحقيق عوائد معدّلة حسب المخاطر."
         },
         {
-            "valueTitle": "Trust",
-            "valueContent": "We build and maintain trust through transparency, consistency and collaboration in our dealings with all our stakeholders."
+            "valueTitle": "الثقة",
+            "valueContent": "نبني الثقة ونحافظ عليها من خلال الشفافية والاتساق والتعاون مع جميع أصحاب المصلحة لدينا."
         },
         {
-            "valueTitle": "Sustainability",
-            "valueContent": "We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities."
+            "valueTitle": "الاستدامة",
+            "valueContent": "نستثمر في مشاريع مصممة بشكل مسؤول لتحقيق فوائد بيئية واجتماعية مستدامة للمجتمعات."
         }
-        
     ],
     "team": "Our team",
     "teamMembers": [
@@ -233,6 +232,6 @@
         }
     ],
     "shariahSub": "<p>The Shariah Supervisory Board shall be managed by Amanie Advisors Ltd, a company incorporated in DIFC with license No: CL0696. </p> <p> Amanie Advisors Ltd is also the appointed Shariah Advisor for Elite Capital (DIFC) Limited.</p>",
-    "contactHead": "Invest  with us",
-    "contactSub": "Unlock Real Assets with Real Returns"
+    "contactHead": "استثمر معنا",
+    "contactSub": "تواصل معنا لمعرفة المزيد حول فرصنا الاستثمارية."
 }
