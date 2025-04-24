@@ -17,14 +17,14 @@ const PortfolioCard = ({img, title,location, address1, address2})=>{
                   height={397} 
                 />
               </div>
-              <div className='w-full  text-black1 font-body  mobile:px-1 mobile:space-y-[5vw] '>
+              <div className='w-full  text-black1 font-body  mobile:px-1 mobile:space-y-[1vw] '>
                 <div className='mobile:space-y-[1vw] mobile:pt-[3vw]'>
                   <h3 data-para-anim className='text-[2.5vw] font-display mobile:text-[7vw] font-medium tablet:font-normal tablet:text-[5.5vw]'>{title}</h3>
                   <p data-para-anim className='content'>{location}</p>
                 </div>
                 <div className='pt-[2vw]'>
                 <div 
-                  className='content mobile:pb-[5vw]'
+                  className='content '
                 >{address1}</div>
               </div>
               <div  

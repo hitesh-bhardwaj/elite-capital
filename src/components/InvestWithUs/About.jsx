@@ -55,7 +55,7 @@ const About = () => {
                         ))}
                     </div>
 
-                    <div className="w-full h-full translate-x-[65%] rtl:translate-x-[-60%] mobile:translate-x-[20%] tablet:translate-x-[30%]">
+                    <div className="w-full h-full translate-x-[65%] rtl:translate-x-[-60%] mobile:translate-x-[20%] tablet:translate-x-[30%] rtl:mobile:translate-x-[-20%]">
                         <ImageComponent imgsrc={aboutImage} width={"w-[80%] mobile:w-[80%]"} />
                     </div>
                 </div>
