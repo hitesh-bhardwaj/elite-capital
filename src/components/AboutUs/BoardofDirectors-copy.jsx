@@ -13,7 +13,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-const BoardofDirectors = () => {
+const BoardofDirectorsCopy = () => {
   const { t } = useTranslation("about");
 
   const [openedIndexinvestment, setOpenedIndexinvestment] = useState(null);
@@ -50,10 +50,10 @@ const BoardofDirectors = () => {
           </div>
         </div>
 
-        <div className=" mobile:space-y-[5vw] pt-[8vw]">
+        <div className=" mobile:space-y-[5vw] pt-[5vw]">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+            className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub1")}
           </h2>
@@ -62,10 +62,10 @@ const BoardofDirectors = () => {
             {mobileWidth && <MobileSwiper members={adviserMembers} />}
           </div>
         </div>
-        <div className="pt-[8vw] mobile:space-y-[5vw]">
+        <div className="pt-[5vw] mobile:space-y-[5vw]">
           <h2
             data-title-anim
-            className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+            className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub2")}
           </h2>
@@ -176,7 +176,7 @@ const TeamAccordion = ({ members }) => {
       className="w-full h-full flex flex-wrap justify-start mobile:hidden"
     >
       {members.map((item, index) => {
-        const visibleCount = Math.ceil(item.features.length / 2);
+        const visibleCount = Math.ceil(item.features.length / 3);
         const firstHalf = item.features.slice(0, visibleCount);
         const secondHalf = item.features.slice(visibleCount);
 
@@ -232,11 +232,15 @@ const TeamAccordion = ({ members }) => {
               <AccordionTrigger
                 hide={true}
                 onClick={() => {
-                  setOpenedIndex((prev) => !prev);
+                  setOpenedIndex((prev) => (prev === index ? null : index));
                 }}
-                className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2vw] text-left font-normal "
+                className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal "
               >
-                {openedIndex ? <p>Read less -</p> : <p>Read more +</p>}
+                {openedIndex === index ? (
+                  <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">Read less -</p>
+                ) : (
+                  <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">Read more +</p>
+                )}
               </AccordionTrigger>
             </div>
           </AccordionItem>
@@ -246,4 +250,4 @@ const TeamAccordion = ({ members }) => {
   );
 };
 
-export default BoardofDirectors;
+export default BoardofDirectorsCopy;

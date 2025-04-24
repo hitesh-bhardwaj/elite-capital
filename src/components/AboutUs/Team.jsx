@@ -3,6 +3,7 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import BoardofDirectors from "./BoardofDirectors";
 import ShariahBoard from "./ShariahBoard";
+import BoardofDirectorsCopy from "./BoardofDirectors-copy";
 
 const Team = () => {
   const { t } = useTranslation("about");
@@ -71,7 +72,7 @@ const Team = () => {
             </div>
           </div>
         </div>
-        <BoardofDirectors />
+        <BoardofDirectorsCopy />
         <ShariahBoard />
       </section>
     </>
