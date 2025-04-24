@@ -47,79 +47,43 @@ const BoardofDirectors = () => {
             {t("teamSub")}
           </h2>
           <div>
-          <Accordion
-  type="single"
-  collapsible
-  className="w-full h-full flex flex-wrap justify-start mobile:hidden"
->
-  {boardMembers.map((item, index) => {
-    const visibleCount = Math.ceil(item.features.length / 2)
-    const firstHalf = item.features.slice(0, visibleCount)
-    const secondHalf = item.features.slice(visibleCount)
-
-    return (
-      <AccordionItem
-        key={index}
-        value={`item-${index}`}
-        className={`w-full flex gap-[5vw] transition-transform  px-[5vw] py-[2vw] tablet:flex-col ${
-          index % 2 === 0 ? "bg-[#BCBCBC]" : ""
-        }`}
-      >
-        <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease tablet:h-[40vw] tablet:w-[30vw]">
-          <Image
-            src={item.img}
-            height={626}
-            width={535}
-            alt="team"
-            className="w-full h-full object-cover transition-all duration-500 ease group-hover:scale-[1.1]"
-          />
-        </div>
-
-        <div className="flex flex-col gap-[0.5vw] py-[2vw] w-[70%] tablet:w-full">
-          <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]">
-            {item.name}
-          </p>
-
-          <p className="mobile:text-[4.6vw] tablet:text-[3vw] w-[60%] leading-[1.2] tablet:w-full">
-            {item.des}
-          </p>
-
-          {/* First half (always visible) */}
-          <div className="space-y-[1vw] pt-[1vw]">
-            {firstHalf.map((feature, i) => (
-              <p
-                key={i}
-                className={`text-[1.3vw] tablet:text-[2.5vw] ${i === 0 ? "mt-[2vw]" : ""}`}
-              >
-                {feature}
-              </p>
-            ))}
-          </div>
-
-          <AccordionContent className="space-y-[1vw] pt-[1vw]">
-            {secondHalf.map((feature, i) => (
-              <p key={i} className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]">
-                {feature}
-              </p>
-            ))}
-          </AccordionContent>
-
-          <AccordionTrigger className="text-[1.3vw] mt-[2vw] tablet:text-[2vw] text-left hover:underline">
-            {({ open }) =>
-              open ? "Read less -" : "Read more +"
-            }
-          </AccordionTrigger>
-        </div>
-      </AccordionItem>
-    )
-  })}
-</Accordion>
-
+         <TeamAccordion members={boardMembers}/>
             {mobileWidth && (
   <MobileSwiper members={boardMembers}/>
 )}
           </div>
+          
         </div>
+
+
+         <div className=" mobile:space-y-[5vw] pt-[8vw]">
+                  <h2
+                    data-title-anim
+                    className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+                  >
+                    {t("teamSub1")}
+                  </h2>
+                  <div >
+                    <TeamAccordion members={adviserMembers}/>
+                    {mobileWidth && (
+          <MobileSwiper members={adviserMembers}/>
+        )}
+                  </div>
+                </div>
+                <div className="pt-[8vw] mobile:space-y-[5vw]">
+                  <h2
+                    data-title-anim
+                    className="text-[4.6vw] font-display  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+                  >
+                    {t("teamSub2")}
+                  </h2>
+                  <div >
+                   <TeamAccordion members={investmentMembers}/>
+                    {mobileWidth && (
+          <MobileSwiper members={investmentMembers}/>
+        )}
+                  </div>
+                </div>
        
 
       </section>
@@ -210,5 +174,74 @@ const MobileSwiper = ({ members }) => {
     </Swiper>
   );
 };
+
+const TeamAccordion = ({ members }) => {
+  return (
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full h-full flex flex-wrap justify-start mobile:hidden"
+    >
+      {members.map((item, index) => {
+        const visibleCount = Math.ceil(item.features.length / 2)
+        const firstHalf = item.features.slice(0, visibleCount)
+        const secondHalf = item.features.slice(visibleCount)
+
+        return (
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className={`w-full flex gap-[5vw] transition-transform px-[5vw] py-[2vw] tablet:flex-col ${
+              index % 2 === 0 ? "bg-[#BCBCBC]" : ""
+            }`}
+          >
+            <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease tablet:h-[40vw] tablet:w-[30vw]">
+              <Image
+                src={item.img}
+                height={626}
+                width={535}
+                alt="team"
+                className="w-full h-full object-cover transition-all duration-500 ease group-hover:scale-[1.1]"
+              />
+            </div>
+
+            <div className="flex flex-col gap-[0.5vw] py-[2vw] w-[70%] tablet:w-full">
+              <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]">
+                {item.name}
+              </p>
+
+              <p className="mobile:text-[4.6vw] tablet:text-[3vw] w-[60%] leading-[1.2] tablet:w-full">
+                {item.des}
+              </p>
+
+              <div className="space-y-[1vw] pt-[1vw]">
+                {firstHalf.map((feature, i) => (
+                  <p
+                    key={i}
+                    className={`text-[1.3vw] tablet:text-[2.5vw] ${i === 0 ? "mt-[2vw]" : ""}`}
+                  >
+                    {feature}
+                  </p>
+                ))}
+              </div>
+
+              <AccordionContent className="space-y-[1vw] pt-[1vw]">
+                {secondHalf.map((feature, i) => (
+                  <p key={i} className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]">
+                    {feature}
+                  </p>
+                ))}
+              </AccordionContent>
+
+              <AccordionTrigger className="text-[1.3vw] mt-[2vw] tablet:text-[2vw] text-left hover:underline">
+                {({ open }) => (open ? "Read less -" : "Read more +")}
+              </AccordionTrigger>
+            </div>
+          </AccordionItem>
+        )
+      })}
+    </Accordion>
+  )
+}
 
 export default BoardofDirectors;
