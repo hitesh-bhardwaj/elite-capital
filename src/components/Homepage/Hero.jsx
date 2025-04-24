@@ -12,7 +12,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
   let delayTime ="";
   useEffect(()=>{
     const isFirstTimeLoading = sessionStorage.getItem('hasVisited') === null;
-     delayTime = isFirstTimeLoading ? 1.7 : 0.2;
+     delayTime = isFirstTimeLoading ? 1.8 : 0.2;
   },[])
  
 
