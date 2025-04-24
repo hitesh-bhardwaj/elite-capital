@@ -20,35 +20,47 @@ const socials = [
   },
 ];
 
-const LanguageButton = ({inverted , setarabicMode,className}) => {
+
+
+const LanguageButton = ({ inverted, setarabicMode, className }) => {
   const { locale, asPath } = useRouter();
+
+  const switchLanguage = (lang) => {
+    if (lang === 'ar') {
+      setarabicMode(true);
+    } else {
+      setarabicMode(false);
+    }
+
+    // Force reload with new locale
+    window.location.href = `/${lang}${asPath}`;
+  };
+
   return (
     <div className={`text-golden flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
-      <Link 
-      onclick={()=>{
-        setarabicMode(false)
-      }}
-        className={`${
+      <span
+        onClick={() => switchLanguage('en')}
+        className={`cursor-pointer ${
           locale === "en" ? "text-white mobile:text-black" : ""
-        } hover:scale-110 block duration-150 ${inverted?"!text-black rtl:!text-golden ":""}`}
-        href={asPath}
-        locale="en"
+        } hover:scale-110 block duration-150 ${inverted ? "!text-black rtl:!text-golden" : ""}`}
       >
         EN
-      </Link>
-      <span className={`bg-white w-[1px] block h-[18px] mobile:bg-black ${inverted?"!bg-black":""}`}></span>
-      <Link
-        className={`${
+      </span>
+
+      <span className={`bg-white w-[1px] block h-[18px] mobile:bg-black ${inverted ? "!bg-black" : ""}`}></span>
+
+      <span
+        onClick={() => switchLanguage('ar')}
+        className={`cursor-pointer ${
           locale === "ar" ? "text-white mobile:text-black" : ""
-        } hover:scale-110 block duration-150 ${inverted?"text-golden rtl:!text-black ":""}`}
-        href={asPath}
-        locale="ar"
+        } hover:scale-110 block duration-150 ${inverted ? "text-golden rtl:!text-black" : ""}`}
       >
         AR
-      </Link>
+      </span>
     </div>
   );
 };
+
 const NewHeader = () => {
   const headerRef = useRef();
   const [openMenu, setOpenMenu] = useState(false);
