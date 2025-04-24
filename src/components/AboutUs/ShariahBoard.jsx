@@ -61,7 +61,7 @@ const ShariahBoard = () => {
                     <div key={index} className="w-[50%] mobile:w-[90%]">
                       <div
                         className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] ${
-                          openedIndex === index ? "h-[35vw]" : "h-[8vw]"
+                          openedIndex === index ? "h-[35vw]" : "h-[8vw] rtl:h-[5vw]"
                         }`}
                       >
                         {item.features.map((feature, i) => (
