@@ -6,7 +6,7 @@ import Head from "next/head";
 import { appWithTranslation } from 'next-i18next'
 import { ReactLenis } from "lenis/react";
 import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion"; 
-import Loader2 from "@/components/Loader2";
+import Loader from "@/components/Loader";
 
 
 const bodoni_moda = Bodoni_Moda({
@@ -92,7 +92,7 @@ const App = ({ Component, pageProps }) => {
                 transition={{ duration: 0.6 }}
               >
       <main className={`${bodoni_moda.variable} ${barlow.variable} font-body text-[1.55vw] text-black1`}>
-      {showPreloader && <Loader2/>}
+      {showPreloader && <Loader/>}
         <Component {...pageProps} />
       </main>
       </m.div>

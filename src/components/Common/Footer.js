@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import React from "react";
 
 const Footer = () => {
     const { t } = useTranslation('common');
@@ -63,13 +64,13 @@ const Footer = () => {
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
            <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[4vw] tablet:gap-[1vw]">
             {footerNavBottom.map((item,index)=>(
-             <>
-              <Link key={index}  href={item.link} prefetch={false} className="group">
+             <React.Fragment key={index}>
+              <Link  href={item.link} prefetch={false} className="group">
               <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
                 <span  className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.5vw]">{item.text}</span>
             </div></Link>
               <span className="h-1 w-1 bg-white rounded-full block last:hidden mobile:hidden"/>
-             </>
+             </React.Fragment>
             ))}
               </div>
           <div className="flex items-center gap-4">

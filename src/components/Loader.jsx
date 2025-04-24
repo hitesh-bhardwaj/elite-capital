@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import {useLenis} from "lenis/react"
+
 
 const Loader = () => {
   const loaderRef = useRef(null);
@@ -7,40 +9,67 @@ const Loader = () => {
   const path1Ref = useRef(null);
   const path2Ref = useRef(null);
   const path3Ref = useRef(null);
+  const lenis = useLenis();
 
   useEffect(() => {
     gsap.set([path1Ref.current, path2Ref.current, path3Ref.current], {
       scaleX: 0,
       transformOrigin: 'left center',
     });
-
+    gsap.set(svgWrapperRef.current, {
+      transformOrigin: 'center center',
+    });
+  
     const tl = gsap.timeline();
-
-    tl.to(path3Ref.current, { scaleX: 1, duration: 0.5, ease: 'power2.out' }, 0.2)
-      .to(path1Ref.current, { scaleX: 1, duration: 0.5, ease: 'power2.out' }, '+=0.2')
-      .to(path2Ref.current, { scaleX: 1, duration: 0.5, ease: 'power2.out' }, '+=0.2')
-
+  
+    tl.to(path3Ref.current, {
+      scaleX: 1,
+      duration: 0.5,
+      ease: 'power2.out',
+    }, "0.2")
+      .to(path1Ref.current, {
+        scaleX: 1,
+        duration: 0.5,
+        ease: 'power2.out',
+      }, '-=0.3')
+      .to(path2Ref.current, {
+        scaleX: 1,
+        duration: 0.5, 
+        ease: 'power2.out',
+      }, '-=0.3')
       .to(svgWrapperRef.current, {
-        x: '-44vw', 
-        y: '-42vh', 
-        opacity:0,
-        scale: 0.3,
+        transform: 'translateZ(1100px)',
         duration: 1.5,
-        ease: 'power3.inOut',
-      }, '+=0.5')
+        ease: 'power4.out',
+      }, '-=0.2')
       .to(loaderRef.current, {
-        backgroundColor: 'transparent',
-        duration: 1,
-        ease: 'power2.inOut',
+        backgroundColor: 'black',
+        duration: 0.5,
+        ease: 'power2.out',
+      }, '-=1.2') 
+  
+      .to(loaderRef.current, {
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
       }, '-=0.8')
       .set(loaderRef.current, { pointerEvents: 'none' });
-
   }, []);
+      
+  useEffect(() => {
+    lenis && lenis.stop();
+
+    const timeout = setTimeout(() => {
+      lenis && lenis.start();
+    }, 2200);
+
+    return()=>clearTimeout(timeout)
+  }, [lenis]);
 
   return (
     <div
       ref={loaderRef}
-      className="fixed top-0 left-0 w-screen h-screen bg-white z-[200] flex items-center justify-center overflow-hidden"
+      className="fixed top-0 left-0 w-screen h-screen bg-white z-[200] flex items-center justify-center overflow-hidden" style={{ perspective: '1000px', transformStyle: 'preserve-3d', }}
     >
       <div ref={svgWrapperRef} className="w-[100px] h-[100px]">
         <svg width="100" height="100" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
