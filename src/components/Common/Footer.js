@@ -22,7 +22,7 @@ const Footer = () => {
   const socials = [
     {
       icon: "/icons/linkedin.svg",
-      link: "https://www.linkedin.com/yourlinkedinpage",
+      link: "https://www.linkedin.com/company/officialelitecapital",
       alt: "LinkedIn Icon",
     },
     {
