@@ -132,7 +132,7 @@
                 "شخصية مؤثرة في عالم الفنون القتالية المختلطة (MMA)، يشغل منصب رئيس التطوير الدولي في Dominance MMA ويقود توسيع نطاق الشركة عالميًا",
                 "Previously, as CEO of Eagle FC, he spearheaded the promotion’s global expansion, launching events in new markets and securing key broadcasting and sponsorship agreements. With degrees in law and linguistics, he possesses a unique combination of legal acumen, business strategy, and cross-cultural communication skills."
             ]
-        }
+        } 
     ],
     "teamSub1": "المستشارون",
     "adviserMembers": [
@@ -171,9 +171,9 @@
                 "Investment Committee"
             ],
             "features": [
-                "خبيرة تنفيذية في القطاع العقاري بخبرة 30 عامًا عبر المملكة المتحدة والشرق الأوسط وأفريقيا، تولّت مناصب عليا في Majid Al Futtaim وبلغت منصب رئيس إدارة الأصول لمحفظة تتجاوز 11 مليار دولار.",
-                "In this role, she led strategic planning, investment management, and asset performance, achieving significant revenue and EBITDA growth. Sophie’s expertise spans investment management, valuation, strategic development, and corporate real estate. ",
-                "She has also served in key advisory and non-executive roles, including a 15+ year tenure with a leading Middle East REIT, and as an elected member of the RICS Global Governing Council. Sophie holds a BSc in Estate Management from Oxford Brookes University and has completed executive education programs at the London School of Economics and Harvard University."
+                "خبيرة تنفيذية في القطاع العقاري بخبرة 30 عامًا عبر المملكة المتحدة والشرق الأوسط وأفريقيا تولّت مناصب عليا في Majid Al Futtaim وبلغت منصب رئيس إدارة الأصول لمحفظة تتجاوز 11 مليار.",
+                "في هذا الدور، قادت التخطيط الاستراتيجي، وإدارة الاستثمارات، وأداء الأصول، وحققت نموًا ملحوظًا في الإيرادات والأرباح قبل الفوائد والضرائب والاستهلاك والإطفاء (EBITDA). تمتد خبرة صوفي لتشمل إدارة الاستثمارات، والتقييم العقاري، والتطوير الاستراتيجي، والعقارات المؤسسية.",
+                "كما شغلت مناصب استشارية وتنفيذية غير إدارية بارزة، بما في ذلك عضويتها لأكثر من 15 عامًا في أحد صناديق الاستثمار العقاري الرائدة في الشرق الأوسط، وانتخابها عضوًا في المجلس العالمي الحاكم للمعهد الملكي للمساحين القانونيين (RICS). تحمل صوفي درجة البكالوريوس في إدارة العقارات من جامعة أكسفورد بروكس، كما أكملت برامج تعليم تنفيذي في كلية لندن للاقتصاد وجامعة هارفارد."
             ]
         },
         {
@@ -208,8 +208,9 @@
             "img": "/assets/images/about/icon.png",
             "features": [
                 "رئيس مجلس إدارة مجموعة أماني، ترأس سابقًا مجالس شرعية في بنك أبوظبي الأول، البنك المركزي الماليزي، وهيئة الأوراق المالية الماليزية وشركة بيرمودالان ناسيونال بيرهاد (PNB).",
-                "Dr. Mohd Daud is a Shariah Board Member of various global financial institutions, including Amanie Advisors Ltd (Dubai, UAE) and Amanie Advisors Sdn Bhd (Malaysia), where he serves as Chairman. He also chairs Salama Insurance (Dubai) and Habib Metropolitan Bank (Pakistan). Additionally, he serves on the Shariah boards of BNP Paribas Najma (Bahrain), Guidance Financial (USA), Amundi Asset Management (Paris), Dow Jones Islamic Market Index (USA), Standard and Poor’s Islamic Index (USA), Oasis Asset Management (South Africa), Morgan Stanley (Dubai), Sedco Capital (Saudi Arabia and Luxembourg), Credit Agricole CIB (Dubai), Madina Takaful (Oman), and Abu Dhabi Commercial Bank (UAE). ",
-                "Dr. Mohd Daud earned his first degree in Shariah from the University of Kuwait in 1988, a Ph.D. from the University of St. Andrews, United Kingdom in 1993, and completed his external Bachelor of Jurisprudence at the University of Malaya in 2002."
+                "الدكتور محمد داود عضو في عدد من الهيئات الشرعية لدى مؤسسات مالية عالمية، منها 'أماني أدفايزرز المحدودة' (دبي، الإمارات العربية المتحدة) و'أماني أدفايزرز سند بيرهارد' (ماليزيا)، حيث يشغل منصب الرئيس. كما يرأس مجلس إدارة شركة 'سلامة للتأمين' (دبي) وبنك 'حبيب متروبوليتان' (باكستان). ",
+                "بالإضافة إلى ذلك، يشغل عضوية الهيئات الشرعية لكل من بنك بي إن بي باريبا نجمة (البحرين)، غايدنس فاينانشال (الولايات المتحدة الأمريكية)، أماندي لإدارة الأصول (باريس)، مؤشر داو جونز للسوق الإسلامية (الولايات المتحدة الأمريكية)، مؤشر ستاندرد آند بورز الإسلامي (الولايات المتحدة الأمريكية)، أواسيس لإدارة الأصول (جنوب أفريقيا)، مورغان ستانلي (دبي)، سدكو كابيتال (السعودية ولوكسمبورغ)، كريدي أغريكول CIB (دبي)، مدينة تكافل (عُمان)، وبنك أبوظبي التجاري (الإمارات العربية المتحدة).",
+                "حصل الدكتور محمد داود على درجة البكالوريوس في الشريعة من جامعة الكويت عام 1988، وعلى درجة الدكتوراه من جامعة سانت أندروز في المملكة المتحدة عام 1993، كما أنهى درجة البكالوريوس الخارجية في القانون من جامعة مالايا عام 2002."
             ]
         },
         {

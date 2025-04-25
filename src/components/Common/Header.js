@@ -98,17 +98,17 @@ const Header = () => {
       setLastScrollY(currentScrollY);
 
       // Invert logic
-      const darkSections = document.querySelectorAll(".dark");
-      let found = false;
+      // const darkSections = document.querySelectorAll(".dark");
+      // let found = false;
 
-      darkSections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom > 0) {
-          found = true;
-        }
-      });
+      // darkSections.forEach((section) => {
+      //   const rect = section.getBoundingClientRect();
+      //   if (rect.top <= 0 && rect.bottom > 0) {
+      //     found = true;
+      //   }
+      // });
 
-      setIsInverted(found);
+      // setIsInverted(found);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -168,9 +168,9 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 w-screen z-50 transition-all ease duration-500  ${showHeader ? "translate-y-0" : "-translate-y-full"} `}
+      className={`fixed top-0 left-0 w-screen z-50 transition-all  backdrop-blur-md ease bg-black/40 duration-500  ${showHeader ? "translate-y-0" : "-translate-y-full"} `}
     >
-      <div className="w-full px-[5vw] py-12 flex justify-between items-center">
+      <div className="w-full px-[5vw] py-8 flex justify-between items-center">
       <div>
           <Link href="/" className="flex gap-[0.5vw] rtl:flex-row-reverse">
             <Image

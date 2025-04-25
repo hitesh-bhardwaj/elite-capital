@@ -31,7 +31,7 @@ const ShariahBoard = () => {
       <section className="w-screen h-full bg-[#ffffff]  pb-[5vw] mobile:overflow-hidden mobile:space-y-[8vw] tablet:pb-[7%]">
         <div className="p-[5vw] mobile:space-y-[12vw]">
           <h2
-            data-title-anim
+           
             className="text-[4.6vw] font-display mb-[10vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2]"
           >
             {t("teamSub3")}

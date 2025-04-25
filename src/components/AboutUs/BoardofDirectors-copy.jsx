@@ -39,7 +39,7 @@ const BoardofDirectorsCopy = () => {
       <section className="w-screen h-full bg-[#ffffff]  pb-[5vw] mobile:overflow-hidden mobile:space-y-[8vw] tablet:pb-[7%] pt-[7vw]">
         <div className=" mobile:space-y-[5vw] ">
           <h2
-            data-title-anim
+           
             className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] mobile:mb-[7vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub")}
@@ -52,7 +52,7 @@ const BoardofDirectorsCopy = () => {
 
         <div className=" mobile:space-y-[5vw] pt-[5vw]">
           <h2
-            data-title-anim
+           
             className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub1")}
@@ -64,7 +64,7 @@ const BoardofDirectorsCopy = () => {
         </div>
         <div className="pt-[5vw] mobile:space-y-[5vw]">
           <h2
-            data-title-anim
+           
             className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub2")}

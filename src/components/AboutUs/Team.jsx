@@ -14,7 +14,7 @@ const Team = () => {
       <section className="w-screen h-full bg-[#ffffff]  pb-[5vw] mobile:overflow-hidden mobile:space-y-[8vw] tablet:pb-[7%] dark">
         <div className="px-[5vw] py-[5vw] mobile:space-y-[5vw]">
           <h2
-            data-title-anim
+           
             className="text-[4.7vw] font-display mb-[2vw] mobile:text-[12.5vw] tablet:mb-0 tablet:text-[7vw]"
           >
             {t("team")}
