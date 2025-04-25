@@ -254,7 +254,7 @@ export default function ContactForm() {
                     </div>
                   ) : (
                     <span className="text-[1.1vw] mobile:text-[4.5vw] tablet:text-[2.5vw]">
-                      {t("formSubmitting")}
+                     Submitting..
                     </span>
                   )}
                 </Button>
