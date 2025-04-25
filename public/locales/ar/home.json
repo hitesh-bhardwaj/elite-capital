@@ -71,32 +71,32 @@
     "portfolioCta": "للإطلاع علي ملف مشاريعنا",
     "portfolio": [
         {
-            "image": "/assets/images/homepage/portfolio-1.png",
+            "image": "/assets/images/homepage/rymal-portfolio-1.png",
             "text1": "81-87 ر ، أونتاريو",
             "text2": "هاميلتون, رايمال،"
         },
         {
-            "image": "/assets/images/homepage/hero-bg.jpg",
+            "image": "/assets/images/homepage/ottawa-portfolio.jpg",
             "text1": "570  أونتاريو",
             "text2": "بر أوتاوا، هاميلتون، أ"
         },
         {
-            "image": "/assets/images/homepage/portfolio-1.png",
+            "image": "/assets/images/homepage/station-portfolio.png",
             "text1": "ستيشن 60،",
             "text2": " برانتفورد، أونتاريو"
         },
         {
-            "image": "/assets/images/homepage/hero-bg.jpg",
+            "image": "/assets/images/homepage/niagara-portfolio.png",
             "text1": "148 شارع نياجارا، ",
             "text2": "و هاميلتون، أونتاري"
         },
         {
-            "image": "/assets/images/homepage/portfolio-1.png",
+            "image": "/assets/images/homepage/avenue-portfolio.png",
             "text1": " المرحلة الأولى ",
             "text2": "الجادة الرابعة، سانت كاثرينز، أونتاري"
         },
         {
-            "image": "/assets/images/homepage/hero-bg.jpg",
+            "image": "/assets/images/homepage/meridian-portfolio.png",
             "text1": "120 ميريديان واي، و",
             "text2": " بيلهام، أونتاري"
         }
