@@ -1,7 +1,7 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import About from '@/components/AboutUs/About';
 import Team from '@/components/AboutUs/Team';
-import { blockAnim, fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
+import {  fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import Values from '@/components/AboutUs/Values';
 import Hero from '@/components/Common/Hero';
 import { useTranslation } from 'next-i18next';

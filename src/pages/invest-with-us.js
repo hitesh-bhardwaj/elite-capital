@@ -17,7 +17,7 @@ export default function Invest() {
    paraAnim()
    titleAnim()
    fadeIn()
-   blockAnim()
+  //  blockAnim()
    const { t } = useTranslation('invest');
      
   return (

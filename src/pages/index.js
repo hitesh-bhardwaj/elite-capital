@@ -19,7 +19,7 @@ export default function Home() {
   titleAnim();
   lineAnim();
   fadeIn();
-  blockAnim();
+  // blockAnim();
   const { t } = useTranslation('home');
   return (
     <>
