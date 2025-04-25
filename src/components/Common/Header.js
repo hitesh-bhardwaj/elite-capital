@@ -37,22 +37,22 @@ const LanguageButton = ({ inverted, setarabicMode, className }) => {
   };
 
   return (
-    <div className={`text-golden flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
+    <div className={`text-white flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
       <span
         onClick={() => switchLanguage('en')}
         className={`cursor-pointer ${
-          locale === "en" ? "text-white mobile:text-black" : ""
+          locale === "en" ? "text-golden mobile:text-black tablet:text-black" : "mobile:text-black tablet:text-black"
         } hover:scale-110 block duration-150 ${inverted ? "!text-black rtl:!text-golden" : ""}`}
       >
         EN
       </span>
 
-      <span className={`bg-white w-[1px] block h-[18px] mobile:bg-black ${inverted ? "!bg-black" : ""}`}></span>
+      <span className={`bg-white w-[1px] block h-[18px] mobile:bg-black tablet:bg-black ${inverted ? "!bg-black" : ""}`}></span>
 
       <span
         onClick={() => switchLanguage('ar')}
         className={`cursor-pointer ${
-          locale === "ar" ? "text-white mobile:text-black" : ""
+          locale === "ar" ? "text-golden mobile:text-black tablet:text-black" : " mobile:text-black tablet:text-black"
         } hover:scale-110 block duration-150 ${inverted ? "text-golden rtl:!text-black" : ""}`}
       >
         AR
