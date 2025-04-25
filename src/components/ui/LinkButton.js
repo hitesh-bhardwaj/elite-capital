@@ -20,7 +20,7 @@ export default function LinkButton({ className = "", href, text, ...props }) {
   }, []);
 
   return (
-    <Link {...props} href={href} className={className}>
+    <a {...props} href={href} className={className}>
       <div
         ref={buttonRef}
         onMouseMove={handleMouseMove}
@@ -66,6 +66,6 @@ export default function LinkButton({ className = "", href, text, ...props }) {
           </svg>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }

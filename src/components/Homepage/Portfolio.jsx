@@ -8,13 +8,14 @@ import "swiper/css/controller";
 import "swiper/css/parallax";
 import gsap from "gsap";
 import LinkButton from "@/components/ui/LinkButton";
+import Image from "next/image";
 
 const slides = [
   {
-    image: "/assets/images/homepage/portfolio-1.png",
+    image: "/assets/images/homepage/rymal-portfolio-1.png",
   },
   {
-    image: "/assets/images/homepage/hero-bg.jpg",
+    image: "/assets/images/homepage/ottawa-portfolio-2.png",
   },
   {
     image: "/assets/images/homepage/portfolio-1.png",
@@ -129,16 +130,10 @@ export default function SwiperSlider() {
           <>
             <SwiperSlide key={idx}>
               <figure
-                className="relative w-full h-full"
+                className="relative w-full h-full brightness-[0.6]"
                 data-swiper-parallax="50%"
               >
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    filter: "brightness(0.7)",
-                    backgroundImage: `url(${item.image})`,
-                  }}
-                />
+                <Image src={item.image} width={1920} height={1080} alt="portfolio-images" className="w-full h-full object-cover"/>
               </figure>
 
               <div
@@ -259,7 +254,7 @@ export default function SwiperSlider() {
       </div>
 
       <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:left-[80%] rtl:mobile:left-[45%] rtl:tablet:left-[70%]">
-        <LinkButton href={"/"} text={t('portfolioCta')} />
+        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} />
       </div>
     </div>
   );

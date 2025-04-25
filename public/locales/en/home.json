@@ -71,32 +71,32 @@
     "portfolioCta": "View portfolio",
     "portfolio": [
         {
-            "image": "/assets/images/homepage/portfolio-1.png",
+            "image": "/assets/images/homepage/rymal-portfolio-1.png",
             "text1": "81-87 Rymal,",
             "text2": "Hamilton, ON"
         },
         {
-            "image": "/assets/images/homepage/hero-bg.jpg",
+            "image": "/assets/images/homepage/ottawa-portfolio.jpg",
             "text1": "570 Upper Ottawa,",
             "text2": "Hamilton, ON"
         },
         {
-            "image": "/assets/images/homepage/portfolio-1.png",
+            "image": "/assets/images/homepage/station-portfolio.png",
             "text1": "Station 60,",
             "text2": "Brantford, ON"
         },
         {
-            "image": "/assets/images/homepage/hero-bg.jpg",
+            "image": "/assets/images/homepage/niagara-portfolio.png",
             "text1": "148, Niagara",
             "text2": "Hamilton, ON"
         },
         {
-            "image": "/assets/images/homepage/portfolio-1.png",
+            "image": "/assets/images/homepage/avenue-portfolio.png",
             "text1": "4th Avenue - Phase 1,",
             "text2": "St. Catharines, ON"
         },
         {
-            "image": "/assets/images/homepage/hero-bg.jpg",
+            "image": "/assets/images/homepage/meridian-portfolio.png",
             "text1": "120 Meridian Way,",
             "text2": "Pelham, ON"
         }

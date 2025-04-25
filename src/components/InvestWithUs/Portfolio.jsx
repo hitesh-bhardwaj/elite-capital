@@ -39,7 +39,7 @@ const Portfolio = () => {
   const { t } = useTranslation('invest');
 
   return (
-    <section className='w-screen h-full bg-white p-[4vw] py-[7vw] space-y-[3vw] dark mobile:py-[15%]'>
+    <section className='w-screen h-full bg-white p-[4vw] py-[7vw] space-y-[3vw] dark mobile:py-[15%]' id='portfolio'>
       <div className='space-y-[2vw] mobile:space-y-[4vw] tablet:space-y-[3vw]'>
         <h2 
           data-title-anim
