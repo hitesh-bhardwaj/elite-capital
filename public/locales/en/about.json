@@ -79,6 +79,8 @@
         }
         
     ],
+    "readLess":"Read Less -",
+    "readMore":"Read More +",
     "teamSub": "Board of Directors ",
     "boardMembers": [
         {

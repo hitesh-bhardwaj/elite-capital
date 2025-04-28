@@ -15,7 +15,7 @@ const slides = [
     image: "/assets/images/homepage/rymal-portfolio-1.png",
   },
   {
-    image: "/assets/images/homepage/ottawa-portfolio-2.png",
+    image: "/assets/images/homepage/ottawa-portfolio.png",
   },
   {
     image: "/assets/images/homepage/portfolio-1.png",

@@ -40,7 +40,7 @@ const Advantage = () => {
                            <p data-para-anim key={index}>{item.text}</p>
                         ))}
                     </div>
-                    <LineButton text={t('advantageCta')} href="#" className="fadein text-white"/>
+                    <LineButton text={t('advantageCta')} href="/invest-with-us" className="fadein text-white"/>
                 </div>
                 <div className="w-1/2 overflow-hidden advantage-block mobile:w-full  tablet:w-full tablet:h-[70vw]">
                     <Image

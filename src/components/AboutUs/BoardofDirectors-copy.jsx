@@ -169,6 +169,8 @@ const MobileSwiper = ({ members }) => {
 
 const TeamAccordion = ({ members }) => {
   const [openedIndex, setOpenedIndex] = useState(null);
+  const { t } = useTranslation("about");
+
   return (
     <Accordion
       type="single"
@@ -237,9 +239,9 @@ const TeamAccordion = ({ members }) => {
                 className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal "
               >
                 {openedIndex === index ? (
-                  <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">Read less -</p>
+                  <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">{t('readLess')}</p>
                 ) : (
-                  <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">Read more +</p>
+                  <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">{t('readMore')}</p>
                 )}
               </AccordionTrigger>
             </div>

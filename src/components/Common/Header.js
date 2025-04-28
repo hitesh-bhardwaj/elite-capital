@@ -73,6 +73,7 @@ const Header = () => {
   const [arabicMode,setarabicMode] = useState(false);
   const { t } = useTranslation("common");
   const footerNav = t("footerNav", { returnObjects: true });
+  const [scrolled, setScrolled] = useState(false);
 
   // useEffect(() => {
   //   const handleRouteChangeStart = () => {
@@ -85,6 +86,19 @@ const Header = () => {
   //     router.events.off("routeChangeStart", handleRouteChangeStart);
   //   };
   // }, [lenis, router.events]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);     
+      } else {
+        setScrolled(false);    
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -168,7 +182,9 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 w-screen z-50 transition-all  backdrop-blur-md ease bg-black/40 duration-500  ${showHeader ? "translate-y-0" : "-translate-y-full"} `}
+      className={`fixed top-0 left-0 w-screen z-50 transition-all   duration-500 ease  ${showHeader ? "translate-y-0 " : "-translate-y-full "} ${
+        scrolled ? "backdrop-blur-md bg-black/40" : ""
+      } `}
     >
       <div className="w-full px-[5vw] py-8 flex justify-between items-center">
       <div>
