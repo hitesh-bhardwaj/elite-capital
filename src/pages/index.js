@@ -12,6 +12,8 @@ import { useTranslation } from "next-i18next";
 import Contact from "@/components/Common/Contact";
 import Layout from "@/components/Common/Layout";
 import Hero from "@/components/Homepage/Hero";
+import Metadata from "@/components/Metadata";
+import { WebpageJsonLd } from "@/lib/json-ld";
 
 export default function Home() {
   fadeUp();
@@ -21,8 +23,18 @@ export default function Home() {
   fadeIn();
   // blockAnim();
   const { t } = useTranslation('home');
+  const metadata = {
+    title: "Elite Capital",
+    metaDescription: "A real-estate focused fund manager delivering premium investment opportunities in real estate that generate exceptional risk-adjusted returns from developments that contribute to thriving communities.​",
+    path: "",
+    img: "homepage.png",
+    date_published: "2025-04-29T00:00",
+    date_modified: "2025-04-29T00:00",
+  };
   return (
     <>
+    <Metadata metadata={metadata}/>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
       <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
       <About />

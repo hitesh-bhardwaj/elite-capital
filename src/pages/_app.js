@@ -8,6 +8,7 @@ import { ReactLenis } from "lenis/react";
 import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion"; 
 import Loader from "@/components/Loader";
 import Loader2 from "@/components/newLoader";
+import { ImageObjectJsonLd, LocalBusiness, OrganizationJsonLd, WebsiteJsonLd } from "@/lib/json-ld";
 
 
 const bodoni_moda = Bodoni_Moda({
@@ -74,12 +75,16 @@ const App = ({ Component, pageProps }) => {
     }, []);
   return (
     <>
-      <Head>
+      {/* <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0" />
         <title>Elite Capital</title>
         <meta name="description" content="Real Assets, Real Returns" />
-      </Head>
+      </Head> */}
+      <LocalBusiness/>
+      <OrganizationJsonLd/>
+      <WebsiteJsonLd/>
+      <ImageObjectJsonLd/>
       
       <ReactLenis root>
       <LazyMotion features={domAnimation}>
