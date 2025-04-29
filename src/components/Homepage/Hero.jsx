@@ -53,35 +53,35 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
           scrub: true,
         },
       });
-      const heroParaAnimation = document.querySelector(".hero-para-anim");
-      SplitInWord(heroParaAnimation);
-      const paraLine = heroParaAnimation.querySelectorAll(".word");
-      gsap.from(paraLine, {
-        scrollTrigger: {
-          trigger: heroParaAnimation,
-          start: "top 80%",
-        },
-        opacity: 0,
-        yPercent: 40,
-        duration: 1,
-        delay: delayTime,
-        stagger: 0.02,
-      });
+      // const heroParaAnimation = document.querySelector(".hero-para-anim");
+      // SplitInWord(heroParaAnimation);
+      // const paraLine = heroParaAnimation.querySelectorAll(".word");
+      // gsap.from(paraLine, {
+      //   scrollTrigger: {
+      //     trigger: heroParaAnimation,
+      //     start: "top 80%",
+      //   },
+      //   opacity: 0,
+      //   yPercent: 40,
+      //   duration: 1,
+      //   delay: delayTime,
+      //   stagger: 0.02,
+      // });
 
-      const heroTitleAnimation = document.querySelector(".hero-title-anim");
-      SplitInWord(heroTitleAnimation);
-      const HeroTitle = heroTitleAnimation.querySelectorAll(".word");
-      gsap.from(HeroTitle, {
-        scrollTrigger: {
-          trigger: heroTitleAnimation,
-          start: "top 80%",
-        },
-        opacity: 0,
-        delay: delayTime,
-        x: 20,
-        duration: 1,
-        stagger: 0.05,
-      });
+      // const heroTitleAnimation = document.querySelector(".hero-title-anim");
+      // SplitInWord(heroTitleAnimation);
+      // const HeroTitle = heroTitleAnimation.querySelectorAll(".word");
+      // gsap.from(HeroTitle, {
+      //   scrollTrigger: {
+      //     trigger: heroTitleAnimation,
+      //     start: "top 80%",
+      //   },
+      //   opacity: 0,
+      //   delay: delayTime,
+      //   x: 20,
+      //   duration: 1,
+      //   stagger: 0.05,
+      // });
     });
     return () => ctx.revert();
   }, []);
