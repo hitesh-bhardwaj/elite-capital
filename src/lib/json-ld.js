@@ -126,7 +126,7 @@ export function LocalBusiness() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Elite Capital",
-    "image": `https://www.ec-staging.vercel.app/seo/logo.png`,
+    "image": `https://ec-staging.vercel.app/seo/logo.png`,
     "@id": "",
     "url": `${homepage}`,
     "telephone": "+971 44 99 2400",
