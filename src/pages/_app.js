@@ -32,6 +32,7 @@ const App = ({ Component, pageProps }) => {
       swiper.setAttribute("dir", dir);
     });
   }, [locale]);
+  
   const pageVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },

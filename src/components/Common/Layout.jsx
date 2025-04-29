@@ -6,12 +6,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main>
+      <div>
         {children}
-      </main>
+      </div>
       <Footer />
     </>
   )
 }
 
-export default Layout
+export default Layout;

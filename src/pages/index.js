@@ -17,11 +17,11 @@ import { WebpageJsonLd } from "@/lib/json-ld";
 
 export default function Home() {
 
-  // fadeUp();
-  // paraAnim();
-  // titleAnim();
-  // lineAnim();
-  // fadeIn();
+  fadeUp();
+  paraAnim();
+  titleAnim();
+  lineAnim();
+  fadeIn();
 
   const { t } = useTranslation('home');
 
@@ -40,14 +40,14 @@ export default function Home() {
       <WebpageJsonLd metadata={metadata} />
       <Layout>
         <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
-        {/* <About />
+        <About />
         <Stats />
         <Values />
         <Advantage />
         <Diversify />
         <Assets />
-        <Portfolio /> */}
-        {/* <Contact translation={'home'} heading={t("contactHead")} para={t("contactSub")} /> */}
+        <Portfolio />
+        <Contact translation={'home'} heading={t("contactHead")} para={t("contactSub")} />
       </Layout>
     </>
   );
