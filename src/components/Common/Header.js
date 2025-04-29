@@ -20,8 +20,6 @@ const socials = [
   },
 ];
 
-
-
 const LanguageButton = ({ inverted, setarabicMode, className }) => {
   const { locale, asPath } = useRouter();
 
@@ -41,18 +39,18 @@ const LanguageButton = ({ inverted, setarabicMode, className }) => {
       <span
         onClick={() => switchLanguage('en')}
         className={`cursor-pointer ${
-          locale === "en" ? "text-golden mobile:text-black tablet:text-black" : "mobile:text-black tablet:text-black"
+          locale === "en" ? "text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black" : "mobile:text-black tablet:text-black"
         } hover:scale-110 block duration-150 ${inverted ? "!text-black rtl:!text-golden" : ""}`}
       >
         EN
       </span>
 
-      <span className={`bg-white w-[1px] block h-[18px] mobile:bg-black tablet:bg-black ${inverted ? "!bg-black" : ""}`}></span>
+      <span className={`bg-white w-[1px] block h-[20px] mobile:bg-black tablet:bg-black ${inverted ? "!bg-black" : ""}`}></span>
 
       <span
         onClick={() => switchLanguage('ar')}
         className={`cursor-pointer ${
-          locale === "ar" ? "text-golden mobile:text-black tablet:text-black" : " mobile:text-black tablet:text-black"
+          locale === "ar" ? "text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black" : " mobile:text-black tablet:text-black"
         } hover:scale-110 block duration-150 ${inverted ? "text-golden rtl:!text-black" : ""}`}
       >
         AR
