@@ -103,7 +103,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
         />
         <div className="relative z-10 px-[5vw] pt-[8vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%]">
           <div className="py-[10%] text-white w-full mobile:w-full tablet:space-y-[2vw]">
-            <h1 className="heading-1 w-[80%] mobile:w-[95%] tablet:w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw] hero-title-anim">
+            <h1 className="heading-1 w-[80%] mobile:w-[95%] tablet:w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw]">
               {heading}
             </h1>
             {para && (
