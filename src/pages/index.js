@@ -1,4 +1,4 @@
-import { blockAnim, fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
+import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Assets from "@/components/Homepage/Assets";
@@ -16,13 +16,15 @@ import Metadata from "@/components/Metadata";
 import { WebpageJsonLd } from "@/lib/json-ld";
 
 export default function Home() {
+
   fadeUp();
   paraAnim();
   titleAnim();
   lineAnim();
   fadeIn();
-  // blockAnim();
+
   const { t } = useTranslation('home');
+
   const metadata = {
     title: "Elite Capital",
     metaDescription: "A real-estate focused fund manager delivering premium investment opportunities in real estate that generate exceptional risk-adjusted returns from developments that contribute to thriving communities.​",
@@ -31,21 +33,22 @@ export default function Home() {
     date_published: "2025-04-29T00:00",
     date_modified: "2025-04-29T00:00",
   };
+
   return (
     <>
-    <Metadata metadata={metadata}/>
-    <WebpageJsonLd metadata={metadata}/>
+      <Metadata metadata={metadata} />
+      <WebpageJsonLd metadata={metadata} />
       <Layout>
-      <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
-      <About />
-      <Stats />
-      <Values/>
-      <Advantage />
-      <Diversify/>
-      <Assets/>
-      <Portfolio/>
-     <Contact translation={'home'} heading= {t("contactHead")} para={t("contactSub")}/>
-     </Layout>
+        <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
+        <About />
+        <Stats />
+        <Values />
+        <Advantage />
+        <Diversify />
+        <Assets />
+        <Portfolio />
+        <Contact translation={'home'} heading={t("contactHead")} para={t("contactSub")} />
+      </Layout>
     </>
   );
 }
@@ -54,7 +57,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, [
-        'home','common'
+        'home', 'common'
       ])),
     },
   }

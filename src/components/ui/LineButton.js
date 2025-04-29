@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function LineButton({ className = "", href, text, ...props }) {
-    const { locale } = useRouter();
 
     return (
         <Link {...props} href={href} className={`font-body block w-fit text-[1.2vw] text-black1 tracking-wide rounded-full mobile:text-[4.5vw] tablet:text-[2.5vw] group ${className}`}>

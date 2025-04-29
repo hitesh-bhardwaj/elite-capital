@@ -23,9 +23,7 @@ export function titleAnim() {
               start: "top 80%",
             },
             opacity: 0,
-            // skewX:-5,
             x:20,
-            // yPercent: 40,
             duration: 1,
             stagger: 0.05,
           });
@@ -145,26 +143,3 @@ export function blockAnim() {
     return () => ctx.revert()
   }, []);
 }
-
-// export function parllaxAnim({sectionId}){
-//   useEffect(() => {
-//     const ctx = gsap.context(() => {
-//       const parallaxImg = document.querySelectorAll(".parallaxAnim");
-//       parallaxImg.forEach((img) => {
-//         gsap.to(img, {
-//           scrollTrigger: {
-//             trigger: sectionId,
-//             start: "top bottom",
-//             end:"bottom top",
-//             scrub:true,
-//             markers:true,
-
-//           },
-//           yPercent:140,
-//           ease: "none",
-//         });
-//       });
-//     })
-//     return () => ctx.revert()
-//   }, []);
-// }

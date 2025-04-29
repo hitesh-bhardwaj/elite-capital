@@ -48,13 +48,11 @@ export default function SwiperSlider() {
           trigger:"#portfolio",
           start:"top 60%"
         }
-      
       });
-   
     });
     return () => ctx.revert();
-
   },[])
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".swiper-content-fadeup", {
@@ -105,8 +103,6 @@ export default function SwiperSlider() {
     }
   }
 
-  // console.log(portfolio);
-
   return (
     <div className="relative w-screen overflow-hidden h-[54vw] mobile:h-screen tablet:h-[100vw]" id="portfolio">
       <Swiper
@@ -114,10 +110,6 @@ export default function SwiperSlider() {
         loop={true}
         speed={1000}
         parallax={true}
-        // autoplay={{
-        //   delay: 2000, // adjust delay as needed
-        //   disableOnInteraction: false,
-        // }}
         modules={[Controller, Parallax, Autoplay]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -254,7 +246,7 @@ export default function SwiperSlider() {
       </div>
 
       <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:left-[80%] rtl:mobile:left-[45%] rtl:tablet:left-[70%]">
-        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} />
+        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} prefetch={false}/>
       </div>
     </div>
   );

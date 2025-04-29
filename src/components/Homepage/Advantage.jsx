@@ -8,25 +8,22 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger)
 
 const Advantage = () => {
-    useEffect(()=>{
-        const ctx = gsap.context(()=>{
-           gsap.from(".advantage-image",{
-            scale:1.2,
-            yPercent:-20,
-            ease:"none",
-            scrollTrigger:{
-                trigger:".advantage-block",
-                start:"top bottom",
-                end:"bottom top",
-                scrub:true,
-                // markers:true
-
-            }
-           })
-
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(".advantage-image", {
+                scale: 1.2,
+                yPercent: -20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".advantage-block",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true,
+                }
+            })
         })
-        return()=>ctx.revert()
-    },[])
+        return () => ctx.revert()
+    }, [])
     const { t } = useTranslation('home');
     const advantage = t('advantage', { returnObjects: true });
 
@@ -37,10 +34,10 @@ const Advantage = () => {
                     <h2 data-title-anim className="heading-1  !leading-[1.1] mb-[5vw] mobile:mb-[8vw]">{t('advantageHead')}</h2>
                     <div className=" content space-y-[2vw] pr-[4.5vw]   mb-[5vw] mobile:space-y-[4vw] rtl:pr-0">
                         {advantage.map((item, index) => (
-                           <p data-para-anim key={index}>{item.text}</p>
+                            <p data-para-anim key={index}>{item.text}</p>
                         ))}
                     </div>
-                    <LineButton text={t('advantageCta')} href="/invest-with-us" className="fadein text-white"/>
+                    <LineButton text={t('advantageCta')} href="/invest-with-us" className="fadein text-white" prefetch={false}/>
                 </div>
                 <div className="w-1/2 overflow-hidden advantage-block mobile:w-full  tablet:w-full tablet:h-[70vw]">
                     <Image

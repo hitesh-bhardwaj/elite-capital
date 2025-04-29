@@ -4,21 +4,21 @@ import { useTranslation } from "next-i18next";
 import React from "react";
 
 const Footer = () => {
-    const { t } = useTranslation('common');
-    const footerNav = t('footerNav', { returnObjects: true });
-    const footerNavBottom = t('footerNavBottom', { returnObjects: true });
-   
-          
-    function handleMouseMove(e) {
-      const hoverCircle = e.currentTarget.querySelector('.hover-circle');
-      if (hoverCircle) {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        hoverCircle.style.left = `${x}px`;
-        hoverCircle.style.top = `${y}px`;
-      }
+  const { t } = useTranslation('common');
+  const footerNav = t('footerNav', { returnObjects: true });
+  const footerNavBottom = t('footerNavBottom', { returnObjects: true });
+
+
+  function handleMouseMove(e) {
+    const hoverCircle = e.currentTarget.querySelector('.hover-circle');
+    if (hoverCircle) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      hoverCircle.style.left = `${x}px`;
+      hoverCircle.style.top = `${y}px`;
     }
+  }
   const socials = [
     {
       icon: "/icons/linkedin.svg",
@@ -33,8 +33,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" bg-transparent h-[30vw] text-white !font-body  mobile:h-[199vw] tablet:h-[46vw]"  
-    style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
+    <footer className=" bg-transparent h-[30vw] text-white !font-body  mobile:h-[199vw] tablet:h-[46vw]"
+      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="px-[5vw] w-full bg-[#121212] fixed bottom-0 mobile:px-[7vw] mobile:py-[5vw]">
         <div className=" pb-[10vw] h-[25vw] flex  justify-between mobile:flex-col mobile:h-[100vw] mobile:py-[5vw]">
           <div className="flex flex-col items-start justify-start pt-[5vw] mobile:flex-col ">
@@ -47,59 +47,60 @@ const Footer = () => {
             />
             <p className="text-[2.1vw] pl-[4.5vw] pt-[0.5vw] mobile:text-[6vw] mobile:pl-[13vw] mobile:pt-[2vw] tablet:text-[2.5vw] tablet:pt-[1vw]"> {t('footerline')} </p>
           </div>
-          
+
           <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw] mobile:my-[10vw] mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">
-          {footerNav.map((item,index)=>(
-            <Link key={index} href={item.link} className="group transition-all duration-300 ease" >
-               <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
-                <span  className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">{item.text}</span>
-            </div>
-            </Link>
-))}
+            {footerNav.map((item, index) => (
+              <Link key={index} href={item.link} className="group transition-all duration-300 ease" prefetch={false}>
+                <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
+                  <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">{item.text}</span>
+                </div>
+              </Link>
+            ))}
           </div>
-         
+
         </div>
         <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[4vw] mobile:mt-[10vw] tablet:mt-[7vw] tablet:pb-[5vw] mobile:pb-[10vw]">
           <h4 className="text-[1.15rem] tablet:w-[40%] mobile:text-[5.1vw]">{t('footerCopy')}</h4>
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
-           <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[4vw] tablet:gap-[1vw]">
-            {footerNavBottom.map((item,index)=>(
-             <React.Fragment key={index}>
-              <Link  href={item.link} prefetch={false} className="group">
-              <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-                <span  className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.5vw]">{item.text}</span>
-            </div></Link>
-              <span className="h-1 w-1 bg-white rounded-full block last:hidden mobile:hidden"/>
-             </React.Fragment>
-            ))}
-              </div>
-          <div className="flex items-center gap-4">
-            {socials.map((social, index) => (
-              <Link 
-              onMouseMove={(e) => handleMouseMove(e)}
-                target="_blank"
-                href={social.link}
-                className="group flex items-center relative justify-center border-[1.5px] border-white overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
-                key={index}
-              >
-                <span 
+            <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[4vw] tablet:gap-[1vw]">
+              {footerNavBottom.map((item, index) => (
+                <React.Fragment key={index}>
+                  <Link href={item.link} prefetch={false} className="group">
+                    <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                      <span className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.5vw]">{item.text}</span>
+                    </div>
+                  </Link>
+                  <span className="h-1 w-1 bg-white rounded-full block last:hidden mobile:hidden" />
+                </React.Fragment>
+              ))}
+            </div>
+            <div className="flex items-center gap-4">
+              {socials.map((social, index) => (
+                <a
+                  onMouseMove={(e) => handleMouseMove(e)}
+                  target="_blank"
+                  href={social.link}
+                  className="group flex items-center relative justify-center border-[1.5px] border-white overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
+                  key={index}
+                >
+                  <span
                     className="hover-circle absolute aspect-square rounded-full bg-white 
                     transition-all duration-500 ease transform -translate-x-1/2 -translate-y-1/2 
                     pointer-events-none opacity-1 scale-0  group-hover:scale-100"
                     style={{
-                        width: '200%', 
+                      width: '200%',
                     }}
-                ></span>
-                <Image
-                  className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300 tablet:h-[3vw] tablet:w-[3vw]"
-                  src={social.icon}
-                  alt={social.alt}
-                  width={25}
-                  height={25}
-                />
-              </Link>
-            ))}
-          </div>
+                  ></span>
+                  <Image
+                    className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300 tablet:h-[3vw] tablet:w-[3vw]"
+                    src={social.icon}
+                    alt={social.alt}
+                    width={25}
+                    height={25}
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

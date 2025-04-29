@@ -20,83 +20,45 @@ const socials = [
   },
 ];
 
-const LanguageButton = ({ inverted, setarabicMode, className }) => {
+const LanguageButton = ({ className = "" }) => {
   const { locale, asPath } = useRouter();
-
-  const switchLanguage = (lang) => {
-    if (lang === 'ar') {
-      setarabicMode(true);
-    } else {
-      setarabicMode(false);
-    }
-
-    // Force reload with new locale
-    window.location.href = `/${lang}${asPath}`;
-  };
 
   return (
     <div className={`text-white flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
-      <span
-        onClick={() => switchLanguage('en')}
-        className={`cursor-pointer ${
-          locale === "en" ? "text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black" : "mobile:text-black tablet:text-black"
-        } hover:scale-110 block duration-150 ${inverted ? "!text-black rtl:!text-golden" : ""}`}
-      >
+      <a className={`${locale === 'en' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={asPath} locale="en">
         EN
-      </span>
-
-      <span className={`bg-white w-[1px] block h-[20px] mobile:bg-black tablet:bg-black ${inverted ? "!bg-black" : ""}`}></span>
-
-      <span
-        onClick={() => switchLanguage('ar')}
-        className={`cursor-pointer ${
-          locale === "ar" ? "text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black" : " mobile:text-black tablet:text-black"
-        } hover:scale-110 block duration-150 ${inverted ? "text-golden rtl:!text-black" : ""}`}
-      >
+      </a>
+      <span className={`bg-white w-[1px] block h-[20px] mobile:bg-black tablet:bg-black`}></span>
+      <a className={`${locale === 'ar' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={`ar${asPath}`} locale="ar">
         AR
-      </span>
+      </a>
     </div>
-  );
+  )
 };
 
 const Header = () => {
   const headerRef = useRef();
   const [openMenu, setOpenMenu] = useState(false);
   const lenis = useLenis();
-  const router = useRouter();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
-  const [isInverted, setIsInverted] = useState(false);
-  // const [openMenu, setOpenMenu] = useState(false);
-  const [arabicMode,setarabicMode] = useState(false);
   const { t } = useTranslation("common");
   const footerNav = t("footerNav", { returnObjects: true });
   const [scrolled, setScrolled] = useState(false);
 
-  // useEffect(() => {
-  //   const handleRouteChangeStart = () => {
-  //     lenis && lenis.start();
-  //   };
-
-  //   router.events.on("routeChangeStart", handleRouteChangeStart);
-
-  //   return () => {
-  //     router.events.off("routeChangeStart", handleRouteChangeStart);
-  //   };
-  // }, [lenis, router.events]);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setScrolled(true);     
+        setScrolled(true);
       } else {
-        setScrolled(false);    
+        setScrolled(false);
       }
     };
-  
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -108,19 +70,6 @@ const Header = () => {
       }
 
       setLastScrollY(currentScrollY);
-
-      // Invert logic
-      // const darkSections = document.querySelectorAll(".dark");
-      // let found = false;
-
-      // darkSections.forEach((section) => {
-      //   const rect = section.getBoundingClientRect();
-      //   if (rect.top <= 0 && rect.bottom > 0) {
-      //     found = true;
-      //   }
-      // });
-
-      // setIsInverted(found);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -143,25 +92,25 @@ const Header = () => {
         gsap.to(".ham-line", {
           scaleX: 0,
           stagger: 0.05,
-          opacity:0,
+          opacity: 0,
           duration: 0.5,
         })
-        gsap.from(".menu-link",{
-          opacity:0,
-          duration:1,
-          delay:0.3,
+        gsap.from(".menu-link", {
+          opacity: 0,
+          duration: 1,
+          delay: 0.3,
         })
       } else {
         gsap.from(".ham-line", {
           scaleX: 0,
           stagger: 0.05,
-          opacity:0,
+          opacity: 0,
           duration: 0.5,
         });
-        gsap.to(".menu-link",{
-          opacity:0,
-          duration:0.3,
-         
+        gsap.to(".menu-link", {
+          opacity: 0,
+          duration: 0.3,
+
         })
       }
     });
@@ -180,12 +129,11 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 w-screen z-50 transition-all   duration-500 ease  ${showHeader ? "translate-y-0 " : "-translate-y-full "} ${
-        scrolled ? "backdrop-blur-md bg-black/40" : ""
-      } `}
+      className={`fixed top-0 left-0 w-screen z-50 transition-all   duration-500 ease  ${showHeader ? "translate-y-0 " : "-translate-y-full "} ${scrolled ? "backdrop-blur-md bg-black/40" : ""
+        } `}
     >
       <div className="w-full px-[5vw] py-8 flex justify-between items-center">
-      <div>
+        <div>
           <Link href="/" className="flex gap-[0.5vw] rtl:flex-row-reverse">
             <Image
               className="w-[2.1vw] mobile:w-[5.5vw] tablet:w-[3.5vw]"
@@ -195,9 +143,7 @@ const Header = () => {
               alt="elite logo"
             />
             <Image
-              className={`w-[14vw] mobile:w-[35vw] tablet:w-[25vw] ${
-                isInverted ? "invert" : ""
-              }`}
+              className={`w-[14vw] mobile:w-[35vw] tablet:w-[25vw]`}
               src={logo}
               alt="Elite text"
               width={220}
@@ -205,52 +151,44 @@ const Header = () => {
             />
           </Link>
         </div>
+
         <div className="flex gap-[2vw]">
-
-        <div
-          className={` h-[2vw]  flex flex-nowrap overflow-hidden justify-end text-white transition-all duration-500 ease-in-out ${
-            openMenu ? "w-[30vw] mobile:w-[2vw]" : "w-[2vw]"
-          }`}
-          onMouseEnter={open}
-          onMouseLeave={close}
-        >
-          <div className={`absolute right-[10%] z-[2] rtl:left-[2%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${
-            openMenu ? "w-[32.5vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
-          } `}>
           <div
-            className={`w-[40vw] flex-nowrap flex gap-[3vw]`}
+            className={` h-[2vw]  flex flex-nowrap overflow-hidden justify-end text-white transition-all duration-500 ease-in-out ${openMenu ? "w-[30vw] mobile:w-[2vw]" : "w-[2vw]"
+              }`}
+            onMouseEnter={open}
+            onMouseLeave={close}
           >
-            {footerNav.map((item,id)=>(
-             
-            <Link key={id} href={item.link} className={`menu-link text-[1.2vw] group ${isInverted?"text-black":""}`}>
-            <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ${isInverted?"after:bg-black":"after:bg-white"}`}>
-                  <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
-                    {item.text}
-                  </span>
-                </div>
-            </Link>
+            <div className={`absolute right-[10%] z-[2] rtl:left-[2%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${openMenu ? "w-[32.5vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
+              } `}>
+              <div
+                className={`w-[40vw] flex-nowrap flex gap-[3vw]`}
+              >
+                {footerNav.map((item, id) => (
 
-            ))}
-          </div>
+                  <Link key={id} href={item.link} className={`menu-link text-[1.2vw] group`} prefetch={false}>
+                    <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
+                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
+                        {item.text}
+                      </span>
+                    </div>
+                  </Link>
 
+                ))}
+              </div>
+            </div>
+            <div className={`w-[2vw] h-[2vw] flex flex-col justify-center items-center gap-[0.5vw] relative z-[2] tablet:hidden mobile:hidden `}>
+              <span className={`w-full h-[1.5px]  ham-line origin-right bg-white`}></span>
+              <span className={`w-full h-[1.5px]  ham-line origin-right bg-white`}></span>
+              <span className={`w-full h-[1.5px] ham-line origin-right bg-white`}></span>
+            </div>
           </div>
-          <div className={`w-[2vw] h-[2vw] flex flex-col justify-center items-center gap-[0.5vw] relative z-[2] tablet:hidden mobile:hidden `}>
-            <span className={`w-full h-[1.5px]  ham-line origin-right ${isInverted?"bg-black":"bg-white"}`}></span>
-            <span className={`w-full h-[1.5px]  ham-line origin-right ${isInverted?"bg-black":"bg-white"}`}></span>
-            <span className={`w-full h-[1.5px] ham-line origin-right ${isInverted?"bg-black":"bg-white"}`}></span>
-          </div>
+          <LanguageButton className="mobile:hidden tablet:hidden" />
         </div>
-        <LanguageButton className="mobile:hidden tablet:hidden" inverted={isInverted} setarabicMode={setarabicMode} onclick={()=>{
-          setarabicMode(true)
-        }}/>
 
-        </div>
-
-      <div className="hidden mobile:block tablet:block">
+        <div className="hidden mobile:block tablet:block">
           <div
-            className={`cursor-pointer relative z-[100] ${
-              isInverted ? "invert" : ""
-            }`}
+            className={`cursor-pointer relative z-[100]`}
             onClick={openMenuMobile}
           >
             <svg
@@ -267,9 +205,8 @@ const Header = () => {
         </div>
         <div className="w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block">
           <div
-            className={`h-[40vh] bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between pt-[25vw] tablet:pt-[15vw] pb-[5vw] px-[5vw] transition-transform duration-500 ease-in-out pointer-events-auto ${
-              openMenu ? "translate-y-0" : "-translate-y-full"
-            }`}
+            className={`h-[40vh] bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between pt-[25vw] tablet:pt-[15vw] pb-[5vw] px-[5vw] transition-transform duration-500 ease-in-out pointer-events-auto ${openMenu ? "translate-y-0" : "-translate-y-full"
+              }`}
           >
             <div className="flex flex-col gap-[2vw] mb-[7vw]">
               {footerNav.map((item, index) => (
@@ -290,7 +227,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-4">
               {socials.map((social, index) => (
-                <Link
+                <a
                   target="_blank"
                   href={social.link}
                   className="group flex items-center relative justify-center border-[1.5px] border-black overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
@@ -303,7 +240,7 @@ const Header = () => {
                     width={25}
                     height={25}
                   />
-                </Link>
+                </a>
               ))}
             </div>
             <div
@@ -319,16 +256,11 @@ const Header = () => {
               />
             </div>
             <div className="w-full flex justify-end">
-            <LanguageButton className="" inverted={isInverted} setarabicMode={setarabicMode} onclick={()=>{
-          setarabicMode(true)
-        }}/>
-              
+              <LanguageButton />
             </div>
           </div>
           <div
-            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${
-              openMenu ? "opacity-100" : "opacity-0"
-            }`}
+            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${openMenu ? "opacity-100" : "opacity-0"}`}
           ></div>
         </div>
       </div>
