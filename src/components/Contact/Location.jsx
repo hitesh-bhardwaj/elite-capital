@@ -1,10 +1,22 @@
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import Link from "next/link";
 
 const Location = () => {
     const { t } = useTranslation('contact');
     const [offset, setOffset] = useState({ x: 0, y: 0 });
+  
+  function handleMouseMoveIcon(e) {
+    const hoverCircle = e.currentTarget.querySelector('.hover-circle');
+    if (hoverCircle) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      hoverCircle.style.left = `${x}px`;
+      hoverCircle.style.top = `${y}px`;
+    }
+  }
 
     const handleMouseMove = (e) => {
         const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
@@ -82,7 +94,7 @@ const Location = () => {
                     
                     <div className="mt-[1vw] mobile:space-y-[4vw]">
                         <h2 data-title-anim className="heading-2 mb-[1.5vw] mobile:mb-[7vw] tablet:mb-[3vw]">{t('contactHead')}</h2>
-                        <div className="flex items-center justify-start gap-[1vw] pb-[0.5vw] group cursor-pointer">
+                        <div className="flex items-center justify-start gap-[1vw] pb-[0.5vw] group cursor-pointer mobile:pb-0">
                             <div className="">
                                 <Image src="/icons/phone-icon.svg" height={35} width={35} alt="phone" className="fadein" />
                             </div>
@@ -98,6 +110,27 @@ const Location = () => {
                                 <p className="w-full content mobile:pl-[3vw] tablet:w-full fadein">{t('mail')}</p>
                             </div>
                         </div>
+                        <Link href={t('linkedin')}>
+                        <div className="flex items-center justify-start gap-[1.4vw] py-[0.5vw] group cursor-pointer mobile:py-[1.5vw] pl-[0.5vw]">
+                            <div className="">
+                                <Image src="/icons/contact-linkedin.svg" height={24} width={24} alt="mail" className="fadein mobile:h-[7vw] mobile:w-[7vw] mobile:pl-[1.5vw]"  />
+                            </div>
+                            <div className="flex gap-2 items-center w-[30%]  after:absolute relative after:bottom-0 after:w-[calc(75%+0.05rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
+                                <p className="w-full content mobile:pl-[3.5vw] tablet:w-full fadein">Elite Capital</p>
+                            </div>
+                        </div>
+                        </Link>
+                        <Link href={t('instagram')}>
+                        <div className="flex items-center justify-start gap-[1vw] py-[0.5vw] group cursor-pointer mobile:py-[1.5vw] pl-[0.2vw]">
+                            <div className="">
+                                <Image src="/icons/contact-instagram.svg" height={35} width={35} alt="mail" className="fadein mobile:h-[7vw] mobile:w-[7vw] mobile:pl-[1.5vw]" />
+                            </div>
+                            <div className="flex gap-2 items-center w-[30%] after:absolute relative after:bottom-0 after:w-[calc(75%+0.05rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
+                                <p className="w-full content mobile:pl-[3.5vw] tablet:w-full fadein">Elite Capital</p>
+                            </div>
+                        </div>
+                        </Link>
+                        
                     </div>
                 </div>
             </div>

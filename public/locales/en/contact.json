@@ -12,6 +12,18 @@
     "contactHead":"Contact Us",
     "phone":"+971 44 99 2400",
     "mail":"info@elitecapitalinvestments.com",
+    "linkedin":"https://www.linkedin.com/company/officialelitecapital",
+    "instagram":"https://www.instagram.com/officialelitecapital?igsh=MXVieHkybDZkdXhxdQ==",
     "contactFormHead": "Invest  with us",
-    "contactSub": "Unlock Real Assets with Real Returns"
+    "contactSub": "Unlock Real Assets with Real Returns",
+    "footerNavBottom": [
+        {
+             "text": "Privacy Policy",
+            "link": "/privacy-policy"
+        },
+        {
+            "text": "Cookie Policy",
+            "link": "/cookie-policy"
+        }
+    ]
 }

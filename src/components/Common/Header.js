@@ -15,7 +15,7 @@ const socials = [
   },
   {
     icon: "/icons/instagram.svg",
-    link: "https://www.instagram.com/yourinstagrampage",
+    link: "https://www.instagram.com/officialelitecapital?igsh=MXVieHkybDZkdXhxdQ==",
     alt: "Instagram Icon",
   },
 ];
@@ -159,11 +159,18 @@ const Header = () => {
             onMouseEnter={open}
             onMouseLeave={close}
           >
-            <div className={`absolute right-[10%] z-[2] rtl:left-[2%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${openMenu ? "w-[32.5vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
+            <div className={`absolute right-[10%] z-[2] rtl:left-[2%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${openMenu ? "w-[40.5vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
               } `}>
               <div
                 className={`w-[40vw] flex-nowrap flex gap-[3vw]`}
               >
+                <Link  href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
+                    <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
+                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
+                       HOME
+                      </span>
+                    </div>
+                  </Link>
                 {footerNav.map((item, id) => (
 
                   <Link key={id} href={item.link} className={`menu-link text-[1.2vw] group`} prefetch={false}>

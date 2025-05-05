@@ -18,7 +18,7 @@ const Values = () => {
             data-title-anim
             className="text-[4.6vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]"
           >
-            {t("valueHead")}
+            {t("valuesHead")}
           </h2>
           <div className=" w-full mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
             <Accordion

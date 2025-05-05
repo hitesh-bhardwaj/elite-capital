@@ -29,10 +29,10 @@ const ShariahBoard = () => {
   return (
     <>
       <section className="w-screen h-full bg-[#ffffff]  pb-[5vw] mobile:overflow-hidden mobile:space-y-[8vw] tablet:pb-[7%]">
-        <div className="p-[5vw] mobile:space-y-[12vw]">
+        <div className=" mobile:space-y-[12vw]">
           <h2
            
-            className="text-[4.6vw] font-display mb-[10vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2]"
+            className="text-[4.6vw] font-display mb-[10vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2] pl-[4vw]"
           >
             {t("teamSub3")}
           </h2>
@@ -64,7 +64,7 @@ const ShariahBoard = () => {
           </div>
         )}
           <div
-            className="text-[1.9vw] mt-[5vw] space-y-[2vw] fadeUp mobile:space-y-[7vw] mobile:text-[5vw] mobile:w-[95%] tablet:mt-[7vw] tablet:!text-[3vw]"
+            className="text-[1.9vw] mt-[5vw] space-y-[2vw] fadeUp mobile:space-y-[7vw] mobile:text-[5vw] mobile:w-[95%] tablet:mt-[7vw] tablet:!text-[3vw] px-[4vw]"
             dangerouslySetInnerHTML={{ __html: t("shariahSub") }}
           />
         </div>
@@ -106,68 +106,65 @@ const TeamAccordion = ({ members }) => {
       className="w-full h-full flex flex-wrap justify-start mobile:hidden tablet:hidden"
     >
       {members.map((item, index) => {
-        const visibleCount = Math.ceil(item.features.length / 3);
-        const firstHalf = item.features.slice(0, visibleCount);
+        const visibleCount = Math.ceil(item.features.length / 2);
+        const firstHalf = item.features.slice(1, visibleCount);
         const secondHalf = item.features.slice(visibleCount);
 
         return (
           <div key={index} className="w-full">
-            <AccordionItem
-              value={`item-${index}`}
-              className="w-full flex flex-col gap-[5vw] transition-transform px-[5vw] py-[2vw] tablet:flex-col"
-            >
-              <div className="w-full h-full flex justify-between gap-[1vw] fadeUp">
-                <div className="space-y-[0.5vw] w-[45%] mobile:w-full">
-                  <p
-                    data-para-anim
-                    className="text-[2.5vw] leading-[1.2] font-display"
-                  >
-                    {item.name}
-                  </p>
-                  <p
-                    data-para-anim
-                    className="h-[5vw]"
-                  >
-                    {item.des}
-                  </p>
-                </div>
-                <div className="w-[50%] mobile:w-[90%]">
-                  <div
-                    className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] `}
-                  >
-                    {item.features.map((feature, i) => (
-                      <p key={i} className="text-[1.3vw]">
-                        {feature}
-                      </p>
-                    ))}
-                  </div>
-                  <AccordionContent className="space-y-[1vw] pt-[1vw]">
-                    {secondHalf.map((feature, i) => (
-                      <p
-                        key={i}
-                        className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]"
-                      >
-                        {feature}
-                      </p>
-                    ))}
-                  </AccordionContent>
-                  <AccordionTrigger
-                                 hide={true}
-                                 onClick={() => {
-                                   setOpenedIndex((prev) => (prev === index ? null : index));
-                                 }}
-                                 className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal "
-                               >
-                                 {openedIndex === index ? (
-                                   <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">{t('readLess')}</p>
-                                 ) : (
-                                   <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">{t('readMore')}</p>
-                                 )}
-                               </AccordionTrigger>
-                </div>
-              </div>
-            </AccordionItem>
-            <div className="w-full h-[1px] bg-black my-[1.5vw] lineDraw"></div>
+           <AccordionItem
+  value={`item-${index}`}
+  className={`w-full flex flex-col gap-[5vw] transition-transform py-[2vw] tablet:flex-col ${index % 2 === 0 ? "bg-[#BCBCBC]" : ""}`}
+>
+  <div className="w-full h-full flex justify-between gap-[1vw] fadeUp px-[4vw] py-[4vw]">
+    {/* Left Column */}
+    <div className="space-y-[0.5vw] w-[45%] mobile:w-full">
+      <p data-para-anim className="text-[2.5vw] leading-[1.2] font-display">
+        {item.name}
+      </p>
+      <p data-para-anim className="h-[5vw]">{item.des}</p>
+    </div>
+
+    {/* Right Column */}
+    <div className="w-[50%] mobile:w-[90%]">
+      {/* First Half Features - always visible */}
+      <div className="transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw]">
+        {item.features.slice(0, 2).map((feature, i) => (
+          <p key={i} className="text-[1.3vw]">
+            {feature}
+          </p>
+        ))}
+      </div>
+
+      {/* Second Half Features - only visible when expanded */}
+      <AccordionContent className="space-y-[1vw] pt-[1vw]">
+        {item.features.slice(2).map((feature, i) => (
+          <p key={i} className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]">
+            {feature}
+          </p>
+        ))}
+      </AccordionContent>
+      <AccordionTrigger
+        hide={true}
+        onClick={() =>
+          setOpenedIndex((prev) => (prev === index ? null : index))
+        }
+        className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal"
+      >
+        {openedIndex === index ? (
+          <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+            {t("readLess")}
+          </p>
+        ) : (
+          <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+            {t("readMore")}
+          </p>
+        )}
+      </AccordionTrigger>
+    </div>
+  </div>
+</AccordionItem>
+
           </div>
         );
       })}

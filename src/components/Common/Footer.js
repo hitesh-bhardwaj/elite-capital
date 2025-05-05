@@ -27,7 +27,7 @@ const Footer = () => {
     },
     {
       icon: "/icons/instagram.svg",
-      link: "https://www.instagram.com/yourinstagrampage",
+      link: "https://www.instagram.com/officialelitecapital?igsh=MXVieHkybDZkdXhxdQ==",
       alt: "Instagram Icon",
     },
   ];
@@ -45,7 +45,7 @@ const Footer = () => {
               alt="Logo"
               className="w-[35vw] h-auto fadeUp mobile:w-[90vw] tablet:w-[30vw]"
             />
-            <p className="text-[2.1vw] pl-[4.5vw] pt-[0.5vw] mobile:text-[6vw] mobile:pl-[13vw] mobile:pt-[2vw] tablet:text-[2.5vw] tablet:pt-[1vw]"> {t('footerline')} </p>
+            <p className="text-[2.1vw] pl-[4.8vw] pt-[0.5vw] mobile:text-[6vw] mobile:pl-[13vw] mobile:pt-[2vw] tablet:text-[2.5vw] tablet:pt-[1vw]"> {t('footerline')} </p>
           </div>
 
           <div className="uppercase content font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw] mobile:my-[10vw] mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">

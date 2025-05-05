@@ -200,12 +200,12 @@ const TeamAccordion = ({ members }) => {
               />
             </div>
 
-            <div className="flex flex-col gap-[0.5vw] py-[2vw] w-[70%] tablet:w-full">
+            <div className="flex flex-col gap-[0.5vw] py-[2vw] w-full tablet:w-full">
               <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]">
                 {item.name}
               </p>
 
-              <p className="mobile:text-[4.6vw] tablet:text-[3vw] w-[60%] leading-[1.2] tablet:w-full">
+              <p className="mobile:text-[4.6vw] tablet:text-[3vw] w-full leading-[1.2] tablet:w-full">
                 {item.des}
               </p>
 

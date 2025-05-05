@@ -31,7 +31,7 @@ const Diversify = () => {
     return (
         <section className="bg-[#F2F2E9] overflow-hidden h-full mobile:pb-[10vw] tablet:pt-0 dark">
             <div className="flex items-center mobile:flex-col mobile:gap-[8vw] tablet:flex-col ">
-                <div className="w-1/2 h-[56vw] overflow-hidden diversify-block mobile:w-full mobile:h-[60vh]  tablet:w-full tablet:h-[70vw]">
+                <div className="w-1/2 h-[58vw] overflow-hidden diversify-block mobile:w-full mobile:h-[60vh]  tablet:w-full tablet:h-[70vw]">
                     <Image
                         className="object-cover w-full h-full diversify-image translate-y-[5%]"
                         src={image}
@@ -48,6 +48,7 @@ const Diversify = () => {
                             <p data-para-anim key={index}>{item.text}</p>
                         ))}
                     </div>
+                      <LineButton text={t('diversifyCta')} href="/invest-with-us" className="fadein " prefetch={false}/>
                 </div>
 
             </div>

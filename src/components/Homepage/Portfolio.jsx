@@ -121,12 +121,23 @@ export default function SwiperSlider() {
         {portfolio.map((item, idx) => (
           <>
             <SwiperSlide key={idx}>
-              <figure
-                className="relative w-full h-full brightness-[0.6]"
-                data-swiper-parallax="50%"
-              >
-                <Image src={item.image} width={1920} height={1080} alt="portfolio-images" className="w-full h-full object-cover"/>
-              </figure>
+            <figure
+  className="relative w-full h-full  overflow-hidden"
+  data-swiper-parallax="50%"
+>
+
+  <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10" />
+
+
+  <Image
+    src={item.image}
+    width={1920}
+    height={1080}
+    alt="portfolio-images"
+    className="w-full h-full object-cover"
+  />
+</figure>
+
 
               <div
                 key={idx}

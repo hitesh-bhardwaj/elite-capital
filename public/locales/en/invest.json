@@ -1,17 +1,17 @@
 {
-    "hero": "Partner with Elite Capital to access high-growth, community-focused developments to achieve superior risk-adjusted returns.",
+    "hero": "Partner with Elite Capital to access high-growth and community-focused developments.",
     "cta": "Learn More",
     "aboutsub": [
         {
-            "text": "As a DFSA-authorised private equity firm, we provide access to investment in a carefully curated pipeline of premium real estate investments in Ontario, Canada. Our investment strategy is rooted in thorough due diligence, deep local knowledge, and global fund management expertise. We focus on investing in purpose-built and shovel-ready residential projects that have undergone extensive planning and permitting. This meticulous approach ensures that our investors benefit from reduced risk and enhanced potential for strong, sustainable returns."
+            "text": "As a DFSA-authorised private equity firm, we provide access to a carefully curated pipeline of real estate investments in Ontario, Canada. Our investment strategy is rooted in thorough due diligence, deep local knowledge, and global fund management expertise. We focus on investing in purpose-built and shovel-ready residential projects that have undergone extensive planning and permitting. This meticulous approach ensures that our investors benefit from reduced risk and enhanced potential for strong and sustainable returns."
         }
     ],
     "stats1": "Pipeline of projects in Canada",
     "stats2": "Residential and commercial units",
-    "stats3": "Sqft. of residential development",
+    "stats3": "Sqft. of residential and commercial development",
     "stats4": "Equity investment opportunity",
     "portfolioHead": "Explore select opportunities from our investment pipeline",
-    "portfolioSub": "Diversified portfolio of purpose-built residential developments in Ontario.",
+    "portfolioSub": "Browse through our diversified portfolio of purpose-built residential developments in Ontario..",
     "portfolio1": {
         "img": "/assets/images/invest/portfolio-1.png",
         "title": "81-87 Rymal",
@@ -59,12 +59,12 @@
         {
             "num": "01.",
             "title": "Access to exclusive  opportunities ",
-            "para": "Opportunity to invest in our pipeline of 45+ premium developments in Ontario, carefully selected for their superior risk adjusted return."
+            "para": "Opportunity to invest in our pipeline of 45+ developments in Ontario, carefully selected for their superior risk adjusted return."
         },
         {
             "num": "02.",
             "title": "Proven experience",
-            "para": "Leverage our 80+ years of combined professional experience with encompassing global fund management and real estate investment."
+            "para": "Leverage our 80+ years of combined professional experience which encompasses strategic global fund management and real estate investment."
         },
         {
             "num": "03.",
@@ -90,20 +90,20 @@
         {
             "num": "01",
             "title": "Population surge",
-            "para": "Canada's population is projected to grow by 11.6 million by 2050."
+            "para": "Canada's population is rapidly rising at one of the fastest rates among developed nations. By 2050, the country's population is expected to grow by an additional 11.6 million people, significantly increasing demand for housing and infrastructure."
         },
         {
             "num": "02",
             "title": "Housing shortage ",
-            "para": "A projected deficit of over 3.5 million homes by 2030 underscores the urgent need for new residential development."
+            "para": "Canada is currently facing a projected housing deficit of more than 3.5 million homes by 2030, highlighting a critical shortage in residential supply. This gap underscores the urgent need for residential developments to meet growing demand and ease pressure on affordability in key urban markets."
         },
         {
             "num": "03",
             "title": "Economic and political stability ",
-            "para": "A strong and reliable economy, coupled with a stable political environment, provides a secure foundation for long-term investment."
+            "para": "Canada's strong economy and stable political environment create a reliable foundation for long- term investment. The Canadian federal government's ongoing committment to economic resilience is further reinforced by forward-looking immigration and growth policies, including the Century Initiative-- an ambitious plan supported by the government to grow Canada's population to 100 million by 2100. This initiative aims to further position Canada as a global economic leader, making it an even more compelling destination for sustained real estate investment."
         }
     ],
-    "exclusiveSub": "Our exclusive pipeline of 45+ premium community-centered developments are strategically located within Ontario, the largest province in Canada by size of the economy and population, capitalising on its dynamic growth and strong market fundamentals.",
+    "exclusiveSub": "Our exclusive pipeline of 45+ community-centered developments are strategically located within Ontario, the largest provicne in Canada by size of the economy and population.",
     "contactHead": "Invest  with us",
     "contactSub": "Unlock Real Assets with Real Returns"
 }
