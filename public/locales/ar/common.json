@@ -1,6 +1,7 @@
 {
    "contactHead": "استثمر معنا",
     "contactSub": "تواصل معنا لمعرفة المزيد حول فرصنا الاستثمارية.",
+    "home":"الرئيسة",
     "footerCopy": "حقوق النشر (©) 2025 جميع الحقوق محفوظة. إيليت كابيتال (DIFC) ليمتد.",
     "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
     "footerEmailText": "Enter Your Email",
@@ -10,15 +11,15 @@
     "footerline":"أصول حقيقية. عوائد حقيقية.",
     "footerNav": [
         {
-             "text": "اتصل بنا",
+             "text": "من نحن",
             "link": "/about-us"
         },
         {
-            "text": "استثمر معنا ",
+            "text": "ابدأ استثمارك الآن",
             "link": "/invest-with-us"
         },
         {
-            "text": "من نحن ",
+            "text": "تواصل معنا ",
             "link": "/contact"
         }
     ],

@@ -1,4 +1,4 @@
-import { Barlow, Bodoni_Moda } from "next/font/google";
+import { Barlow, Bodoni_Moda, Readex_Pro, Tajawal } from "next/font/google";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -18,6 +18,19 @@ const barlow = Barlow({
   variable: '--font-body',
   display: 'swap',
   weight: ["300", "400", "500", "600"]
+})
+
+const readex_pro = Readex_Pro({
+  subsets: ['arabic'],
+  variable: '--font-display-arabic',
+  display: 'swap',
+})
+
+const tajawal = Tajawal({
+  subsets: ['arabic'],
+  variable: '--font-body-arabic',
+  display: 'swap',
+  weight: ["300", "400", "500", "700"]
 })
 
 const App = ({ Component, pageProps }) => {
@@ -77,7 +90,7 @@ const App = ({ Component, pageProps }) => {
               variants={pageVariants}
               transition={{ duration: 0.6 }}
             >
-              <main className={`${bodoni_moda.variable} ${barlow.variable} font-body text-[1.55vw] text-black1`}>
+              <main className={`${bodoni_moda.variable} ${barlow.variable} ${readex_pro.variable} ${tajawal.variable} font-body text-[1.55vw] text-black1`}>
                 {showPreloader && <Loader2 />}
                 <Component {...pageProps} />
               </main>

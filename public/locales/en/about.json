@@ -2,16 +2,16 @@
     "hero": "Global experience combined with local expertise to generate Real Returns.",
     "cta": "Learn More",
     "aboutHead": "About us",
-    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). Backed by over 80 years of combined professional experience, we combine deep global fund management expertise and strategic local real estate knowledge to invest in high-quality real assets. Our focus is on delivering long-term value to investors while supporting the growth and vitality of the communities we invest in.",
+    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). Backed by over 80 years of combined professional experience, we combine deep global fund management expertise and strategic local real estate knowledge to invest in high-quality, real assets. Our focus is on delivering long-term value to investors while supporting the growth and vitality of the communities we invest in.",
     "valuesHead": "Our values",
-    "values": [
+    "values": [ 
         {
             "valueTitle": "Partnership",
             "valueContent": "We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
         },
         {
             "valueTitle": "Integrity",
-            "valueContent": "With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics.."
+            "valueContent": "With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics."
         },
         {
             "valueTitle": "Knowledge",
@@ -45,7 +45,7 @@
             "img": "/assets/images/about/samim-sakhi.png",
             "features": [
                 "15+ years' experience in real estate acquisition and development at Elite Developments",
-                "Expertise in structuring equity and hybrid investments for large-scale projects.",
+                "Expertise in structuring equity and hybrid investments for large-scale projects",
                 " Background in managing medical facilities across Ontario"
             ]
         },
@@ -196,7 +196,7 @@
             "img": "/assets/images/about/icon.png",
             "features": [
                 "Dr. Mohamed Ali Elgari was previously a Professor of Islamic Economics and a former Director of the Centre for Research in Islamic Economics at King Abdul Aziz University in Saudi Arabia. He is an advisor to several Islamic financial institutions throughout the world and is also on the Shariah board of the Dow Jones Islamic Index.",
-                "He is a member of, amongst others, the following Shariah Supervisory Boards: Dubai Islamic Bank, Credit Suisse, Merrill Lynch &; Co, Resmalla Investments, UBS Islamic Finance, Saudi American Bank, Natixis Bank,FWU Group, Citi Islamic Investment Bank, HSBC Amanah Takaful Malaysia, Credit Agricole (Dubai), the Islamic Fiqh Academy as well as the Accounting & Auditing Organisation for Islamic Financial Institutions (AAOIFI).",
+                "He is a member of, amongst others, the following Shariah Supervisory Boards: Dubai Islamic Bank, Credit Suisse, Merrill Lynch & Co, Resmalla Investments, UBS Islamic Finance, Saudi American Bank, Natixis Bank,  FWU Group, Citi Islamic Investment Bank, HSBC Amanah Takaful Malaysia, Credit Agricole (Dubai), the Islamic Fiqh Academy as well as the Accounting & Auditing Organisation for Islamic Financial Institutions (AAOIFI).",
                 "Dr. Elgari has written several books on Islamic banking. He is a graduate of the University of California with a Ph.D. in Economics."
             ]
         },

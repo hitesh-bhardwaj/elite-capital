@@ -38,7 +38,6 @@ const LanguageButton = ({ className = "" }) => {
 
 const Header = () => {
   const headerRef = useRef();
-  const [openMenu, setOpenMenu] = useState(false);
   const lenis = useLenis();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
@@ -79,43 +78,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
-  const open = () => {
-    setOpenMenu(true);
-  };
-  const close = () => {
-    setOpenMenu(false);
-  };
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (openMenu) {
-        gsap.to(".ham-line", {
-          scaleX: 0,
-          stagger: 0.05,
-          opacity: 0,
-          duration: 0.5,
-        })
-        gsap.from(".menu-link", {
-          opacity: 0,
-          duration: 1,
-          delay: 0.3,
-        })
-      } else {
-        gsap.from(".ham-line", {
-          scaleX: 0,
-          stagger: 0.05,
-          opacity: 0,
-          duration: 0.5,
-        });
-        gsap.to(".menu-link", {
-          opacity: 0,
-          duration: 0.3,
-
-        })
-      }
-    });
-    return () => ctx.revert();
-  }, [openMenu]);
 
   const openMenuMobile = () => {
     setOpenMenu(true);
@@ -154,20 +116,16 @@ const Header = () => {
 
         <div className="flex gap-[2vw]">
           <div
-            className={` h-[2vw]  flex flex-nowrap overflow-hidden justify-end text-white transition-all duration-500 ease-in-out ${openMenu ? "w-[30vw] mobile:w-[2vw]" : "w-[2vw]"
-              }`}
-            onMouseEnter={open}
-            onMouseLeave={close}
+            className={` h-[2vw]  flex flex-nowrap overflow-hidden justify-end text-white transition-all duration-500 ease-in-out w-[30vw]`}
           >
-            <div className={`absolute right-[10%] z-[2] rtl:left-[2%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out ${openMenu ? "w-[40.5vw] px-[2vw] pointer-events-auto" : "w-[28vw] pointer-events-none"
-              } `}>
+            <div className={`absolute right-[10%] z-[2] rtl:left-[13%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out w-[37vw] pt-[0.3vw] rtl:w-[32vw]`}>
               <div
-                className={`w-[40vw] flex-nowrap flex gap-[3vw]`}
+                className={`w-[40vw] flex-nowrap flex gap-[3vw] rtl:w-[35vw]`}
               >
                 <Link  href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
                     <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
                       <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
-                       HOME
+                      {t('home')}
                       </span>
                     </div>
                   </Link>
@@ -184,11 +142,7 @@ const Header = () => {
                 ))}
               </div>
             </div>
-            <div className={`w-[2vw] h-[2vw] flex flex-col justify-center items-center gap-[0.5vw] relative z-[2] tablet:hidden mobile:hidden `}>
-              <span className={`w-full h-[1.5px]  ham-line origin-right bg-white`}></span>
-              <span className={`w-full h-[1.5px]  ham-line origin-right bg-white`}></span>
-              <span className={`w-full h-[1.5px] ham-line origin-right bg-white`}></span>
-            </div>
+          
           </div>
           <LanguageButton className="mobile:hidden tablet:hidden" />
         </div>
@@ -212,8 +166,7 @@ const Header = () => {
         </div>
         <div className="w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block">
           <div
-            className={`h-[40vh] bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between pt-[25vw] tablet:pt-[15vw] pb-[5vw] px-[5vw] transition-transform duration-500 ease-in-out pointer-events-auto ${openMenu ? "translate-y-0" : "-translate-y-full"
-              }`}
+            className={`h-[40vh] bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between pt-[25vw] tablet:pt-[15vw] pb-[5vw] px-[5vw] transition-transform duration-500 ease-in-out pointer-events-auto `}
           >
             <div className="flex flex-col gap-[2vw] mb-[7vw]">
               {footerNav.map((item, index) => (
@@ -267,7 +220,7 @@ const Header = () => {
             </div>
           </div>
           <div
-            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${openMenu ? "opacity-100" : "opacity-0"}`}
+            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease `}
           ></div>
         </div>
       </div>

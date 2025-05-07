@@ -32,7 +32,7 @@ const ShariahBoard = () => {
         <div className=" mobile:space-y-[12vw]">
           <h2
            
-            className="text-[4.6vw] font-display mb-[10vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2] pl-[4vw]"
+            className="text-[4.6vw] font-display mb-[10vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2] pl-[4vw] rtl:pr-[4vw]"
           >
             {t("teamSub3")}
           </h2>
@@ -127,7 +127,6 @@ const TeamAccordion = ({ members }) => {
 
     {/* Right Column */}
     <div className="w-[50%] mobile:w-[90%]">
-      {/* First Half Features - always visible */}
       <div className="transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw]">
         {item.features.slice(0, 2).map((feature, i) => (
           <p key={i} className="text-[1.3vw]">
@@ -135,8 +134,6 @@ const TeamAccordion = ({ members }) => {
           </p>
         ))}
       </div>
-
-      {/* Second Half Features - only visible when expanded */}
       <AccordionContent className="space-y-[1vw] pt-[1vw]">
         {item.features.slice(2).map((feature, i) => (
           <p key={i} className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]">
@@ -144,23 +141,26 @@ const TeamAccordion = ({ members }) => {
           </p>
         ))}
       </AccordionContent>
-      <AccordionTrigger
-        hide={true}
-        onClick={() =>
-          setOpenedIndex((prev) => (prev === index ? null : index))
-        }
-        className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal"
-      >
-        {openedIndex === index ? (
-          <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-            {t("readLess")}
-          </p>
-        ) : (
-          <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-            {t("readMore")}
-          </p>
-        )}
-      </AccordionTrigger>
+      {index < members.length - 2 && (
+  <AccordionTrigger
+    hide={true}
+    onClick={() =>
+      setOpenedIndex((prev) => (prev === index ? null : index))
+    }
+    className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal"
+  >
+    {openedIndex === index ? (
+      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+        {t("readLess")}
+      </p>
+    ) : (
+      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+        {t("readMore")}
+      </p>
+    )}
+  </AccordionTrigger>
+)}
+
     </div>
   </div>
 </AccordionItem>
