@@ -32,7 +32,7 @@ const ShariahBoard = () => {
         <div className=" mobile:space-y-[12vw]">
           <h2
            
-            className="text-[4.6vw] font-display mb-[10vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2] pl-[4vw] rtl:pr-[4vw]"
+            className="text-[4.6vw] font-display mb-[3vw] mobile:text-[12.5vw] tablet:text-[6vw] tablet:mt-[5vw]  tablet:mb-[5vw] mobile:leading-[1.2] pl-[4vw] rtl:pr-[4vw]"
           >
             {t("teamSub3")}
           </h2>

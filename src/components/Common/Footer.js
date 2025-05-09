@@ -33,10 +33,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" bg-transparent h-[30vw] text-white   mobile:h-[199vw] tablet:h-[50vw]"
+    <footer className=" bg-transparent h-[30vw] text-white   mobile:h-[85vh] tablet:h-[50vw]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="px-[5vw] w-full bg-[#121212] fixed bottom-0 mobile:px-[7vw]  font-body mobile:py-[5vw]">
-        <div className=" pb-[10vw] h-[25vw] flex  justify-between mobile:flex-col mobile:h-[100vw] mobile:py-[5vw]">
+        <div className=" pb-[10vw] h-[25vw] flex  justify-between mobile:flex-col mobile:h-full mobile:py-[5vw] mobile:pb-[0vw]">
           <div className="flex flex-col items-start justify-start pt-[5vw] mobile:flex-col ">
             <Image
               src="/elite-logo.svg"
@@ -48,7 +48,7 @@ const Footer = () => {
             <p className="text-[2.1vw] pl-[4.8vw] pt-[0.5vw] mobile:text-[6vw] mobile:pl-[13vw] mobile:pt-[2vw] tablet:text-[2.5vw] tablet:pt-[1vw]"> {t('footerline')} </p>
           </div>
 
-          <div className="uppercase content  font-body font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw] mobile:my-[10vw] mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">
+          <div className="uppercase content  font-body font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw]  mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">
             {footerNav.map((item, index) => (
               <Link key={index} href={item.link} className="group transition-all duration-300 ease" prefetch={false}>
                 <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
 
         </div>
-        <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[4vw] mobile:mt-[10vw] tablet:mt-[7vw] tablet:pb-[5vw] mobile:pb-[10vw]">
+        <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[4vw] mobile:mt-[10vw] tablet:mt-[7vw] tablet:pb-[5vw] mobile:pb-[10vw] mobile:pt-[10vw] ">
           <p className="text-[1.15rem] tablet:w-[40%] mobile:text-[5.1vw]">{t('footerCopy')}</p>
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
             <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[4vw] tablet:gap-[1vw]">

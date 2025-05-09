@@ -20,13 +20,13 @@ const Values = () => {
           >
             {t("valuesHead")}
           </h2>
-          <div className=" w-full mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
+          <div className=" w-full mobile:block mobile:space-y-[10vw] tablet:grid-cols-2 tablet:pl-[1vw]">
             <Accordion
               dir="ltr"
               type="single"
               collapsible
               defaultValue="item-0"
-              className="w-[95%] flex flex-wrap justify-between gap-y-[3vw]"
+              className="w-[95%] flex flex-wrap justify-between gap-y-[3vw] mobile:pl-[3vw] rtl:mobile:pr-[3vw] rtl:mobile:pl-0 "
             >
               <div className="flex w-full gap-[15vw] mobile:flex-col mobile:gap-0 tablet:flex-col tablet:gap-0">
                 <div className="flex flex-col w-[50%] mobile:w-full tablet:w-full">

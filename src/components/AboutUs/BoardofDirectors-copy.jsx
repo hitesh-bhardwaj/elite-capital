@@ -40,7 +40,7 @@ const BoardofDirectorsCopy = () => {
         <div className=" mobile:space-y-[5vw] ">
           <h2
            
-            className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] mobile:mb-[7vw] rtl:pr-[4.5vw]"
+            className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-[5vw] pl-[5vw] mobile:mb-[7vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub")}
           </h2>
@@ -53,7 +53,7 @@ const BoardofDirectorsCopy = () => {
         <div className=" mobile:space-y-[5vw] pt-[5vw]">
           <h2
            
-            className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+            className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-[5vw] pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub1")}
           </h2>
@@ -65,7 +65,7 @@ const BoardofDirectorsCopy = () => {
         <div className="pt-[5vw] mobile:space-y-[5vw]">
           <h2
            
-            className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-0 pl-[5vw] rtl:pr-[4.5vw]"
+            className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-[5vw] pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub2")}
           </h2>
@@ -186,7 +186,7 @@ const TeamAccordion = ({ members}) => {
           <AccordionItem
             key={index}
             value={`item-${index}`}
-            className={`w-full flex gap-[5vw] transition-transform px-[5vw] py-[2vw] tablet:flex-col ${
+            className={`w-full flex gap-[5vw] transition-transform px-[5vw] py-[2vw] tablet:flex-col tablet:pt-[5vw] ${
               index % 2 === 0 ? "bg-[#BCBCBC]" : ""
             }`}
           >
