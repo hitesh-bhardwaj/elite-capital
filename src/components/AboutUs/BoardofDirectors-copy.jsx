@@ -142,7 +142,7 @@ const MobileSwiper = ({ members }) => {
                 {item.des}
               </p>
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] mobile:h-[160vw]  `}
+                className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] mobile:h-[180vw]  `}
               >
                 {item.features.map((feature, i) => (
                   <p

@@ -38,7 +38,7 @@ const ShariahBoard = () => {
           </h2>
           <TeamAccordion members={shariahMembers}/>
           {mobileWidth && (
-          <div className="pb-[2vw] mobile:block text-black text-[5vw] font-bold">
+          <div className="pb-[2vw] mobile:block text-black text-[5vw] font-bold px-[5vw]">
              <div className=" w-full mobile:block mobile:space-y-[10vw] tablet:grid-cols-2 tablet:space-y-[5vw]">
             <Accordion
               type="single"

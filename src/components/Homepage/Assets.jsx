@@ -12,13 +12,13 @@ const Assets = () => {
         <section className='w-screen h-screen mobile:h-full mobile:py-[15%] overflow-hidden dark tablet:h-full tablet:py-[10%]'>
             <div className='flex  h-full w-full items-center justify-between px-[5%] mobile:flex-col-reverse mobile:gap-[15vw] tablet:flex-col-reverse tablet:gap-[10vw] rtl:flex-row-reverse rtl:mobile:flex-col-reverse'>
                 <div className='w-[50%] space-y-[4vw] mobile:w-full mobile:space-y-[7vw]'>
-                    <div className='w-full flex items-end justify-end translate-x-[30%] mobile:translate-x-[40%] tablet:translate-x-[40%]  rtl:mobile:translate-x-[3%] rtl:translate-x-[45%]'>
+                    <div className='w-full flex items-end justify-end translate-x-[30%] mobile:translate-x-[40%] tablet:translate-x-[40%]  rtl:mobile:translate-x-[15%] rtl:translate-x-[45%]'>
                         <ImageComponent imgsrc={real1} width={"w-[65%] mobile:w-[55%] tablet:w-[75%] rtl:translate-x-[-55%]"} />
                     </div>
-                    <div className='w-full flex items-center justify-center translate-x-[15%] mobile:translate-x-[20%]  rtl:mobile:translate-x-[-20%] rtl:translate-x-[15%]'>
+                    <div className='w-full flex items-center justify-center translate-x-[15%] mobile:translate-x-[20%]  rtl:mobile:translate-x-[2%] rtl:translate-x-[15%]'>
                         <ImageComponent imgsrc={real2} width={"w-[65%] mobile:w-[55%] tablet:w-[75%] rtl:translate-x-[-55%]"} />
                     </div>
-                    <div className='w-full flex items-center justify-start tablet:translate-x-[-10%] rtl:mobile:translate-x-[-45%] rtl:translate-x-[-10%]'>
+                    <div className='w-full flex items-center justify-start tablet:translate-x-[-10%] rtl:mobile:translate-x-[-15%] rtl:translate-x-[-10%]'>
                         <ImageComponent imgsrc={real3} width={"w-[65%] mobile:w-[55%] tablet:w-[75%] rtl:translate-x-[-55%]"} />
                     </div>
                 </div>

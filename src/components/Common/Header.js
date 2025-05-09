@@ -24,12 +24,12 @@ const LanguageButton = ({ className = "" }) => {
   const { locale, asPath } = useRouter();
 
   return (
-    <div className={`text-white flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
+    <div className={`text-white flex items-center gap-x-2 text-[1.2vw] tablet:text-[4vw] mobile:text-[5vw] ${className}`}>
       <a className={`${locale === 'en' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[5vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={asPath} locale="en">
         EN
       </a>
-      <span className={`bg-white w-[1px] block h-[20px] mobile:bg-black tablet:bg-black`}></span>
-      <a className={`${locale === 'ar' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[5vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={`ar${asPath}`} locale="ar">
+      <span className={`bg-white w-[1px] block h-[20px] mobile:bg-black tablet:bg-black tablet:h-[5vw]`}></span>
+      <a className={`${locale === 'ar' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={`ar${asPath}`} locale="ar">
         AR
       </a>
     </div>
@@ -44,6 +44,7 @@ const Header = () => {
   const { t } = useTranslation("common");
   const footerNav = t("footerNav", { returnObjects: true });
   const [scrolled, setScrolled] = useState(false);
+  const [openMenu , setOpenMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -114,7 +115,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex gap-[2vw]">
+        <div className="flex gap-[2vw] mobile:hidden tablet:hidden">
           <div
             className={` h-[2vw]  flex flex-nowrap overflow-hidden justify-end text-white transition-all duration-500 ease-in-out w-[30vw]`}
           >
@@ -164,11 +165,12 @@ const Header = () => {
             </svg>
           </div>
         </div>
-        <div className="w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block">
+        <div className={`w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block `}>
           <div
-            className={`h-[40vh] bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between pt-[25vw] tablet:pt-[15vw] pb-[5vw] px-[5vw] transition-transform duration-500 ease-in-out pointer-events-auto `}
+            className={`${openMenu ? 'h-[50vh] tablet:h-[60vh]': 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
           >
-            <div className="flex flex-col gap-[2vw] mb-[7vw]">
+            <div className="flex flex-col gap-[10vw] relative">
+            <div className="flex flex-col gap-[2vw] pt-[25vw] ">
               {footerNav.map((item, index) => (
                 <Link
                   key={index}
@@ -203,8 +205,11 @@ const Header = () => {
                 </a>
               ))}
             </div>
+            <div className="w-full flex justify-end">
+              <LanguageButton />
+            </div>
             <div
-              className="absolute right-[5%] top-[10%] border rounded-full border-black p-[3vw]"
+              className="absolute right-[-2%] top-[8%] border rounded-full border-black p-[3vw]"
               onClick={closeMenuMobile}
             >
               <Image
@@ -215,12 +220,12 @@ const Header = () => {
                 className="object-contain w-[4vw] h-[4vw] tablet:w-[2vw] tablet:h-[2vw]"
               />
             </div>
-            <div className="w-full flex justify-end">
-              <LanguageButton />
             </div>
+            
+           
           </div>
           <div
-            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease `}
+            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${openMenu ? '':'opacity-0 pointer-events-none'} `}
           ></div>
         </div>
       </div>
