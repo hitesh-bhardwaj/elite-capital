@@ -89,42 +89,38 @@ const Stats = () => {
       });
     });
   };
-
-  const counterClasses = [
-    { selector: ".counter-3", top: "-125px", delay: 0.1 },
-    { selector: ".counter-2", top: "-1030px", delay: -1.3 },
-    { selector: ".counter-1", top: "-825px", delay: -1.3 },
-  ];
-
-  const countClasses = [
-    { selector: ".count-4", top: "-140px", delay: 0.1 },
-    { selector: ".count-3", top: "-525px", delay: -1.2 },
-    { selector: ".count-2", top: "-423px", delay: -1.3 },
-  ];
-
-  const countNewClasses = [
-    { selector: ".countnew-1", top: "-110px", delay: -0.2 },
-    { selector: ".countnew-3", top: "-1030px", delay: -1.0 },
-    { selector: ".countnew-2", top: "-519px", delay: -1.3 },
-    { selector: ".countnew-4", top: "-113px", delay: -1.3 },
-  ];
-  const countLastClasses = [
-    { selector: ".countlast-1", top: "-113px", delay: -0.2 },
-    { selector: ".countlast-3", top: "-115px", delay: -1.0 },
-    { selector: ".countlast-2", top: "-114px", delay: -1.3 },
-    { selector: ".countlast-4", top: "-135px", delay: -1.3 },
-  ];
   if (globalThis.innerWidth > 1023) {
   
+    const counterClasses = [
+      { selector: ".counter-3", top: "-125px", delay: 0.1 },
+      { selector: ".counter-2", top: "-1030px", delay: -1.3 },
+      { selector: ".counter-1", top: "-825px", delay: -1.3 },
+    ];
+  
+    const countClasses = [
+      { selector: ".count-4", top: "-140px", delay: 0.1 },
+      { selector: ".count-3", top: "-525px", delay: -1.2 },
+      { selector: ".count-2", top: "-423px", delay: -1.3 },
+    ];
+  
+    const countNewClasses = [
+      { selector: ".countnew-1", top: "-110px", delay: -0.2 },
+      { selector: ".countnew-3", top: "-1030px", delay: -1.0 },
+      { selector: ".countnew-2", top: "-519px", delay: -1.3 },
+      { selector: ".countnew-4", top: "-113px", delay: -1.3 },
+    ];
+    const countLastClasses = [
+      { selector: ".countlast-1", top: "-113px", delay: -0.2 },
+      { selector: ".countlast-3", top: "-115px", delay: -1.0 },
+      { selector: ".countlast-2", top: "-114px", delay: -1.3 },
+      { selector: ".countlast-4", top: "-135px", delay: -1.3 },
+    ];
     createTimeline(".countlast", countLastClasses, "top 90%", null);
     createTimeline(".counter", counterClasses, "top 90%", null);
     createTimeline(".count", countNewClasses, "top 90%", null);
     createTimeline(".count", countClasses, "top 90%", null);
   } else {
-    createTimeline(".countlast", countLastClasses, "top 90%", null);
-    createTimeline(".counter", counterClasses, "top 90%", null);
-    createTimeline(".count", countNewClasses, "top 90%", null);
-    createTimeline(".count", countClasses, "top 90%", null);
+   
   }
   const text = t("stats", { returnObjects: true });
 
@@ -144,7 +140,7 @@ const Stats = () => {
         <div className="flex text-white w-full px-[5vw] items-center justify-between gap-[1vw] mobile:flex-col mobile:items-start tablet:flex-wrap tablet:gap-y-[4vw]">
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col items-center gap-[2vw] mobile:flex-row  ">
-              <div dir="ltr" className="counter mobile:w-[40%] mobile:flex mobile:justify-cente rtl:mobile:w-[50%]">
+              <div dir="ltr" className="counter mobile:hidden  mobile:justify-center rtl:mobile:w-[50%] tablet:hidden">
                 <div className="counter-1 digit font-semibold mobile:text-[12vw] tablet:text-[7vw]">
                   <div className="num">0</div>
                   <div className="num">1</div>
@@ -173,14 +169,16 @@ const Stats = () => {
                   <div className="num text-[3vw] mobile:text-[10vw] rtl:leading-[1.5]]">+</div>
                 </div>
               </div>
-              <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[50%] rtl:mobile:w-[80%] ">{statsContent[0].text}</p>
+              <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[40%] font-semibold mobile:text-[12vw] tablet:text-[7vw] mobile:text-white z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
+                <p data-para-anim>80+</p> </div>
+              <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[60%] rtl:mobile:w-[80%] ">{statsContent[0].text}</p>
             </div>
           </div>
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
 
           <div className="flex flex-col gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row mobile:gap-[3vw]">
-            <div dir="ltr" className="countnew mobile:w-[40%] mobile:flex mobile:justify-center">
+            <div dir="ltr" className="countnew mobile:w-[40%] mobile:hidden tablet:hidden">
               <div className="countnew-1 digit font-semibold translate-y-[100px] mobile:text-[12vw] tablet:text-[7vw]">
                 <div className="num rtl:leading-[1.5]">$</div>
               </div>
@@ -210,6 +208,8 @@ const Stats = () => {
                 <div className="num rtl:leading-[1.5]">B</div>
               </div>
             </div>
+            <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[40%] font-semibold mobile:text-[12vw] tablet:text-[7vw] mobile:text-white z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
+            <p data-para-anim>$50B</p> </div>
             <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[60%] ">{statsContent[1].text}</p>
 
             </div>
@@ -217,7 +217,7 @@ const Stats = () => {
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw tablet:hidden" />
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
-            <div dir="ltr" className="count mobile:w-[40%] mobile:text-[12vw] tablet:text-[7vw] mobile:flex mobile:justify-center">
+            <div dir="ltr" className="count mobile:w-[40%] mobile:text-[12vw] tablet:text-[7vw]  mobile:hidden tablet:hidden">
               <div className="count-2 digit font-semibold">
                 <div className="num">0</div>
                 <div className="num">1</div>
@@ -238,7 +238,9 @@ const Stats = () => {
                 <div className="num text-[3vw] mobile:text-[10vw] rtl:imac:leading-[2]">+</div>
               </div>
             </div>
-            <p data-para-anim className="relative content z-[2] text-center mobile:text-left  mobile:w-[60%]">{statsContent[2].text}</p>
+            <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[40%] font-semibold mobile:text-[12vw] tablet:text-[7vw] mobile:text-white z-[10] tablet:flex tablet:justify-center tablet:w-[30%] ]">
+            <p data-para-anim>45+</p> </div>
+            <p data-para-anim className="relative content z-[2] text-center mobile:text-left  mobile:w-[60%] tablet:w-[60%]">{statsContent[2].text}</p>
             
 
             </div>
@@ -246,7 +248,7 @@ const Stats = () => {
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
-            <div dir="ltr" className="countlast mobile:text-[12vw] mobile:w-[40%] tablet:text-[7vw] mobile:flex mobile:justify-center ">
+            <div dir="ltr" className="countlast mobile:text-[12vw] mobile:w-[40%] tablet:text-[7vw] mobile:hidden tablet:hidden">
               <div className="countlast-1 digit font-semibold translate-y-[100px]">
                 <div className="num rtl:leading-[1.5]">$</div>
               </div>
@@ -262,11 +264,11 @@ const Stats = () => {
                 <div className="num text-[3vw] mobile:text-[10vw] rtl:imac:leading-[2]">+</div>
               </div>
             </div>
+            <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[40%] font-semibold mobile:text-[12vw] tablet:text-[7vw] mobile:text-white z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
+            <p data-para-anim>$1B+</p> </div>
             <p data-para-anim className="relative content z-[2] text-center mobile:text-left mobile:w-[60%] ">{statsContent[3].text}</p>
 
             </div>
-          {/* <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw hidden mobile:block mobile:last-hidden" /> */}
-
           </div>
         </div>
       </section>

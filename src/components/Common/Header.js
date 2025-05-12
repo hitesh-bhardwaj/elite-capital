@@ -170,7 +170,7 @@ const Header = () => {
         </div>
         <div className={`w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block `}>
           <div
-            className={`${openMenu ? 'h-[60vh] tablet:h-[55vh]': 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
+            className={`${openMenu ? 'h-[55vh] tablet:h-[55vh]': 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
           >
             <div className="flex flex-col gap-[10vw] relative">
             <div className="flex flex-col gap-[2vw] pt-[25vw] tablet:pt-[10vw] ">
@@ -219,7 +219,7 @@ const Header = () => {
               <LanguageButton />
             </div>
             <div
-              className="absolute right-[-2%] top-[8%] border rounded-full border-black p-[3vw]"
+              className="absolute right-[-2%] top-[8%] border rounded-full border-black p-[3vw] rtl:left-[2%] rtl:right-auto"
               onClick={closeMenuMobile}
             >
               <Image

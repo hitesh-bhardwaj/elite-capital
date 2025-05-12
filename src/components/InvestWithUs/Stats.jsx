@@ -49,43 +49,42 @@ const Stats = () => {
     });
   };
 
-  const counterClasses = [
-    { selector: ".counter-3", top: "-125px", delay: 0.1 },
-    { selector: ".counter-2", top: "-521px", delay: -1.3 },
-    { selector: ".counter-1", top: "-420px", delay: -1.3 },
-  ];
 
-  const countClasses = [
-    { selector: ".count-1", top: "-210px", delay: -0.2 },
-    { selector: ".count-2", top: "-617px", delay: -1.3 },
-    { selector: ".count-4", top: "-127px", delay: -1.0 },
-    { selector: ".count-3", top: "-96px", delay: -1.3 },
-  ];
-
-  const countNewClasses = [
-    { selector: ".countnew-1", top: "-110px", delay: -0.2 },
-    { selector: ".countnew-2", top: "-1028px", delay: -1.0 },
-    { selector: ".countnew-3", top: "-98px", delay: -1.3 },
-    { selector: ".countnew-4", top: "-120px", delay: -1.3 },
-  ];
-  const countLastClasses = [
-    { selector: ".countlast-1", top: "-108px", delay: -0.2 },
-    { selector: ".countlast-2", top: "-110px", delay: -1.0 },
-    { selector: ".countlast-3", top: "-110px", delay: -1.3 },
-    { selector: ".countlast-4", top: "-518px", delay: -1.3 },
-    { selector: ".countlast-5", top: "-110px", delay: -1.3 },
-    { selector: ".countlast-6", top: "-130px", delay: -1.3 },
-  ];
   if (globalThis.innerWidth > 1023) {
+
+    const counterClasses = [
+      { selector: ".counter-3", top: "-125px", delay: 0.1 },
+      { selector: ".counter-2", top: "-521px", delay: -1.3 },
+      { selector: ".counter-1", top: "-420px", delay: -1.3 },
+    ];
+  
+    const countClasses = [
+      { selector: ".count-1", top: "-210px", delay: -0.2 },
+      { selector: ".count-2", top: "-617px", delay: -1.3 },
+      { selector: ".count-4", top: "-127px", delay: -1.0 },
+      { selector: ".count-3", top: "-96px", delay: -1.3 },
+    ];
+  
+    const countNewClasses = [
+      { selector: ".countnew-1", top: "-110px", delay: -0.2 },
+      { selector: ".countnew-2", top: "-1028px", delay: -1.0 },
+      { selector: ".countnew-3", top: "-98px", delay: -1.3 },
+      { selector: ".countnew-4", top: "-120px", delay: -1.3 },
+    ];
+    const countLastClasses = [
+      { selector: ".countlast-1", top: "-108px", delay: -0.2 },
+      { selector: ".countlast-2", top: "-110px", delay: -1.0 },
+      { selector: ".countlast-3", top: "-110px", delay: -1.3 },
+      { selector: ".countlast-4", top: "-518px", delay: -1.3 },
+      { selector: ".countlast-5", top: "-110px", delay: -1.3 },
+      { selector: ".countlast-6", top: "-130px", delay: -1.3 },
+    ];
     createTimeline(".countlast", countLastClasses, "top 90%", null);
     createTimeline(".counter", counterClasses, "top 90%", null);
     createTimeline(".count", countNewClasses, "top 90%", null);
     createTimeline(".count", countClasses, "top 90%", null);
   } else {
-    createTimeline(".countlast", countLastClasses, "top 90%", null);
-    createTimeline(".counter", counterClasses, "top 90%", null);
-    createTimeline(".count", countNewClasses, "top 80%", "bottom 80%");
-    createTimeline(".count", countClasses, "top 80%", "bottom 80%");
+   
   }
   return (
     <>
@@ -101,10 +100,10 @@ const Stats = () => {
             />
           </div>
 
-          <div className="flex pl-[3vw] rtl:pl-0  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw]">
+          <div className="flex pl-[3vw] rtl:pl-[7vw]  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw]">
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
-              <div className="flex w-full items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center">
-                <div dir="ltr" className=" ">
+              <div className="flex w-full items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center ">
+                <div dir="ltr" className="mobile:hidden tablet:hidden" >
                   <div className="counter !text-[#111111] mobile:text-[8.5vw] ">
                     <div className="counter-1 digit font-semibold">
                       <div className="num">0</div>
@@ -126,6 +125,9 @@ const Stats = () => {
                     </div>
                   </div>
                 </div>
+                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
+                <p data-para-anim>45+</p> </div>
+               
               </div>
               <p
                 data-para-anim
@@ -138,7 +140,7 @@ const Stats = () => {
             <div className="w-full h-[1px] hidden mobile:block bg-black"/>
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
-                <div dir="ltr" className="countnew !text-[#111111] mobile:text-[8.5vw]">
+                <div dir="ltr" className="countnew !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
                   <div className="countnew-1 digit font-semibold ">
                     <div className="num">0</div>
                     <div className="num text-center rtl:imac:leading-[1.2]">1</div>
@@ -163,6 +165,9 @@ const Stats = () => {
                     <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                   </div>
                 </div>
+                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
+                <p data-para-anim>10K+</p> </div>
+              
               </div>
               <p
                 data-para-anim
@@ -175,7 +180,7 @@ const Stats = () => {
 
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
-                <div dir="ltr" className="count !text-[#111111] mobile:text-[8.5vw]">
+                <div dir="ltr" className="count !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
                   <div className="count-1 digit font-semibold">
                     <div className="num">0</div>
                     <div className="num">1</div>
@@ -197,6 +202,8 @@ const Stats = () => {
                     <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                   </div>
                 </div>
+                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
+                <p data-para-anim>26M+</p> </div>
               </div>
               <p
                 data-para-anim
@@ -209,7 +216,7 @@ const Stats = () => {
 
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center">
-                <div dir="ltr" className="countlast !text-[#111111] mobile:text-[8.5vw]">
+                <div dir="ltr" className="countlast !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
                   <div className="countlast-1 digit font-semibold translate-y-[100px]">
                     <div className="num rtl:imac:leading-[1.2]">$</div>
                   </div>
@@ -236,6 +243,8 @@ const Stats = () => {
                     <div className="num text-[3vw] mobile:text-[10vw]">+</div>
                   </div>
                 </div>
+                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
+                <p data-para-anim>$1.5B+</p> </div>
               </div>
               <p
                 data-para-anim

@@ -71,6 +71,17 @@ const App = ({ Component, pageProps }) => {
       setShowPreloader(false);
     }
   }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      window.location.reload();
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -78,7 +89,6 @@ const App = ({ Component, pageProps }) => {
       <OrganizationJsonLd />
       <WebsiteJsonLd />
       <ImageObjectJsonLd />
-
       <ReactLenis root>
         <LazyMotion features={domAnimation}>
           <AnimatePresence mode="wait">
