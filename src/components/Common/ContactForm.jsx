@@ -85,7 +85,7 @@ export default function ContactForm() {
     <section className="mobile:pt-0" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
         <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full">
-          <h3 className="heading-2 !font-body">{t("formHead")}</h3>
+          <h3 className="heading-2 ltr:font-body">{t("formHead")}</h3>
           <Form {...form}>
             <form
               autoComplete="off"

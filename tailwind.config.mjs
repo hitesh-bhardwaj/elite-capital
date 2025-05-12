@@ -14,6 +14,10 @@ const config = {
 			tablet: {
 				min: '541px',
 				max: '1024px'
+			},
+			imac:{
+				min:"1920px",
+				max:"2224px"
 			}
 		},
 		extend: {

@@ -34,7 +34,7 @@ const Exclusive = () => {
                 <div className="relative z-10  flex  items-center justify-between h-full mobile:block mobile:space-y-[5vw] tablet:items-start">
                 <div className="w-[45%] h-[38vw] mobile:h-[120vw] flex items-start justify-between overflow-hidden mobile:w-full tablet:h-[60vw]">
                         <Image 
-                            className="factor-image  tablet:h-full exclusive-img mobile:h-full"
+                            className="factor-image h-full w-full  tablet:h-full exclusive-img mobile:h-full"
                             src={factorImage} 
                             alt="factor image" 
                             placeholder="blur" 

@@ -34,9 +34,28 @@ const Values = () => {
     return () => ctx.revert();
   })
 
+  if(globalThis.innerWidth<1024){
+    useEffect(() => {
+      const ctx = gsap.context(() => {
+          gsap.from(".values-img", {
+              scale: 1.2,
+              yPercent: -20,
+              ease: "none",
+              scrollTrigger: {
+                  trigger: ".values-block",
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: true,
+              }
+          })
+      })
+      return () => ctx.revert()
+  }, [])
+  }
+
   return (
     <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:pb-[0vw] mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex tablet:h-full tablet:pt-0 dark" id="values">
-      <div className="absolute top-0 left-0 h-full w-full z-0 mobile:relative mobile:h-[60vh] tablet:relative tablet:h-[50vw] ">
+      <div className="absolute top-0 left-0 h-full w-full z-0 mobile:relative mobile:h-[60vh] tablet:relative tablet:h-[50vw] values-block ">
         <Image
           src={valuesBg}
           alt="stats-bg"

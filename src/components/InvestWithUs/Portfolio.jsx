@@ -7,11 +7,11 @@ const PortfolioCard = ({img, title,location, address1, address2})=>{
   return(
     <>
     <div className='w-[32%] flex flex-col mobile:w-full items-center gap-[1.5vw] mobile:flex-col  tablet:w-[44vw]'>
-              <div className='mobile:w-full group fadeup transition-all duration-500 ease overflow-hidden'>
+              <div className='mobile:w-full group h-[21vw] w-full fadeup transition-all duration-500 ease overflow-hidden mobile:h-[75vw]'>
                 <Image 
                   src={img}
                   alt={`image`} 
-                  className=' object-cover h-[21vw] group-hover:scale-[1.1] transition-all duration-500 ease mobile:h-[75vw] tablet:h-[30vw]'
+                  className=' object-cover h-full w-full group-hover:scale-[1.1] transition-all duration-500 ease  tablet:h-[30vw]'
                   loading="lazy" 
                   width={555} 
                   height={397} 

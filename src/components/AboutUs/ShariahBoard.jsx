@@ -54,7 +54,7 @@ const ShariahBoard = () => {
                       id={`item-${index}`}
                       title={item.name}
                       des={item.des}
-                      content={`${item.features.join("\n")}`}
+                      content={`${item.features.join("<br/> <br/>")}`}
                     />
                   ))}
                 </div>

@@ -104,14 +104,14 @@ const Stats = () => {
           <div className="flex pl-[3vw] rtl:pl-0  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw]">
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center">
-                <div className="">
+                <div dir="ltr" className=" ">
                   <div className="counter !text-[#111111] mobile:text-[8.5vw] ">
                     <div className="counter-1 digit font-semibold">
                       <div className="num">0</div>
                       <div className="num">1</div>
                       <div className="num">2</div>
-                      <div className="num">3</div>
-                      <div className="num">4</div>
+                      <div className="num ">3</div>
+                      <div className="num rtl:imac:leading-[1.5]">4</div>
                     </div>
                     <div className="counter-2 digit font-semibold ">
                       <div className="num">0</div>
@@ -119,10 +119,10 @@ const Stats = () => {
                       <div className="num">2</div>
                       <div className="num">3</div>
                       <div className="num">4</div>
-                      <div className="num">5</div>
+                      <div className="num rtl:imac:leading-[1.5]">5</div>
                     </div>
                     <div className="counter-3 translate-y-[100%] digit font-semibold">
-                      <div className="num text-[3vw] mobile:text-[10vw]">+</div>
+                      <div className="num text-[3vw] mobile:text-[10vw] rtl:imac:leading-[2]">+</div>
                     </div>
                   </div>
                 </div>
@@ -138,10 +138,10 @@ const Stats = () => {
             <div className="w-full h-[1px] hidden mobile:block bg-black"/>
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
-                <div className="countnew !text-[#111111] mobile:text-[8.5vw]">
+                <div dir="ltr" className="countnew !text-[#111111] mobile:text-[8.5vw]">
                   <div className="countnew-1 digit font-semibold ">
                     <div className="num">0</div>
-                    <div className="num text-center">1</div>
+                    <div className="num text-center rtl:imac:leading-[1.2]">1</div>
                   </div>
                   <div className="countnew-2 digit font-semibold">
                     <div className="num">0</div>
@@ -154,10 +154,10 @@ const Stats = () => {
                     <div className="num">7</div>
                     <div className="num">8</div>
                     <div className="num">9</div>
-                    <div className="num">0</div>
+                    <div className="num rtl:imac:leading-[1.2]">0</div>
                   </div>
                   <div className="countnew-3 digit font-semibold translate-y-[100%]">
-                    <div className="num">K</div>
+                    <div className="num rtl:imac:leading-[1.2]">K</div>
                   </div>
                   <div className="countnew-4 digit font-semibold translate-y-[100%]">
                     <div className="num text-[3vw] mobile:text-[10vw]">+</div>
@@ -175,11 +175,11 @@ const Stats = () => {
 
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
-                <div className="count !text-[#111111] mobile:text-[8.5vw]">
+                <div dir="ltr" className="count !text-[#111111] mobile:text-[8.5vw]">
                   <div className="count-1 digit font-semibold">
                     <div className="num">0</div>
                     <div className="num">1</div>
-                    <div className="num">2</div>
+                    <div className="num rtl:imac:leading-[1.2]">2</div>
                   </div>
                   <div className="count-2 digit font-semibold">
                     <div className="num">0</div>
@@ -188,10 +188,10 @@ const Stats = () => {
                     <div className="num">3</div>
                     <div className="num">4</div>
                     <div className="num">5</div>
-                    <div className="num">6</div>
+                    <div className="num rtl:imac:leading-[1.2]">6</div>
                   </div>
                   <div className="count-3 digit font-semibold translate-y-[100%]">
-                    <div className="num">M</div>
+                    <div className="num rtl:imac:leading-[1.2]">M</div>
                   </div>
                   <div className="count-4 digit font-semibold translate-y-[100px]">
                     <div className="num text-[3vw] mobile:text-[10vw]">+</div>
@@ -208,17 +208,17 @@ const Stats = () => {
             <div className="w-full h-[1px] hidden mobile:block bg-black"/>
 
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
-              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
-                <div className="countlast !text-[#111111] mobile:text-[8.5vw]">
+              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center">
+                <div dir="ltr" className="countlast !text-[#111111] mobile:text-[8.5vw]">
                   <div className="countlast-1 digit font-semibold translate-y-[100px]">
-                    <div className="num">$</div>
+                    <div className="num rtl:imac:leading-[1.2]">$</div>
                   </div>
                   <div className="countlast-2 digit font-semibold">
                     <div className="num">0</div>
-                    <div className="num text-center">1</div>
+                    <div className="num text-center rtl:imac:leading-[1.2]">1</div>
                   </div>
                   <div className="countlast-3 digit font-semibold translate-y-[100px]">
-                    <div className="num">.</div>
+                    <div className="num rtl:imac:leading-[1.2]">.</div>
                   </div>
                   <div className="countlast-4 digit font-semibold">
                     <div className="num">0</div>
@@ -226,11 +226,11 @@ const Stats = () => {
                     <div className="num">2</div>
                     <div className="num">3</div>
                     <div className="num">4</div>
-                    <div className="num">5</div>
+                    <div className="num rtl:imac:leading-[1.2]">5</div>
                   </div>
                   <div className="countlast-5 digit font-semibold">
                     <div className="num">A</div>
-                    <div className="num">B</div>
+                    <div className="num rtl:imac:leading-[1.2]">B</div>
                   </div>
                   <div className="countlast-6 digit font-semibold translate-y-[100px]">
                     <div className="num text-[3vw] mobile:text-[10vw]">+</div>

@@ -46,18 +46,20 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [openMenu , setOpenMenu] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
+  
+    if(globalThis.innerWidth>=1023){
+      useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,6 +81,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+}
 
   const openMenuMobile = () => {
     setOpenMenu(true);
@@ -93,7 +96,7 @@ const Header = () => {
     <header
       ref={headerRef}
       className={`fixed top-0 left-0 w-screen z-50 transition-all   duration-500 ease  ${showHeader ? "translate-y-0 " : "-translate-y-full "} ${scrolled ? "backdrop-blur-md bg-black/40" : ""
-        } `}
+        }  mobile:backdrop-blur-md mobile:bg-black/40 tablet:backdrop-blur-md tablet:bg-black/40`}
     >
       <div className="w-full px-[5vw] py-8 flex justify-between items-center">
         <div>
@@ -125,7 +128,7 @@ const Header = () => {
               >
                 <Link  href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
                     <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
-                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
+                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease">
                       {t('home')}
                       </span>
                     </div>
@@ -167,10 +170,17 @@ const Header = () => {
         </div>
         <div className={`w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block `}>
           <div
-            className={`${openMenu ? 'h-[50vh] tablet:h-[60vh]': 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
+            className={`${openMenu ? 'h-[60vh] tablet:h-[55vh]': 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
           >
             <div className="flex flex-col gap-[10vw] relative">
-            <div className="flex flex-col gap-[2vw] pt-[25vw] ">
+            <div className="flex flex-col gap-[2vw] pt-[25vw] tablet:pt-[10vw] ">
+            <Link  href="/" className={`menu-link text-[1.2vw] group` } prefetch={false} onClick={closeMenuMobile}>
+                    <div className={`flex gap-2 items-center relative `}>
+                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease mobile:text-[6vw] tablet:text-[4vw]">
+                      {t('home')}
+                      </span>
+                    </div>
+                  </Link>
               {footerNav.map((item, index) => (
                 <Link
                   key={index}

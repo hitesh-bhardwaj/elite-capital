@@ -81,17 +81,17 @@ const BoardofDirectorsCopy = () => {
 
 const MobileSwiper = ({ members }) => {
   const swiperRef = useRef(null);
+  const [openedIndex, setOpenedIndex] = useState(null);
+  const { t } = useTranslation("about");
+
   const handleNext = () => {
-    if (swiperRef.current) {
-      swiperRef.current.slideNext();
-    }
+    swiperRef.current?.slideNext();
   };
 
   const handlePrev = () => {
-    if (swiperRef.current) {
-      swiperRef.current.slidePrev();
-    }
+    swiperRef.current?.slidePrev();
   };
+
   return (
     <Swiper
       navigation={true}
@@ -113,52 +113,80 @@ const MobileSwiper = ({ members }) => {
         },
       }}
     >
-      {members.map((item, index) => (
-        <SwiperSlide key={index}>
-          <div
-            className={`h-full flex gap-[5vw] fadeUp mobile:w-full transition-transform hover:scale-[1.02] tablet:w-[70vw] tablet:h-[180vw] w-full px-[5vw] py-[10vw] bg-[#BCBCBC] mobile:flex-col mobile:items-center mobile:h-full mobie:py-[4vw]  tablet:flex-col `}
-          >
-            <div className="h-[28vw] w-[22vw] mobile:w-[80vw] mobile:ml-[-10vw] mobile:h-[90vw] mobile:rounded-[3.5vw] overflow-hidden group transition-all duration-500 ease rounded-[2vw] tablet:w-[50vw] tablet:h-[50vw] rtl:mobile:ml-[10vw]">
-              <Image
-                src={item.img}
-                height={626}
-                width={535}
-                alt="team"
-                className="w-full h-full object-cover transition-all duration-500 ease "
-              />
-            </div>
-            <div className="flex flex-col gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%] mobile:w-full tablet:w-full">
-              <p
-                data-para-anim
-                className="text-[2.5vw] leading-[1.2] font-display mobile:text-[7.2vw] tablet:text-[5vw]"
-              >
-                {item.name}
-              </p>
+      {members.map((item, index) => {
+        const visibleCount = Math.ceil(item.features.length / 3);
+        const firstHalf = item.features.slice(0, visibleCount);
+        const secondHalf = item.features.slice(visibleCount);
+        const isOpen = openedIndex === index;
 
-              <p
-                data-para-anim
-                className="mobile:text-[4.8vw] tablet:text-[3vw] w-[30%] mobile:w-full tablet:w-full"
-              >
-                {item.des}
-              </p>
-              <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw] mobile:h-[180vw]  `}
-              >
-                {item.features.map((feature, i) => (
-                  <p
-                    key={i}
-                    className={`text-[1.3vw] space-y-[1vw] mobile:text-[4.1vw] tablet:text-[2.5vw] ${
-                      i === 0 ? "mt-[2vw]" : ""
-                    }`}
+        return (
+          <SwiperSlide key={index}>
+            <div className="h-full flex gap-[5vw] mobile:w-full transition-transform hover:scale-[1.02] tablet:w-[70vw] tablet:h-[180vw] w-full px-[5vw] py-[10vw] bg-[#BCBCBC] mobile:flex-col mobile:items-center mobile:h-full tablet:flex-col">
+              {/* Image */}
+              <div className="h-[28vw] w-[22vw] mobile:w-[80vw] mobile:ml-[-10vw] mobile:h-[90vw] overflow-hidden group transition-all duration-500 ease rounded-[2vw] tablet:w-[50vw] tablet:h-[50vw] rtl:mobile:ml-[10vw]">
+                <Image
+                  src={item.img}
+                  height={626}
+                  width={535}
+                  alt="team"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="flex flex-col gap-[0.5vw] py-[2vw] mobile:space-y-[2vw] w-[70%] mobile:w-full tablet:w-full">
+                <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[7.2vw] tablet:text-[5vw]">
+                  {item.name}
+                </p>
+                <p className="mobile:text-[4.8vw] tablet:text-[3vw] w-[30%] mobile:w-full tablet:w-full">
+                  {item.des}
+                </p>
+
+               
+                <div className="space-y-[1vw] pt-[1vw]">
+                  {firstHalf.map((feature, i) => (
+                    <p
+                      key={i}
+                      className="text-[1.3vw] tablet:text-[2.5vw]  mobile:text-[4.1vw]"
+                    >
+                      {feature}
+                    </p>
+                  ))}
+                </div>
+                {isOpen && (
+                  <div className="space-y-[1vw] pt-[1vw]">
+                    {secondHalf.map((feature, i) => (
+                      <p
+                        key={i}
+                        className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]  mobile:text-[4.1vw]"
+                      >
+                        {feature}
+                      </p>
+                    ))}
+                  </div>
+                )}
+                {secondHalf.length > 0 && (
+                  <div
+                    onClick={() =>
+                      setOpenedIndex(isOpen ? null : index)
+                    }
+                    className="text-[1.3vw] mt-[2vw] tablet:text-[2.5vw] font-normal cursor-pointer"
                   >
-                    {feature}
-                  </p>
-                ))}
+                     {openedIndex === index ? (
+      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(25%-1rem)] after:h-[1.5px]  mobile:text-[3.5vw] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
+        {t('readLess')}
+      </p>
+    ) : (
+      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(25%-1rem)] after:h-[1.5px]  mobile:text-[3.5vw] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
+        {t('readMore')}
+      </p>
+    )}
+                  </div>
+                )}
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        );
+      })}
       <div className="flex gap-2 mt-6 items-end justify-end pr-[3vw] rtl:flex-row-reverse rtl:justify-start rtl:pl-[3vw]">
         <PreviousButton onClick={handlePrev} />
         <NextButton onClick={handleNext} />
@@ -199,7 +227,6 @@ const TeamAccordion = ({ members}) => {
                 className="w-full h-full object-cover transition-all duration-500 ease group-hover:scale-[1.1]"
               />
             </div>
-
             <div className="flex flex-col gap-[0.5vw] py-[2vw] w-full tablet:w-full">
               <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]">
                 {item.name}
@@ -240,11 +267,11 @@ const TeamAccordion = ({ members}) => {
     className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal "
   >
     {openedIndex === index ? (
-      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
         {t('readLess')}
       </p>
     ) : (
-      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
         {t('readMore')}
       </p>
     )}

@@ -4,7 +4,7 @@
     "home":"HOME",
     "formHead":"Get in touch",
     "formAgreement":"Yes, I would like to receive communications from Elite Capital. *We will only use this information as described in our privacy policy.",
-    "footerCopy": "Copyright (c) 2025 All Rights Reserved. Elite Capital (DIFC) Limited",
+    "footerCopy": "Copyright (©) 2025 All Rights Reserved. Elite Capital (DIFC) Limited",
     "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
     "footerEmailText": "Enter Your Email",
     "footerEmailButton": "Subscribe",
@@ -39,5 +39,7 @@
             "text": "Cookie Policy",
             "link": "/cookie-policy"
         }
-    ]
+    ],
+    "errorSub":"This page does not exist.",
+    "errorCta":"Go back to Homepage"
 }

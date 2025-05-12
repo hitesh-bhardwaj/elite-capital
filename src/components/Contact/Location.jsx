@@ -63,43 +63,38 @@ const Location = () => {
                             className="mb-[3vw] w-[80%] content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                             dangerouslySetInnerHTML={{ __html: t('locationSub') }}
                         ></div> */}
-                        <div className="w-[80%] pb-[3vw]">
+                        <div className="w-[80%] pb-[3vw] mobile:w-full">
 
                         <div data-para-anim
-                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                            className=" w-full content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                            
                         >{t('address1')}</div>
                          <div data-para-anim
-                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                            className=" w-full content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                            
                         >{t('address2')}</div>
                          <div data-para-anim
-                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
-                           
+                            className=" w-full content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                         >{t('address3')}</div>
                          <div data-para-anim
-                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
-                           
+                            className=" w-full content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                         >{t('address4')}</div>
                          <div data-para-anim
-                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
-                           
+                            className=" w-full content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                         >{t('address5')}</div>
                          <div data-para-anim
-                            className=" w-full content mobile:w-[80%] mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
-                           
+                            className=" w-full content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
                         >{t('address6')}</div>
                     </div>
                     </div>
-                    
                     <div className="mt-[1vw] mobile:space-y-[4vw]">
                         <h2 data-title-anim className="heading-2 mb-[1.5vw] mobile:mb-[7vw] tablet:mb-[3vw]">{t('contactHead')}</h2>
                         <div className="flex items-center justify-start gap-[1vw] pb-[0.5vw] group cursor-pointer mobile:pb-0">
                             <div className="">
                                 <Image src="/icons/phone-icon.svg" height={35} width={35} alt="phone" className="fadein" />
                             </div>
-                            <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
-                                <p className="w-full content mobile:pl-[3vw] tablet:w-full fadein">{t('phone')}</p>
+                            <div dir="ltr" className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
+                                <p className="w-full content mobile:pl-[3vw] tablet:w-full fadein ">{t('phone')}</p>
                             </div>
                         </div>
                         <div className="flex items-center justify-start gap-[1vw] py-[0.5vw] group cursor-pointer">
@@ -111,7 +106,7 @@ const Location = () => {
                             </div>
                         </div>
                         <Link href={t('linkedin')}>
-                        <div className="flex items-center justify-start gap-[1.4vw] py-[0.5vw] group cursor-pointer mobile:py-[1.5vw] pl-[0.5vw]">
+                        <div className="flex items-center justify-start gap-[1.4vw] py-[0.5vw] group cursor-pointer mobile:py-[1.5vw] pl-[0.5vw] rtl:pr-[0.4vw]">
                             <div className="">
                                 <Image src="/icons/contact-linkedin.svg" height={24} width={24} alt="mail" className="fadein mobile:h-[7vw] mobile:w-[7vw] mobile:pl-[1.5vw]"  />
                             </div>

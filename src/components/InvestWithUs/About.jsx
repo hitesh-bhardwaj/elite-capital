@@ -47,9 +47,9 @@ const About = () => {
                         <Image src={yellowRectangle} height={52} width={77} alt="yellow-rectangle" className="blockAnim mobile:w-[10vw] mobile:h-[8vw]" />
                     </div>
 
-                    <div className="space-y-[2vw] w-[80%] mb-[3vw] pr-[3vw] pl-[10vw] text-black1 py-[3vw] mobile:w-[90%] mobile:text-[4.6vw] mobile:px-[5vw] tablet:w-full tablet:pl-[4vw] tablet:pr-[3vw]">
+                    <div className="space-y-[2vw] w-[80%] mb-[3vw] pr-[3vw] pl-[10vw] text-black1 py-[3vw] mobile:w-[98%] mobile:text-[4.6vw] mobile:px-[4vw] tablet:w-full tablet:pl-[4vw] tablet:pr-[3vw] ">
                         {aboutsub.map((item, index) => (
-                            <div className="content about-content text-justify mobile:leading-[1.6]" key={index}>
+                            <div className="content about-content  mobile:leading-[1.6]" key={index}>
                                 {item.text}
                             </div>
                         ))}

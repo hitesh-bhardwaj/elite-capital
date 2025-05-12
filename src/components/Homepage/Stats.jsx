@@ -12,7 +12,6 @@ const Stats = () => {
   const { t } = useTranslation("home");
   const statsContent = t('stats',{returnObjects:true});
   useEffect(() => {
-  
       const ctx = gsap.context(() => {
         const lineDraws = document.querySelectorAll(".vlineDraw");
         if(globalThis.innerWidth>1024){
@@ -145,7 +144,7 @@ const Stats = () => {
         <div className="flex text-white w-full px-[5vw] items-center justify-between gap-[1vw] mobile:flex-col mobile:items-start tablet:flex-wrap tablet:gap-y-[4vw]">
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col items-center gap-[2vw] mobile:flex-row  ">
-              <div className="counter mobile:w-[40%] mobile:flex mobile:justify-center">
+              <div dir="ltr" className="counter mobile:w-[40%] mobile:flex mobile:justify-cente rtl:mobile:w-[50%]">
                 <div className="counter-1 digit font-semibold mobile:text-[12vw] tablet:text-[7vw]">
                   <div className="num">0</div>
                   <div className="num">1</div>
@@ -155,7 +154,7 @@ const Stats = () => {
                   <div className="num">5</div>
                   <div className="num">6</div>
                   <div className="num">7</div>
-                  <div className="num">8</div>
+                  <div className="num rtl:leading-[1.5] ">8</div>
                 </div>
                 <div className="counter-2 digit font-semibold mobile:text-[12vw] tablet:text-[7vw]">
                   <div className="num">0</div>
@@ -168,22 +167,22 @@ const Stats = () => {
                   <div className="num">7</div>
                   <div className="num">8</div>
                   <div className="num">9</div>
-                  <div className="num">0</div>
+                  <div className="num rtl:leading-[1.5]">0</div>
                 </div>
                 <div className="counter-3 translate-y-[100%] digit font-semibold mobile:text-[12vw] tablet:text-[7vw] ">
-                  <div className="num text-[3vw] mobile:text-[10vw]">+</div>
+                  <div className="num text-[3vw] mobile:text-[10vw] rtl:leading-[1.5]]">+</div>
                 </div>
               </div>
-              <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[50%]">{statsContent[0].text}</p>
+              <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[50%] rtl:mobile:w-[80%] ">{statsContent[0].text}</p>
             </div>
           </div>
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
 
           <div className="flex flex-col gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row mobile:gap-[3vw]">
-            <div className="countnew mobile:w-[40%] mobile:flex mobile:justify-center">
+            <div dir="ltr" className="countnew mobile:w-[40%] mobile:flex mobile:justify-center">
               <div className="countnew-1 digit font-semibold translate-y-[100px] mobile:text-[12vw] tablet:text-[7vw]">
-                <div className="num">$</div>
+                <div className="num rtl:leading-[1.5]">$</div>
               </div>
               <div className="countnew-2 digit font-semibold mobile:text-[12vw] tablet:text-[7vw]">
                 <div className="num">0</div>
@@ -191,7 +190,7 @@ const Stats = () => {
                 <div className="num">2</div>
                 <div className="num">3</div>
                 <div className="num">4</div>
-                <div className="num">5</div>
+                <div className="num rtl:leading-[1.5]">5</div>
               </div>
               <div className="countnew-3 digit font-semibold mobile:text-[12vw] tablet:text-[7vw]">
                 <div className="num">0</div>
@@ -204,11 +203,11 @@ const Stats = () => {
                 <div className="num">7</div>
                 <div className="num">8</div>
                 <div className="num">9</div>
-                <div className="num">0</div>
+                <div className="num rtl:leading-[1.5]">0</div>
               </div>
               <div className="countnew-4 digit font-semibold mobile:text-[12vw] tablet:text-[7vw]">
                 <div className="num ">A</div>
-                <div className="num ">B</div>
+                <div className="num rtl:leading-[1.5]">B</div>
               </div>
             </div>
             <p data-para-anim className="relative content z-[2] text-center  mobile:text-left mobile:w-[60%] ">{statsContent[1].text}</p>
@@ -218,13 +217,13 @@ const Stats = () => {
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw tablet:hidden" />
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
-            <div className="count mobile:w-[40%] mobile:text-[12vw] tablet:text-[7vw] mobile:flex mobile:justify-center">
+            <div dir="ltr" className="count mobile:w-[40%] mobile:text-[12vw] tablet:text-[7vw] mobile:flex mobile:justify-center">
               <div className="count-2 digit font-semibold">
                 <div className="num">0</div>
                 <div className="num">1</div>
                 <div className="num">2</div>
                 <div className="num">3</div>
-                <div className="num">4</div>
+                <div className="num rtl:leading-[1.5]">4</div>
               </div>
               <div className="count-3 digit font-semibold">
                 <div className="num">0</div>
@@ -232,11 +231,11 @@ const Stats = () => {
                 <div className="num">2</div>
                 <div className="num">3</div>
                 <div className="num">4</div>
-                <div className="num">5</div>
+                <div className="num rtl:leading-[1.5]">5</div>
                
               </div>
               <div className="count-4 digit font-semibold translate-y-[100px]">
-                <div className="num text-[3vw] mobile:text-[10vw]">+</div>
+                <div className="num text-[3vw] mobile:text-[10vw] rtl:imac:leading-[2]">+</div>
               </div>
             </div>
             <p data-para-anim className="relative content z-[2] text-center mobile:text-left  mobile:w-[60%]">{statsContent[2].text}</p>
@@ -247,26 +246,26 @@ const Stats = () => {
           <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw" />
           <div className="flex items-end gap-[8px] mobile:flex-col mobile:items-start mobile:gap-0 w-[23%] mobile:w-full tablet:w-[48%]">
             <div className="flex flex-col gap-[2vw] items-center mobile:flex-row">
-            <div className="countlast mobile:text-[12vw] mobile:w-[40%] tablet:text-[7vw] mobile:flex mobile:justify-center">
+            <div dir="ltr" className="countlast mobile:text-[12vw] mobile:w-[40%] tablet:text-[7vw] mobile:flex mobile:justify-center ">
               <div className="countlast-1 digit font-semibold translate-y-[100px]">
-                <div className="num">$</div>
+                <div className="num rtl:leading-[1.5]">$</div>
               </div>
               <div className="countlast-2 digit font-semibold">
                 <div className="num">0</div>
-                <div className="num">1</div>
+                <div className="num text-center mobile:pl-[1.2vw] rtl:leading-[1.5]">1</div>
               </div>
               <div className="countlast-3 digit font-semibold">
                 <div className="num">A</div>
-                <div className="num">B</div>
+                <div className="num rtl:leading-[1.5]">B</div>
               </div>
               <div className="countlast-4 digit font-semibold translate-y-[100px]">
-                <div className="num text-[3vw] mobile:text-[10vw]">+</div>
+                <div className="num text-[3vw] mobile:text-[10vw] rtl:imac:leading-[2]">+</div>
               </div>
             </div>
             <p data-para-anim className="relative content z-[2] text-center mobile:text-left mobile:w-[60%] ">{statsContent[3].text}</p>
 
             </div>
-          <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw hidden mobile:block" />
+          {/* <div className="w-[1px] h-[22vw] bg-white relative z-[2] mobile:h-[1.5px] mobile:w-full mobile:my-[4vw] vlineDraw hidden mobile:block mobile:last-hidden" /> */}
 
           </div>
         </div>

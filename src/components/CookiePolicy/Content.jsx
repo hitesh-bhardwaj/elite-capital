@@ -32,7 +32,7 @@ const Content = () => {
     return (
         <section className='w-screen h-full py-[8%] px-[5vw] overflow-hidden dark' id='cookie-content'>
             <div className=''>
-                <div className='content mobile:py-[7vw] mobile:text-justify' >{t('heroSub')}</div>
+                <div className='content mobile:py-[7vw] ' >{t('heroSub')}</div>
                 <span className='bg-black1 w-full h-[1px] block mb-[5vw] mt-[8vw] lineDraw mobile:my-[10vw]  tablet:my-[5vw]' />
                 <div className='space-y-[4vw] w-full'>
                     {content.map((item, index) => (

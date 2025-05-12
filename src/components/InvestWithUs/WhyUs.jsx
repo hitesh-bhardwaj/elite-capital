@@ -28,6 +28,11 @@ const WhyUS = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1022);
     };
+    if(globalThis.innerWidth<=1021){
+      setCurrentIndex(0);
+    }else{
+setCurrentIndex(null);
+    }
 
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -64,7 +69,7 @@ const WhyUS = () => {
               <div
                 // Main Card
                 key={index}
-                className="w-[17vw] h-[22vw] relative group duration-500 transition-transform mobile:w-[43vw] mobile:h-[60vw] tablet:!w-[30vw] tablet:h-[40vw]"
+                className="w-[17vw] h-[22vw] relative group duration-500 transition-transform mobile:w-[70vw] mobile:h-[60vw] tablet:!w-[50vw] tablet:h-[40vw]"
                 style={{
                   zIndex: index === currentIndex && active ? "20" : "0",
                   transform:
@@ -76,7 +81,7 @@ const WhyUS = () => {
                 }}
               >
                 <div
-                  className="w-full h-full overflow-hidden relative cursor-pointer"
+                  className="w-full h-full overflow-hidden relative cursor-pointer "
                   onClick={() => {
                     setActive(true);
                     setCurrentIndex(index);
@@ -84,13 +89,16 @@ const WhyUS = () => {
                   }}
                 >
                   <Image
-                    className={`w-full h-full object-cover ${currentIndex == index ? "gray-scale-0" : "grayscale"}  `}
+                    className={`w-full h-full object-cover ${currentIndex == index ? "gray-scale-0" : "grayscale"} mobile:!gray-scale-0 `}
                     placeholder="blur"
                     src={images[index]}
                     alt="Image"
                   />
+                  <div className={`mobile:text-[5vw] tablet:text-[2.5vw] hidden z-[10] text-white absolute bottom-0 left-0 w-full h-full bg-black/50 mobile:flex mobile:items-center mobile:justify-center tablet:flex tablet:items-center tablet:justify-center ${currentIndex == index ? "bg-transparent" : ""}`}><p className={`p-[2vw] ${currentIndex == index ? "hidden" : ""}`}>
+                    {t('click')}</p></div>
+                  
                   <div
-                    className={`absolute bg-[#F2F2E9] top-0 left-0 bottom-0 right-0 opacity-0  z-[5] transition-all duration-500 ease py-[1vw] flex flex-col justify-between h-full pr-[1.5vw] px-[1vw] w-full mobile:hidden tablet:hidden ${active ? "group-hover:opacity-0" : "group-hover:opacity-100"}`}
+                    className={`absolute bg-[#F2F2E9] top-0 left-0 bottom-0 right-0 opacity-0  z-[5] transition-all duration-500 ease py-[1vw] flex flex-col justify-between h-full pr-[1.5vw] px-[1vw] w-full   mobile:hidden tablet:hidden ${active ? "group-hover:opacity-0" : "group-hover:opacity-100"}`}
                   >
                     <div className="flex justify-between">
                       <p>{item.num}</p>
@@ -104,7 +112,7 @@ const WhyUS = () => {
                         />
                       </div>
                     </div>
-                    <p className="text-[2.2vw] !leading-[1.2] !font-display text-black1 transform -translate-y-[80px] opacity-0 transition-all duration-700 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                    <p className="text-[2.2vw] !leading-[1.2] text-black1 transform -translate-y-[80px] opacity-0 transition-all duration-700 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 ltr:font-display ">
                       {item.title}
                     </p>
                   </div>
@@ -118,7 +126,7 @@ const WhyUS = () => {
                 >
                   <div className="w-full h-full relative flex flex-col justify-end gap-[1vw] p-[1.5vw] text-white">
                     <p>{item.num}</p>
-                    <p className="text-[2.2vw] !leading-[1.2] !font-display">
+                    <p className="text-[2.2vw] !leading-[1.2] font-body ltr:font-display">
                       {item.title}
                     </p>
                     <p>{item.para}</p>
@@ -184,7 +192,6 @@ const WhyUS = () => {
 
           {/* Prev Button */}
           <div
-           
             onMouseMove={(e) => handleMouseMove(e)}
             className="relative w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-black mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%] rtl:mobile:left-[65%] rtl:tablet:left-[80%]"
             onClick={() => {
