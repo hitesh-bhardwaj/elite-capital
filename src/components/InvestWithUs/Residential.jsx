@@ -21,8 +21,8 @@ const Residential = () => {
                     <div className="flex justify-between mobile:block mobile:space-y-[15vw] tablet:flex-col tablet:flex-wrap tablet:gap-y-[8vw]">
                       {features.map((item,index)=>(
                         <div className="flex flex-col gap-[1vw] w-[32%] mobile:w-full tablet:w-[65%]  mobile:gap-[3vw] tablet:gap-[1vw]" key={index}>
-                            <div className="group fadeup transition-all duration-500 ease overflow-hidden mobile:mb-[4vw]">
-                            <Image src={images[index]} alt="factors" height={228} width={556} className=" group-hover:scale-[1.1] transition-all duration-500 ease "/>
+                            <div className="group fadeup transition-all duration-500 ease overflow-hidden mobile:mb-[4vw] tablet:mb-[2vw]">
+                            <Image src={images[index]} alt="factors" height={228} width={556} className=" group-hover:scale-[1.1] transition-all duration-500 ease  w-full h-full"/>
                             </div>
                           <h3 data-para-anim className="heading-2  leading-[1.2] mobile:text-[7vw] tablet:text-[5.5vw]">{item.title}</h3>
                           <p data-para-anim className="text-[1.25vw] mobile:text-[4vw] tablet:text-[2.5vw]">{item.para}</p>

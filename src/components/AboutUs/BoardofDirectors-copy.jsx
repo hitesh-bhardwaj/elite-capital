@@ -169,7 +169,7 @@ const MobileSwiper = ({ members }) => {
                     onClick={() =>
                       setOpenedIndex(isOpen ? null : index)
                     }
-                    className="text-[1.3vw] mt-[2vw] tablet:text-[2.5vw] font-normal cursor-pointer"
+                    className="text-[1.3vw] mt-[2vw] tablet:text-[2.5vw] font-normal cursor-pointer mobile:pt-[5vw]"
                   >
                      {openedIndex === index ? (
       <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(25%-1rem)] after:h-[1.5px]  mobile:text-[3.5vw] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(25%+1rem)] rtl:after:right-0">

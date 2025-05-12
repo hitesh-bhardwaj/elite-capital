@@ -24,11 +24,11 @@ const LanguageButton = ({ className = "" }) => {
   const { locale, asPath } = useRouter();
 
   return (
-    <div className={`text-white flex items-center gap-x-2 text-[1.2vw] tablet:text-[4vw] mobile:text-[5vw] ${className}`}>
-      <a className={`${locale === 'en' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[5vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={asPath} locale="en">
+    <div className={`text-white flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
+      <a className={`${locale === 'en' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={asPath} locale="en">
         EN
       </a>
-      <span className={`bg-white w-[1px] block h-[20px] mobile:bg-black tablet:bg-black tablet:h-[5vw]`}></span>
+      <span className={`bg-white w-[1px] block h-[1.5vw] mobile:bg-black tablet:bg-black tablet:h-[5vw]`}></span>
       <a className={`${locale === 'ar' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={`ar${asPath}`} locale="ar">
         AR
       </a>

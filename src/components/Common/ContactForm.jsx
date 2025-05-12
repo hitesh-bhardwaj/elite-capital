@@ -84,13 +84,13 @@ export default function ContactForm() {
   return (
     <section className="mobile:pt-0" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
-        <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full">
+        <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full mobile:px-[3vw] mobile:py-[5vw]">
           <h3 className="heading-2 ltr:font-body">{t("formHead")}</h3>
           <Form {...form}>
             <form
               autoComplete="off"
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-[2vw] mobile:space-y-[10vw] tablet:space-y-[5vw]"
+              className="space-y-[2vw] mobile:space-y-[10vw] tablet:space-y-[5vw]  mobile:pt-[5vw]"
             >
               <FormField
                 control={form.control}

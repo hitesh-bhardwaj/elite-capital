@@ -88,20 +88,20 @@ const Stats = () => {
   }
   return (
     <>
-      <section className="relative bg-[#F4F4F4] h-[40vw] overflow-hidden  mobile:pb-[10%] tablet:py-[7%] mobile:h-full dark tablet:h-[60vw]" id="stats">
-        <div className="flex items-center justify-between h-full mobile:flex-col">
-          <div className="w-1/2 h-full overflow-hidden mobile:w-full mobile:h-[100vw] tablet:h-[60vw]">
+      <section className="relative bg-[#F4F4F4] h-[40vw] overflow-hidden  mobile:pb-[10%] tablet:pb-[7%] mobile:h-full dark tablet:h-full" id="stats">
+        <div className="flex items-center justify-between h-full mobile:flex-col tablet:flex-col">
+          <div className="w-1/2  h-full overflow-hidden mobile:w-full mobile:h-[100vw] tablet:h-[70vw] tablet:w-full">
             <Image
               src={statsImg}
               height={1280}
               width={929}
               alt="stats-img"
-              className="h-full stats-img"
+              className="h-full stats-img w-full"
             />
           </div>
 
-          <div className="flex pl-[3vw] rtl:pl-[7vw]  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw]">
-            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
+          <div className="flex pl-[3vw]  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw] tablet:h-[60vw] tablet:w-[80%] ">
+            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
               <div className="flex w-full items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center ">
                 <div dir="ltr" className="mobile:hidden tablet:hidden" >
                   <div className="counter !text-[#111111] mobile:text-[8.5vw] ">
@@ -131,14 +131,14 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] text-center mx-auto  mobile:text-left mobile:w-[60%] tablet:w-full"
+                className="content w-[75%] mobile:!text-[4.7vw] text-center mx-auto  mobile:text-left mobile:w-[60%] tablet:w-full imac:pt-[1.5vw]"
               >
                 {t("stats1")}
               </p>
               
             </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black"/>
-            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
+            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
                 <div dir="ltr" className="countnew !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
                   <div className="countnew-1 digit font-semibold ">
@@ -171,14 +171,14 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] mx-auto  text-center mobile:text-left mobile:w-[60%] tablet:w-full"
+                className="content w-[75%] mobile:!text-[4.7vw] mx-auto  text-center mobile:text-left mobile:w-[60%] tablet:w-full imac:pt-[1.5vw]"
               >
                 {t("stats2")}
               </p>
             </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black"/>
 
-            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
+            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
                 <div dir="ltr" className="count !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
                   <div className="count-1 digit font-semibold">
@@ -207,7 +207,7 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw]  mx-auto text-center mobile:text-left mobile:w-[60%]  tablet:w-full "
+                className="content w-[75%] mobile:!text-[4.7vw]  mx-auto text-center mobile:text-left mobile:w-[60%]  tablet:w-full imac:pt-[1.5vw]"
               >
                 {t("stats3")}
               </p>
@@ -248,7 +248,7 @@ const Stats = () => {
               </div>
               <p
                 data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] mx-auto text-center mobile:text-left mobile:w-[60%] tablet:w-full"
+                className="content w-[75%] mobile:!text-[4.7vw] mx-auto text-center mobile:text-left mobile:w-[60%] tablet:w-full imac:pt-[1.5vw]"
               >
                 {t("stats4")}
               </p>
@@ -256,7 +256,7 @@ const Stats = () => {
             <div className="w-full h-[1px] hidden mobile:block bg-black"/>
 
           </div>
-          <div className="w-[10%] flex items-end justify-end pr-[3vw] rtl:pl-[3vw] rtl:pr-0 h-full pb-[3vw] mobile:hidden">
+          <div className="w-[10%] flex items-end justify-end pr-[3vw] rtl:pl-[3vw] rtl:pr-0 h-full pb-[3vw] mobile:hidden tablet:hidden">
             <Image
               src={"/icons/yellow-rectangle-mask.svg"}
               height={32}
@@ -266,8 +266,8 @@ const Stats = () => {
             />
           </div>
         </div>
-        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  rtl:right-[46%] " />
-        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[70%] rtl:right-[69%]  mobile:hidden tablet:h-[85%]" />
+        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  rtl:right-[46%] tablet:left-[10%] tablet:top-[75%] rtl:tablet:right-[10%] rtl:tablet:top-[73%] tablet:w-[80%] " />
+        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[70%] rtl:right-[69%]   mobile:hidden tablet:h-[40%] tablet:top-[55%] rtl:tablet:right-[50%]  tablet:left-[52%]" />
       </section>
     </>
   );
