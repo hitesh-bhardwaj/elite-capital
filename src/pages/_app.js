@@ -71,17 +71,7 @@ const App = ({ Component, pageProps }) => {
       setShowPreloader(false);
     }
   }, []);
-  useEffect(() => {
-    const handleResize = () => {
-      window.location.reload();
-    };
   
-    window.addEventListener('resize', handleResize);
-  
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <>
