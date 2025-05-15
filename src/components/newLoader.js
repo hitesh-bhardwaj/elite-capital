@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import {useLenis} from "lenis/react"
 
-
-
 const Loader2 = () => {
   const loaderRef = useRef(null);
   const path1Ref = useRef(null);

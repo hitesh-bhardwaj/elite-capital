@@ -70,7 +70,8 @@ const config = {
 			lineHeight: {
 				'1.1': '1.1',
 				'1.15': '1.15',
-				'1.2': '1.2'
+				'1.2': '1.2',
+				'1.5': '1.5',
 			},
 			container: {
 				center: true,

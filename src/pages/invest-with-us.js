@@ -16,13 +16,12 @@ import { WebpageJsonLd } from "@/lib/json-ld";
 
 
 export default function Invest() {
-   fadeUp()
-   paraAnim()
-   titleAnim()
-   fadeIn()
-  //  blockAnim()
-   const { t } = useTranslation('invest');
-   const metadata = {
+  fadeUp()
+  paraAnim()
+  titleAnim()
+  fadeIn()
+  const { t } = useTranslation('invest');
+  const metadata = {
     title: "Invest With Us | Elite Capital ",
     metaDescription: "Partner with Elite Capital to invest in DFSA-authorised, community-focused real estate developments in Ontario, offering superior risk-adjusted returns.​​",
     path: "invest-with-us",
@@ -30,21 +29,21 @@ export default function Invest() {
     date_published: "2025-04-29T00:00",
     date_modified: "2025-04-29T00:00",
   };
-   
+
   return (
     <>
-    <Metadata metadata={metadata}/>
-    <WebpageJsonLd metadata={metadata}/>
-    <Layout>
-    <Hero img={heroBg} translation={'invest'} heading={t('hero')} nextSectionId={"about"}/>
-    <About/>
-    <Stats/>
-    <WhyUs/>
-    <Residential/>
-    <Factors/>
-   <Portfolio/>
-   <Contact translation={'invest'} heading={t('contactHead')} para={t('contactSub')}/>
-   </Layout>
+      <Metadata metadata={metadata} />
+      <WebpageJsonLd metadata={metadata} />
+      <Layout>
+        <Hero img={heroBg} translation={'invest'} heading={t('hero')} nextSectionId={"about"} />
+        <About />
+        <Stats />
+        <WhyUs />
+        <Residential />
+        <Factors />
+        <Portfolio />
+        <Contact translation={'invest'} heading={t('contactHead')} para={t('contactSub')} />
+      </Layout>
     </>
   );
 }

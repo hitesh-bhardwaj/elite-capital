@@ -17,7 +17,7 @@ const barlow = Barlow({
   subsets: ["latin"],
   variable: '--font-body',
   display: 'swap',
-  weight: ["300", "400", "500", "600"]
+  weight: ["300", "400", "500", "600"],
 })
 
 const readex_pro = Readex_Pro({
@@ -45,7 +45,7 @@ const App = ({ Component, pageProps }) => {
       swiper.setAttribute("dir", dir);
     });
   }, [locale]);
-  
+
   const pageVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -72,7 +72,6 @@ const App = ({ Component, pageProps }) => {
     }
   }, []);
   
-
   return (
     <>
       <LocalBusiness />

@@ -9,25 +9,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Stats = () => {
   const { t } = useTranslation("invest");
-  useEffect(()=>{
-    const ctx = gsap.context(()=>{
-      gsap.from(".stats-img", 
-         {
-            scale:1.3,
-            ease:"none",
-            scrollTrigger:{
-                trigger:"#stats",
-                start:"top bottom",
-                end:"bottom top",
-                scrub:true
-            }
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".stats-img",
+        {
+          scale: 1.3,
+          ease: "none",
+          scrollTrigger: {
+            trigger: "#stats",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
         }
       )
     })
-    return()=>ctx.revert()
+    return () => ctx.revert()
+  }, [])
 
-},[])
   const createTimeline = (triggerClass, countClasses, start, end) => {
     useEffect(() => {
       const tl = gsap.timeline({
@@ -57,14 +56,14 @@ const Stats = () => {
       { selector: ".counter-2", top: "-521px", delay: -1.3 },
       { selector: ".counter-1", top: "-420px", delay: -1.3 },
     ];
-  
+
     const countClasses = [
       { selector: ".count-1", top: "-210px", delay: -0.2 },
       { selector: ".count-2", top: "-617px", delay: -1.3 },
       { selector: ".count-4", top: "-127px", delay: -1.0 },
       { selector: ".count-3", top: "-96px", delay: -1.3 },
     ];
-  
+
     const countNewClasses = [
       { selector: ".countnew-1", top: "-110px", delay: -0.2 },
       { selector: ".countnew-2", top: "-1028px", delay: -1.0 },
@@ -84,7 +83,7 @@ const Stats = () => {
     createTimeline(".count", countNewClasses, "top 90%", null);
     createTimeline(".count", countClasses, "top 90%", null);
   } else {
-   
+
   }
   return (
     <>
@@ -126,8 +125,8 @@ const Stats = () => {
                   </div>
                 </div>
                 <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                <p data-para-anim>45+</p> </div>
-               
+                  <p data-para-anim>45+</p> </div>
+
               </div>
               <p
                 data-para-anim
@@ -135,9 +134,9 @@ const Stats = () => {
               >
                 {t("stats1")}
               </p>
-              
+
             </div>
-            <div className="w-full h-[1px] hidden mobile:block bg-black"/>
+            <div className="w-full h-[1px] hidden mobile:block bg-black" />
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
                 <div dir="ltr" className="countnew !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
@@ -166,8 +165,8 @@ const Stats = () => {
                   </div>
                 </div>
                 <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                <p data-para-anim>10K+</p> </div>
-              
+                  <p data-para-anim>10K+</p> </div>
+
               </div>
               <p
                 data-para-anim
@@ -176,7 +175,7 @@ const Stats = () => {
                 {t("stats2")}
               </p>
             </div>
-            <div className="w-full h-[1px] hidden mobile:block bg-black"/>
+            <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
@@ -203,7 +202,7 @@ const Stats = () => {
                   </div>
                 </div>
                 <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                <p data-para-anim>26M+</p> </div>
+                  <p data-para-anim>26M+</p> </div>
               </div>
               <p
                 data-para-anim
@@ -212,7 +211,7 @@ const Stats = () => {
                 {t("stats3")}
               </p>
             </div>
-            <div className="w-full h-[1px] hidden mobile:block bg-black"/>
+            <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
             <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
               <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center">
@@ -244,7 +243,7 @@ const Stats = () => {
                   </div>
                 </div>
                 <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                <p data-para-anim>$1.5B+</p> </div>
+                  <p data-para-anim>$1.5B+</p> </div>
               </div>
               <p
                 data-para-anim
@@ -253,7 +252,7 @@ const Stats = () => {
                 {t("stats4")}
               </p>
             </div>
-            <div className="w-full h-[1px] hidden mobile:block bg-black"/>
+            <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
           </div>
           <div className="w-[10%] flex items-end justify-end pr-[3vw] rtl:pl-[3vw] rtl:pr-0 h-full pb-[3vw] mobile:hidden tablet:hidden">

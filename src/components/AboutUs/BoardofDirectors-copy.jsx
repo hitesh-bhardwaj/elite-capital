@@ -15,9 +15,6 @@ import {
 
 const BoardofDirectorsCopy = () => {
   const { t } = useTranslation("about");
-
-  const [openedIndexinvestment, setOpenedIndexinvestment] = useState(null);
-  const [openedIndexadviser, setOpenedIndexadviser] = useState(null);
   const boardMembers = t("boardMembers", { returnObjects: true });
   const adviserMembers = t("adviserMembers", { returnObjects: true });
   const investmentMembers = t("investmentMembers", { returnObjects: true });
@@ -39,7 +36,7 @@ const BoardofDirectorsCopy = () => {
       <section className="w-screen h-full bg-[#ffffff]  pb-[5vw] mobile:overflow-hidden mobile:space-y-[8vw] tablet:pb-[7%] pt-[7vw]">
         <div className=" mobile:space-y-[5vw] ">
           <h2
-           
+
             className="text-[4.6vw] font-display mb-[2vw] mobile:w-[90%] mobile:text-[12.5vw] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-[5vw] pl-[5vw] mobile:mb-[7vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub")}
@@ -52,7 +49,7 @@ const BoardofDirectorsCopy = () => {
 
         <div className=" mobile:space-y-[5vw] pt-[5vw]">
           <h2
-           
+
             className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-[5vw] pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub1")}
@@ -64,7 +61,7 @@ const BoardofDirectorsCopy = () => {
         </div>
         <div className="pt-[5vw] mobile:space-y-[5vw]">
           <h2
-           
+
             className="text-[4.6vw] font-display mb-[2vw]  mobile:text-[12.5vw] mobile:w-[70%] mobile:leading-[1.2] tablet:text-[7vw] tablet:mb-[5vw] pl-[5vw] rtl:pr-[4.5vw]"
           >
             {t("teamSub2")}
@@ -141,7 +138,7 @@ const MobileSwiper = ({ members }) => {
                   {item.des}
                 </p>
 
-               
+
                 <div className="space-y-[1vw] pt-[1vw]">
                   {firstHalf.map((feature, i) => (
                     <p
@@ -171,15 +168,15 @@ const MobileSwiper = ({ members }) => {
                     }
                     className="text-[1.3vw] mt-[2vw] tablet:text-[2.5vw] font-normal cursor-pointer mobile:pt-[5vw]"
                   >
-                     {openedIndex === index ? (
-      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(25%-1rem)] after:h-[1.5px]  mobile:text-[3.5vw] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(25%+1rem)] rtl:after:right-0">
-        {t('readLess')}
-      </p>
-    ) : (
-      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(25%-1rem)] after:h-[1.5px]  mobile:text-[3.5vw] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(25%+1rem)] rtl:after:right-0">
-        {t('readMore')}
-      </p>
-    )}
+                    {openedIndex === index ? (
+                      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(25%-1rem)] after:h-[1.5px]  mobile:text-[3.5vw] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(25%+1rem)] rtl:after:right-0">
+                        {t('readLess')}
+                      </p>
+                    ) : (
+                      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(25%-1rem)] after:h-[1.5px]  mobile:text-[3.5vw] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(25%+1rem)] rtl:after:right-0">
+                        {t('readMore')}
+                      </p>
+                    )}
                   </div>
                 )}
               </div>
@@ -195,10 +192,10 @@ const MobileSwiper = ({ members }) => {
   );
 };
 
-const TeamAccordion = ({ members}) => {
+const TeamAccordion = ({ members }) => {
   const [openedIndex, setOpenedIndex] = useState(null);
   const { t } = useTranslation("about");
-  // const lastIndex = members.length - 1;
+
   return (
     <Accordion
       type="single"
@@ -214,9 +211,8 @@ const TeamAccordion = ({ members}) => {
           <AccordionItem
             key={index}
             value={`item-${index}`}
-            className={`w-full flex gap-[5vw] transition-transform px-[5vw] py-[2vw] tablet:flex-col tablet:pt-[5vw] ${
-              index % 2 === 0 ? "bg-[#BCBCBC]" : ""
-            }`}
+            className={`w-full flex gap-[5vw] transition-transform px-[5vw] py-[2vw] tablet:flex-col tablet:pt-[5vw] ${index % 2 === 0 ? "bg-[#BCBCBC]" : ""
+              }`}
           >
             <div className="h-[28vw] w-[22vw] rounded-[1.2vw] overflow-hidden group transition-all duration-500 ease tablet:h-[40vw] tablet:w-[30vw]">
               <Image
@@ -227,11 +223,10 @@ const TeamAccordion = ({ members}) => {
                 className="w-full h-full object-cover transition-all duration-500 ease group-hover:scale-[1.1]"
               />
             </div>
-            <div className="flex flex-col gap-[0.5vw] py-[2vw] w-full tablet:w-full">
+            <div className="flex flex-col gap-[0.5vw] rtl:gap-[1vw] py-[2vw] w-[60%] mobile:w-full tablet:w-full">
               <p className="text-[2.5vw] leading-[1.2] font-display mobile:text-[8vw] tablet:text-[5vw]">
                 {item.name}
               </p>
-
               <p className="mobile:text-[4.6vw] tablet:text-[3vw] w-full leading-[1.2] tablet:w-full">
                 {item.des}
               </p>
@@ -259,24 +254,24 @@ const TeamAccordion = ({ members}) => {
               </AccordionContent>
 
               {secondHalf.length > 0 && (
-  <AccordionTrigger
-    hide={true}
-    onClick={() => {
-      setOpenedIndex((prev) => (prev === index ? null : index));
-    }}
-    className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal "
-  >
-    {openedIndex === index ? (
-      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
-        {t('readLess')}
-      </p>
-    ) : (
-      <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
-        {t('readMore')}
-      </p>
-    )}
-  </AccordionTrigger>
-)}
+                <AccordionTrigger
+                  hide={true}
+                  onClick={() => {
+                    setOpenedIndex((prev) => (prev === index ? null : index));
+                  }}
+                  className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal "
+                >
+                  {openedIndex === index ? (
+                    <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
+                      {t('readLess')}
+                    </p>
+                  ) : (
+                    <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
+                      {t('readMore')}
+                    </p>
+                  )}
+                </AccordionTrigger>
+              )}
             </div>
           </AccordionItem>
         );

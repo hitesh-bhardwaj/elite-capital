@@ -4,7 +4,6 @@ import Advantage from "@/components/Homepage/Advantage";
 import Assets from "@/components/Homepage/Assets";
 import Diversify from "@/components/Homepage/Diversify";
 import Portfolio from "@/components/Homepage/Portfolio";
-import Stats from "@/components/Homepage/Stats";
 import Values from "@/components/Homepage/Values";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
@@ -14,6 +13,7 @@ import Layout from "@/components/Common/Layout";
 import Hero from "@/components/Homepage/Hero";
 import Metadata from "@/components/Metadata";
 import { WebpageJsonLd } from "@/lib/json-ld";
+import Counter from "@/components/Homepage/Counter";
 
 export default function Home() {
 
@@ -41,7 +41,7 @@ export default function Home() {
       <Layout>
         <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
         <About />
-        <Stats />
+        <Counter />
         <Values />
         <Advantage />
         <Diversify />

@@ -70,7 +70,6 @@ const Footer = () => {
                       <span className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.5vw]">{item.text}</span>
                     </div>
                   </Link>
-                  <span className="h-1 w-1 bg-white rounded-full block last:hidden mobile:hidden" />
                 </React.Fragment>
               ))}
             </div>

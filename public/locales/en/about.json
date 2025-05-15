@@ -139,18 +139,18 @@
     "adviserMembers": [
         {
             "name": "Khabib Nurmagomedov",
-            "des": "Ambassador, Elite Capital",
+            "des": "Ambassador",
             "img": "/assets/images/about/khabib.png",
             "role": [
                 "Board of Directors"
             ],
             "features": [
-                "Khabib Nurmagomedov is a globally recognized entrepreneur and retired undefeated UFC Champion, widely regarded as one of the greatest fighters in MMA history. As an Ambassador for Elite Capital, Khabib leverages his international profile and network to drive investment opportunities and business development. Since retiring from professional sports, he has founded Eagle Fighting Championship (EFC) and invested in a diverse portfolio spanning fitness (FITRO), nutrition, hospitality (Papakha Restaurants and Cafes), and consumer products (M-PWR energy drinks). His strategic partnership with Wahed Invest underscores his commitment to ethical and inclusive finance, particularly in Muslim communities. Khabib’s ability to connect with global investors and communities brings tremendous value to Elite Capital’s growth trajectory."
+                "Khabib Nurmagomedov is a globally recognized entrepreneur and retired undefeated UFC Champion, widely regarded as one of the greatest fighters in MMA history. As an Ambassador for Elite Capital, Khabib leverages his international profile and network to drive investment opportunities and business development. Since retiring from professional sports he has founded Eagle Fighting Championship (EFC) and invested in a diverse portfolio spanning fitness (FITRO), nutrition, hospitality (Papakha Restaurants and Cafes) and consumer products (M-PWR energy drinks). His strategic partnership with Wahed Invest underscores his commitment to ethical and inclusive finance, particularly in Muslim communities. Khabib’s ability to connect with global investors and communities brings tremendous value to Elite Capital’s growth trajectory."
             ]
         },
         {
             "name": "Islam Makhachev",
-            "des": "Ambassador, Elite Capital",
+            "des": "Ambassador",
             "img": "/assets/images/about/icon.png",
             "role": [
                 "Investment Committee"
@@ -163,28 +163,28 @@
     "teamSub2": "Investment Committee",
     "investmentMembers": [
         {
-            "name": "Sophie Llewellyn",
-            "des": "Investment Committee Member, Elite Capital",
+            "name": "Sophie Llewellyn, FRICS",
+            "des": "Investment Committee Member",
             "img": "/assets/images/about/sophie-image.png",
             "role": [
                 "Investment Committee"
             ],
             "features": [
-                "Sophie Llewellyn FRICS is an executive-level real estate professional with 30 years of experience, driving commercial growth in properties across the UK, Middle East, and Africa. Her extensive career includes over 15 years at Majid Al Futtaim Properties, where she held leadership positions across multiple asset classes, culminating in her role as Head of Asset Management for a $11BN portfolio.",
-               "In this role, she led strategic planning, investment management, and asset performance, achieving significant revenue and EBITDA growth. Sophie's expertise spans investment management, valuation, strategic development, and corporate real estate. ",
-               "She has also served in key advisory and non-executive roles, including a 15+ year tenure with a leading Middle East REIT, and as an elected member of the RICS Global Governing Council. Sophie holds a BSc in Estate Management from Oxford Brookes University and has completed executive education programs at the London School of Economics and Harvard University."
+                "Sophie Llewellyn is a senior real estate executive with over 30 years of experience leading commercial growth across the UK, Middle East and Africa. A Fellow of the Royal Institution of Chartered Surveyors (FRICS), she has held executive roles across multiple real estate sectors, including a 15-year tenure at Majid Al Futtaim Properties. There, she served as Head of Asset Management for an $11 billion diversified portfolio, where she led strategic planning, investment oversight and performance optimization, delivering consistent revenue and EBITDA growth.",
+               "Sophie's expertise spans investment and asset management, valuation, strategic development and corporate real estate. She has served in key advisory and non-executive roles, including over 15 years with a leading Middle Eastern REIT and as an elected member of the RICS Global Governing Council. She holds a BSc in Estate Management from Oxford Brookes University and has completed executive education at both the London School of Economics and Harvard University."
             ]
         },
         {
             "name": "Michael A. D. Cox",
-            "des": "Investment Committee Member, Elite Capital",
+            "des": "Investment Committee Member",
             "img": "/assets/images/about/icon.png",
             "role": [
                 "Investment Committee"
             ],
             "features": [
-                "Michael A. D. Cox is a global real estate leader with more than 30 years of executive experience across the United States, Asia, the Middle East, and Australia. He specializes in strategic business planning, investment frameworks, and end-to-end project delivery for complex real estate ventures. Michael has held senior leadership roles with institutions including the Public Investment Fund (PIF), Dubai Holding, Aldar Properties, QIC, and Portman Holdings, where he oversaw multi-billion-dollar developments from inception through to asset management. ",
-                "His expertise spans P&L oversight, M&A due diligence, acquisitions, and large-scale construction management. Currently, he serves as Projects Executive Officer for a Confidential Private Office in Saudi Arabia, and serves on the Board of PRI and the Investment Committee of Gallery Securities."
+                "Michael A. D. Cox is a global real estate leader with more than 30 years of executive experience across the United States, Asia, the Middle East and Australia. He specializes in strategic business planning, investment frameworks and end-to-end project delivery for complex real estate ventures.",
+                "Michael has held senior leadership roles with institutions including the Public Investment Fund (PIF), Dubai Holding, Aldar Properties, QIC and Portman Holdings, where he oversaw multi-billion-dollar developments from inception through to asset management.",
+                "His expertise spans P&L oversight, M&A due diligence, acquisitions and large-scale construction management. Currently, he serves as Projects Executive Officer for a Confidential Private Office in Saudi Arabia, and serves on the Board of PRI and the Investment Committee of Gallery Securities."
             ]
         }
     ],

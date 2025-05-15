@@ -37,21 +37,21 @@ export default function SwiperSlider() {
   const [activeIndex, setActiveIndex] = useState(1);
   const { t } = useTranslation("home");
   const portfolio = t("portfolio", { returnObjects: true });
-  useEffect(()=>{
+  useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from("#portfolio", {
         y: 30,
-        opacity:0,
+        opacity: 0,
         duration: 2,
         ease: "power3.out",
-        scrollTrigger:{
-          trigger:"#portfolio",
-          start:"top 60%"
+        scrollTrigger: {
+          trigger: "#portfolio",
+          start: "top 60%"
         }
       });
     });
     return () => ctx.revert();
-  },[])
+  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -90,7 +90,7 @@ export default function SwiperSlider() {
     if (swiperRef.current) swiperRef.current.slidePrev();
   };
 
- const buttonRef = useRef(null);
+  const buttonRef = useRef(null);
 
   function handleMouseMove(e) {
     const hoverCircle = e.currentTarget.querySelector('.hover-circle');
@@ -106,7 +106,7 @@ export default function SwiperSlider() {
   return (
     <div className="relative w-screen overflow-hidden h-[54vw] mobile:h-screen tablet:h-[100vw]" id="portfolio">
       <Swiper
-      dir="ltr"
+        dir="ltr"
         loop={true}
         speed={1000}
         parallax={true}
@@ -121,31 +121,25 @@ export default function SwiperSlider() {
         {portfolio.map((item, idx) => (
           <>
             <SwiperSlide key={idx}>
-            <figure
-  className="relative w-full h-full  overflow-hidden"
-  data-swiper-parallax="50%"
->
-
-  <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10 rtl:bg-gradient-to-l" />
-
-
-  <Image
-    src={item.image}
-    width={1920}
-    height={1080}
-    alt="portfolio-images"
-    className="w-full h-full object-cover"
-  />
-</figure>
-
-
+              <figure
+                className="relative w-full h-full  overflow-hidden"
+                data-swiper-parallax="50%"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10 rtl:bg-gradient-to-l" />
+                <Image
+                  src={item.image}
+                  width={1920}
+                  height={1080}
+                  alt="portfolio-images"
+                  className="w-full h-full object-cover"
+                />
+              </figure>
               <div
                 key={idx}
-                className="slide absolute w-full h-full flex items-center justify-start top-0 left-0 px-[5vw] overflow-hidden"
+                className="slide absolute w-full h-full flex items-center ltr:justify-start rtl:justify-end top-0 left-0 px-[5vw] overflow-hidden "
               >
-                <div className="slide__content absolute z-[2] text-white top-[50%] w-[30vw] h-[20vw] rtl:right-0 mobile:w-full  mobile:left-[5%] mobile:top-[60%] tablet:w-[42%] tablet:top-[55%] rtl:tablet:right-0 rtl:mobile:left-0 ">
-                 
-                  <div className="address-container absolute top-0 left-[0] mt-[2vw] rtl:right-[7vw] rtl:left-auto">
+                <div className="slide__content absolute z-[2] text-white top-[50%] w-[50vw] h-[20vw] mobile:w-full mobile:top-[55%] tablet:w-[42%] tablet:top-[55%]">
+                  <div className="address-container absolute top-0 ltr:left-[0] mt-[2vw] rtl:right-[0] rtl:text-right space-y-4">
                     <p className="text-[2.6vw] text-white font-display font-light swiper-content-fadeup mobile:text-[7vw] tablet:text-[4vw]">
                       {item.text1}
                     </p>
@@ -161,16 +155,16 @@ export default function SwiperSlider() {
       </Swiper>
 
       <div className="absolute top-[10%] left-[5%] z-[5] text-white rtl:right-[5%]">
-      <h2 className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[1.5vw]  mobile:text-[13.8vw] mobile:mb-[8vw] tablet:text-[7vw]">
-                    {t("portfolioHead")}
-                  </h2>
-                  <p className="slide__text  mobile:text-[4.1vw] w-[50%] mobile:tracking-wider tablet:text-[2.5vw]">
-                    {t("portfolioSub")}
-                  </p>
+        <h2 className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[1.5vw] mobile:text-[10vw] mobile:mb-6 tablet:text-[7vw]">
+          {t("portfolioHead")}
+        </h2>
+        <p className="slide__text  mobile:text-[4.1vw] w-[50%] mobile:w-full mobile:tracking-wider tablet:text-[2.5vw]">
+          {t("portfolioSub")}
+        </p>
       </div>
 
       {/* Progress Bar */}
-      <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%] mobile:w-full mobile:text-[4.1vw] mobile:gap-[2vw] mobile:top-[55%] tablet:top-[50%] tablet:text-[3vw] tablet:w-[30vw] tablet:gap-[2vw] rtl:right-[5%]">
+      <div className="w-[20vw] flex items-center text-white gap-[0.5vw] absolute top-[45%] z-[5] left-[5%] mobile:w-full mobile:text-[4.1vw] mobile:gap-[2vw] mobile:top-[45%] tablet:top-[50%] tablet:text-[3vw] tablet:w-[30vw] tablet:gap-[2vw] rtl:right-[5%]">
         <p>{String(activeIndex).padStart(2, "0")}</p>
         <div className="w-[15vw] h-fit bg-white/20 mobile:w-[75vw] tablet:w-[25vw]">
           <div
@@ -188,7 +182,7 @@ export default function SwiperSlider() {
       <div
         ref={buttonRef}
         onMouseMove={(e) => handleMouseMove(e)}
-        className="absolute z-[5] bottom-[25%] left-[10%] rtl:left-[88%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:left-[20%] tablet:bottom-[20%] tablet:left-[15%] rtl:mobile:left-[80%]"
+        className="absolute z-[5] bottom-[25%] ltr:left-[10%] rtl:right-[5%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] overflow-hidden group rounded-full next-button cursor-pointer border border-white transition-colors duration-500 mobile:bottom-[20%] mobile:ltr:left-[20%] rtl:mobile:right-[5%] tablet:bottom-[20%] tablet:left-[15%] "
         onClick={handleNext}
       >
         <span
@@ -224,7 +218,7 @@ export default function SwiperSlider() {
       <div
         ref={buttonRef}
         onMouseMove={(e) => handleMouseMove(e)}
-        className="absolute z-[5] bottom-[25%] left-[5%] rtl:left-[83%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%] rtl:mobile:left-[65%] rtl:tablet:left-[80%]"
+        className="absolute z-[5] bottom-[25%] ltr::left-[5%] rtl:right-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%] mobile:ltr:left-[5%] mobile:rtl:right-[20%] rtl:tablet:left-[80%]"
         onClick={handlePrev}
       >
         <span
@@ -234,7 +228,8 @@ export default function SwiperSlider() {
           style={{
             width: "300%",
           }}
-        ></span>
+        >
+        </span>
         <div className="w-full h-full flex justify-center items-center rotate-180">
           <span className="w-[1.5vw] h-[1.5vw] mobile:w-[5vw] mobile:h-[5vw] flex justify-center items-center tablet:w-[4vw] tablet:h-[4vw]">
             <svg
@@ -256,8 +251,8 @@ export default function SwiperSlider() {
         </div>
       </div>
 
-      <div className="absolute bottom-[10%] z-[5] left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:left-[75%] rtl:mobile:left-[27%] rtl:tablet:left-[55%]">
-        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} prefetch={false}/>
+      <div className="absolute bottom-[10%] z-[5] ltr:left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:right-[5%] rtl:mobile:left-[27%] rtl:tablet:left-[55%]">
+        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} prefetch={false} />
       </div>
     </div>
   );
