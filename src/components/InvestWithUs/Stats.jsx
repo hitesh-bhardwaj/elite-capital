@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -7,8 +7,23 @@ import statsImg from "../../../public/assets/images/invest/stats-img.png";
 // import yellowRectangle from "../../../public/assets/icons/yellow-rectangle-mask.svg";
 gsap.registerPlugin(ScrollTrigger);
 
+function renderDigits(value) {
+  return value.split('').map((char, i) => {
+      return /\d/.test(char)
+          ? <DigitScroller key={i} digit={char} />
+          : <span key={i}>{char}</span>;
+  });
+}
 const Stats = () => {
   const { t } = useTranslation("invest");
+  const statsContent = t("stats", { returnObjects: true });
+ const [values, setValues] = useState(["00", "00", "00", "0"]);
+ useEffect(() => {
+  setTimeout(() => {
+      setValues(["45", "10", "26", "1.5"]);
+  }, 500);
+}, []);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".stats-img",
@@ -27,64 +42,6 @@ const Stats = () => {
     return () => ctx.revert()
   }, [])
 
-  const createTimeline = (triggerClass, countClasses, start, end) => {
-    useEffect(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggerClass,
-          start: start,
-          end: end,
-        },
-      });
-      countClasses.forEach((countClass) => {
-        tl.to(countClass.selector, {
-          top: countClass.top,
-          stagger: 0.25,
-          delay: countClass.delay,
-          duration: 1.5,
-          ease: "power2.inOut",
-        });
-      });
-    });
-  };
-
-
-  if (globalThis.innerWidth > 1023) {
-
-    const counterClasses = [
-      { selector: ".counter-3", top: "-125px", delay: 0.1 },
-      { selector: ".counter-2", top: "-521px", delay: -1.3 },
-      { selector: ".counter-1", top: "-420px", delay: -1.3 },
-    ];
-
-    const countClasses = [
-      { selector: ".count-1", top: "-210px", delay: -0.2 },
-      { selector: ".count-2", top: "-617px", delay: -1.3 },
-      { selector: ".count-4", top: "-127px", delay: -1.0 },
-      { selector: ".count-3", top: "-96px", delay: -1.3 },
-    ];
-
-    const countNewClasses = [
-      { selector: ".countnew-1", top: "-110px", delay: -0.2 },
-      { selector: ".countnew-2", top: "-1028px", delay: -1.0 },
-      { selector: ".countnew-3", top: "-98px", delay: -1.3 },
-      { selector: ".countnew-4", top: "-120px", delay: -1.3 },
-    ];
-    const countLastClasses = [
-      { selector: ".countlast-1", top: "-108px", delay: -0.2 },
-      { selector: ".countlast-2", top: "-110px", delay: -1.0 },
-      { selector: ".countlast-3", top: "-110px", delay: -1.3 },
-      { selector: ".countlast-4", top: "-518px", delay: -1.3 },
-      { selector: ".countlast-5", top: "-110px", delay: -1.3 },
-      { selector: ".countlast-6", top: "-130px", delay: -1.3 },
-    ];
-    createTimeline(".countlast", countLastClasses, "top 90%", null);
-    createTimeline(".counter", counterClasses, "top 90%", null);
-    createTimeline(".count", countNewClasses, "top 90%", null);
-    createTimeline(".count", countClasses, "top 90%", null);
-  } else {
-
-  }
   return (
     <>
       <section className="relative bg-[#F4F4F4] h-[40vw] overflow-hidden  mobile:pb-[10%] tablet:pb-[7%] mobile:h-full dark tablet:h-full" id="stats">
@@ -99,159 +56,47 @@ const Stats = () => {
             />
           </div>
 
-          <div className="flex pl-[3vw]  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-between  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw] tablet:h-[60vw] tablet:w-[80%] ">
-            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
-              <div className="flex w-full items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center ">
-                <div dir="ltr" className="mobile:hidden tablet:hidden" >
-                  <div className="counter !text-[#111111] mobile:text-[8.5vw] ">
-                    <div className="counter-1 digit font-semibold">
-                      <div className="num">0</div>
-                      <div className="num">1</div>
-                      <div className="num">2</div>
-                      <div className="num ">3</div>
-                      <div className="num rtl:imac:leading-[1.5]">4</div>
-                    </div>
-                    <div className="counter-2 digit font-semibold ">
-                      <div className="num">0</div>
-                      <div className="num">1</div>
-                      <div className="num">2</div>
-                      <div className="num">3</div>
-                      <div className="num">4</div>
-                      <div className="num rtl:imac:leading-[1.5]">5</div>
-                    </div>
-                    <div className="counter-3 translate-y-[100%] digit font-semibold">
-                      <div className="num text-[3vw] mobile:text-[10vw] rtl:imac:leading-[2]">+</div>
-                    </div>
-                  </div>
-                </div>
-                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                  <p data-para-anim>45+</p> </div>
-
-              </div>
-              <p
-                data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] text-center mx-auto  mobile:text-left mobile:w-[60%] tablet:w-full imac:pt-[1.5vw]"
-              >
-                {t("stats1")}
-              </p>
-
-            </div>
+          <div className="flex pl-[3vw]  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-center  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw] tablet:h-[60vw] tablet:w-[80%] ">
+          <div className="flex w-[45%] gap-[2vw] tablet:w-[40%] tablet:gap-0 mobile:w-full mobile:flex-col">
+                            <div className="flex flex-col items-center justify-start pt-[2.5vw] gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw] rtl:pt-[5vw] rtl:tablet:pt-[5vw]">
+                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                                    {renderDigits(values[0])}<sup>+</sup>
+                                </h3>
+                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[0].text}</p>
+                            </div>
+                        </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
-            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
-              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
-                <div dir="ltr" className="countnew !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
-                  <div className="countnew-1 digit font-semibold ">
-                    <div className="num">0</div>
-                    <div className="num text-center rtl:imac:leading-[1.2]">1</div>
-                  </div>
-                  <div className="countnew-2 digit font-semibold">
-                    <div className="num">0</div>
-                    <div className="num">1</div>
-                    <div className="num">2</div>
-                    <div className="num">3</div>
-                    <div className="num">4</div>
-                    <div className="num">5</div>
-                    <div className="num">6</div>
-                    <div className="num">7</div>
-                    <div className="num">8</div>
-                    <div className="num">9</div>
-                    <div className="num rtl:imac:leading-[1.2]">0</div>
-                  </div>
-                  <div className="countnew-3 digit font-semibold translate-y-[100%]">
-                    <div className="num rtl:imac:leading-[1.2]">K</div>
-                  </div>
-                  <div className="countnew-4 digit font-semibold translate-y-[100%]">
-                    <div className="num text-[3vw] mobile:text-[10vw]">+</div>
-                  </div>
-                </div>
-                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                  <p data-para-anim>10K+</p> </div>
-
-              </div>
-              <p
-                data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] mx-auto  text-center mobile:text-left mobile:w-[60%] tablet:w-full imac:pt-[1.5vw]"
-              >
-                {t("stats2")}
-              </p>
-            </div>
+            <div className="flex w-[45%] gap-[2vw] tablet:w-[50%] tablet:gap-0 mobile:w-full mobile:flex-col">
+                            <div className="flex flex-col items-center justify-start pt-[2.5vw] gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
+                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                                    {renderDigits(values[1])}<span>K</span><sup>+</sup>
+                                </h3>
+                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[1].text}</p>
+                            </div>
+                           
+                        </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
-            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center ">
-              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%]  mobile:justify-center">
-                <div dir="ltr" className="count !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
-                  <div className="count-1 digit font-semibold">
-                    <div className="num">0</div>
-                    <div className="num">1</div>
-                    <div className="num rtl:imac:leading-[1.2]">2</div>
-                  </div>
-                  <div className="count-2 digit font-semibold">
-                    <div className="num">0</div>
-                    <div className="num">1</div>
-                    <div className="num">2</div>
-                    <div className="num">3</div>
-                    <div className="num">4</div>
-                    <div className="num">5</div>
-                    <div className="num rtl:imac:leading-[1.2]">6</div>
-                  </div>
-                  <div className="count-3 digit font-semibold translate-y-[100%]">
-                    <div className="num rtl:imac:leading-[1.2]">M</div>
-                  </div>
-                  <div className="count-4 digit font-semibold translate-y-[100px]">
-                    <div className="num text-[3vw] mobile:text-[10vw]">+</div>
-                  </div>
-                </div>
-                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                  <p data-para-anim>26M+</p> </div>
-              </div>
-              <p
-                data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw]  mx-auto text-center mobile:text-left mobile:w-[60%]  tablet:w-full imac:pt-[1.5vw]"
-              >
-                {t("stats3")}
-              </p>
-            </div>
+            <div className="flex w-[45%] gap-[2vw] tablet:w-[40%] tablet:gap-0 mobile:w-full mobile:flex-col">
+                            <div className="flex flex-col items-center justify-start  gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw] rtl:tablet:pt-[5vw] rtl:imac:pt-[2vw]">
+                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                                    {renderDigits(values[2])}<span>M</span><sup>+</sup>
+                                </h3>
+                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[2].text}</p>
+                            </div>
+                           
+                        </div>
+
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
-            <div className="w-[45%] mobile:w-full mobile:flex mobile:items-center">
-              <div className="flex w-full  items-center justify-center gap-[8px] mobile:w-[30%] mobile:justify-center">
-                <div dir="ltr" className="countlast !text-[#111111] mobile:text-[8.5vw] mobile:hidden tablet:hidden">
-                  <div className="countlast-1 digit font-semibold translate-y-[100px]">
-                    <div className="num rtl:imac:leading-[1.2]">$</div>
-                  </div>
-                  <div className="countlast-2 digit font-semibold">
-                    <div className="num">0</div>
-                    <div className="num text-center rtl:imac:leading-[1.2]">1</div>
-                  </div>
-                  <div className="countlast-3 digit font-semibold translate-y-[100px]">
-                    <div className="num rtl:imac:leading-[1.2]">.</div>
-                  </div>
-                  <div className="countlast-4 digit font-semibold">
-                    <div className="num">0</div>
-                    <div className="num">1</div>
-                    <div className="num">2</div>
-                    <div className="num">3</div>
-                    <div className="num">4</div>
-                    <div className="num rtl:imac:leading-[1.2]">5</div>
-                  </div>
-                  <div className="countlast-5 digit font-semibold">
-                    <div className="num">A</div>
-                    <div className="num rtl:imac:leading-[1.2]">B</div>
-                  </div>
-                  <div className="countlast-6 digit font-semibold translate-y-[100px]">
-                    <div className="num text-[3vw] mobile:text-[10vw]">+</div>
-                  </div>
-                </div>
-                <div dir="ltr" className="hidden mobile:flex mobile:justify-center mobile:w-[30%] font-semibold mobile:text-[8.5vw] tablet:text-[7vw]  z-[10] tablet:flex tablet:justify-center tablet:w-[30%]">
-                  <p data-para-anim>$1.5B+</p> </div>
-              </div>
-              <p
-                data-para-anim
-                className="content w-[75%] mobile:!text-[4.7vw] mx-auto text-center mobile:text-left mobile:w-[60%] tablet:w-full imac:pt-[1.5vw]"
-              >
-                {t("stats4")}
-              </p>
-            </div>
+            <div className="flex w-[45%] gap-[2vw] tablet:w-1/2 tablet:gap-0 mobile:w-full mobile:flex-col">
+                            <div className="flex flex-col items-center justify-start  gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
+                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                                    <span>$</span>{renderDigits(values[3])}B<sup>+</sup>
+                                </h3>
+                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[3].text}</p>
+                            </div>
+                            </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
           </div>
@@ -265,11 +110,38 @@ const Stats = () => {
             />
           </div>
         </div>
-        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  rtl:right-[46%] tablet:left-[10%] tablet:top-[75%] rtl:tablet:right-[10%] rtl:tablet:top-[73%] tablet:w-[80%] " />
-        <span className="h-[80%] w-[1.5px] bg-black1 block absolute top-[10%] left-[70%] rtl:right-[69%]   mobile:hidden tablet:h-[40%] tablet:top-[55%] rtl:tablet:right-[50%]  tablet:left-[52%]" />
+        <span className="w-[45%] h-[1.5px] bg-black1 block absolute top-1/2 left-[48%] mobile:hidden  rtl:right-[46%] rtl:top-[55%] tablet:left-[12%] tablet:top-[75%] rtl:tablet:right-[10%] rtl:tablet:top-[73%] tablet:w-[78%] " />
+        <span className="h-[85%] w-[1.5px] bg-black1 block absolute top-[10%] left-[70%] rtl:right-[67%]  mobile:hidden tablet:h-[40%] tablet:top-[55%] rtl:tablet:right-[50%]  tablet:left-[52%]" />
       </section>
     </>
   );
 };
 
 export default Stats;
+
+function DigitScroller({ digit, duration = 2 }) {
+  const containerRef = useRef();
+
+  useEffect(() => {
+      const digitIndex = parseInt(digit, 10);
+      gsap.to(containerRef.current, {
+          y: `-${digitIndex * 10}%`,
+          duration,
+          ease: "power1.out",
+          scrollTrigger: {
+              trigger: "#stats",
+              start: "top 80%",
+          }
+      });
+  }, [digit, duration]);
+
+  return (
+      <div className="overflow-hidden h-[6vw] mb-[0.9vw] tablet:h-[8.8vw] mobile:h-[14.4vw] mobile:mb-[2.1vw] leading-[1.4] inline-block relative w-[0.6em]">
+          <div ref={containerRef} className="flex flex-col items-center">
+              {[...Array(10).keys()].map((d) => (
+                  <span key={d} className="h-fit text-inherit">{d}</span>
+              ))}
+          </div>
+      </div>
+  );
+}
