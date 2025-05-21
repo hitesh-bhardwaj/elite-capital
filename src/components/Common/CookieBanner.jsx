@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { useState } from "react";
 
 export default function CookieBanner({ cookieVisible, setVisible }) {
 
     return (
-        <div className={`w-[25vw] p-[1.5vw] mobile:w-[90%] rounded-[1vw] mobile:rounded-2xl mobile:p-4 tablet:p-4 tablet:rounded-2xl tablet:w-3/5 bg-white fixed bottom-[5%] left-[5%] drop-shadow-sm shadow-md z-[999] ${cookieVisible ? "pointer-events-auto" : "pointer-events-none opacity-0 hidden"}`}>
+        <div className={`w-[25vw] p-[1.5vw] mobile:w-[90%] rounded-[1vw] mobile:rounded-2xl mobile:p-4 tablet:p-4 tablet:rounded-2xl tablet:w-3/5 bg-white fixed bottom-[5%] left-[5%] drop-shadow-sm shadow-md z-[199] ${cookieVisible ? "pointer-events-auto" : "pointer-events-none opacity-0 hidden"}`}>
             <div className="w-full h-full flex flex-col gap-[1.5vw] mobile:gap-4 tablet:gap-6">
                 <span className="text-[1vw] inline-block mobile:text-lg tablet:text-2xl">
                     By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
