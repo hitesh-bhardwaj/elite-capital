@@ -19,7 +19,7 @@ const Stats = () => {
   const [values, setValues] = useState(["00", "00", "00", "0"]);
   useEffect(() => {
     setTimeout(() => {
-      setValues(["45", "10", "26", "1.5"]);
+      setValues(["45", "10", "26", "1"]);
     }, 500);
   }, []);
 
@@ -91,7 +91,7 @@ const Stats = () => {
             <div className="flex w-[45%] gap-[2vw] tablet:w-1/2 tablet:gap-0 mobile:w-full mobile:flex-col">
               <div className="flex flex-col items-center justify-start  gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
                 <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
-                  <span>$</span>{renderDigits(values[3])}B<sup>+</sup>
+                  <span>CA$</span>{renderDigits(values[3])}B<sup>+</sup>
                 </h3>
                 <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[3].text}</p>
               </div>
