@@ -1,8 +1,8 @@
 {
-    "hero": "Global experience combined with local expertise to generate Real Returns.",
+    "hero": "Global experience combined with local expertise",
     "cta": "Learn More",
     "aboutHead": "About us",
-    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). Backed by over 80 years of combined professional experience, we combine deep global fund management expertise and strategic local real estate knowledge to invest in high-quality, real assets. Our focus is on delivering long-term value to investors while supporting the growth and vitality of the communities we invest in.",
+    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC).The Elite Capital team has over 80 years of  professional experience, which combines deep global fund management expertise and strategic local real estate knowledge . We focus on investing in high-quality real assets while supporting the growth and vitality of the communities they serve.",
     "valuesHead": "Our values",
     "values": [ 
         {
@@ -35,7 +35,7 @@
             "features": [
                 "25+ years' professional experience",
                 "Senior roles with Henderson Global Investors, EY, IL&FS, Gresham House and Downing LLP",
-                "MBA (Dean's List) from London School of Business",
+                "MBA (Dean's List) from London Business School",
                 "Chartered Accountant (Institute of Chartered Accountants of India)"
             ]
         },
@@ -44,9 +44,9 @@
             "des": "Executive Director",
             "img": "/assets/images/about/samim-sakhi.png",
             "features": [
-                "15+ years' experience in real estate acquisition and development at Elite Developments",
-                "Expertise in structuring equity and hybrid investments for large-scale projects",
-                " Background in managing medical facilities across Ontario"
+                "15+ years' professional experience",
+                "Leads investment strategy at Elite Developments covering full-cycle project execution, from land acquisition through to development",
+                "Experience managing multiple medical facilities across Ontario"
             ]
         },
         {
@@ -64,7 +64,8 @@
             "des": "Legal & Corporate Development Manager",
             "img": "/assets/images/about/susan-mansuri.png",
             "features": [
-                "5+ years’ professional legal experience with top-tier corporate law firm in Toronto and in-house with various investment fund managers",
+                "5+ years’ professional legal experience",
+                "Roles with top tier corporate law firm and various investment fund managers in Toronto",
                 "Juris Doctor from Osgoode Hall Law School; Hon. BA Political Science (Specialization in Political Economy)"
             ]
         },
@@ -73,8 +74,9 @@
             "des": "Investment Partnerships & Corporate Development Manager",
             "img": "/assets/images/about/amir-banaga.png",
             "features": [
-                "10+ years’ professional experience across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations.",
-                "Hon. BA International relations & Industrial Relations from the University of Toronto"
+                "10+ years’ professional experience",
+                "Roles across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations",
+                "Hon. BA International Relations & Industrial Relations from the University of Toronto"
             ]
         }
         
@@ -85,53 +87,53 @@
     "boardMembers": [
         {
             "name": "Hamid Hakimi",
-            "des": "Chairman, Elite Capital | Founder & CEO of Elite Developments",
+            "des": "Chairman",
             "img": "/assets/images/about/hamid-hakimi.png",
             "role": [
                 "Board of Directors",
                 "Investment Committee"
             ],
             "features": [
-                "Hamid Hakimi serves as the Chairman of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape, bolting Elite Developments towards becoming the fastest-growing real estate developer in Ontario, Canada. Under his leadership, the company has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects.",
-                "Prior to this, Hamid successfully managed a team of realtors who completed in excess of $1 billion in real estate sales in Ontario, Canada. His expertise in the field has solidified his place as a respected and influential figure in real estate development and acquisition."
+                "Hamid Hakimi serves as the Chairman of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments the company has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
+                "Prior to this, Hamid successfully managed a team of realtors who completed real estate sales in Ontario, Canada in excess of $1 billion. His expertise in the field has solidified his place as a respected and influential figure in real estate development and acquisition."
             ]
         },
         {
             "name": "Vimal Jain",
-            "des": "CEO, Executive Director & Investment Committee Member at Elite Capital",
+            "des": "Chief Executive Officer ",
             "img": "/assets/images/about/vimal-jain.png",
             "role": [
                 "Board of Directors",
                 "Investment Committee"
             ],
             "features": [
-                "Vimal Jain serves as CEO of Elite Capital and sits on the Board of Directors as an Executive Director. Vimal brings over 25 years of global experience in investment, fundraising, and strategic advisory across real assets including infrastructure and energy, spanning greenfield and brownfield projects. His work has covered key markets across Europe, the Middle East, Asia, and Australia, with cumulative enterprise value contributions exceeding £50 billion.",
-                "He previously held senior leadership roles at prominent investment firms such as Downing LLP and Gresham House Asset Management. He also served as CEO and Head of Europe at IL&FS, one of India’s leading infrastructure and energy investment groups. Earlier in his career, Vimal was an Associate Partner at EY, advising on M&A, capital structuring, and strategic transactions for major infrastructure assets globally.",
-                "Vimal was a founding member of the infrastructure private equity team at Henderson Global Investors, where he played a key role in raising and deploying over £900 million across two successful funds. He holds an MBA with Dean’s List honors from London Business School and is a qualified Chartered Accountant through the Institute of Chartered Accountants of India."
+                "Vimal Jain serves as CEO of Elite Capital and sits on the Board of Directors as an Executive Director. Vimal brings over 25 years of global experience in investment, fundraising and strategic advisory across real assets including infrastructure and energy, spanning greenfield and brownfield projects. His work has covered key markets across Europe, the Middle East, Asia and Australia, with cumulative enterprise value  exceeding £50 billion.",
+                "He previously held senior leadership roles at prominent investment firms such as Downing LLP and Gresham House Asset Management. He also served as CEO and Head of Europe at IL&FS, one of India’s leading infrastructure and energy investment groups. Earlier in his career, Vimal was an Associate Partner at EY, advising on M&A, capital structuring and strategic transactions for major infrastructure assets globally.",
+                "Vimal was a founding member of the infrastructure private equity team at Henderson Global Investors, where he played a key role in raising and deploying over £900 million across two successful funds. He holds an MBA from London Business School and is a qualified Chartered Accountant through the Institute of Chartered Accountants of India."
             ]
         },
         {
             "name": "Samim Sakhi",
-            "des": "Executive Director, Elite Capital | President of Elite Developments",
+            "des": "Executive Director",
             "img": "/assets/images/about/samim-sakhi.png",
             "role": [
                 "Board of Directors",
                 "Investment Committee"
             ],
             "features": [
-                "Samim Sakhi serves on the Board of Directors at Elite Capital as an Executive Director. Samim has over 15 years of experience in managing real estate developments and acquisitions. As President of Elite Developments, he leads the firm’s investment strategy with a focus on full-cycle project execution, from land acquisition through to development, while closely monitoring and evaluating project financial performance at each stage.",
-                "Samim has a strong track record of structuring investments in large-scale land developments across North America. He is well-known in the industry for his strategic vision, operational expertise, and results-oriented leadership. In addition to his real estate work, he has extensive experience managing mid- and large-scale medical facilities across Ontario."
+                "Samim Sakhi serves on the Board of Directors at Elite Capital as an Executive Director. Samim has over 15 years of experience in managing real estate developments and acquisitions. As President of Elite Developments he leads the firm’s investment strategy with a focus on full-cycle project execution, from land acquisition through to development, while closely monitoring and evaluating project financial performance at each stage.",
+                "Samim has a strong track record of structuring investments in large-scale land developments across North America. He is well-known in the industry for his strategic vision, operational expertise and results-oriented leadership. In addition to his real estate work, he has extensive experience managing mid- and large-scale medical facilities across Ontario."
             ]
         },
         {
             "name": "Rizvan Magomedov",
-            "des": "Non-Executive Director, Elite Capital | President of International Development, Dominance MMA",
+            "des": "Non-Executive Director",
             "img": "/assets/images/about/icon.png",
             "role": [
                 "Board of Directors"
             ],
             "features": [
-                "Rizvan Magomedov serves on the Board of Directors at Elite Capital as an Executive Director. Rizvan leads international development at Dominance MMA, where he is instrumental in negotiating high-profile athlete contracts, sponsorship deals, and global promotional partnerships. Formerly CEO of Eagle FC, Rizvan spearheaded the promotion’s international expansion, securing key broadcast and sponsorship agreements while launching events in new markets. With academic backgrounds in law and linguistics, he brings a distinctive combination of legal acumen, strategic thinking, and cross-cultural fluency. Rizvan’s expertise continues to drive meaningful growth for elite athletes and global sports ventures alike."
+                "Rizvan Magomedov serves on the Board of Directors at Elite Capital as an Executive Director. Rizvan leads international development at Dominance MMA where he is instrumental in negotiating high-profile athlete contracts, sponsorship deals and global promotional partnerships. Formerly CEO of Eagle FC, Rizvan spearheaded the promotion’s international expansion, securing key broadcast and sponsorship agreements while launching events in new markets. With academic backgrounds in law and linguistics, he brings a distinctive combination of legal acumen, strategic thinking and cross-cultural fluency. Rizvan’s expertise continues to drive meaningful growth for elite athletes and global sports ventures alike."
             ]
         }
     ],
@@ -140,7 +142,7 @@
         {
             "name": "Khabib Nurmagomedov",
             "des": "Ambassador",
-            "img": "/assets/images/about/khabib.png",
+            "img": "/assets/images/about/icon.png",
             "role": [
                 "Board of Directors"
             ],
@@ -192,7 +194,7 @@
     "shariahMembers": [
         {
             "name": "Dr. Mohamed Ali Elgari",
-            "des": "Chairman",
+            "des": "",
             "img": "/assets/images/about/icon.png",
             "features": [
                 "Dr. Mohamed Ali Elgari was previously a Professor of Islamic Economics and a former Director of the Centre for Research in Islamic Economics at King Abdul Aziz University in Saudi Arabia. He is an advisor to several Islamic financial institutions throughout the world and is also on the Shariah board of the Dow Jones Islamic Index.",

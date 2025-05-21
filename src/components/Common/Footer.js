@@ -45,7 +45,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" bg-transparent h-[40vw] text-white   mobile:h-full tablet:h-[70vw]"
+    <footer className=" bg-transparent h-[38vw] text-white   mobile:h-full tablet:h-[70vw]"
     style={{
       ...(mobileWidth
         ? {}
@@ -102,6 +102,7 @@ const Footer = () => {
                 <a
                   onMouseMove={(e) => handleMouseMove(e)}
                   target="_blank"
+                  aria-label={social.alt}
                   href={social.link}
                   className="group flex items-center relative justify-center border-[1.5px] border-white overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
                   key={index}
@@ -127,7 +128,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-[1.5vw] bg-[#E5E5DC] text-[#121212] w-full flex items-center justify-center italic font-body text-[1.15rem]  mobile:px-[5vw] mobile:py-[5vw] mobile:text-[3.5vw] tablet:px-[5vw]">Regulated by the DFSA under F009439. Elite Capital (DIFC) Limited only provides financial services to professional clients</div>
+      <div className="py-[1.5vw] mobile:mt-[-2vw] bg-[#121212] w-full flex items-center justify-center italic font-body text-[1.15rem]  mobile:px-[5vw] mobile:py-[5vw] mobile:text-[3.5vw] tablet:px-[5vw]">Regulated by the DFSA under F009439. Elite Capital (DIFC) Limited only provides financial services to professional clients</div>
       </div>
     </footer>
   );

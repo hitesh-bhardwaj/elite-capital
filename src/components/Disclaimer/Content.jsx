@@ -31,6 +31,11 @@ const Content = () => {
   return (
     <section className="w-screen h-full py-[8%] px-[5vw] overflow-hidden dark bg-white" id="disclaimer-content">
       <div className="">
+      <span className='bg-black1 w-full h-[1px] block mb-[3vw] lineDraw mobile:my-[10vw]  tablet:my-[5vw]' />
+       <div className='h-full w-[10%] relative py-[1vw] mobile:w-[20%]'>
+                                          <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
+                                          <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={100} height={36} className=' mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw] rtl:scale-x-[-1]' />
+                                      </div>
         <div className="space-y-[2vw] w-full">
           {content.map((item, index) => (
             <>

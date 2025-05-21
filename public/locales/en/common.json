@@ -7,7 +7,8 @@
   "footerEmailText": "Enter Your Email",
   "footerEmailButton": "Subscribe",
   "formHead": "Get in touch",
-  "formAgreement": "Yes, I would like to receive communications from Elite Capital. *We will only use this information as described in our privacy policy.",
+  "formAgreement": "Yes, I would like to receive communications from Elite Capital.",
+  "formPrivacy":"<p>*Elite Capital will only use this information as described in our <a href='/privacy-policy' class='underline pb-1' > Privacy Policy </a>.</p>",
   "footerline": "Real Assets. Real Returns.",
   "footerNav": [
     {

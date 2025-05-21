@@ -48,7 +48,7 @@ const Content = () => {
                                     ))}
                                     {item.list1 && item.list1.map((items, index) => (
                                         <div key={index} className='space-y-[1.5vw] pl-[5vw] pt-[3vw]'>
-                                            <div className='heading-2 s mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] cookie rtl:mobile:ml-0 rtl:mobile:mr-[-7vw]'>
+                                            <div className='text-[2.5vw] mobile:text-[5vw] font-display mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] cookie rtl:mobile:ml-0 rtl:mobile:mr-[-7vw]'>
                                                 {items.title}
                                             </div>
                                             <div className='content mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] rtl:mobile:mr-[-7vw] rtl:mobile:ml-0 cookie'>
@@ -56,12 +56,11 @@ const Content = () => {
                                             </div>
                                         </div>
                                     ))}
-                                    <ul className='list-disc'>
+                                    <ul className='list-disc pl-[5vw] '>
                                         {item.list2 && item.list2.map((items, index) => (
                                             <li key={index} className='pt-[1vw]'>
-                                                <div className='content  mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] rtl:mobile:mr-[-7vw] rtl:mobile:ml-0 cookie'>
-                                                    {items.detail}
-                                                </div>
+                                                <div className='content  mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] rtl:mobile:mr-[-7vw] rtl:mobile:ml-0 cookie' dangerouslySetInnerHTML={{__html:items.detail}}/>
+                                                    
                                             </li>
                                         ))}
                                     </ul>

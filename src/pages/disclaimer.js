@@ -16,7 +16,7 @@ export default function Privacy() {
   lineAnim();
   const { t } = useTranslation('disclaimer');
 
-  const metadata = {
+  const metadata = { 
     title: "Disclaimer | Elite Capital ",
     metaDescription: "Learn how Elite Capital collects, uses, and protects your personal data. Read our privacy policy to understand your rights and our data handling practices.​​",
     path: "disclaimer",

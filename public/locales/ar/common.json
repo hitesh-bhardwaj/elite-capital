@@ -7,14 +7,15 @@
   "footerEmailText": "Enter Your Email",
   "footerEmailButton": "Subscribe",
   "formHead": "تواصل معنا",
-  "formAgreement": "نعم، أرغب في تلقي تحديثات من إيليت كابيتال. *سنستخدم هذه المعلومات فقط كما هو موضح في سياسة الخصوصية.",
+  "formAgreement": "نعم، أرغب في استلام اتصالات من شركة إيليت كابيتال.",
+  "formPrivacy":"<p>*ستستخدم إيليت كابيتال هذه المعلومات فقط كما هو موضح في  <a href='/privacy-policy' class='underline pb-1' >  سياسة الخصوصية. </a>.</p>",
   "footerline": "أصول حقيقية. عوائد حقيقية.",
   "footerNav": [
     {
       "text": "من نحن",
       "link": "/about-us"
     },
-    {
+    { 
       "text": "ابدأ استثمارك الآن",
       "link": "/invest-with-us"
     },
@@ -43,7 +44,7 @@
   "formCompany": "اسم الشركة*",
   "formDesignation": "المسمى الوظيفي*",
   "formMessage": "رسالتك*",
-  "formcta": "إرسال",
+  "formcta": "يُقدِّم",
   "errorSub": "هذه الصفحة غير موجودة.",
   "errorCta": "العودة إلى الصفحة الرئيسية"
 }

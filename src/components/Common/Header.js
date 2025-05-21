@@ -194,6 +194,7 @@ const Header = () => {
                   <a
                     target="_blank"
                     href={social.link}
+                    aria-label={social.alt}
                     className="group flex items-center relative justify-center border-[1.5px] border-black overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
                     key={index}
                   >
