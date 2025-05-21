@@ -151,7 +151,6 @@ setCurrentIndex(null);
             className={`flex gap-[1vw] absolute bottom-[5%] overflow-hidden right-[5%] flex-row-reverse tablet:hidden mobile:hidden ${active ? "" : "hidden"}`}
           >
           <div
-           
             onMouseMove={(e) => handleMouseMove(e)}
             className=" w-[3.5vw] relative h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] overflow-hidden group rounded-full next-button  cursor-pointer border border-black transition-colors duration-500"
             onClick={() => {
