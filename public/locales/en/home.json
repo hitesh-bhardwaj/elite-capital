@@ -1,8 +1,8 @@
 {
     "hero": "Providing investors with access to Real Assets with Real Returns.",
-    "heroSub": "A real-estate focused fund manager delivering investment opportunities that generate exceptional risk-adjusted returns from developments that contribute to thriving communities.",
+    "heroSub": "A real estate focused fund manager delivering investment opportunities that generate exceptional risk adjusted returns from developments that contribute to thriving communities.",
     "aboutHead": "Who we are",
-    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm, combining in-depth local knowledge with strategic global fund management expertise to offer international investors with access to attractive real estate investment opportunities. Our success is built on creating long-lasting partnerships with our investors to offer Real Assets with Real Returns.",
+    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm, combining in-depth local knowledge with strategic global fund management expertise to offer international investors with access to attractive real estate investment opportunities. Our success is built on creating long-lasting partnerships with our investors.",
     "cta": "Learn More",
     "stats": [
         {
@@ -18,8 +18,8 @@
             "text": "Real estate projects exclusive to Elite Capital"
         },
         {
-            "number": "$1B+",
-            "text": "in equity required for Elite Capital’s exclusive pipeline"
+            "number": "CA$1B+",
+            "text": "Equity required for Elite Capital's exclusive pipeline"
         }
     ],
     "valuesHead": "Our values",
@@ -34,7 +34,7 @@
         },
         {
             "valueTitle": "Knowledge",
-            "valueContent": "We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk-adjusted returns."
+            "valueContent": "We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk adjusted returns."
         },
         {
             "valueTitle": "Trust",
@@ -48,7 +48,7 @@
     "advantageHead": "Canada's real estate investment opportunity",
     "advantage": [
         {
-            "text": "Canada stands out as a prime G7 investment destination due to its stable economy, abundance of natural resources, AAA credit rating, and rapidly rising population. The population is expected to grow by 11.6 million people by 2050, driving sustained demand across key sectors - particularly housing."
+            "text": "Canada stands out as a prime G7 investment destination due to its stable economy, abundance of natural resources, AAA credit rating and rapidly rising population. The population is expected to grow by 11.6 million people by 2050, driving sustained demand across key sectors - particularly housing."
         },
         {
             "text": "Rapid population growth, combined with a projected shortfall of over 3.5 million homes by 2030, has created a supply gap and presents a compelling and long-term opportunity for residential real estate investment in Canada."
