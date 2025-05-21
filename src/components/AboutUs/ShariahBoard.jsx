@@ -68,8 +68,6 @@ const ShariahBoard = () => {
             dangerouslySetInnerHTML={{ __html: t("shariahSub") }}
           />
         </div>
-
-
       </section>
     </>
   );

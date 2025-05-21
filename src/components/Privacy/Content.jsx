@@ -29,7 +29,7 @@ const Content = () => {
   });
 
   return (
-    <section className="w-screen h-full py-[8%] px-[5vw] overflow-hidden dark" id="privacy-content">
+    <section className="w-screen h-full py-[8%] px-[5vw] overflow-hidden dark bg-white" id="privacy-content">
       <div className="">
         <div className="mobile:py-[7vw]">
           <p className="content  mobile:leading-[1.6] ">{t("heroSub")}</p>

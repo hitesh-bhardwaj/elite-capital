@@ -16,7 +16,8 @@ export default function AboutPage() {
   paraAnim();
   titleAnim();
   fadeIn();
-  lineAnim()
+  lineAnim();
+  
   const { t } = useTranslation('about');
 
   const metadata = {

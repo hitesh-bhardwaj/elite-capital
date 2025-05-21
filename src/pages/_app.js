@@ -71,7 +71,7 @@ const App = ({ Component, pageProps }) => {
       setShowPreloader(false);
     }
   }, []);
-  
+
   return (
     <>
       <LocalBusiness />
@@ -87,7 +87,7 @@ const App = ({ Component, pageProps }) => {
               animate="animate"
               exit="exit"
               variants={pageVariants}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.4 }}
             >
               <main className={`${bodoni_moda.variable} ${barlow.variable} ${readex_pro.variable} ${tajawal.variable} font-body text-[1.55vw] text-black1`}>
                 {showPreloader && <Loader2 />}

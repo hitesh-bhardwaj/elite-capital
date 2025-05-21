@@ -25,6 +25,14 @@
   ],
   "footerNavBottom": [
     {
+      "text": "تنصل",
+      "link": "/disclaimer"
+    },
+    {
+      "text": "سياسة الخصوصية",
+      "link": "/privacy-policy"
+    },
+    {
       "text": "سياسة الخصوصية",
       "link": "/cookie-policy"
     }

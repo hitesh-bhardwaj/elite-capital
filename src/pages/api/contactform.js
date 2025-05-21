@@ -9,9 +9,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, companyName, designation, message,number } = req.body;
-     
-    if (!name || !email ) {
+    const { name, email, companyName, designation, message, number } = req.body;
+
+    if (!name || !email) {
       return res.status(400).json({ error: "Required fields missing" });
     }
     const { data, error } = await resend.emails.send({
@@ -21,11 +21,10 @@ export default async function handler(req, res) {
       react: ContactDetails({
         userName: name,
         userEmail: email,
-        userNumber:number,
+        userNumber: number,
         userCompany: companyName,
         userDesignation: designation,
         userMessage: message || "No message provided",
-      
       }),
     });
 

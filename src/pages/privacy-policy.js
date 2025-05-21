@@ -15,7 +15,7 @@ export default function Privacy() {
   fadeIn();
   lineAnim();
   const { t } = useTranslation('privacy');
-     
+
   const metadata = {
     title: "Privacy Policy | Elite Capital ",
     metaDescription: "Learn how Elite Capital collects, uses, and protects your personal data. Read our privacy policy to understand your rights and our data handling practices.​​",
@@ -26,12 +26,12 @@ export default function Privacy() {
   };
   return (
     <>
-    <Metadata metadata={metadata}/>
-    <WebpageJsonLd metadata={metadata}/>
-    <Layout>
-    <Hero img={heroBg} heading={t('hero')} translation={'privacy'} nextSectionId={"privacy-content"}/>
-    <Content/>
-    </Layout>
+      <Metadata metadata={metadata} />
+      <WebpageJsonLd metadata={metadata} />
+      <Layout>
+        <Hero img={heroBg} heading={t('hero')} translation={'privacy'} nextSectionId={"privacy-content"} />
+        <Content />
+      </Layout>
     </>
   );
 }

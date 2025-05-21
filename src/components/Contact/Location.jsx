@@ -1,44 +1,45 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
 
 const Location = () => {
     const { t } = useTranslation('contact');
-    const [offset, setOffset] = useState({ x: 0, y: 0 });
+    // const [offset, setOffset] = useState({ x: 0, y: 0 });
 
-    function handleMouseMoveIcon(e) {
-        const hoverCircle = e.currentTarget.querySelector('.hover-circle');
-        if (hoverCircle) {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            hoverCircle.style.left = `${x}px`;
-            hoverCircle.style.top = `${y}px`;
-        }
-    }
+    // function handleMouseMoveIcon(e) {
+    //     const hoverCircle = e.currentTarget.querySelector('.hover-circle');
+    //     if (hoverCircle) {
+    //         const rect = e.currentTarget.getBoundingClientRect();
+    //         const x = e.clientX - rect.left;
+    //         const y = e.clientY - rect.top;
+    //         hoverCircle.style.left = `${x}px`;
+    //         hoverCircle.style.top = `${y}px`;
+    //     }
+    // }
 
-    const handleMouseMove = (e) => {
-        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-        const x = -((e.clientX - left) / width - 0.5) * 80;
-        const y = -((e.clientY - top) / height - 0.5) * 80;
-        setOffset({ x, y });
-    };
+    // const handleMouseMove = (e) => {
+    //     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    //     const x = -((e.clientX - left) / width - 0.5) * 80;
+    //     const y = -((e.clientY - top) / height - 0.5) * 80;
+    //     setOffset({ x, y });
+    // };
 
-    const handleMouseLeave = () => {
-        setOffset({ x: 0, y: 0 });
-    };
+    // const handleMouseLeave = () => {
+    //     setOffset({ x: 0, y: 0 });
+    // };
     return (
         <section className="relative h-fit bg-[#747977] py-[3vw] overflow-hidden mobile:py-[15vw] mobile:min-h-full mobile:h-full tablet:h-full tablet:py-[7%]" id="location">
             <div className="relative z-10 px-[5vw]  flex items-center justify-between h-screen mobile:flex-col-reverse mobile:gap-[10vw] mobile:h-full tablet:h-full tablet:flex-col-reverse tablet:gap-[7vw]">
 
                 {/* Image with parallax effect */}
                 <div
-                    className="w-[50%] flex h-[50vw]  mobile:h-[100vw] mobile:rounded-[3vw]  items-center justify-between mobile:w-full tablet:w-full overflow-hidden mobile:mt-[7vw] "
-                    onMouseMove={handleMouseMove}
-                    onMouseLeave={handleMouseLeave}
+                    className="w-[50%] flex h-[50vw] mobile:h-[100vw] mobile:rounded-[3vw]  items-center justify-between mobile:w-full tablet:w-full overflow-hidden mobile:mt-[7vw] "
+                    // onMouseMove={handleMouseMove}
+                    // onMouseLeave={handleMouseLeave}
                 >
-                    <Image
+                    <iframe src="https://snazzymaps.com/embed/704246" width="100%" height="100%" style={{border: 'none'}}></iframe>
+                    {/* <Image
                         className="w-[90%] fadeUp mobile:w-full tablet:w-full tablet:h-[50vw] object-cover h-full scale-[1.3] mobile:!scale-[2]"
                         src={"/assets/images/contactpage/contact-map.png"}
                         width={1920}
@@ -49,7 +50,7 @@ const Location = () => {
                             transition: 'transform 0.2s ease-out',
                         }}
                         loading="lazy"
-                    />
+                    /> */}
                 </div>
 
                 {/* Text content */}

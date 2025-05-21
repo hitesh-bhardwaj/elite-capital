@@ -11,7 +11,7 @@ const Values = () => {
   const values = t("values", { returnObjects: true });
 
   return (
-    <section className=" pb-[5vw] mobile:py-[10vw] dark">
+    <section className=" pb-[5vw] mobile:py-[10vw] dark bg-white">
       <div className="px-[5vw]">
         <div className="">
           <h2

@@ -8,7 +8,6 @@ const Footer = () => {
   const footerNav = t('footerNav', { returnObjects: true });
   const footerNavBottom = t('footerNavBottom', { returnObjects: true });
 
-
   function handleMouseMove(e) {
     const hoverCircle = e.currentTarget.querySelector('.hover-circle');
     if (hoverCircle) {
@@ -19,6 +18,7 @@ const Footer = () => {
       hoverCircle.style.top = `${y}px`;
     }
   }
+
   const socials = [
     {
       icon: "/icons/linkedin.svg",
@@ -48,7 +48,7 @@ const Footer = () => {
             <p className="text-[2.1vw] pl-[4.8vw] pt-[0.5vw] mobile:text-[6vw] mobile:pl-[13vw] mobile:pt-[2vw] tablet:text-[2.5vw] tablet:pt-[1vw]"> {t('footerline')} </p>
           </div>
 
-          <div className="uppercase content  font-body font-medium flex items-center  justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw]  mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">
+          <div className="uppercase content font-body font-medium flex items-center justify-end gap-[5vw] mobile:flex-col  mobile:items-start mobile:mt-[8vw]  mobile:gap-[4vw] tablet:justify-start mobile:text-[6.65vw] tablet:gap-[3vw]">
             {footerNav.map((item, index) => (
               <Link key={index} href={item.link} className="group transition-all duration-300 ease" prefetch={false}>
                 <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
@@ -62,15 +62,13 @@ const Footer = () => {
         <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[4vw] mobile:mt-[10vw] tablet:mt-[7vw] tablet:pb-[5vw] mobile:pb-[10vw] mobile:pt-[10vw] ">
           <p className="text-[1.15rem] tablet:w-[40%] mobile:text-[5.1vw]">{t('footerCopy')}</p>
           <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse">
-            <div className="flex items-center justify-center gap-[0.7vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[4vw] tablet:gap-[1vw]">
+            <div className="flex items-center justify-center gap-[2vw] mobile:flex-col mobile:py-[6vw] mobile:gap-[4vw] tablet:gap-[1vw]">
               {footerNavBottom.map((item, index) => (
-                <React.Fragment key={index}>
-                  <Link href={item.link} prefetch={false} className="group">
-                    <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
-                      <span className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.5vw]">{item.text}</span>
-                    </div>
-                  </Link>
-                </React.Fragment>
+                <Link key={index} href={item.link} prefetch={false} className="group">
+                  <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
+                    <span className="mobile:text-[5.1vw] group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.5vw]">{item.text}</span>
+                  </div>
+                </Link>
               ))}
             </div>
             <div className="flex items-center gap-4">

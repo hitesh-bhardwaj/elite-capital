@@ -28,9 +28,8 @@ const Content = () => {
     const { t } = useTranslation('cookie');
     const content = t('content', { returnObjects: true });
 
-
     return (
-        <section className='w-screen h-full py-[8%] px-[5vw] overflow-hidden dark' id='cookie-content'>
+        <section className='w-screen h-full py-[8%] px-[5vw] overflow-hidden dark bg-white' id='cookie-content'>
             <div className=''>
                 <div className='content mobile:py-[7vw] ' >{t('heroSub')}</div>
                 <span className='bg-black1 w-full h-[1px] block mb-[5vw] mt-[8vw] lineDraw mobile:my-[10vw]  tablet:my-[5vw]' />

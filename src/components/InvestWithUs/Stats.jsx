@@ -4,25 +4,24 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import statsImg from "../../../public/assets/images/invest/stats-img.png";
-// import yellowRectangle from "../../../public/assets/icons/yellow-rectangle-mask.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 function renderDigits(value) {
   return value.split('').map((char, i) => {
-      return /\d/.test(char)
-          ? <DigitScroller key={i} digit={char} />
-          : <span key={i}>{char}</span>;
+    return /\d/.test(char)
+      ? <DigitScroller key={i} digit={char} />
+      : <span key={i}>{char}</span>;
   });
 }
 const Stats = () => {
   const { t } = useTranslation("invest");
   const statsContent = t("stats", { returnObjects: true });
- const [values, setValues] = useState(["00", "00", "00", "0"]);
- useEffect(() => {
-  setTimeout(() => {
+  const [values, setValues] = useState(["00", "00", "00", "0"]);
+  useEffect(() => {
+    setTimeout(() => {
       setValues(["45", "10", "26", "1.5"]);
-  }, 500);
-}, []);
+    }, 500);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -57,46 +56,46 @@ const Stats = () => {
           </div>
 
           <div className="flex pl-[3vw]  rtl:mr-[3vw] mobile:px-[5vw] w-1/2 flex-wrap items-center justify-center  gap-y-[6vw] gap-[4vw] mobile:w-full mobile:py-[5vw] mobile:gap-y-[4vw] tablet:h-[60vw] tablet:w-[80%] ">
-          <div className="flex w-[45%] gap-[2vw] tablet:w-[40%] tablet:gap-0 mobile:w-full mobile:flex-col">
-                            <div className="flex flex-col items-center justify-start pt-[2.5vw] gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw] rtl:pt-[5vw] rtl:tablet:pt-[5vw]">
-                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
-                                    {renderDigits(values[0])}<sup>+</sup>
-                                </h3>
-                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[0].text}</p>
-                            </div>
-                        </div>
+            <div className="flex w-[45%] gap-[2vw] tablet:w-[40%] tablet:gap-0 mobile:w-full mobile:flex-col">
+              <div className="flex flex-col items-center justify-start pt-[2.5vw] gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw] rtl:pt-[5vw] rtl:tablet:pt-[5vw]">
+                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                  {renderDigits(values[0])}<sup>+</sup>
+                </h3>
+                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[0].text}</p>
+              </div>
+            </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
             <div className="flex w-[45%] gap-[2vw] tablet:w-[50%] tablet:gap-0 mobile:w-full mobile:flex-col">
-                            <div className="flex flex-col items-center justify-start pt-[2.5vw] gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
-                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
-                                    {renderDigits(values[1])}<span>K</span><sup>+</sup>
-                                </h3>
-                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[1].text}</p>
-                            </div>
-                           
-                        </div>
+              <div className="flex flex-col items-center justify-start pt-[2.5vw] gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
+                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                  {renderDigits(values[1])}<span>K</span><sup>+</sup>
+                </h3>
+                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[1].text}</p>
+              </div>
+
+            </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
             <div className="flex w-[45%] gap-[2vw] tablet:w-[40%] tablet:gap-0 mobile:w-full mobile:flex-col">
-                            <div className="flex flex-col items-center justify-start  gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw] rtl:tablet:pt-[5vw] rtl:imac:pt-[2vw]">
-                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
-                                    {renderDigits(values[2])}<span>M</span><sup>+</sup>
-                                </h3>
-                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[2].text}</p>
-                            </div>
-                           
-                        </div>
+              <div className="flex flex-col items-center justify-start  gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw] rtl:tablet:pt-[5vw] rtl:imac:pt-[2vw]">
+                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                  {renderDigits(values[2])}<span>M</span><sup>+</sup>
+                </h3>
+                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[2].text}</p>
+              </div>
+
+            </div>
 
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
             <div className="flex w-[45%] gap-[2vw] tablet:w-1/2 tablet:gap-0 mobile:w-full mobile:flex-col">
-                            <div className="flex flex-col items-center justify-start  gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
-                                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
-                                    <span>$</span>{renderDigits(values[3])}B<sup>+</sup>
-                                </h3>
-                                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[3].text}</p>
-                            </div>
-                            </div>
+              <div className="flex flex-col items-center justify-start  gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
+                <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
+                  <span>$</span>{renderDigits(values[3])}B<sup>+</sup>
+                </h3>
+                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[3].text}</p>
+              </div>
+            </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
 
           </div>
@@ -123,25 +122,25 @@ function DigitScroller({ digit, duration = 2 }) {
   const containerRef = useRef();
 
   useEffect(() => {
-      const digitIndex = parseInt(digit, 10);
-      gsap.to(containerRef.current, {
-          y: `-${digitIndex * 10}%`,
-          duration,
-          ease: "power1.out",
-          scrollTrigger: {
-              trigger: "#stats",
-              start: "top 80%",
-          }
-      });
+    const digitIndex = parseInt(digit, 10);
+    gsap.to(containerRef.current, {
+      y: `-${digitIndex * 10}%`,
+      duration,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: "#stats",
+        start: "top 80%",
+      }
+    });
   }, [digit, duration]);
 
   return (
-      <div className="overflow-hidden h-[6vw] mb-[0.9vw] tablet:h-[8.8vw] mobile:h-[14.4vw] mobile:mb-[2.1vw] leading-[1.4] inline-block relative w-[0.6em]">
-          <div ref={containerRef} className="flex flex-col items-center">
-              {[...Array(10).keys()].map((d) => (
-                  <span key={d} className="h-fit text-inherit">{d}</span>
-              ))}
-          </div>
+    <div className="overflow-hidden h-[6vw] mb-[0.9vw] tablet:h-[8.8vw] mobile:h-[14.4vw] mobile:mb-[2.1vw] leading-[1.4] inline-block relative w-[0.6em]">
+      <div ref={containerRef} className="flex flex-col items-center">
+        {[...Array(10).keys()].map((d) => (
+          <span key={d} className="h-fit text-inherit">{d}</span>
+        ))}
       </div>
+    </div>
   );
 }

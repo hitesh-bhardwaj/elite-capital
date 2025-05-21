@@ -14,7 +14,6 @@ import Layout from '@/components/Common/Layout';
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from "@/lib/json-ld";
 
-
 export default function Invest() {
   fadeUp()
   paraAnim()

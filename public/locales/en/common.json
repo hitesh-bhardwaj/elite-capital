@@ -25,7 +25,15 @@
   ],
   "footerNavBottom": [
     {
-      "text": "Cookie Policy",
+      "text": "Disclaimer",
+      "link": "/disclaimer"
+    },
+    {
+      "text": "Privacy Policy",
+      "link": "/privacy-policy"
+    },
+    {
+      "text": "Cookies Policy",
       "link": "/cookie-policy"
     }
   ],

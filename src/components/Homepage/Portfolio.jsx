@@ -129,6 +129,7 @@ export default function SwiperSlider() {
                 <Image
                   src={item.image}
                   width={1920}
+                  quality={95}
                   height={1080}
                   alt="portfolio-images"
                   className="w-full h-full object-cover"
@@ -218,7 +219,7 @@ export default function SwiperSlider() {
       <div
         ref={buttonRef}
         onMouseMove={(e) => handleMouseMove(e)}
-        className="absolute z-[5] bottom-[25%] ltr::left-[5%] rtl:right-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%] mobile:ltr:left-[5%] mobile:rtl:right-[20%] rtl:tablet:left-[80%]"
+        className="absolute z-[5] bottom-[25%] ltr:left-[5%] rtl:right-[10%] w-[3.5vw] h-[3.5vw] mobile:w-[12vw] mobile:h-[12vw] overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer border border-white mobile:bottom-[20%] tablet:w-[7vw] tablet:h-[7vw] tablet:bottom-[20%] tablet:left-[5%] mobile:ltr:left-[5%] mobile:rtl:right-[20%] rtl:tablet:left-[80%]"
         onClick={handlePrev}
       >
         <span
@@ -252,7 +253,7 @@ export default function SwiperSlider() {
       </div>
 
       <div className="absolute bottom-[10%] z-[5] ltr:left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:right-[5%] rtl:mobile:left-[27%] rtl:tablet:left-[55%]">
-        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} prefetch={false} />
+        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} />
       </div>
     </div>
   );

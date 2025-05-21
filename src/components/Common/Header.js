@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import logo from "../../../public/EC-text.svg";
 import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
 import { useTranslation } from "next-i18next";
 
 const socials = [
@@ -44,11 +43,12 @@ const Header = () => {
   const { t } = useTranslation("common");
   const footerNav = t("footerNav", { returnObjects: true });
   const [scrolled, setScrolled] = useState(false);
-  const [openMenu , setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
-  
-    if(globalThis.innerWidth>=1023){
-      useEffect(() => {
+
+
+  useEffect(() => {
+    if (globalThis.innerWidth >= 1023) {
       const handleScroll = () => {
         if (window.scrollY > 50) {
           setScrolled(true);
@@ -56,32 +56,35 @@ const Header = () => {
           setScrolled(false);
         }
       };
-    window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
+
       return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-  
+    }
+  }, []);
+
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+    if (globalThis.innerWidth >= 1023) {
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
-        setShowHeader(false);
-      } else if (currentScrollY < lastScrollY) {
-        setShowHeader(true);
-      }
+        if (currentScrollY > lastScrollY) {
+          setShowHeader(false);
+        } else if (currentScrollY < lastScrollY) {
+          setShowHeader(true);
+        }
 
-      setLastScrollY(currentScrollY);
-    };
+        setLastScrollY(currentScrollY);
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [lastScrollY]);
-}
 
   const openMenuMobile = () => {
     setOpenMenu(true);
@@ -119,36 +122,25 @@ const Header = () => {
         </div>
 
         <div className="flex gap-[2vw] mobile:hidden tablet:hidden">
-          <div
-            className={` h-[2vw]  flex flex-nowrap overflow-hidden justify-end text-white transition-all duration-500 ease-in-out w-[30vw]`}
-          >
-            <div className={`absolute right-[10%] z-[2] rtl:left-[13%] rtl:right-auto overflow-hidden transition-all duration-500 ease-in-out w-[37vw] pt-[0.3vw] rtl:w-[32vw]`}>
-              <div
-                className={`w-[40vw] flex-nowrap flex gap-[3vw] rtl:w-[35vw]`}
-              >
-                <Link  href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
-                    <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
-                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease">
-                      {t('home')}
-                      </span>
-                    </div>
-                  </Link>
-                {footerNav.map((item, id) => (
-
-                  <Link key={id} href={item.link} className={`menu-link text-[1.2vw] group`} prefetch={false}>
-                    <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
-                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
-                        {item.text}
-                      </span>
-                    </div>
-                  </Link>
-
-                ))}
+          <div className={`flex flex-nowrap justify-end text-white gap-[2vw]`}>
+            <Link href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
+              <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
+                <span className="group-hover:scale-[0.98] transition-all duration-300 ease">
+                  {t('home')}
+                </span>
               </div>
-            </div>
-          
+            </Link>
+            {footerNav.map((item, id) => (
+              <Link key={id} href={item.link} className={`menu-link text-[1.2vw] group`} prefetch={false}>
+                <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
+                  <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
+                    {item.text}
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
-          <LanguageButton className="mobile:hidden tablet:hidden" />
+          {/* <LanguageButton className="mobile:hidden tablet:hidden" /> */}
         </div>
 
         <div className="hidden mobile:block tablet:block">
@@ -170,72 +162,70 @@ const Header = () => {
         </div>
         <div className={`w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block `}>
           <div
-            className={`${openMenu ? 'h-[55vh] tablet:h-[55vh]': 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
+            className={`${openMenu ? 'h-[55vh] tablet:h-[55vh]' : 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
           >
             <div className="flex flex-col gap-[10vw] relative">
-            <div className="flex flex-col gap-[2vw] pt-[25vw] tablet:pt-[10vw] ">
-            <Link  href="/" className={`menu-link text-[1.2vw] group` } prefetch={false} onClick={closeMenuMobile}>
-                    <div className={`flex gap-2 items-center relative `}>
-                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease mobile:text-[6vw] tablet:text-[4vw]">
+              <div className="flex flex-col gap-[2vw] pt-[25vw] tablet:pt-[10vw] ">
+                <Link href="/" className={`menu-link text-[1.2vw] group`} prefetch={false} onClick={closeMenuMobile}>
+                  <div className={`flex gap-2 items-center relative `}>
+                    <span className="group-hover:scale-[0.98] transition-all duration-300 ease mobile:text-[6vw] tablet:text-[4vw]">
                       {t('home')}
-                      </span>
-                    </div>
-                  </Link>
-              {footerNav.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.link}
-                  prefetch={false}
-                  className="group w-fit"
-                  onClick={closeMenuMobile}
-                >
-                  <div className="flex items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out mobile:after:bg-black mobile:after:w-0">
-                    <span className="group-hover:scale-[0.98] transition-all duration-300 ease text-[6vw] tablet:text-[4vw]">
-                      {item.text}
                     </span>
                   </div>
                 </Link>
-              ))}
+                {footerNav.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    prefetch={false}
+                    className="group w-fit"
+                    onClick={closeMenuMobile}
+                  >
+                    <div className="flex items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out mobile:after:bg-black mobile:after:w-0">
+                      <span className="group-hover:scale-[0.98] transition-all duration-300 ease text-[6vw] tablet:text-[4vw]">
+                        {item.text}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div className="flex items-center gap-4">
+                {socials.map((social, index) => (
+                  <a
+                    target="_blank"
+                    href={social.link}
+                    className="group flex items-center relative justify-center border-[1.5px] border-black overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
+                    key={index}
+                  >
+                    <Image
+                      className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300 invert tablet:w-[1.5rem] tablet:h-[1.5rem]"
+                      src={social.icon}
+                      alt={social.alt}
+                      width={25}
+                      height={25}
+                    />
+                  </a>
+                ))}
+              </div>
+              {/* <div className="w-full flex justify-end">
+                <LanguageButton />
+              </div> */}
+              <div
+                className="absolute right-[-2%] top-[8%] border rounded-full border-black p-[3vw] rtl:left-[2%] rtl:right-auto"
+                onClick={closeMenuMobile}
+              >
+                <Image
+                  src={"/icons/cross.svg"}
+                  width={30}
+                  height={30}
+                  alt="cross-icon"
+                  className="object-contain w-[4vw] h-[4vw] tablet:w-[2vw] tablet:h-[2vw]"
+                />
+              </div>
             </div>
-            <div className="flex items-center gap-4">
-              {socials.map((social, index) => (
-                <a
-                  target="_blank"
-                  href={social.link}
-                  className="group flex items-center relative justify-center border-[1.5px] border-black overflow-hidden rounded-full p-[1vw] duration-500 mobile:items-start mobile:p-[3.5vw] tablet:p-[2vw]"
-                  key={index}
-                >
-                  <Image
-                    className="w-[1.2rem] h-[1.2rem] group-hover:invert duration-300 invert tablet:w-[1.5rem] tablet:h-[1.5rem]"
-                    src={social.icon}
-                    alt={social.alt}
-                    width={25}
-                    height={25}
-                  />
-                </a>
-              ))}
-            </div>
-            <div className="w-full flex justify-end">
-              <LanguageButton />
-            </div>
-            <div
-              className="absolute right-[-2%] top-[8%] border rounded-full border-black p-[3vw] rtl:left-[2%] rtl:right-auto"
-              onClick={closeMenuMobile}
-            >
-              <Image
-                src={"/icons/cross.svg"}
-                width={30}
-                height={30}
-                alt="cross-icon"
-                className="object-contain w-[4vw] h-[4vw] tablet:w-[2vw] tablet:h-[2vw]"
-              />
-            </div>
-            </div>
-            
-           
           </div>
           <div
-            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${openMenu ? '':'opacity-0 pointer-events-none'} `}
+            className={`w-screen h-screen absolute top-0 bg-black/50 transition-all duration-500 ease ${openMenu ? '' : 'opacity-0 pointer-events-none'} `}
           ></div>
         </div>
       </div>

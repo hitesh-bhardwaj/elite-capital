@@ -1,9 +1,7 @@
 import React from "react";
-import { useTranslation } from "next-i18next";
 import ContactForm from "./ContactForm";
 
-const Contact = ({ translation, heading, para }) => {
-  const { t } = useTranslation(`${translation}`);
+const Contact = ({ heading, para }) => {
   return (
     <section className="bg-[#F2F2E9] w-screen h-full py-[5%] mobile:py-[15%] tablet:pb-[10%] dark" id="contact">
       <div className="px-[5vw] w-full h-full flex justify-between mobile:flex-col mobile:gap-[5vw] tablet:flex-col tablet:gap-[5vw]">

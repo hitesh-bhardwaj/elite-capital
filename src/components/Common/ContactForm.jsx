@@ -204,18 +204,20 @@ export default function ContactForm() {
                 control={form.control}
                 name="terms"
                 render={({ field }) => (
-                  <FormItem className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw]">
-                    <Checkbox
-                      id="terms"
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                    <FormLabel
-                      htmlFor="terms"
-                      className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
-                    >
-                      {t("formAgreement")}
-                    </FormLabel>
+                  <FormItem className="">
+                    <div className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw]">
+                      <Checkbox
+                        id="terms"
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                      <FormLabel
+                        htmlFor="terms"
+                        className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
+                      >
+                        {t("formAgreement")}
+                      </FormLabel>
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -254,7 +256,7 @@ export default function ContactForm() {
                     </div>
                   ) : (
                     <span className="text-[1.1vw] mobile:text-[4.5vw] tablet:text-[2.5vw]">
-                     Submitting..
+                      Submitting..
                     </span>
                   )}
                 </Button>
