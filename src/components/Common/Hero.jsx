@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { SplitInWord } from "../splitTextUtils";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = ({ img, translation, heading, para, nextSectionId , className}) => {
