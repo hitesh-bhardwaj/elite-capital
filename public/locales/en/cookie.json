@@ -80,7 +80,7 @@
             "title": "6. Contact Us",
             "para": [
                 "<p>If you have any questions or concerns regarding our use of cookies, please contact:</p>",
-              "<p><span class='font-medium'>Elite Capital (DIFC) Limited</span> <ul class='!list-none '><li><span class='font-medium'> Email: </span><a href='mailto:info@elitecapitalinvestments.com'>info@elitecapitalinvestments.com</a></li> <li> <span class='font-medium'>Telephone: </span> <a href='tel: +971 4499 2400'> +971 4 499 2400 </a></li></ul> </p>"
+              "<p><span class='font-medium'>Elite Capital (DIFC) Limited</span> <ul class='!list-none '><li><span class='font-medium'> Email: </span><a href='mailto:info@elitecapitalinvestments.com' target='_blank'>info@elitecapitalinvestments.com</a></li> <li> <span class='font-medium'>Telephone: </span> <a href='tel: +971 4499 2400' target='_blank'> +971 4499 2400 </a></li></ul> </p>"
             ]
         }
     ]
