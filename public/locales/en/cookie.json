@@ -1,52 +1,86 @@
 {
     "hero": "Cookie policy",
-    "heroSub": "Website (website URL) is  operated by Elite Capital.This policy explains the way in which cookies are used on our websites. Please ensure as the user of our websites you have read and understood this policy before continuing to use them. If you have any questions about our use of cookies, you can contact us at (Email)",
+    "heroSub": "This Cookie Policy explains how Elite Capital (DIFC) Limited (“Elite”, “we”, “our”, or “us”) uses cookies and similar technologies when you access or interact with our website.",
     "content": [
         {
-            "title": "What are cookies?",
+            "title": "1. Use of Cookies",
             "para": [
-                "Cookies are text files containing small amounts of information which are downloaded to your device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognizes that cookie. Cookies are useful because they allow a website to recognize a user’s device.",
-                "You can find more information about cookies at:https://allaboutcookies.org  and  https://youronlinechoices.eu.",
-                "Cookies do lots of different jobs, like letting you navigate between pages efficiently, remembering your preferences, and generally improving the user experience. They can also help to ensure that adverts you see online are more relevant to you and your interests."
+                "A cookie is a small text file that is stored on your browser or device when you visit a website. Cookies are widely used to make websites work more efficiently and to provide reporting information. When you access our website, we may use cookies or other similar technologies to distinguish you from other users and enhance your browsing experience.",
+                "We do not use cookies to collect personal data unless you voluntarily provide such information (e.g., by submitting a form on the website). Where cookies collect data that could identify an individual, we treat such data as personal data and handle it in accordance with our Privacy Policy and applicable data protection laws, including DIFC Law No. 5 of 2020."
             ]
         },
         {
-            "title": "Which cookies are used on this website?",
+            "title": "2. Types of Cookies We Use",
             "para": [
-                "The cookies used on this website have been categorised based on the categories found in the ICC UK Cookie guide.A list of all the cookie types used on this website by category is set out below"
+                "We may use the following categories of cookies on our website:"
             ],
-            "list": [
+            "list1": [
                 {
                     "title": "Strictly necessary cookies",
                     "detail": [
-                        "These cookies are essential in order to enable you to move around the website and use its features, such as accessing secure areas of the website. Without these cookies, services you have asked for cannot be provided."
+                        "These cookies are essential to enable you to navigate the website and use its features. Without these cookies, certain services you request may not be possible."
                     ]
                 },
                 {
-                    "title": "Performance cookies",
+                    "title": "Performance and Analytics Cookies:",
                     "detail": [
-                        "These cookies collect information about how visitors use a website, for instance which pages visitors go to most often, and if they get error messages from web pages. These cookies don’t collect information that identifies a visitor. All information these cookies collect is aggregated and therefore anonymous. It is only used to improve how a website works."
+                        "These cookies collect aggregated and anonymous data on how visitors use the website, such as which pages are visited most often, and whether users receive error messages from web pages. These cookies help us improve the performance and functionality of our website."
                     ]
                 },
                 {
-                    "title": "Functional cookies",
+                    "title": "Functionality Cookies:",
                     "detail": [
-                        "These cookies allow a website to remember choices you make (such as your user name, language or the region you are in) and provide enhanced, more personal features. These cookies can also be used to remember changes you have made to text size, fonts and other parts of web pages that you can customize. They may also be used to provide services you have asked for such as watching a video or commenting on a blog. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites."
-                    ]
-                },
-                {
-                    "title": "Google Analytics",
-                    "detail": [
-                        "These cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from and the pages they visited."
+                        "These cookies allow the website to remember choices you make (such as your language preferences) and provide enhanced, more personalized features."
                     ]
                 }
             ]
         },
         {
-            "title": "How can the cookies be removed?",
+            "title": "3. Third-Party Cookies",
             "para": [
-                "You may refuse to accept cookies by activating the setting on your internet browser which allows you to refuse the setting of cookies. For more information about cookies including how to set your internet browser to reject cookies please go to www.allaboutcookies.org.",
-                "To opt out of Google Analytics visit https://tools.google.com/dlpage/gaoptout."
+               "We may allow selected third parties to place cookies on our website for performance and analytics purposes. These third-party service providers are required to comply with applicable data protection laws and are contractually bound to process any personal data only as instructed by us."
+            ]
+        },
+        {
+            "title": "4. Consent and Control",
+            "para": [
+               "By continuing to browse our website, you consent to our use of cookies as described in this policy. You may choose to disable or block cookies at any time by modifying your browser settings. However, please note that if you choose to disable all cookies, some parts of our website may not function properly.",
+               "For detailed instructions on how to manage cookie preferences in your specific browser, you may refer to:"
+            ],
+            "list2": [
+                {
+                    "detail": [
+                        "Google Chrome: support.google.com/chrome/answer/95647"
+                    ]
+                },
+                {
+                    "detail": [
+                        "Mozilla Firefox: support.mozilla.org/en-US/kb/enable-and-disable-cookies"
+                    ]
+                },
+                {
+                    "detail": [
+                        "Safari: support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471"
+                    ]
+                },
+                {
+                    "detail": [
+                        "Microsoft Edge: support.microsoft.com/en-us/help/4027947/microsoft-edge-delete-cookies"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "5. Updates to this Policy",
+            "para": [
+               "We may update this Cookie Policy from time to time to reflect changes in the law, technology, or our practices. Any updates will be posted on this page with an updated effective date. We encourage you to periodically review this page for the latest information."
+            ]
+        },
+        {
+            "title": "6. Contact Us",
+            "para": [
+                "<p>If you have any questions or concerns regarding our use of cookies, please contact:</p>",
+              "<p><span class='font-medium'>Elite Capital (DIFC) Limited</span> <ul class='!list-none'><li>Email:<a href='mailto:info@elitecapitalinvestments.com'>info@elitecapitalinvestments.com</a></li> <li>Telephone: +971 4 499 2400</li></ul> </p>"
             ]
         }
     ]

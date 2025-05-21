@@ -44,9 +44,9 @@ const Content = () => {
                                 <div className='w-full mobile:w-[80%]'>
                                     <div className='heading-2 pb-[1vw] mobile:pb-[5vw] tablet:pb-[5vw] '>{item.title}</div>
                                     {item.para && item.para.map((text, index) => (
-                                        <div key={index} className='content py-[1vw] mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] cookie rtl:mobile:ml-0 rtl:mobile:mr-[-18vw]'>{text}</div>
+                                        <div key={index} className='content py-[1vw] mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] cookie rtl:mobile:ml-0 rtl:mobile:mr-[-18vw]'dangerouslySetInnerHTML={{__html:text}} />
                                     ))}
-                                    {item.list && item.list.map((items, index) => (
+                                    {item.list1 && item.list1.map((items, index) => (
                                         <div key={index} className='space-y-[1.5vw] pl-[5vw] pt-[3vw]'>
                                             <div className='heading-2 s mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] cookie rtl:mobile:ml-0 rtl:mobile:mr-[-7vw]'>
                                                 {items.title}
@@ -56,6 +56,15 @@ const Content = () => {
                                             </div>
                                         </div>
                                     ))}
+                                    <ul className='list-disc'>
+                                        {item.list2 && item.list2.map((items, index) => (
+                                            <li key={index} className='pt-[1vw]'>
+                                                <div className='content  mobile:space-y-[5vw] mobile:ml-[-18vw] tablet:space-y-[4vw] rtl:mobile:mr-[-7vw] rtl:mobile:ml-0 cookie'>
+                                                    {items.detail}
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                             <span className='bg-black1 w-full h-[1px] block mt-[1vw] lineDraw mobile:!my-[15vw]  tablet:my-[5vw]' />
