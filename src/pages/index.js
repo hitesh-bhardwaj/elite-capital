@@ -1,4 +1,4 @@
-import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
+// import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Assets from "@/components/Homepage/Assets";
@@ -15,11 +15,11 @@ import Counter from "@/components/Homepage/Counter";
 
 export default function Home() {
 
-  fadeUp();
-  paraAnim();
-  titleAnim();
-  lineAnim();
-  fadeIn();
+  // fadeUp();
+  // paraAnim();
+  // titleAnim();
+  // lineAnim();
+  // fadeIn();
 
 
   const metadata = {

@@ -3,17 +3,17 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { SplitInWord } from "@/components/splitTextUtils";
+// import { SplitInWord } from "@/components/splitTextUtils";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = ({ img, nextSectionId }) => {
 
   const buttonRef = useRef(null);
-  let delayTime = "";
-  useEffect(() => {
-    const isFirstTimeLoading = sessionStorage.getItem('hasVisited') === null;
-    delayTime = isFirstTimeLoading ? 1.8 : 0.2;
-  }, [])
+  // let delayTime = "";
+  // useEffect(() => {
+  //   const isFirstTimeLoading = sessionStorage.getItem('hasVisited') === null;
+  //   delayTime = isFirstTimeLoading ? 1.8 : 0.2;
+  // }, [])
 
   const handleMouseMove = useCallback((e) => {
     if (!buttonRef.current) return;
@@ -33,56 +33,56 @@ const Hero = ({ img, nextSectionId }) => {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".hero-img", {
-        scale: 1.1,
-        duration: 1,
-        delay: delayTime,
-        ease: "power3.out",
-      });
-      gsap.to(".hero-img", {
-        yPercent: 50,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-      const heroParaAnimation = document.querySelector(".hero-para-anim");
-      SplitInWord(heroParaAnimation);
-      const paraLine = heroParaAnimation.querySelectorAll(".word");
-      gsap.from(paraLine, {
-        scrollTrigger: {
-          trigger: heroParaAnimation,
-          start: "top 80%",
-        },
-        opacity: 0,
-        yPercent: 40,
-        duration: 1,
-        delay: delayTime,
-        stagger: 0.02,
-      });
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.from(".hero-img", {
+  //       scale: 1.1,
+  //       duration: 1,
+  //       delay: delayTime,
+  //       ease: "power3.out",
+  //     });
+  //     gsap.to(".hero-img", {
+  //       yPercent: 50,
+  //       ease: "none",
+  //       scrollTrigger: {
+  //         trigger: "#hero",
+  //         start: "top top",
+  //         end: "bottom top",
+  //         scrub: true,
+  //       },
+  //     });
+  //     const heroParaAnimation = document.querySelector(".hero-para-anim");
+  //     SplitInWord(heroParaAnimation);
+  //     const paraLine = heroParaAnimation.querySelectorAll(".word");
+  //     gsap.from(paraLine, {
+  //       scrollTrigger: {
+  //         trigger: heroParaAnimation,
+  //         start: "top 80%",
+  //       },
+  //       opacity: 0,
+  //       yPercent: 40,
+  //       duration: 1,
+  //       delay: delayTime,
+  //       stagger: 0.02,
+  //     });
 
-      const heroTitleAnimation = document.querySelector(".hero-title-anim");
-      SplitInWord(heroTitleAnimation);
-      const HeroTitle = heroTitleAnimation.querySelectorAll(".word");
-      gsap.from(HeroTitle, {
-        scrollTrigger: {
-          trigger: heroTitleAnimation,
-          start: "top 80%",
-        },
-        opacity: 0,
-        delay: delayTime,
-        x: 20,
-        duration: 1,
-        stagger: 0.05,
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+  //     const heroTitleAnimation = document.querySelector(".hero-title-anim");
+  //     SplitInWord(heroTitleAnimation);
+  //     const HeroTitle = heroTitleAnimation.querySelectorAll(".word");
+  //     gsap.from(HeroTitle, {
+  //       scrollTrigger: {
+  //         trigger: heroTitleAnimation,
+  //         start: "top 80%",
+  //       },
+  //       opacity: 0,
+  //       delay: delayTime,
+  //       x: 20,
+  //       duration: 1,
+  //       stagger: 0.05,
+  //     });
+  //   });
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <>
