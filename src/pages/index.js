@@ -38,12 +38,12 @@ export default function Home() {
       <Layout>
         <Hero img={heroBg} nextSectionId={"about"} />
         <About />
-        <Counter />
-        <Values />
+        {/* <Counter /> */}
+        {/* <Values /> */}
         <Advantage />
         <Diversify />
         <Assets />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Contact   />
       </Layout>
     </>
