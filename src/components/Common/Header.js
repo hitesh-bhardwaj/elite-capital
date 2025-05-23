@@ -46,7 +46,7 @@ const Header = () => {
   ]
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
- console.log(footerNav)
+//  console.log(footerNav)
 
 
   useEffect(() => {
