@@ -1,0 +1,50 @@
+{
+  "contactHead": "استثمر معنا",
+  "contactSub": "تواصل معنا لمعرفة المزيد حول فرصنا الاستثمارية.",
+  "home": "الرئيسة",
+  "footerCopy": "حقوق النشر (©) 2025 جميع الحقوق محفوظة. إيليت كابيتال (DIFC) ليمتد.",
+  "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
+  "footerEmailText": "Enter Your Email",
+  "footerEmailButton": "Subscribe",
+  "formHead": "تواصل معنا",
+  "formAgreement": "نعم، أرغب في استلام اتصالات من شركة إيليت كابيتال.",
+  "formPrivacy":"<p>*ستستخدم إيليت كابيتال هذه المعلومات فقط كما هو موضح في  <a href='/privacy-policy' class='underline pb-1' >  سياسة الخصوصية. </a>.</p>",
+  "footerline": "أصول حقيقية. عوائد حقيقية.",
+  "footerNav": [
+    {
+      "text": "من نحن",
+      "link": "/about-us"
+    },
+    { 
+      "text": "ابدأ استثمارك الآن",
+      "link": "/invest-with-us"
+    },
+    {
+      "text": "تواصل معنا ",
+      "link": "/contact"
+    }
+  ],
+  "footerNavBottom": [
+    {
+      "text": "تنصل",
+      "link": "/disclaimer"
+    },
+    {
+      "text": "سياسة الخصوصية",
+      "link": "/privacy-policy"
+    },
+    {
+      "text": "سياسة الخصوصية",
+      "link": "/cookie-policy"
+    }
+  ],
+  "formName": "الاسم بالكامل*",
+  "formEmail": "البريد الإلكتروني*",
+  "formPhone": "رقم الهاتف*",
+  "formCompany": "اسم الشركة*",
+  "formDesignation": "المسمى الوظيفي*",
+  "formMessage": "رسالتك*",
+  "formcta": "يُقدِّم",
+  "errorSub": "هذه الصفحة غير موجودة.",
+  "errorCta": "العودة إلى الصفحة الرئيسية"
+}

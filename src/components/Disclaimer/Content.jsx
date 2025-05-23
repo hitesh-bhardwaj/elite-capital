@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import yellowRectangleMask from "../../../public/icons/yellow-rectangle-mask.svg";
 import Image from "next/image";
 import gsap from "gsap";

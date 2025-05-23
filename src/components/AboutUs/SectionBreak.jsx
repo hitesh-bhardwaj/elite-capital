@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import Image from "next/image";
 import image from "../../../public/assets/images/about/section-break.png"
 import gsap from "gsap";

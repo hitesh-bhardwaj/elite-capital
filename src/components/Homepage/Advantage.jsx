@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import LineButton from "../ui/LineButton";
 import image from "../../../public/assets/images/homepage/advantage.png"
 import Image from "next/image";

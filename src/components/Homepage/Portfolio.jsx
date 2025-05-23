@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Controller, Autoplay, Parallax } from "swiper/modules";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/controller";

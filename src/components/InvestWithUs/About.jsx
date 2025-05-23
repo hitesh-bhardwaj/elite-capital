@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import aboutImage from "../../../public/assets/images/invest/about-img.png";
 import yellowRectangle from "../../../public/assets/images/homepage/yellow-rectangle.png";
 import Image from "next/image";

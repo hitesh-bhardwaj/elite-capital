@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 
 const PortfolioCard = ({ img, title, location, address1, address2 }) => {
   return (

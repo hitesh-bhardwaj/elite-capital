@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import Image from "next/image";
 import { useCallback, useEffect, useRef } from "react";
 import gsap from "gsap";

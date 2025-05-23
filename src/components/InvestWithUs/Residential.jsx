@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import factors1 from "../../../public/assets/images/invest/factors-1.png"
 import factors2 from "../../../public/assets/images/invest/factors-2.png"
 import factors3 from "../../../public/assets/images/invest/factors-3.png"

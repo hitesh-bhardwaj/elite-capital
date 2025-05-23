@@ -1,15 +1,15 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import About from '@/components/AboutUs/About';
 import Team from '@/components/AboutUs/Team';
 import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import Values from '@/components/AboutUs/Values';
 import Hero from '@/components/Common/Hero';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "@/lib/i18";
 import heroBg from "../../public/assets/images/about/hero-bg.png";
 import Contact from '@/components/Common/Contact';
 import Layout from '@/components/Common/Layout';
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from "@/lib/json-ld";
+import { loadTranslations } from '@/lib/i18n-server';
 
 export default function AboutPage() {
   fadeUp();
@@ -44,11 +44,8 @@ export default function AboutPage() {
 }
 
 export async function getStaticProps({ locale }) {
+  const translations = loadTranslations(locale, ['about', 'common'])
   return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        'about', 'common',
-      ])),
-    },
+    props: { translations },
   }
 }

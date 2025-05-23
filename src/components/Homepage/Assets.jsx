@@ -1,10 +1,9 @@
 import React from 'react'
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "@/lib/i18";
 import real1 from "../../../public/assets/images/homepage/real-1.png"
 import real2 from "../../../public/assets/images/homepage/real-2.png"
 import real3 from "../../../public/assets/images/homepage/real-3.png"
 import ImageComponent from '../Common/ImageComponent';
-
 
 const Assets = () => {
     const { t } = useTranslation("home");

@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import logo from "../../../public/EC-text.svg";
 import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 
 const socials = [
   {
@@ -44,8 +44,6 @@ const Header = () => {
   const footerNav = t("footerNav", { returnObjects: true });
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-
-
 
   useEffect(() => {
     if (globalThis.innerWidth >= 1023) {

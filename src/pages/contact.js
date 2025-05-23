@@ -1,13 +1,13 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Location from '@/components/Contact/Location';
 import Contact from '@/components/Common/Contact';
 import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
 import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/contact/hero-bg.png";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "@/lib/i18";
 import Layout from '@/components/Common/Layout';
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
+import { loadTranslations } from '@/lib/i18n-server';
 
 export default function AboutPage() {
   fadeUp();
@@ -36,12 +36,10 @@ export default function AboutPage() {
     </>
   );
 }
+
 export async function getStaticProps({ locale }) {
+  const translations = loadTranslations(locale, ['contact', 'common'])
   return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        'contact', 'common'
-      ])),
-    },
+    props: { translations },
   }
 }

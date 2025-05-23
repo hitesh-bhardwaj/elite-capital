@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import valuesBg from "../../../public/assets/images/homepage/values-bg.png"
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
@@ -6,11 +6,8 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
-// import { parllaxAnim } from "../gsapAnimations";
-
 
 const Values = () => {
-  // parllaxAnim("#values")
   const { t } = useTranslation('home');
   const values = t('values', { returnObjects: true });
   useEffect(() => {

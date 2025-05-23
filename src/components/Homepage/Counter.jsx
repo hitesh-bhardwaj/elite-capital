@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import statsBg from "../../../public/assets/images/homepage/stats-bg.png";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);

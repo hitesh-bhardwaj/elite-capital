@@ -1,12 +1,12 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import bg from "../../public/assets/images/cookiepolicy/cookie-policy-hero.png";
 import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from '@/components/gsapAnimations';
 import Content from '@/components/CookiePolicy/Content';
 import Hero from '@/components/Common/Hero';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "@/lib/i18";
 import Layout from '@/components/Common/Layout';
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
+import { loadTranslations } from '@/lib/i18n-server';
 
 export default function Cookie() {
   fadeUp();
@@ -36,11 +36,8 @@ export default function Cookie() {
 }
 
 export async function getStaticProps({ locale }) {
+  const translations = loadTranslations(locale, ['cookie', 'common'])
   return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        'cookie', 'common'
-      ])),
-    },
+    props: { translations },
   }
 }

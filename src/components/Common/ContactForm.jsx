@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Checkbox } from "../ui/checkbox";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/lib/i18";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),

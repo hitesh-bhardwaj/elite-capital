@@ -1,0 +1,50 @@
+{
+  "contactHead": "Invest with us",
+  "contactSub": "Contact us to learn more about our investment opportunities.",
+  "home": "HOME",
+  "footerCopy": "Copyright (©) 2025 All Rights Reserved. Elite Capital (DIFC) Limited",
+  "footerEmail": "Subscribe for our Newsletter to Receive Updates and Content.",
+  "footerEmailText": "Enter Your Email",
+  "footerEmailButton": "Subscribe",
+  "formHead": "Get in touch",
+  "formAgreement": "Yes, I would like to receive communications from Elite Capital.",
+  "formPrivacy":"<p>*Elite Capital will only use this information as described in our <a href='/privacy-policy' class='underline pb-1' > Privacy Policy </a>.</p>",
+  "footerline": "Real Assets. Real Returns.",
+  "footerNav": [
+    {
+      "text": "WHO WE ARE",
+      "link": "/about-us"
+    },
+    {
+      "text": "INVEST WITH US",
+      "link": "/invest-with-us"
+    },
+    {
+      "text": "CONTACT US",
+      "link": "/contact"
+    }
+  ],
+  "footerNavBottom": [
+    {
+      "text": "Disclaimer",
+      "link": "/disclaimer"
+    },
+    {
+      "text": "Privacy Policy",
+      "link": "/privacy-policy"
+    },
+    {
+      "text": "Cookies Policy",
+      "link": "/cookie-policy"
+    }
+  ],
+  "formName": "Full name*",
+  "formEmail": "Email*",
+  "formPhone": "Phone*",
+  "formCompany": "Company name*",
+  "formDesignation": "Designation*",
+  "formMessage": "Message*",
+  "formcta": "Submit",
+  "errorSub": "This page does not exist.",
+  "errorCta": "Go back to Homepage"
+}

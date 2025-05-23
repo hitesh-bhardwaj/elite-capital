@@ -1,0 +1,29 @@
+{
+  "hero": "Get in touch",
+  "cta": "Learn More",
+  "locationHead": "Our Location",
+  "locationSub": "Elite Capital Head Office Central Park Towers, Office 02-40  Dubai International Financial Centre  PO Box 507417 Dubai, United Arab Emirates  Regulated by the DFSA under F009439",
+  "address1": "Elite Capital Head Office",
+  "address2": "Central Park Towers, Office 02-40",
+  "address3": "Dubai International Financial Centre ",
+  "address4": "PO Box 507417",
+  "address5": "Dubai, United Arab Emirates ",
+  "address6": "Regulated by the DFSA under F009439",
+  "contactHead": "Contact Us",
+  "phone": "+971 4 499 2400",
+  "mail": "info@elitecapitalinvestments.com",
+  "linkedin": "https://www.linkedin.com/company/officialelitecapital",
+  "instagram": "https://www.instagram.com/officialelitecapital?igsh=MXVieHkybDZkdXhxdQ==",
+  "contactFormHead": "Invest with us",
+  "contactSub": "Contact us to learn more about our investment opportunities.",
+  "footerNavBottom": [
+    {
+      "text": "Privacy Policy",
+      "link": "/privacy-policy"
+    },
+    {
+      "text": "Cookie Policy",
+      "link": "/cookie-policy"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { loadTranslations } from '@/lib/i18n-server';
+import { useTranslation } from '@/lib/i18';
 import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
@@ -5,9 +7,7 @@ import Assets from "@/components/Homepage/Assets";
 import Diversify from "@/components/Homepage/Diversify";
 import Portfolio from "@/components/Homepage/Portfolio";
 import Values from "@/components/Homepage/Values";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
-import { useTranslation } from "next-i18next";
 import Contact from "@/components/Common/Contact";
 import Layout from "@/components/Common/Layout";
 import Hero from "@/components/Homepage/Hero";
@@ -23,7 +23,7 @@ export default function Home() {
   lineAnim();
   fadeIn();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation('home')
 
   const metadata = {
     title: "Elite Capital",
@@ -54,11 +54,8 @@ export default function Home() {
 }
 
 export async function getStaticProps({ locale }) {
+  const translations = loadTranslations(locale, ['home', 'common'])
   return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        'home', 'common'
-      ])),
-    },
+    props: { translations },
   }
 }

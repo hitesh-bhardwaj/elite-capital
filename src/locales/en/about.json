@@ -1,0 +1,237 @@
+{
+    "hero": "Global experience combined with local expertise",
+    "cta": "Learn More",
+    "aboutHead": "About us",
+    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC).The Elite Capital team has over 80 years of  professional experience, which combines deep global fund management expertise and strategic local real estate knowledge . We focus on investing in high-quality real assets while supporting the growth and vitality of the communities they serve.",
+    "valuesHead": "Our values",
+    "values": [ 
+        {
+            "valueTitle": "Partnership",
+            "valueContent": "We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
+        },
+        {
+            "valueTitle": "Integrity",
+            "valueContent": "With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics."
+        },
+        {
+            "valueTitle": "Knowledge",
+            "valueContent": "We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk adjusted returns."
+        },
+        {
+            "valueTitle": "Trust",
+            "valueContent": "We build and maintain trust by promoting transparent collaboration in our dealings and prioritizing the interests of our stakeholders."
+        },
+        {
+            "valueTitle": "Sustainability",
+            "valueContent": "We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities."
+        }
+    ],
+    "team": "Our team",
+    "teamMembers": [
+        {
+            "name": "Vimal Jain",
+            "des": "Chief Executive Officer",
+            "img": "/assets/images/about/vimal-jain.png",
+            "features": [
+                "25+ years' professional experience",
+                "Senior roles with Henderson Global Investors, EY, IL&FS, Gresham House and Downing LLP",
+                "MBA (Dean's List) from London Business School",
+                "Chartered Accountant (Institute of Chartered Accountants of India)"
+            ]
+        },
+        {
+            "name": "Samim Sakhi",
+            "des": "Executive Director",
+            "img": "/assets/images/about/samim-sakhi.png",
+            "features": [
+                "15+ years' professional experience",
+                "Leads investment strategy at Elite Developments covering full-cycle project execution, from land acquisition through to development",
+                "Experience managing multiple medical facilities across Ontario"
+            ]
+        },
+        {
+            "name": "Tom Arnold",
+            "des": "Senior Advisor",
+            "img": "/assets/images/about/tom-arnold.png",
+            "features": [
+                "20+ years’ professional experience",
+                "Senior roles with Sweid, Middle East Family Offices, Investbridge Capital and PwC",
+                "MSc in International Real Estate; BA in Economics"
+            ]
+        },
+        {
+            "name": "Susan Mansuri",
+            "des": "Legal & Corporate Development Manager",
+            "img": "/assets/images/about/susan-mansuri.png",
+            "features": [
+                "5+ years’ professional legal experience",
+                "Roles with top tier corporate law firm and various investment fund managers in Toronto",
+                "Juris Doctor from Osgoode Hall Law School; Hon. BA Political Science (Specialization in Political Economy)"
+            ]
+        },
+        {
+            "name": "Amir Banaga",
+            "des": "Investment Partnerships & Corporate Development Manager",
+            "img": "/assets/images/about/amir-banaga.png",
+            "features": [
+                "10+ years’ professional experience",
+                "Roles across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations",
+                "Hon. BA International Relations & Industrial Relations from the University of Toronto"
+            ]
+        }
+        
+    ],
+    "readLess":"Read Less -",
+    "readMore":"Read More +",
+    "teamSub": "Board of Directors ",
+    "boardMembers": [
+        {
+            "name": "Hamid Hakimi",
+            "des": "Chairman",
+            "img": "/assets/images/about/hamid-hakimi.png",
+            "role": [
+                "Board of Directors",
+                "Investment Committee"
+            ],
+            "features": [
+                "Hamid Hakimi serves as the Chairman of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments the company has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
+                "Prior to this, Hamid successfully managed a team of realtors who completed real estate sales in Ontario, Canada in excess of $1 billion. His expertise in the field has solidified his place as a respected and influential figure in real estate development and acquisition."
+            ]
+        },
+        {
+            "name": "Vimal Jain",
+            "des": "Chief Executive Officer ",
+            "img": "/assets/images/about/vimal-jain.png",
+            "role": [
+                "Board of Directors",
+                "Investment Committee"
+            ],
+            "features": [
+                "Vimal Jain serves as CEO of Elite Capital and sits on the Board of Directors as an Executive Director. Vimal brings over 25 years of global experience in investment, fundraising and strategic advisory across real assets including infrastructure and energy, spanning greenfield and brownfield projects. His work has covered key markets across Europe, the Middle East, Asia and Australia, with cumulative enterprise value  exceeding £50 billion.",
+                "He previously held senior leadership roles at prominent investment firms such as Downing LLP and Gresham House Asset Management. He also served as CEO and Head of Europe at IL&FS, one of India’s leading infrastructure and energy investment groups. Earlier in his career, Vimal was an Associate Partner at EY, advising on M&A, capital structuring and strategic transactions for major infrastructure assets globally.",
+                "Vimal was a founding member of the infrastructure private equity team at Henderson Global Investors, where he played a key role in raising and deploying over £900 million across two successful funds. He holds an MBA from London Business School and is a qualified Chartered Accountant through the Institute of Chartered Accountants of India."
+            ]
+        },
+        {
+            "name": "Samim Sakhi",
+            "des": "Executive Director",
+            "img": "/assets/images/about/samim-sakhi.png",
+            "role": [
+                "Board of Directors",
+                "Investment Committee"
+            ],
+            "features": [
+                "Samim Sakhi serves on the Board of Directors at Elite Capital as an Executive Director. Samim has over 15 years of experience in managing real estate developments and acquisitions. As President of Elite Developments he leads the firm’s investment strategy with a focus on full-cycle project execution, from land acquisition through to development, while closely monitoring and evaluating project financial performance at each stage.",
+                "Samim has a strong track record of structuring investments in large-scale land developments across North America. He is well-known in the industry for his strategic vision, operational expertise and results-oriented leadership. In addition to his real estate work, he has extensive experience managing mid- and large-scale medical facilities across Ontario."
+            ]
+        },
+        {
+            "name": "Rizvan Magomedov",
+            "des": "Non-Executive Director",
+            "img": "/assets/images/about/icon.png",
+            "role": [
+                "Board of Directors"
+            ],
+            "features": [
+                "Rizvan Magomedov serves on the Board of Directors at Elite Capital as an Executive Director. Rizvan leads international development at Dominance MMA where he is instrumental in negotiating high-profile athlete contracts, sponsorship deals and global promotional partnerships. Formerly CEO of Eagle FC, Rizvan spearheaded the promotion’s international expansion, securing key broadcast and sponsorship agreements while launching events in new markets. With academic backgrounds in law and linguistics, he brings a distinctive combination of legal acumen, strategic thinking and cross-cultural fluency. Rizvan’s expertise continues to drive meaningful growth for elite athletes and global sports ventures alike."
+            ]
+        }
+    ],
+    "teamSub1": "Our Ambassadors",
+    "adviserMembers": [
+        {
+            "name": "Khabib Nurmagomedov",
+            "des": "Ambassador",
+            "img": "/assets/images/about/icon.png",
+            "role": [
+                "Board of Directors"
+            ],
+            "features": [
+                "Khabib Nurmagomedov is a globally recognized entrepreneur and retired undefeated UFC Champion, widely regarded as one of the greatest fighters in MMA history. As an Ambassador for Elite Capital, Khabib leverages his international profile and network to drive investment opportunities and business development. Since retiring from professional sports he has founded Eagle Fighting Championship (EFC) and invested in a diverse portfolio spanning fitness (FITRO), nutrition, hospitality (Papakha Restaurants and Cafes) and consumer products (M-PWR energy drinks). His strategic partnership with Wahed Invest underscores his commitment to ethical and inclusive finance, particularly in Muslim communities. Khabib’s ability to connect with global investors and communities brings tremendous value to Elite Capital’s growth trajectory."
+            ]
+        },
+        {
+            "name": "Islam Makhachev",
+            "des": "Ambassador",
+            "img": "/assets/images/about/icon.png",
+            "role": [
+                "Investment Committee"
+            ],
+            "features": [
+                "Islam Makhachev is a leading UFC athlete and one of the most prominent figures in global mixed martial arts. As an Ambassador for Elite Capital, Islam harnesses his expansive international following to build brand presence and investor engagement. Beyond his athletic accomplishments, he contributes to Elite Capital by activating a wide-reaching network of investors and supporters across key markets, further strengthening the firm’s global reach."
+            ]
+        }
+    ],
+    "teamSub2": "Investment Committee",
+    "investmentMembers": [
+        {
+            "name": "Sophie Llewellyn, FRICS",
+            "des": "Investment Committee Member",
+            "img": "/assets/images/about/sophie-image.png",
+            "role": [
+                "Investment Committee"
+            ],
+            "features": [
+                "Sophie Llewellyn is a senior real estate executive with over 30 years of experience leading commercial growth across the UK, Middle East and Africa. A Fellow of the Royal Institution of Chartered Surveyors (FRICS), she has held executive roles across multiple real estate sectors, including a 15-year tenure at Majid Al Futtaim Properties. There, she served as Head of Asset Management for an $11 billion diversified portfolio, where she led strategic planning, investment oversight and performance optimization, delivering consistent revenue and EBITDA growth.",
+               "Sophie's expertise spans investment and asset management, valuation, strategic development and corporate real estate. She has served in key advisory and non-executive roles, including over 15 years with a leading Middle Eastern REIT and as an elected member of the RICS Global Governing Council. She holds a BSc in Estate Management from Oxford Brookes University and has completed executive education at both the London School of Economics and Harvard University."
+            ]
+        },
+        {
+            "name": "Michael A. D. Cox",
+            "des": "Investment Committee Member",
+            "img": "/assets/images/about/icon.png",
+            "role": [
+                "Investment Committee"
+            ],
+            "features": [
+                "Michael A. D. Cox is a global real estate leader with more than 30 years of executive experience across the United States, Asia, the Middle East and Australia. He specializes in strategic business planning, investment frameworks and end-to-end project delivery for complex real estate ventures.",
+                "Michael has held senior leadership roles with institutions including the Public Investment Fund (PIF), Dubai Holding, Aldar Properties, QIC and Portman Holdings, where he oversaw multi-billion-dollar developments from inception through to asset management.",
+                "His expertise spans P&L oversight, M&A due diligence, acquisitions and large-scale construction management. Currently, he serves as Projects Executive Officer for a Confidential Private Office in Saudi Arabia, and serves on the Board of PRI and the Investment Committee of Gallery Securities."
+            ]
+        }
+    ],
+    "teamSub3": "Our Shariah Supervisory Board",
+    "shariahMembers": [
+        {
+            "name": "Dr. Mohamed Ali Elgari",
+            "des": "",
+            "img": "/assets/images/about/icon.png",
+            "features": [
+                "Dr. Mohamed Ali Elgari was previously a Professor of Islamic Economics and a former Director of the Centre for Research in Islamic Economics at King Abdul Aziz University in Saudi Arabia. He is an advisor to several Islamic financial institutions throughout the world and is also on the Shariah board of the Dow Jones Islamic Index.",
+                "He is a member of, amongst others, the following Shariah Supervisory Boards: Dubai Islamic Bank, Credit Suisse, Merrill Lynch & Co, Resmalla Investments, UBS Islamic Finance, Saudi American Bank, Natixis Bank,  FWU Group, Citi Islamic Investment Bank, HSBC Amanah Takaful Malaysia, Credit Agricole (Dubai), the Islamic Fiqh Academy as well as the Accounting & Auditing Organisation for Islamic Financial Institutions (AAOIFI).",
+                "Dr. Elgari has written several books on Islamic banking. He is a graduate of the University of California with a Ph.D. in Economics."
+            ]
+        },
+        {
+            "name": "Dr. Mohd Daud Bakar  ",
+            "des": "",
+            "img": "/assets/images/about/icon.png",
+            "features": [
+               "Dr. Mohd Daud Bakar is the Founder and Executive Chairman of Amanie Group. He is the former Chairman of First Abu Dhabi Bank (UAE), the Shariah Advisory Council (SAC) at the Central Bank of Malaysia, the Securities Commission of Malaysia, and Permodalan Nasional Berhad (PNB).",
+               "Dr. Mohd Daud is a Shariah Board Member of various global financial institutions, including Amanie Advisors Ltd (Dubai, UAE) and Amanie Advisors Sdn Bhd (Malaysia), where he serves as Chairman. He also chairs Salama Insurance (Dubai) and Habib Metropolitan Bank (Pakistan). Additionally, he serves on the Shariah boards of BNP Paribas Najma (Bahrain), Guidance Financial (USA), Amundi Asset Management (Paris), Dow Jones Islamic Market Index (USA), Standard and Poor’s Islamic Index (USA), Oasis Asset Management (South Africa), Morgan Stanley (Dubai), Sedco Capital (Saudi Arabia and Luxembourg), Credit Agricole CIB (Dubai), Madina Takaful (Oman), and Abu Dhabi Commercial Bank (UAE).",
+               "Dr. Mohd Daud earned his first degree in Shariah from the University of Kuwait in 1988, a Ph.D. from the University of St. Andrews, United Kingdom in 1993, and completed his external Bachelor of Jurisprudence at the University of Malaya in 2002."
+            ]
+        },
+        {
+            "name": "Dr. Muhammad Amin Ali Qattan",
+            "des": "",
+            "img": "/assets/images/about/icon.png",
+            "features": [
+                "Dr. Qattan has a Ph.D. in Islamic Banking from Birmingham University and is a lecturer and a prolific author of texts and articles on Islamic economics and finance. He is currently a freelance consultant, lecturer and trainer in Islamic banking and finance. ",
+                "Dr. Qattan also serves as the Shariah advisor to many reputable institutions such as Ratings Intelligence, Standard & Poors Shariah Indices amongst others. He is a highly regarded Shariah Scholar and is based in Kuwait."
+            ]
+        },
+        {
+            "name": "Dr. Osama Al Dereai",
+            "des": " ",
+            "img": "/assets/images/about/icon.png",
+            "features": [
+                "Dr. Osama Al Dereai is a Shariah scholar who has an extensive experience in teaching, consulting and research in the field of Islamic finance. Dr. Al Dereai obtained his Masters degree from the International Islamic University (Malaysia) and was later conferred his Doctorate in Islamic Transactions from the University of Malaya.",
+                "Dr. Al Dereai is a Shariah board member of various financial institutions which include the First Leasing Company, Barwa Bank, Barwa Capital (UK), First Investment Company and Ghanim Al Saad Group of Companies, Asian Islamic Investment Management Sdn. Bhd. Dlala Islamic Brokerage Company (W.L.L) First Finance Company (Q.S.C.) amongst others. He received his Bachelor’s degree specializing in the Science of Hadeth Al Sharef from the prestigious Islamic University of Madina."
+            ]
+        }
+    ],
+    "shariahSub": "<p>The Shariah Supervisory Board shall be managed by Amanie Advisors Ltd, a company incorporated in DIFC with license No: CL0696. </p> <p> Amanie Advisors Ltd is also the appointed Shariah Advisor for Elite Capital (DIFC) Limited.</p>",
+    "contactHead": "Invest  with us",
+    "contactSub": "Unlock Real Assets with Real Returns"
+}

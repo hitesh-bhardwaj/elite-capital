@@ -1,0 +1,118 @@
+{
+    "hero": "Partner with Elite Capital to access high- growth and community-focused developments.",
+    "cta": "Learn More",
+    "aboutsub": [
+        {
+            "text": "As a DFSA-authorised private equity firm, we provide access to a carefully curated pipeline of real estate investments in Ontario, Canada. Our investment strategy is rooted in thorough due diligence, deep local knowledge and global fund management expertise. We focus on investing in purpose-built and shovel ready residential projects that have undergone extensive planning and permitting. This meticulous approach ensures that our investors benefit from reduced risk and enhanced potential for strong and sustainable returns."
+        }
+    ],
+    "stats":[
+        {
+            "number": "45+",
+            "text": "Exclusive pipieline of projects in Canada"
+        },
+        {
+            "number": "10K+",
+            "text": "Residential and commercial units"
+        },
+        {
+            "number": "26M+ ",
+            "text": "Sqft. of residential development"
+        },
+        {
+            "number": "CA$1B+",
+            "text": "Equity investment opportunity"
+        }
+    ],
+    "portfolioHead": "Explore select opportunities from our investment pipeline",
+    "portfolioSub": "Browse through our diversified portfolio of purpose-built residential developments in Ontario.",
+    "portfolio1": {
+        "img": "/assets/images/invest/portfolio-1.png",
+        "title": "81-87 Rymal",
+        "location": "Hamilton, ON",
+        "address2": "210 Apartments | 10 Town Homes"
+    },
+    "portfolio2": {
+        "img": "/assets/images/invest/portfolio-2.png",
+        "title": "570 Upper Ottawa",
+        "location": "Hamilton, ON",
+        "address2": "346 Apartments"
+    },
+    "portfolio3": {
+        "img": "/assets/images/invest/portfolio-3.png",
+        "title": "Station 60",
+        "location": "Brantford, ON",
+        "address2": " 242 Apartments"
+    },
+    "portfolio4": {
+        "img": "/assets/images/invest/portfolio-4.png",
+        "title": "148 Niagara",
+        "location": "St. Catharines, ON",
+        "address2": "179 Apartments"
+    },
+    "portfolio5": {
+        "img": "/assets/images/invest/portfolio-5.png",
+        "title": "4th Avenue - Phase 1 ",
+        "location": "St. Catharines, ON",
+        "address2": "259 Apartments"
+    },
+    "portfolio6": {
+        "img": "/assets/images/invest/portfolio-6.png",
+        "title": "120 Meridian Way",
+        "location": "Pelham, ON",
+        "address2": "166 Apartments"
+    },
+    "whyUsHead": "Why invest with Elite Capital?",
+    "whyUs": [
+        {
+            "num": "01.",
+            "title": "Access to exclusive  opportunities",
+            "para": "Opportunity to invest in our pipeline of 45+ developments in Ontario, carefully selected for their superior risk adjusted return."
+        },
+        {
+            "num": "02.",
+            "title": "Proven experience",
+            "para": "Leverage our 80+ years of combined professional experience which encompasses strategic global fund management and real estate investment."
+        },
+        {
+            "num": "03.",
+            "title": "Rigorous due diligence",
+            "para": "Benefit from our comprehensive investment process and institutional-grade oversight."
+        },
+        {
+            "num": "04.",
+            "title": "Sustainable investments",
+            "para": "Contribute to alleviating Canada’s housing shortage and support responsible community development."
+        },
+        {
+            "num": "05.",
+            "title": "DFSA-authorized",
+            "para": "We are authorized and regulated by the Dubai Financial Services Regulatory Authority, a highly reputable financial services regulator in the region."
+        }
+    ],
+    "residentialHead": "Canadian residential real estate is an attractive investment opportunity",
+    "residentialPara": "Canada presents a compelling investment opportunity within the G7, driven by its robust and stable economy, rich natural resources and exceptional AAA credit rating. This foundation, coupled with a rapidly expanding population and significant housing demand, creates an ideal environment for real estate investment.",
+    "residentialSub": "Key factors driving growth:",
+    "residentialSub2": "The following factors make Canada's residential real estate market attractive for investors seeking diversification and exceptional risk adjusted returns.",
+    "features": [
+        {
+            "num": "01",
+            "title": "Population surge",
+            "para": "Canada's population is rapidly rising at one of the fastest rates among developed nations. By 2050, the country's population is expected to grow by an additional 11.6 million people, significantly increasing demand for housing and infrastructure."
+        },
+        {
+            "num": "02",
+            "title": "Housing shortage",
+            "para": "Canada is currently facing a projected housing deficit of more than 3.5 million homes by 2030, highlighting a critical shortage in supply. This gap underscores the urgent need for residential developments to meet growing demand and ease pressure on affordability in key urban markets."
+        },
+        {
+            "num": "03",
+            "title": "Economic and political stability",
+            "para": "Canada's strong economy and stable political environment create a reliable foundation for long- term investment. The Canadian federal government's ongoing committment to economic resilience is further reinforced by forward-looking immigration and growth policies, including the Century Initiative-- an ambitious plan supported by the government to grow Canada's population to 100 million by 2100. This initiative aims to further position Canada as a global economic leader, making it an even more compelling destination for sustained real estate investment."
+        }
+    ],
+    "click":"Click to know more",
+    "exclusiveSub": "Our exclusive pipeline of 45+ community-centered developments are strategically located within Ontario, the largest province in Canada by size of the economy and population.",
+    "contactHead": "Invest  with us",
+    "contactSub": "Contact us to learn more about our investment opportunities."
+}
