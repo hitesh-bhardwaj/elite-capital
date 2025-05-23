@@ -34,7 +34,7 @@ const Values = () => {
       valueContent: 'We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities.'
     }
   ]
-  console.log(values)
+  // console.log(values)
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (globalThis.innerWidth > 1024) {

@@ -15,11 +15,11 @@ import Counter from "@/components/Homepage/Counter";
 
 export default function Home() {
 
-  fadeUp();
-  paraAnim();
-  titleAnim();
-  lineAnim();
-  fadeIn();
+  // fadeUp();
+  // paraAnim();
+  // titleAnim();
+  // lineAnim();
+  // fadeIn();
 
 
   const metadata = {
@@ -44,7 +44,7 @@ export default function Home() {
         <Diversify />
         <Assets />
         <Portfolio />
-        <Contact translation={'home'}  />
+        <Contact   />
       </Layout>
     </>
   );
