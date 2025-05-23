@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from "next-i18next";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';

@@ -32,5 +32,5 @@ export function decodeHtmlEntities(text) {
     return text.replace(/\s+/g, ' ').trim();
   }
   
-  export const homepage = "https://ec-staging.vercel.app";
+  export const homepage = "https://www.elitecapitalinvestments.com";
   export const faviconPath = 'favicon.ico';

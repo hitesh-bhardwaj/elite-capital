@@ -1,4 +1,4 @@
-import { useTranslation } from "@/lib/i18";
+
 import LineButton from "../ui/LineButton";
 import image from "../../../public/assets/images/homepage/diversify-image.png"
 import Image from "next/image";
@@ -24,9 +24,7 @@ const Diversify = () => {
         })
         return () => ctx.revert();
     }, []);
-    
-    const { t } = useTranslation('home');
-    const diversify = t('diversify', { returnObjects: true });
+
 
     return (
         <section className="bg-[#F2F2E9] overflow-hidden h-full mobile:pb-[10vw] tablet:pt-0 dark">
@@ -41,14 +39,13 @@ const Diversify = () => {
                     />
                 </div>
                 <div className="text-black1 w-1/2 pl-[4vw] py-[5vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw] tablet:w-full rtl:pr-[4.5vw] rtl:mobile:pr-[5vw]">
-                    <h3 data-title-anim className="heading-2 w-[85%] !leading-[1.2] rtl:!leading-[1.5] mb-[4vw] mobile:mb-[8vw] mobile:!leading-[1.4]">{t('diversifyHead')}</h3>
+                    <h3 data-title-anim className="heading-2 w-[85%] !leading-[1.2] rtl:!leading-[1.5] mb-[4vw] mobile:mb-[8vw] mobile:!leading-[1.4]">Diversify your portfolio with highly attractive Canadian real estate</h3>
                     <div className=" content space-y-[3vw] pr-[4.5vw]   mb-[3vw] rtl:pr-0">
                         <div className=" content space-y-[1vw] mobile:space-y-[8vw]" />
-                        {diversify.map((item, index) => (
-                            <p data-para-anim key={index}>{item.text}</p>
-                        ))}
+                        <p>Elite Capital investors will gain access to a curated and exclusive pipeline of over 45 community-focused developments across Ontario, Canada. The pipeline includes several shovel ready purpose-built development projects, each having undergone an extensive development and permitting process.</p>
+                        <p>This exclusive pipeline, combined with our rigorous due-diligence process and hands-on asset management, is geared to deliver strong, risk adjusted returns to our investors.</p>
                     </div>
-                      <LineButton text={t('diversifyCta')} href="/invest-with-us" className="fadein " prefetch={false}/>
+                      <LineButton text={"View More"} href="/invest-with-us" className="fadein " prefetch={false}/>
                 </div>
 
             </div>

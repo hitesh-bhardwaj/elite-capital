@@ -4,4 +4,4 @@ Allow: /
 Disallow: /_next/static/
 
 # Sitemaps
-Sitemap: https://www.elite-capital-staging.vercel.app/sitemap.xml
+Sitemap: https://www.elitecapitalinvestments.com/sitemap.xml

@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
+import LineButton from '@/components/ui/LineButton'
 import Header from '@/components/Common/Header'
-import { useTranslation } from "@/lib/i18";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from "next-i18next";
 import LinkButton from '@/components/ui/LinkButton'
-import { loadTranslations } from '@/lib/i18n-server'
 
 const ErrorPage = () => {
   const { t } = useTranslation('common');
@@ -44,8 +45,11 @@ const ErrorPage = () => {
 export default ErrorPage
 
 export async function getStaticProps({ locale }) {
-  const translations = loadTranslations(locale, ['common'])
   return {
-    props: { translations },
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common'
+      ])),
+    },
   }
 }

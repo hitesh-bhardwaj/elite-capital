@@ -1,7 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Controller, Autoplay, Parallax } from "swiper/modules";
-import { useTranslation } from "@/lib/i18";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/controller";
@@ -35,8 +34,39 @@ export default function SwiperSlider() {
   const swiperRef = useRef(null);
   const progressRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
-  const { t } = useTranslation("home");
-  const portfolio = t("portfolio", { returnObjects: true });
+  const portfolio = [
+    {
+      image: '/assets/images/homepage/rymal-portfolio-1.png',
+      text1: '81-87 Rymal',
+      text2: 'Hamilton, ON'
+    },
+    {
+      image: '/assets/images/homepage/ottawa-portfolio.jpg',
+      text1: '570 Upper Ottawa',
+      text2: 'Hamilton, ON'
+    },
+    {
+      image: '/assets/images/homepage/station-portfolio.png',
+      text1: 'Station 60',
+      text2: 'Brantford, ON'
+    },
+    {
+      image: '/assets/images/homepage/niagara-portfolio.png',
+      text1: '148 Niagara',
+      text2: 'Hamilton, ON'
+    },
+    {
+      image: '/assets/images/homepage/avenue-portfolio.png',
+      text1: '4th Avenue - Phase 1',
+      text2: 'St. Catharines, ON'
+    },
+    {
+      image: '/assets/images/homepage/meridian-portfolio.png',
+      text1: '120 Meridian Way',
+      text2: 'Pelham, ON'
+    }
+  ]
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from("#portfolio", {
@@ -157,10 +187,10 @@ export default function SwiperSlider() {
 
       <div className="absolute top-[10%] left-[5%] z-[5] text-white rtl:right-[5%]">
         <h2 className="slide__heading text-[4.5vw] font-display leading-[1.2] mb-[1.5vw] mobile:text-[10vw] mobile:mb-6 tablet:text-[7vw]">
-          {t("portfolioHead")}
+        Our select pipeline of investment opportunities
         </h2>
         <p className="slide__text  mobile:text-[4.1vw] w-[50%] mobile:w-full mobile:tracking-wider tablet:text-[2.5vw]">
-          {t("portfolioSub")}
+        Browse through our diversified portfolio of purpose-built residential developments in Ontario
         </p>
       </div>
 
@@ -253,7 +283,7 @@ export default function SwiperSlider() {
       </div>
 
       <div className="absolute bottom-[10%] z-[5] ltr:left-[5%] mobile:bottom-[8%] tablet:bottom-[5%] rtl:right-[5%] rtl:mobile:left-[27%] rtl:tablet:left-[55%]">
-        <LinkButton href={"/invest-with-us#portfolio"} text={t('portfolioCta')} />
+        <LinkButton href={"/invest-with-us#portfolio"} text={"View portfolio"} />
       </div>
     </div>
   );

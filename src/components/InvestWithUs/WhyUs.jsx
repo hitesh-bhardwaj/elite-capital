@@ -1,4 +1,4 @@
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import invest1 from "../../../public/assets/images/invest/invest-1.jpg";

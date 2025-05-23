@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import About from '@/components/InvestWithUs/About';
 import Stats from '@/components/InvestWithUs/Stats';
 import Portfolio from '@/components/InvestWithUs/Portfolio';
@@ -6,13 +7,12 @@ import WhyUs from '@/components/InvestWithUs/WhyUs';
 import Residential from '@/components/InvestWithUs/Residential';
 import Factors from '@/components/InvestWithUs/Exclusive';
 import { blockAnim, fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from 'next-i18next';
 import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/invest/invest-hero.png"
 import Layout from '@/components/Common/Layout';
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from "@/lib/json-ld";
-import { loadTranslations } from '@/lib/i18n-server';
 
 export default function Invest() {
   fadeUp()
@@ -48,8 +48,11 @@ export default function Invest() {
 }
 
 export async function getStaticProps({ locale }) {
-  const translations = loadTranslations(locale, ['invest', 'common'])
   return {
-    props: { translations },
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'invest', 'common'
+      ])),
+    },
   }
 }

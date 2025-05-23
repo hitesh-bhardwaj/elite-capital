@@ -1,8 +1,8 @@
-import { TranslationsProvider } from "@/lib/i18";
-import { Barlow, Bodoni_Moda, Readex_Pro, Tajawal } from "next/font/google";
+import { Barlow, Bodoni_Moda, Cookie, Readex_Pro, Tajawal } from "next/font/google";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { appWithTranslation } from "next-i18next";
 import { ReactLenis } from "lenis/react";
 import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 import Loader2 from "@/components/newLoader";
@@ -14,6 +14,7 @@ import {
 } from "@/lib/json-ld";
 
 import CookieBanner from "@/components/Common/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
 
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
@@ -41,9 +42,6 @@ const tajawal = Tajawal({
 });
 
 const App = ({ Component, pageProps }) => {
-
-  const { translations, ...rest } = pageProps
-
   const { locale } = useRouter();
   const router = useRouter();
   const [cookieVisible, setVisible] = useState(true);
@@ -86,37 +84,36 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <>
-      <TranslationsProvider translations={translations || {}}>
-
-        <LocalBusiness />
-        <OrganizationJsonLd />
-        <WebsiteJsonLd />
-        <ImageObjectJsonLd />
-        <ReactLenis root>
-          <LazyMotion features={domAnimation}>
-            <AnimatePresence mode="wait">
-              <m.div
-                key={router.pathname}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={pageVariants}
-                transition={{ duration: 0.4 }}
+      <LocalBusiness />
+      <OrganizationJsonLd />
+      <WebsiteJsonLd />
+      <ImageObjectJsonLd />
+      <ReactLenis root>
+        <LazyMotion features={domAnimation}>
+          <AnimatePresence mode="wait">
+            <m.div
+              key={router.pathname}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={{ duration: 0.4 }}
+            >
+              <main
+                className={`${bodoni_moda.variable} ${barlow.variable} ${readex_pro.variable} ${tajawal.variable} font-body text-[1.55vw] text-black1`}
               >
-                <main
-                  className={`${bodoni_moda.variable} ${barlow.variable} ${readex_pro.variable} ${tajawal.variable} font-body text-[1.55vw] text-black1`}
-                >
-                  {showPreloader && <Loader2 />}
-                  <Component {...rest} />
-                  <CookieBanner cookieVisible={cookieVisible} setVisible={setVisible} />
-                </main>
-              </m.div>
-            </AnimatePresence>
-          </LazyMotion>
-        </ReactLenis>
-      </TranslationsProvider>
+                {showPreloader && <Loader2 />}
+                <Component {...pageProps} />
+                <CookieBanner cookieVisible={cookieVisible} setVisible={setVisible} />
+              </main>
+            </m.div>
+          </AnimatePresence>
+        </LazyMotion>
+      </ReactLenis>
+
+      <Analytics/>
     </>
   );
 };
 
-export default App;
+export default appWithTranslation(App);

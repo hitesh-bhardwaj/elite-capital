@@ -1,4 +1,4 @@
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from "next-i18next";
 import {
   Accordion,
   AccordionContent,

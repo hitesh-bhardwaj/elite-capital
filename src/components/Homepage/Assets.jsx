@@ -1,12 +1,12 @@
 import React from 'react'
-import { useTranslation } from "@/lib/i18";
 import real1 from "../../../public/assets/images/homepage/real-1.png"
 import real2 from "../../../public/assets/images/homepage/real-2.png"
 import real3 from "../../../public/assets/images/homepage/real-3.png"
 import ImageComponent from '../Common/ImageComponent';
 
+
 const Assets = () => {
-    const { t } = useTranslation("home");
+
     
     return (
         <section className='w-screen bg-white h-screen mobile:h-full mobile:py-[15%] overflow-hidden dark tablet:h-full tablet:py-[10%]'>
@@ -23,9 +23,9 @@ const Assets = () => {
                     </div>
                 </div>
                 <div className='w-[50%] flex items-center  mobile:w-full tablet:w-[60%] tablet:justify-start rtl:pr-[8vw] rtl:tablet:pr-0 '>
-                    <h3 data-title-anim className='text-black1 text-[5.2vw] leading-[1.2]  !font-body w-[80%] mobile:w-full font-light mobile:text-[12vw] tablet:text-[7vw] tablet:w-full'>{t('realHead')}
+                    <h3 data-title-anim className='text-black1 text-[5.2vw] leading-[1.2]  !font-body w-[80%] mobile:w-full font-light mobile:text-[12vw] tablet:text-[7vw] tablet:w-full'>Real Assets with
                         <br />
-                        <span className='!font-semibold'>{t('realHeadSub')}</span>
+                        <span className='!font-semibold'>Real Returns</span>
                     </h3>
                 </div>
             </div>

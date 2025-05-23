@@ -1,4 +1,4 @@
-import { useTranslation } from "@/lib/i18";
+
 import valuesBg from "../../../public/assets/images/homepage/values-bg.png"
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
@@ -6,10 +6,35 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
+// import { parllaxAnim } from "../gsapAnimations";
+
 
 const Values = () => {
-  const { t } = useTranslation('home');
-  const values = t('values', { returnObjects: true });
+  // parllaxAnim("#values")
+
+  const values = [
+    {
+      valueTitle: 'Partnership',
+      valueContent: 'We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success.'
+    },
+    {
+      valueTitle: 'Integrity',
+      valueContent: 'With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics.'
+    },
+    {
+      valueTitle: 'Knowledge',
+      valueContent: 'We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk adjusted returns.'
+    },
+    {
+      valueTitle: 'Trust',
+      valueContent: 'We build and maintain trust by promoting transparent collaboration in our dealings and prioritizing the interests of our stakeholders.'
+    },
+    {
+      valueTitle: 'Sustainability',
+      valueContent: 'We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities.'
+    }
+  ]
+  console.log(values)
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (globalThis.innerWidth > 1024) {
@@ -51,7 +76,7 @@ const Values = () => {
   }
 
   return (
-    <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw] mobile:pb-[0vw] mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex tablet:h-full tablet:pt-0 dark" id="values">
+    <section className="h-[75vw] w-screen relative pb-[8vw] pt-[5vw]  mobile:pt-0 overflow-hidden mobile:h-full mobile:flex-col mobile:flex tablet:h-full tablet:pt-0 dark mobile:pb-[10vw]" id="values">
       <div className="absolute top-0 left-0 h-full w-full z-0 mobile:relative mobile:h-[60vh] tablet:relative tablet:h-[50vw] values-block ">
         <Image
           src={valuesBg}
@@ -63,7 +88,7 @@ const Values = () => {
       </div>
       <div className="px-[8%] mobile:py-[5%] tablet:py-[10%] ">
         <div className="space-y-[6vw]">
-          <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]">{t('valuesHead')}</h2>
+          <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]">Our values</h2>
           <div className=" w-full relative z-10 mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
             <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full tablet:w-full">
               <div className="flex w-full gap-[5vw] mobile:flex-col tablet:flex-col tablet:gap-0 mobile:gap-0">

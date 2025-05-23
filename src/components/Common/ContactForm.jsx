@@ -15,7 +15,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Checkbox } from "../ui/checkbox";
-import { useTranslation } from "@/lib/i18";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
@@ -46,7 +45,6 @@ export default function ContactForm() {
   });
 
   const [isLoading, setIsLoading] = useState(false);
-  const { t } = useTranslation("common");
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -85,7 +83,7 @@ export default function ContactForm() {
     <section className="mobile:pt-0" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
         <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full mobile:px-[3vw] mobile:py-[5vw]">
-          <h3 className="heading-2 ltr:font-body">{t("formHead")}</h3>
+          <h3 className="heading-2 ltr:font-body">Get in touch</h3>
           <Form {...form}>
             <form
               autoComplete="off"
@@ -100,7 +98,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t("formName")}
+                        placeholder={"Full Name*"}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -118,7 +116,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t("formEmail")}
+                        placeholder={"Email*"}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -136,7 +134,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t("formPhone")}
+                        placeholder={"Phone*"}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -154,7 +152,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t("formCompany")}
+                        placeholder={"Company Name"}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -172,7 +170,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={t("formDesignation")}
+                        placeholder={"Designation*"}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -190,7 +188,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Textarea
                         autoComplete="off"
-                        placeholder={t("formMessage")}
+                        placeholder={"Message*"}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -215,7 +213,7 @@ export default function ContactForm() {
                         htmlFor="terms"
                         className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
                       >
-                        {t("formAgreement")}
+                        Yes, I would like to receive communications from Elite Capital
                       </FormLabel>
                     </div>
                     <FormMessage />
@@ -232,7 +230,7 @@ export default function ContactForm() {
                   {!isLoading ? (
                     <div className="flex gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[1vw] items-center">
                       <span className="text-[1.1vw] mobile:text-[4.5vw] tablet:text-[2.5vw]">
-                        {t("formcta")}
+                       Submit
                       </span>
                       <svg
                         className="relative -rotate-90 w-[1.2vw] h-[1.2vw] overflow-hidden mobile:w-[4.2vw] mobile:h-[4.2vw] tablet:w-[2.2vw] tablet:h-[2.2vw] rtl:rotate-90"
@@ -266,13 +264,15 @@ export default function ContactForm() {
                 name="terms"
                 render={({ field }) => (
                   <FormItem className="">
-                    <div className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw]">
-  <FormLabel
-    htmlFor="terms"
-    className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
-    dangerouslySetInnerHTML={{ __html: t("formPrivacy") }}
-  />
-</div>
+                    <div className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw] text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]">
+                      {/* <FormLabel
+                        htmlFor="terms"
+                        className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
+                    
+                      /> */}
+
+                      *Elite Capital will only use this information as described in our Privacy Policy 
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}

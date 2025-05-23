@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
@@ -61,7 +61,7 @@ const Stats = () => {
                 <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
                   {renderDigits(values[0])}<sup>+</sup>
                 </h3>
-                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[0].text}</p>
+                <p data-para-anim className="content mobile:w-[45%] w-[80%] text-center mobile:text-left ">{statsContent[0].text}</p>
               </div>
             </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />
@@ -70,7 +70,7 @@ const Stats = () => {
                 <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
                   {renderDigits(values[1])}<span>K</span><sup>+</sup>
                 </h3>
-                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[1].text}</p>
+                <p data-para-anim className="content mobile:w-[45%] w-[80%] text-center mobile:text-left ">{statsContent[1].text}</p>
               </div>
 
             </div>
@@ -81,7 +81,7 @@ const Stats = () => {
                 <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
                   {renderDigits(values[2])}<span>M</span><sup>+</sup>
                 </h3>
-                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[2].text}</p>
+                <p data-para-anim className="content mobile:w-[45%] w-[80%] text-center mobile:text-left ">{statsContent[2].text}</p>
               </div>
 
             </div>
@@ -93,7 +93,7 @@ const Stats = () => {
                 <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
                   <span>CA$</span>{renderDigits(values[3])}B<sup>+</sup>
                 </h3>
-                <p data-para-anim className="content mobile:w-[50%] w-[80%] text-center mobile:text-left ">{statsContent[3].text}</p>
+                <p data-para-anim className="content mobile:w-[45%] w-[80%] text-center mobile:text-left ">{statsContent[3].text}</p>
               </div>
             </div>
             <div className="w-full h-[1px] hidden mobile:block bg-black" />

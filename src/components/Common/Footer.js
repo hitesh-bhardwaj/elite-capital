@@ -1,11 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from "next-i18next";
 import React, { useEffect, useState } from "react";
 
 const Footer = () => {
   const { t } = useTranslation('common');
-  const footerNav = t('footerNav', { returnObjects: true });
+  const footerNav = [
+    {
+      valueTitle: 'Partnership',
+      valueContent: 'We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success.'
+    },
+    {
+      valueTitle: 'Integrity',
+      valueContent: 'With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics.'
+    },
+    {
+      valueTitle: 'Knowledge',
+      valueContent: 'We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk adjusted returns.'
+    },
+    {
+      valueTitle: 'Trust',
+      valueContent: 'We build and maintain trust by promoting transparent collaboration in our dealings and prioritizing the interests of our stakeholders.'
+    },
+    {
+      valueTitle: 'Sustainability',
+      valueContent: 'We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities.'
+    }
+  ]
   const footerNavBottom = t('footerNavBottom', { returnObjects: true });
     const [mobileWidth, setIsMobileWidth] = useState(false);
   

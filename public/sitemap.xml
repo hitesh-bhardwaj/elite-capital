@@ -5,62 +5,72 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://elite-capital-staging.vercel.app/</loc>
+  <loc>https://www.elitecapitalinvestments.com/</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/ar/</loc>
+  <loc>https://www.elitecapitalinvestments.com/ar/</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/about-us</loc>
+  <loc>https://www.elitecapitalinvestments.com/about-us</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/ar/about-us</loc>
+  <loc>https://www.elitecapitalinvestments.com/ar/about-us</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/invest-with-us</loc>
+  <loc>https://www.elitecapitalinvestments.com/invest-with-us</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/ar/invest-with-us</loc>
+  <loc>https://www.elitecapitalinvestments.com/ar/invest-with-us</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/contact</loc>
+  <loc>https://www.elitecapitalinvestments.com/contact</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/ar/contact</loc>
+  <loc>https://www.elitecapitalinvestments.com/ar/contact</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/privacy-policy</loc>
+  <loc>https://www.elitecapitalinvestments.com/privacy-policy</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/ar/privacy-policy</loc>
+  <loc>https://www.elitecapitalinvestments.com/ar/privacy-policy</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/cookie-policy</loc>
+  <loc>https://www.elitecapitalinvestments.com/disclaimer</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elite-capital-staging.vercel.app/ar/cookie-policy</loc>
+  <loc>https://www.elitecapitalinvestments.com/ar/disclaimer</loc>
+  <lastmod>2025-04-29T08:00:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.elitecapitalinvestments.com/cookie-policy</loc>
+  <lastmod>2025-04-29T08:00:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.elitecapitalinvestments.com/ar/cookie-policy</loc>
   <lastmod>2025-04-29T08:00:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>

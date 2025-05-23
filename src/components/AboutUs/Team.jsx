@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from "next-i18next";
 import BoardofDirectors from "./BoardofDirectors";
 import ShariahBoard from "./ShariahBoard";
 import BoardofDirectorsCopy from "./BoardofDirectors-copy";

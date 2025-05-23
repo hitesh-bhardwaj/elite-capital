@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useTranslation } from "@/lib/i18";
+import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";

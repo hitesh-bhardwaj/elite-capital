@@ -1,4 +1,4 @@
-import { useTranslation } from "@/lib/i18";
+
 import Image from "next/image";
 import { useCallback, useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -6,8 +6,8 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { SplitInWord } from "@/components/splitTextUtils";
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = ({ img, translation, heading, para, nextSectionId }) => {
-  const { t } = useTranslation(`${translation}`);
+const Hero = ({ img, nextSectionId }) => {
+
   const buttonRef = useRef(null);
   let delayTime = "";
   useEffect(() => {
@@ -102,13 +102,13 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
         <div className="relative z-10 px-[5vw] pt-[8vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%]">
           <div className="py-[10%] text-white w-full mobile:w-full tablet:space-y-[2vw]">
             <h1 className="heading-1 w-[80%] mobile:w-[95%] tablet:w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw] hero-title-anim">
-              {heading}
+            Providing investors with access to Real Assets with Real Returns.
             </h1>
-            {para && (
+        
               <p className="text-[1.56vw] mb-[3vw] w-[80%] mobile:text-[4.1vw] mobile:w-full hero-para-anim tablet:text-[3vw] mobile:leading-[1.6]">
-                {para}
+                A real estate focused fund manager delivering investment opportunities that generate exceptional risk adjusted returns from developments that contribute to thriving communities.
               </p>
-            )}
+          
           </div>
         </div>
         <div
