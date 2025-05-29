@@ -5,12 +5,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "..
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { lineAnim } from "../gsapAnimations";
 gsap.registerPlugin(ScrollTrigger)
 // import { parllaxAnim } from "../gsapAnimations";
 
 
 const Values = () => {
   // parllaxAnim("#values")
+  lineAnim();
 
   const values = [
     {
