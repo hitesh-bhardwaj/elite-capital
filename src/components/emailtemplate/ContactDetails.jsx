@@ -1,8 +1,27 @@
 import React from "react";
-import { Body, Column, Container, Head, Hr, Html, Img, Link, Preview, Row, Section, Text } from "@react-email/components";
+import {
+  Body,
+  Column,
+  Container,
+  Head,
+  Hr,
+  Html,
+  Img,
+  // Link,
+  Preview,
+  Row,
+  Section,
+  Text,
+} from "@react-email/components";
 
-const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessage, userDesignation }) => {
-
+const ContactDetails = ({
+  userName,
+  userEmail,
+  userCompany,
+  userNumber,
+  userMessage,
+  userDesignation,
+}) => {
   return (
     <Html>
       <Head />
@@ -31,7 +50,15 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
             </Row>
             <Row style={row}>
               <Column style={columnHead}>Email</Column>
-              <Column style={{ ...columnText, textDecoration: "underline", color: "#067df7" }}>{userEmail}</Column>
+              <Column
+                style={{
+                  ...columnText,
+                  textDecoration: "underline",
+                  color: "#067df7",
+                }}
+              >
+                {userEmail}
+              </Column>
             </Row>
             <Row style={row}>
               <Column style={columnHead}>Number</Column>
@@ -41,24 +68,23 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
               <Column style={columnHead}>Company</Column>
               <Column style={columnText}>{userCompany}</Column>
             </Row>
-           
+
             <Row style={row}>
               <Column style={columnHead}>Designation</Column>
-              <Column style={columnText}>
-                {userDesignation}
-              </Column>
+              <Column style={columnText}>{userDesignation}</Column>
             </Row>
             <Row style={row}>
               <Column style={columnHead}>Message</Column>
               <Column style={columnText}>{userMessage}</Column>
             </Row>
           </Section>
-          <Text style={footer}>
-            This form is submitted from 
-          </Text>
-          <Text style={paragraph}>- Team HiveMinds</Text>
+          <Text style={footer}>This form is submitted from</Text>
+          <Text style={paragraph}>- Team Elite Capital</Text>
           <Hr style={hr} />
-          <Text style={footer}>BENGALURU (HQ) : No. 11, Seventh Floor, Global Tech Park, O Shaughnessy Rd, Langford Town, Langford Gardens, Bengaluru, Karnataka 560025</Text>
+          <Text style={footer}>
+            Elite Capital Head Office Central Park Towers, Office 02-40 Dubai
+            International Financial Centre PO Box 507417
+          </Text>
         </Container>
       </Body>
     </Html>
