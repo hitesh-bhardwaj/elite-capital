@@ -10,10 +10,10 @@ export default function CookieBanner({ cookieVisible, setVisible }) {
                     <Link
                         href={"/cookie-policy"}
                         aria-label="to cookie policy page"
-                        className="text-[1vw] inline-block w-fit ml-2  mobile:text-lg tablet:text-2xl link-line after:absolute after:left-0 relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-black after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out"
+                        className="text-[1vw] inline-block w-fit ml-2  mobile:text-lg tablet:text-2xl "
                         onClick={() => setVisible(false)}
                     >
-                        Learn more
+                       <span className="link-line after:absolute after:left-0 relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-black after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out"> Learn more</span> <span className="w-[1px] h-[1px] opacity-0 overflow-hidden">to the cookie policy</span>
                     </Link>
                 </span>
                 <button
