@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+
 import LineButton from "../ui/LineButton";
 import image from "../../../public/assets/images/homepage/advantage.png"
 import Image from "next/image";
@@ -24,8 +24,6 @@ const Advantage = () => {
         })
         return () => ctx.revert()
     }, [])
-    const { t } = useTranslation('home');
-    const advantage = t('advantage', { returnObjects: true });
 
     return (
         <section className="bg-[#747977] overflow-hidden h-full mobile:pb-[10vw] tablet:pt-[7%]">

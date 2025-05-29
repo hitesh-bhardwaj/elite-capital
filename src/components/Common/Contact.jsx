@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 
-const Contact = ({ heading, para }) => {
+const Contact = () => {
   return (
     <section className="bg-[#F2F2E9] w-screen h-full py-[5%] mobile:py-[15%] tablet:pb-[10%] dark" id="contact">
       <div className="px-[5vw] w-full h-full flex justify-between mobile:flex-col mobile:gap-[5vw] tablet:flex-col tablet:gap-[5vw]">

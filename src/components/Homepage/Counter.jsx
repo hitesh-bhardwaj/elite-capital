@@ -41,39 +41,7 @@ export default function Counter() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            const lineDraws = document.querySelectorAll(".vlineDraw");
-            if (globalThis.innerWidth > 1024) {
-                lineDraws.forEach((lineDraw) => {
-                    gsap.from(lineDraw, {
-                        scrollTrigger: {
-                            trigger: lineDraw,
-                            start: "top 80%",
-                        },
-                        scaleY: 0,
-                        transformOrigin: "top",
-                        duration: 2,
-                        stagger: 1,
-                        ease: "power4.out",
-                    });
-                });
-
-            }
-            else {
-                lineDraws.forEach((lineDraw) => {
-                    gsap.from(lineDraw, {
-                        scrollTrigger: {
-                            trigger: lineDraw,
-                            start: "top 80%",
-                        },
-                        scaleX: 0,
-                        transformOrigin: "left",
-                        duration: 2,
-                        stagger: 1,
-                        ease: "power4.out",
-                    });
-                });
-
-            }
+          
             if (globalThis.innerWidth > 1024) {
                 gsap.to(".stats-img", {
                     yPercent: 70,

@@ -3,10 +3,7 @@ import aboutImage from "../../../public/assets/images/homepage/about.png"
 import yellowRectangle from "../../../public/assets/images/homepage/yellow-rectangle.png"
 import Image from "next/image";
 import LineButton from "../ui/LineButton";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ImageComponent from "../Common/ImageComponent";
-gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
 
