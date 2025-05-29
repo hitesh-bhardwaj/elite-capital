@@ -1,22 +1,22 @@
 import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
-import Assets from "@/components/Homepage/Assets";
+// import Assets from "@/components/Homepage/Assets";
 import Diversify from "@/components/Homepage/Diversify";
 import Portfolio from "@/components/Homepage/Portfolio";
-import Values from "@/components/Homepage/Values";
+// import Values from "@/components/Homepage/Values";
 import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
-import Contact from "@/components/Common/Contact";
+// import Contact from "@/components/Common/Contact";
 import Layout from "@/components/Common/Layout";
 import Hero from "@/components/Homepage/Hero";
 import Metadata from "@/components/Metadata";
 import { WebpageJsonLd } from "@/lib/json-ld";
-import Counter from "@/components/Homepage/Counter";
+// import Counter from "@/components/Homepage/Counter";
 
 export default function Home() {
 
   fadeUp();
-  // paraAnim();
+  paraAnim();
   titleAnim();
   lineAnim();
   fadeIn();
