@@ -16,7 +16,7 @@ import Counter from "@/components/Homepage/Counter";
 export default function Home() {
 
   fadeUp();
-  paraAnim();
+  // paraAnim();
   titleAnim();
   lineAnim();
   fadeIn();
@@ -36,7 +36,7 @@ export default function Home() {
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata} />
       <Layout>
-        <Hero img={heroBg} nextSectionId={"about"} />
+        <Hero img={heroBg} nextSectionId={"about"} heading={"Providing investors with access to Real Assets with Real Returns."} para={"A real-estate focussed fund manager delivering premium investment opportunities in real estate that generate exceptional risk adjusted returns from developments that contribute to thriving communities."}  />
         <About />
         {/* <Counter /> */}
         {/* <Values /> */}
