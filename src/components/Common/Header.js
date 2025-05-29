@@ -133,7 +133,7 @@ const Header = () => {
               </div>
             </Link>
             {footerNav.map((item, id) => (
-              <Link key={id} href={item.link} className={`menu-link text-[1.2vw] group`} prefetch={false}>
+              <Link key={id} href={item.link} className={`menu-link text-[1.2vw] group`} prefetch={false} aria-label={item.text}>
                 <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
                   <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
                     {item.text}
@@ -180,6 +180,7 @@ const Header = () => {
                     key={index}
                     href={item.link}
                     prefetch={false}
+                    aria-label={item.text}
                     className="group w-fit"
                     onClick={closeMenuMobile}
                   >
