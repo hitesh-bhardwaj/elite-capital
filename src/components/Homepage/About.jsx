@@ -18,7 +18,7 @@ const About = () => {
                     <div className="text-black1 w-[65%] mobile:w-full tablet:w-full tablet:pb-[10vw] mobile:space-y-[4vw] ">
                         <h2 data-title-anim className="heading-1  mb-[3vw] mobile:mb-[4vw] ml-[-0.7vw] mobile:ml-[-2vw]">Who we are</h2>
                         <p data-para-anim className="content !tracking-normal !leading-[1.5] mb-[3vw] mobile:!mb-[7vw]  rtl:mobile:text-right ">Elite Capital is a DFSA-authorised private equity firm, combining in-depth local knowledge with strategic global fund management expertise to offer international investors with access to attractive real estate investment opportunities. Our success is built on creating long-lasting partnerships with our investors.</p>
-                        <LineButton href={"/about-us"} text={"Learn More"} className="fadeUp" prefetch={false}/>
+                        <LineButton href={"/about-us"} aria-label="to about us page" text={"Learn More"} className="fadeUp" prefetch={false}/>
                     </div>
 
                     <div className="flex flex-col relative justify-end w-1/2 gap-[3vw] h-full mobile:w-[90%] mobile:ml-[5vw] tablet:w-full tablet:items-end">

@@ -9,6 +9,7 @@ export default function CookieBanner({ cookieVisible, setVisible }) {
                     By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
                     <Link
                         href={"/cookie-policy"}
+                        aria-label="to cookie policy page"
                         className="text-[1vw] inline-block w-fit ml-2  mobile:text-lg tablet:text-2xl link-line after:absolute after:left-0 relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px] after:bg-black after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out"
                         onClick={() => setVisible(false)}
                     >
