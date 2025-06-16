@@ -21,8 +21,6 @@ const Loader2 = () => {
     });
   
     const tl = gsap.timeline();
-
-
   
     tl.to(path3Ref.current, {
       scaleX: 1,
@@ -48,9 +46,7 @@ const Loader2 = () => {
         yPercent:-100,
         ease: 'power2.inOut',
       }) 
-  
       .set(loaderRef.current, { pointerEvents: 'none' });
-
   }, []);
       
   useEffect(() => {

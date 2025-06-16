@@ -9,13 +9,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, companyName, designation, message, number } = req.body;
+    const { name, email, companyName, designation, message, number, pageURL} = req.body;
 
     if (!name || !email) {
       return res.status(400).json({ error: "Required fields missing" });
     }
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Elite Capital <webforms@elitecapitalinvestments.com>",
       to: ["info@elitecapitalinvestments.com"],
       subject: "New Contact Form Submission",
       react: ContactDetails({
@@ -24,6 +24,7 @@ export default async function handler(req, res) {
         userNumber: number,
         userCompany: companyName,
         userDesignation: designation,
+        pageURL: pageURL,
         userMessage: message || "No message provided",
       }),
     });

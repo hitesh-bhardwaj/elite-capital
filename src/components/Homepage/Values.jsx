@@ -1,42 +1,18 @@
-
+import { useTranslation } from "next-i18next";
 import valuesBg from "../../../public/assets/images/homepage/values-bg.png"
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { lineAnim } from "../gsapAnimations";
 gsap.registerPlugin(ScrollTrigger)
 // import { parllaxAnim } from "../gsapAnimations";
 
 
 const Values = () => {
   // parllaxAnim("#values")
-  lineAnim();
-
-  const values = [
-    {
-      valueTitle: 'Partnership',
-      valueContent: 'We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success.'
-    },
-    {
-      valueTitle: 'Integrity',
-      valueContent: 'With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics.'
-    },
-    {
-      valueTitle: 'Knowledge',
-      valueContent: 'We combine deep local knowledge with global investment expertise to ensure our investment strategies are innovative, data-driven and reliable. Our team consistently delivers a best-in-class approach to seeking superior risk adjusted returns.'
-    },
-    {
-      valueTitle: 'Trust',
-      valueContent: 'We build and maintain trust by promoting transparent collaboration in our dealings and prioritizing the interests of our stakeholders.'
-    },
-    {
-      valueTitle: 'Sustainability',
-      valueContent: 'We invest in responsibly designed developments to deliver lasting environmental and social benefits to communities.'
-    }
-  ]
-  // console.log(values)
+  const { t } = useTranslation('home');
+  const values = t('values', { returnObjects: true });
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (globalThis.innerWidth > 1024) {
@@ -90,7 +66,7 @@ const Values = () => {
       </div>
       <div className="px-[8%] mobile:py-[5%] tablet:py-[10%] ">
         <div className="space-y-[6vw]">
-          <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]">Our values</h2>
+          <h2 data-title-anim className="text-[5vw] font-display  mb-[4vw] mobile:text-[12.5vw] tablet:text-[7vw]">{t('valuesHead')}</h2>
           <div className=" w-full relative z-10 mobile:block mobile:space-y-[10vw] tablet:grid-cols-2">
             <Accordion type="single" collapsible defaultValue="item-0" className="w-[70%] flex flex-wrap justify-between gap-y-[3vw] mobile:w-full tablet:w-full">
               <div className="flex w-full gap-[5vw] mobile:flex-col tablet:flex-col tablet:gap-0 mobile:gap-0">

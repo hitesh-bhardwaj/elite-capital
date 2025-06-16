@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Checkbox } from "../ui/checkbox";
+import { useTranslation } from "next-i18next";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
@@ -28,6 +29,7 @@ const formSchema = z.object({
   terms: z
     .boolean()
     .refine((val) => val, { message: "You must agree to terms." }),
+    pageURL: z.string()
 });
 
 export default function ContactForm() {
@@ -41,14 +43,15 @@ export default function ContactForm() {
       designation: "",
       message: "",
       terms: false,
+      pageURL: typeof window !== 'undefined' ? window.location.href : '',
     },
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const { t } = useTranslation("common");
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    console.log("Form Submitted:", data);
 
     const formData = {
       name: data.name,
@@ -57,6 +60,7 @@ export default function ContactForm() {
       message: data.message,
       companyName: data.company,
       designation: data.designation,
+      pageURL: typeof window !== 'undefined' ? window.location.href : '',
     };
 
     try {
@@ -83,7 +87,7 @@ export default function ContactForm() {
     <section className="mobile:pt-0" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
         <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full mobile:px-[3vw] mobile:py-[5vw]">
-          <h3 className="heading-2 ltr:font-body">Get in touch</h3>
+          <h3 className="heading-2 ltr:font-body">{t("formHead")}</h3>
           <Form {...form}>
             <form
               autoComplete="off"
@@ -98,7 +102,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={"Full Name*"}
+                        placeholder={t("formName")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -116,7 +120,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={"Email*"}
+                        placeholder={t("formEmail")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -134,7 +138,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={"Phone*"}
+                        placeholder={t("formPhone")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -152,7 +156,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={"Company Name"}
+                        placeholder={t("formCompany")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -170,7 +174,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Input
                         autoComplete="off"
-                        placeholder={"Designation*"}
+                        placeholder={t("formDesignation")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -188,7 +192,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Textarea
                         autoComplete="off"
-                        placeholder={"Message*"}
+                        placeholder={t("formMessage")}
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -213,7 +217,7 @@ export default function ContactForm() {
                         htmlFor="terms"
                         className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
                       >
-                        Yes, I would like to receive communications from Elite Capital
+                        {t("formAgreement")}
                       </FormLabel>
                     </div>
                     <FormMessage />
@@ -230,7 +234,7 @@ export default function ContactForm() {
                   {!isLoading ? (
                     <div className="flex gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[1vw] items-center">
                       <span className="text-[1.1vw] mobile:text-[4.5vw] tablet:text-[2.5vw]">
-                       Submit
+                        {t("formcta")}
                       </span>
                       <svg
                         className="relative -rotate-90 w-[1.2vw] h-[1.2vw] overflow-hidden mobile:w-[4.2vw] mobile:h-[4.2vw] tablet:w-[2.2vw] tablet:h-[2.2vw] rtl:rotate-90"
@@ -259,23 +263,9 @@ export default function ContactForm() {
                   )}
                 </Button>
               </div>
-              <FormField
-                control={form.control}
-                name="terms"
-                render={({ field }) => (
-                  <FormItem className="">
-                    <div className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw] text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]">
-                      {/* <FormLabel
-                        htmlFor="terms"
-                        className="text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
-                    
-                      /> */}
-
-                      *Elite Capital will only use this information as described in our Privacy Policy 
-                    </div>
-                    <FormMessage />
-                  </FormItem>
-                )}
+              <div 
+                className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw] text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]" 
+                dangerouslySetInnerHTML={{ __html: t("formPrivacy") }} 
               />
             </form>
           </Form>

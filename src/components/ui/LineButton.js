@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function LineButton({ className = "", href, text, ...props }) {
 
     return (
-        <Link aria-label={`to the ${text}`} {...props} href={href} className={`font-body block w-fit text-[1.2vw] text-black1 tracking-wide rounded-full mobile:text-[4.5vw] tablet:text-[2.5vw] group ${className}`}>
+        <Link {...props} aria-label={`to the ${text}`} href={href} className={`font-body block w-fit text-[1.2vw] text-black1 tracking-wide rounded-full mobile:text-[4.5vw] tablet:text-[2.5vw] group ${className}`}>
             <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%-1.5rem)] after:h-[1.5px] after:bg-current after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">
                 <span className="group-hover:scale-[0.98] transition-all duration-300 ease">{text}</span>
                 <span className="w-[1px] h-[1px] opacity-0">to the {text}</span>

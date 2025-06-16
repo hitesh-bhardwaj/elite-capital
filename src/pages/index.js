@@ -1,33 +1,35 @@
-import { fadeIn, fadeUp, paraAnim, titleAnim } from "@/components/gsapAnimations";
+import { fadeIn, fadeUp, lineAnim, paraAnim, titleAnim } from "@/components/gsapAnimations";
 import About from "@/components/Homepage/About";
 import Advantage from "@/components/Homepage/Advantage";
 import Diversify from "@/components/Homepage/Diversify";
 import Portfolio from "@/components/Homepage/Portfolio";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import heroBg from "../../public/assets/images/homepage/hero-bg.jpg"
+import { useTranslation } from "next-i18next";
 import Layout from "@/components/Common/Layout";
 import Metadata from "@/components/Metadata";
 import { WebpageJsonLd } from "@/lib/json-ld";
 import dynamic from "next/dynamic";
 
-// Dynamic imports
 const Hero = dynamic(() => import("@/components/Homepage/Hero"));
 const Assets = dynamic(() => import("@/components/Homepage/Assets"));
 const Values = dynamic(() => import("@/components/Homepage/Values"));
 const Contact = dynamic(() => import("@/components/Common/Contact"));
 const Counter = dynamic(() => import("@/components/Homepage/Counter"));
 
-import heroBg from "../../public/assets/images/homepage/hero-bg.jpg";
-
 export default function Home() {
-  // Animations
+
   fadeUp();
   paraAnim();
   titleAnim();
+  lineAnim();
   fadeIn();
+
+  const { t } = useTranslation('home');
 
   const metadata = {
     title: "Elite Capital",
-    metaDescription:
-      "A real-estate focused fund manager delivering premium investment opportunities in real estate that generate exceptional risk-adjusted returns from developments that contribute to thriving communities.​",
+    metaDescription: "A real-estate focused fund manager delivering premium investment opportunities in real estate that generate exceptional risk-adjusted returns from developments that contribute to thriving communities.​",
     path: "",
     img: "homepage.png",
     date_published: "2025-04-29T00:00",
@@ -39,14 +41,7 @@ export default function Home() {
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata} />
       <Layout>
-        <Hero
-          img={heroBg}
-          nextSectionId={"about"}
-          heading={"Providing investors with access to Real Assets with Real Returns."}
-          para={
-            "A real-estate focussed fund manager delivering premium investment opportunities in real estate that generate exceptional risk adjusted returns from developments that contribute to thriving communities."
-          }
-        />
+        <Hero img={heroBg} translation={'home'} heading={t('hero')} para={t('heroSub')} nextSectionId={"about"} />
         <About />
         <Counter />
         <Values />
@@ -54,8 +49,18 @@ export default function Home() {
         <Diversify />
         <Assets />
         <Portfolio />
-        <Contact />
+        <Contact translation={'home'} heading={t("contactHead")} para={t("contactSub")} />
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'home', 'common'
+      ])),
+    },
+  }
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import statsBg from "../../../public/assets/images/homepage/stats-bg.png";
+import { useTranslation } from "next-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -14,23 +15,9 @@ function renderDigits(value) {
 }
 
 export default function Counter() {
+    const { t } = useTranslation("home");
+    const statsContent = t("stats", { returnObjects: true });
 
-    const statsContent = [
-        { number: '80+', text: 'Years of combined professional experience' },
-        {
-          number: '$50B',
-          text: 'Aggregate investment & advisory experience'
-        },
-        {
-          number: '45+',
-          text: 'Real estate projects exclusive to Elite Capital'
-        },
-        {
-          number: 'CA$1B+',
-          text: "Equity required for Elite Capital's exclusive pipeline"
-        }
-      ]
-    // console.log(statsContent)
     const [values, setValues] = useState(["00", "00", "00", "0"]); // match digits of 80, 50, 45, 1
 
     useEffect(() => {
@@ -41,7 +28,39 @@ export default function Counter() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-          
+            const lineDraws = document.querySelectorAll(".vlineDraw");
+            if (globalThis.innerWidth > 1024) {
+                lineDraws.forEach((lineDraw) => {
+                    gsap.from(lineDraw, {
+                        scrollTrigger: {
+                            trigger: lineDraw,
+                            start: "top 80%",
+                        },
+                        scaleY: 0,
+                        transformOrigin: "top",
+                        duration: 2,
+                        stagger: 1,
+                        ease: "power4.out",
+                    });
+                });
+
+            }
+            else {
+                lineDraws.forEach((lineDraw) => {
+                    gsap.from(lineDraw, {
+                        scrollTrigger: {
+                            trigger: lineDraw,
+                            start: "top 80%",
+                        },
+                        scaleX: 0,
+                        transformOrigin: "left",
+                        duration: 2,
+                        stagger: 1,
+                        ease: "power4.out",
+                    });
+                });
+
+            }
             if (globalThis.innerWidth > 1024) {
                 gsap.to(".stats-img", {
                     yPercent: 70,
