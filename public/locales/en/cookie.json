@@ -16,7 +16,7 @@
             ],
             "list1": [
                 {
-                    "title": "Strictly necessary cookies",
+                    "title": "Strictly Necessary Cookies:",
                     "detail": [
                         "These cookies are essential to enable you to navigate the website and use its features. Without these cookies, certain services you request may not be possible."
                     ]
@@ -50,22 +50,22 @@
             "list2": [
                 {
                     "detail": [
-                        "Google Chrome: <a href='https://support.google.com/chrome/answer/95647' target='_blank'> support.google.com/chrome/answer/95647 </a>"
+                        "Google Chrome: <a style='color: #0069ff; text-decoration: underline;' href='https://support.google.com/chrome/answer/95647' target='_blank'> support.google.com/chrome/answer/95647 </a>"
                     ]
                 },
                 {
                     "detail": [
-                        "Mozilla Firefox: <a href='https://support.mozilla.org/en-US/kb/enable-and-disable-cookies' target='_blank'> support.mozilla.org/en-US/kb/enable-and-disable-cookies </a>"
+                        "Mozilla Firefox: <a style='color: #0069ff; text-decoration: underline;' href='https://support.mozilla.org/en-US/kb/enable-and-disable-cookies' target='_blank'> support.mozilla.org/en-US/kb/enable-and-disable-cookies </a>"
                     ]
                 },
                 {
                     "detail": [
-                        "Safari: <a href='https://support.apple.com/en-in/guide/safari/sfri11471/mac' target='_blank'> support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471 </a>"
+                        "Safari: <a style='color: #0069ff; text-decoration: underline;' href='https://support.apple.com/en-in/guide/safari/sfri11471/mac' target='_blank'> support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471 </a>"
                     ]
                 },
                 {
                     "detail": [
-                        "Microsoft Edge: <a href='https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d' target='_blank'> support.microsoft.com/en-us/help/4027947/microsoft-edge-delete-cookies </a>"
+                        "Microsoft Edge: <a style='color: #0069ff; text-decoration: underline;' href='https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d' target='_blank'> support.microsoft.com/en-us/help/4027947/microsoft-edge-delete-cookies </a>"
                     ]
                 }
             ]
@@ -80,7 +80,7 @@
             "title": "6. Contact Us",
             "para": [
                 "<p>If you have any questions or concerns regarding our use of cookies, please contact:</p>",
-              "<p><span class='font-medium'>Elite Capital (DIFC) Limited</span> <ul class='!list-none '><li><span class='font-medium'> Email: </span><a href='mailto:info@elitecapitalinvestments.com' target='_blank'>info@elitecapitalinvestments.com</a></li> <li> <span class='font-medium'>Telephone: </span> <a href='tel: +971 4499 2400' target='_blank'> +971 4499 2400 </a></li></ul> </p>"
+              "<p><span class='font-medium'>Elite Capital (DIFC) Limited</span> <ul class='!list-none '><li><span class='font-medium'> Email: </span><a style='color: #0069ff; text-decoration: underline;' href='mailto:info@elitecapitalinvestments.com'>info@elitecapitalinvestments.com</a></li> <li> <span class='font-medium'>Telephone: </span> <a style='color: #0069ff; text-decoration: underline;' href='tel: +971 4 499 2400'> +971 4499 2400 </a></li></ul> </p>"
             ]
         }
     ]

@@ -2,7 +2,7 @@
     "hero": "Global experience combined with local expertise",
     "cta": "Learn More",
     "aboutHead": "About us",
-    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC).The Elite Capital team has over 80 years of  professional experience, which combines deep global fund management expertise and strategic local real estate knowledge . We focus on investing in high-quality real assets while supporting the growth and vitality of the communities they serve.",
+    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). The Elite Capital team has over 150 years of  professional experience, which combines deep global fund management expertise and strategic local real estate knowledge. We focus on investing in high-quality real assets while supporting the growth and vitality of the communities they serve.",
     "valuesHead": "Our values",
     "values": [ 
         {
@@ -11,7 +11,7 @@
         },
         {
             "valueTitle": "Integrity",
-            "valueContent": "With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics."
+            "valueContent": "We are committed to the highest standards of honesty, accountability and ethics."
         },
         {
             "valueTitle": "Knowledge",
@@ -54,8 +54,8 @@
             "des": "Senior Advisor",
             "img": "/assets/images/about/tom-arnold.png",
             "features": [
-                "20+ years’ professional experience",
-                "Senior roles with Sweid, Middle East Family Offices, Investbridge Capital and PwC",
+                "20+ years' professional experience",
+                "Senior roles with Sweid & Sweid, Middle East Family Offices, LRIM Investment Management (now InvestBridge Capital) and PwC",
                 "MSc in International Real Estate; BA in Economics"
             ]
         },
@@ -94,7 +94,7 @@
                 "Investment Committee"
             ],
             "features": [
-                "Hamid Hakimi serves as the Chairman of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments the company has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
+                "Hamid Hakimi serves as the Chairman of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
                 "Prior to this, Hamid successfully managed a team of realtors who completed real estate sales in Ontario, Canada in excess of $1 billion. His expertise in the field has solidified his place as a respected and influential figure in real estate development and acquisition."
             ]
         },
@@ -153,7 +153,7 @@
         {
             "name": "Islam Makhachev",
             "des": "Ambassador",
-            "img": "/assets/images/about/icon.png",
+            "img": "/assets/images/about/islam.png",
             "role": [
                 "Investment Committee"
             ],
@@ -184,8 +184,7 @@
                 "Investment Committee"
             ],
             "features": [
-                "Michael A. D. Cox is a global real estate leader with more than 30 years of executive experience across the United States, Asia, the Middle East and Australia. He specializes in strategic business planning, investment frameworks and end-to-end project delivery for complex real estate ventures.",
-                "Michael has held senior leadership roles with institutions including the Public Investment Fund (PIF), Dubai Holding, Aldar Properties, QIC and Portman Holdings, where he oversaw multi-billion-dollar developments from inception through to asset management.",
+                "Michael A. D. Cox is a global real estate leader with more than 30 years of executive experience across the United States, Asia, the Middle East and Australia. He specializes in strategic business planning, investment frameworks and end-to-end project delivery for complex real estate ventures. Michael has held senior leadership roles with institutions including the Public Investment Fund (PIF), Dubai Holding, Aldar Properties, QIC and Portman Holdings, where he oversaw multi-billion-dollar developments from inception through to asset management.",
                 "His expertise spans P&L oversight, M&A due diligence, acquisitions and large-scale construction management. Currently, he serves as Projects Executive Officer for a Confidential Private Office in Saudi Arabia, and serves on the Board of PRI and the Investment Committee of Gallery Securities."
             ]
         }
@@ -233,5 +232,5 @@
     ],
     "shariahSub": "<p>The Shariah Supervisory Board shall be managed by Amanie Advisors Ltd, a company incorporated in DIFC with license No: CL0696. </p> <p> Amanie Advisors Ltd is also the appointed Shariah Advisor for Elite Capital (DIFC) Limited.</p>",
     "contactHead": "Invest  with us",
-    "contactSub": "Unlock Real Assets with Real Returns"
+    "contactSub": "Contact us to learn more about our investment opportunities."
 }

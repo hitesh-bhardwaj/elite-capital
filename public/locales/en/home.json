@@ -2,11 +2,11 @@
     "hero": "Providing investors with access to Real Assets with Real Returns.",
     "heroSub": "A real estate focused fund manager delivering investment opportunities that generate exceptional risk adjusted returns from developments that contribute to thriving communities.",
     "aboutHead": "Who we are",
-    "aboutSub": "Elite Capital is a DFSA-authorised private equity firm, combining in-depth local knowledge with strategic global fund management expertise to offer international investors with access to attractive real estate investment opportunities. Our success is built on creating long-lasting partnerships with our investors.",
+    "aboutSub": "Elite Capital is a Dubai International Investment Centre (DIFC) based, DFSA-authorised private equity firm, combining in-depth local knowledge with strategic global fund management expertise to offer international investors with access to attractive real estate investment opportunities. Our success is built on creating long-lasting partnerships with our investors.",
     "cta": "Learn More",
     "stats": [
         {
-            "number": "80+",
+            "number": "150+",
             "text": "Years of combined professional experience"
         }, 
         {
@@ -18,7 +18,7 @@
             "text": "Real estate projects exclusive to Elite Capital"
         },
         {
-            "number": "CA$1B+",
+            "number": "$1B+",
             "text": "Equity required for Elite Capital's exclusive pipeline"
         }
     ],
@@ -30,7 +30,7 @@
         },
         {
             "valueTitle": "Integrity",
-            "valueContent": "With 80+ years of combined professional experience, we are committed to the highest standards of honesty, accountability and ethics."
+            "valueContent": "We are committed to the highest standards of honesty, accountability and ethics."
         },
         {
             "valueTitle": "Knowledge",
@@ -48,17 +48,17 @@
     "advantageHead": "Canada's real estate investment opportunity",
     "advantage": [
         {
-            "text": "Canada stands out as a prime G7 investment destination due to its stable economy, abundance of natural resources, AAA credit rating and rapidly rising population. The population is expected to grow by 11.6 million people by 2050, driving sustained demand across key sectors - particularly housing."
+            "text": "Canada stands out as an attractive G7 investment destination due to its stable economy, abundance of natural resources, AAA credit rating and rapidly rising population. The population is expected to grow by 11.6 million people by 2050, driving sustained demand across key sectors - particularly housing."
         },
         {
             "text": "Rapid population growth, combined with a projected shortfall of over 3.5 million homes by 2030, has created a supply gap and presents a compelling and long-term opportunity for residential real estate investment in Canada."
         }
     ],
     "advantageCta": "View more",
-    "diversifyHead": "Diversify your portfolio with highly attractive Canadian real estate ",
+    "diversifyHead": "Diversify your portfolio with attractive Canadian real estate ",
     "diversify": [
         {
-            "text": "Elite Capital investors will gain access to a curated and exclusive pipeline of over 45 community-focused developments across Ontario, Canada. The pipeline includes several shovel ready purpose-built development projects, each having undergone an extensive development and permitting process."
+            "text": "Elite Capital investors will gain access to a curated and exclusive pipeline of over 45 community-focused developments across Ontario, Canada. The pipeline includes several shovel ready purpose-built development projects, each having undergone an extensive pre-development and permitting process."
         },
         {
             "text": "This exclusive pipeline, combined with our rigorous due-diligence process and hands-on asset management, is geared to deliver strong, risk adjusted returns to our investors."
@@ -77,13 +77,13 @@
             "text2": "Hamilton, ON"
         },
         {
-            "image": "/assets/images/homepage/ottawa-portfolio.jpg",
+            "image": "/assets/images/homepage/ottawa-portfolio.png",
             "text1": "570 Upper Ottawa",
             "text2": "Hamilton, ON"
         },
         {
             "image": "/assets/images/homepage/station-portfolio.png",
-            "text1": "Station 60",
+            "text1": "60 Market",
             "text2": "Brantford, ON"
         },
         {

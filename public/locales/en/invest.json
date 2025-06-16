@@ -20,7 +20,7 @@
             "text": "Sqft. of residential development"
         },
         {
-            "number": "CA$1B+",
+            "number": "$1B+",
             "text": "Equity investment opportunity"
         }
     ],
@@ -40,7 +40,7 @@
     },
     "portfolio3": {
         "img": "/assets/images/invest/portfolio-3.png",
-        "title": "Station 60",
+        "title": "60 Market",
         "location": "Brantford, ON",
         "address2": " 242 Apartments"
     },
@@ -72,7 +72,7 @@
         {
             "num": "02.",
             "title": "Proven experience",
-            "para": "Leverage our 80+ years of combined professional experience which encompasses strategic global fund management and real estate investment."
+            "para": "Leverage our 150+ years of combined professional experience which encompasses strategic global fund management and real estate investment."
         },
         {
             "num": "03.",
@@ -108,11 +108,11 @@
         {
             "num": "03",
             "title": "Economic and political stability",
-            "para": "Canada's strong economy and stable political environment create a reliable foundation for long- term investment. The Canadian federal government's ongoing committment to economic resilience is further reinforced by forward-looking immigration and growth policies, including the Century Initiative-- an ambitious plan supported by the government to grow Canada's population to 100 million by 2100. This initiative aims to further position Canada as a global economic leader, making it an even more compelling destination for sustained real estate investment."
+            "para": "Canada's strong economy and stable political environment create a reliable foundation for long-term investment. The Canadian federal government's ongoing commitment to economic resilience is further reinforced by forward-looking immigration and growth policies."
         }
     ],
     "click":"Click to know more",
-    "exclusiveSub": "Our exclusive pipeline of 45+ community-centered developments are strategically located within Ontario, the largest province in Canada by size of the economy and population.",
+    "exclusiveSub": "Our exclusive pipeline of 45+ community-centred developments is strategically located across Ontario, Canada’s most populous province and the largest contributor to the national economy.",
     "contactHead": "Invest  with us",
     "contactSub": "Contact us to learn more about our investment opportunities."
 }

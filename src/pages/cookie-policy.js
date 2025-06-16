@@ -9,12 +9,14 @@ import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
 
 export default function Cookie() {
+
   fadeUp();
   paraAnim();
   titleAnim();
   fadeIn();
   lineAnim();
-  const { t } = useTranslation("cookie"); 
+
+  const { t } = useTranslation("cookie");
   const metadata = {
     title: "Cookie Policy | Elite Capital  ",
     metaDescription: "Learn how Elite Capital uses cookies to enhance your experience, including types of cookies used and how to manage your preferences.​​",
@@ -25,13 +27,13 @@ export default function Cookie() {
   };
   return (
     <>
-    <Metadata metadata={metadata}/>
-    <WebpageJsonLd metadata={metadata}/>
-  <Layout>
-  <Hero img={bg} translation={'cookie'} heading={t("hero")} para={""} nextSectionId={"cookie-content"} />
-  <Content />
-  </Layout>
-  </>
+      <Metadata metadata={metadata} />
+      <WebpageJsonLd metadata={metadata} />
+      <Layout>
+        <Hero img={bg} translation={'cookie'} heading={t("hero")} para={""} nextSectionId={"cookie-content"} />
+        <Content />
+      </Layout>
+    </>
   );
 }
 

@@ -35,8 +35,8 @@ const Content = () => {
                 <span className='bg-black1 w-full h-[1px] block mb-[5vw] mt-[8vw] lineDraw mobile:my-[10vw]  tablet:my-[5vw]' />
                 <div className='space-y-[4vw] w-full'>
                     {content.map((item, index) => (
-                        <>
-                            <div key={index} className=' flex items-start w-full gap-[1vw] '>
+                        <React.Fragment key={index}>
+                            <div className=' flex items-start w-full gap-[1vw]'>
                                 <div className='h-full w-[10%] relative mt-[0.5vw mobile:w-[20%]'>
                                     <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
                                     <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={100} height={36} className=' mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw] rtl:scale-x-[-1]' />
@@ -67,7 +67,7 @@ const Content = () => {
                                 </div>
                             </div>
                             <span className='bg-black1 w-full h-[1px] block mt-[1vw] lineDraw mobile:!my-[15vw]  tablet:my-[5vw]' />
-                        </>
+                        </React.Fragment>
                     ))}
                 </div>
             </div>

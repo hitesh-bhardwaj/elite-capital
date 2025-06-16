@@ -5,14 +5,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "..
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger)
-// import { parllaxAnim } from "../gsapAnimations";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Values = () => {
   // parllaxAnim("#values")
   const { t } = useTranslation('home');
   const values = t('values', { returnObjects: true });
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (globalThis.innerWidth > 1024) {

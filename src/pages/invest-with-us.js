@@ -6,7 +6,7 @@ import Contact from '@/components/Common/Contact';
 import WhyUs from '@/components/InvestWithUs/WhyUs';
 import Residential from '@/components/InvestWithUs/Residential';
 import Factors from '@/components/InvestWithUs/Exclusive';
-import { blockAnim, fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
+import { fadeIn, fadeUp, paraAnim, titleAnim } from '@/components/gsapAnimations';
 import { useTranslation } from 'next-i18next';
 import Hero from '@/components/Common/Hero';
 import heroBg from "../../public/assets/images/invest/invest-hero.png"
@@ -15,11 +15,14 @@ import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from "@/lib/json-ld";
 
 export default function Invest() {
-  fadeUp()
-  paraAnim()
-  titleAnim()
-  fadeIn()
+
+  fadeUp();
+  paraAnim();
+  titleAnim();
+  fadeIn();
+
   const { t } = useTranslation('invest');
+
   const metadata = {
     title: "Invest With Us | Elite Capital ",
     metaDescription: "Partner with Elite Capital to invest in DFSA-authorised, community-focused real estate developments in Ontario, offering superior risk-adjusted returns.​​",

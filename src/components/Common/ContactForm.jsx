@@ -22,7 +22,7 @@ const formSchema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   number: z
     .string()
-    .regex(/^\d{10,15}$/, { message: "Phone number must be 10-15 digits." }),
+    .regex(/^\d{10,20}$/, { message: "Phone number must be 10-20 digits." }),
   company: z.string().min(2, { message: "Company name is required." }),
   designation: z.string().min(2, { message: "Designation is required." }),
   message: z.string().optional(),

@@ -18,11 +18,11 @@ export default function Counter() {
     const { t } = useTranslation("home");
     const statsContent = t("stats", { returnObjects: true });
 
-    const [values, setValues] = useState(["00", "00", "00", "0"]); // match digits of 80, 50, 45, 1
+    const [values, setValues] = useState(["000", "00", "00", "0"]); // match digits of 80, 50, 45, 1
 
     useEffect(() => {
         setTimeout(() => {
-            setValues(["80", "50", "45", "1"]);
+            setValues(["150", "50", "45", "1"]);
         }, 500);
     }, []);
 
@@ -128,7 +128,7 @@ export default function Counter() {
                         <div className="flex w-[25%] gap-[2vw] tablet:w-1/2 tablet:gap-0 mobile:w-full mobile:flex-col">
                             <div className="flex flex-col items-center justify-start pt-[2.5vw] gap-[1vw] w-full mobile:flex-row mobile:justify-between mobile:pl-[4vw] mobile:gap-[4vw]">
                                 <h3 dir="ltr" className="font-semibold text-[5vw] leading-[1.2] flex items-center tablet:text-[7vw] mobile:text-[12vw]">
-                                    <span>CA$</span>{renderDigits(values[3])}B<sup>+</sup>
+                                    <span>$</span>{renderDigits(values[3])}B<sup>+</sup>
                                 </h3>
                                 <p data-para-anim className="content mobile:w-[45%]">{statsContent[3].text}</p>
                             </div>

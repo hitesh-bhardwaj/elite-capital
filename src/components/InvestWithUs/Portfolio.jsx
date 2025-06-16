@@ -60,37 +60,31 @@ const Portfolio = () => {
           img={t("portfolio1.img")}
           title={t("portfolio1.title")}
           location={t("portfolio1.location")}
-          // address2={t("portfolio1.address2")}
         />
         <PortfolioCard
           img={t("portfolio2.img")}
           title={t("portfolio2.title")}
           location={t("portfolio2.location")}
-          // address2={t("portfolio2.address2")}
         />
         <PortfolioCard
           img={t("portfolio3.img")}
           title={t("portfolio3.title")}
           location={t("portfolio3.location")}
-          // address2={t("portfolio3.address2")}
         />
         <PortfolioCard
           img={t("portfolio4.img")}
           title={t("portfolio4.title")}
           location={t("portfolio4.location")}
-          // address2={t("portfolio4.address2")}
         />
         <PortfolioCard
           img={t("portfolio5.img")}
           title={t("portfolio5.title")}
           location={t("portfolio5.location")}
-          // address2={t("portfolio5.address2")}
         />
         <PortfolioCard
           img={t("portfolio6.img")}
           title={t("portfolio6.title")}
           location={t("portfolio6.location")}
-          // address2={t("portfolio6.address2")}
         />
       </div>
     </section>

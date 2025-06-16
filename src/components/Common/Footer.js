@@ -126,7 +126,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-[1.5vw] mobile:mt-[-2vw] bg-[#121212] w-full flex items-center justify-center italic font-body text-[1.15rem]  mobile:px-[5vw] mobile:py-[5vw] mobile:text-[3.5vw] tablet:px-[5vw]">Regulated by the DFSA under F009439. Elite Capital (DIFC) Limited only provides financial services to professional clients</div>
+        <div className="py-[1.5vw] mobile:mt-[-2vw] bg-[#121212] w-full flex items-center justify-center italic font-body text-[1.15rem]  mobile:px-[5vw] mobile:py-[5vw] mobile:text-[3.5vw] tablet:px-[5vw]">Regulated by the DFSA under F009439. Elite Capital (DIFC) Limited only provides financial services to professional clients.</div>
       </div>
     </footer>
   );
