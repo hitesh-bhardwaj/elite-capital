@@ -132,7 +132,7 @@ export default function SwiperSlider() {
                   quality={95}
                   height={1080}
                   alt="portfolio-images"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top" 
                 />
               </figure>
               <div

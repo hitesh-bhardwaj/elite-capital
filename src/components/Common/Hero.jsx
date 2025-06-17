@@ -85,12 +85,11 @@ const Hero = ({ img, translation, heading, para, nextSectionId , className}) => 
           placeholder="blur"
           loading="lazy"
           quality={90}
-          
         />
         <div className="relative z-10 px-[5vw] pt-[8vw] flex items-center justify-start h-full mobile:items-start mobile:pt-[30%] ">
           <div className="py-[10%] text-white w-full mobile:w-full">
             <h1
-              className="heading-1 w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw] hero-title-anim"
+              className="heading-1 w-[90%] mobile:w-full tablet:w-full font-display leading-1.15  mb-[3vw] mobile:mb-[5vw] hero-title-anim"
             >
               {heading}
             </h1>
