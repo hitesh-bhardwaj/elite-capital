@@ -140,7 +140,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          {/* <LanguageButton className="mobile:hidden tablet:hidden" /> */}
+          <LanguageButton className="mobile:hidden tablet:hidden" />
         </div>
 
         <div className="hidden mobile:block tablet:block">
