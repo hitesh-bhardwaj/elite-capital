@@ -23,12 +23,12 @@ const LanguageButton = ({ className = "" }) => {
   const { locale, asPath } = useRouter();
 
   return (
-    <div className={`text-white flex items-center gap-x-2 text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
-      <a className={`${locale === 'en' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={asPath} locale="en">
+    <div className={`text-white relative flex items-center h-full gap-x-2 justify-center text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
+      <a className={`${locale === 'en' ? 'text-golden font-bold  mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline ' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`} href={asPath} locale="en">
         EN
       </a>
-      <span className={`bg-white w-[1px] block h-[1.5vw] mobile:bg-black tablet:bg-black tablet:h-[5vw]`}></span>
-      <a className={`${locale === 'ar' ? 'text-golden font-bold text-[1.5vw] mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw]' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150`} href={`ar${asPath}`} locale="ar">
+      <span className={`bg-white w-[1px] block h-[1vw] mobile:bg-black tablet:bg-black tablet:h-[5vw] rtl:h-[0.9vw] rtl:mt-[-0.2vw]`}></span>
+      <a className={`${locale === 'ar' ? 'text-golden font-bold  mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline ' : 'mobile:text-black tablet:text-black '} hover:scale-110  block duration-150 rtl:pt-[0.1vw]`} href={`ar${asPath}`} locale="ar">
         AR
       </a>
     </div>
@@ -121,7 +121,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex gap-[2vw] mobile:hidden tablet:hidden">
+        <div className="flex gap-[4vw] mobile:hidden tablet:hidden">
           <div className={`flex flex-nowrap justify-end text-white gap-[2vw]`}>
             <Link href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
               <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
