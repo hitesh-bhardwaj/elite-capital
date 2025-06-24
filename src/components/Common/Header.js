@@ -19,20 +19,37 @@ const socials = [
   },
 ];
 
+
 const LanguageButton = ({ className = "" }) => {
   const { locale, asPath } = useRouter();
 
+  // Define routes where the button should be hidden
+  const hiddenRoutes = ['/privacy-policy', '/cookie-policy'];
+
+  // Return null if current route is in the hidden list
+  if (hiddenRoutes.includes(asPath)) {
+    return null;
+  }
+
   return (
     <div className={`text-white relative flex items-center h-full gap-x-2 justify-center text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
-      <a className={`${locale === 'en' ? 'text-golden font-bold  mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline ' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`} href={asPath} locale="en">
+      <a
+        className={`${locale === 'en' ? 'text-golden font-bold  tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`}
+        href={asPath}
+        locale="en"
+      >
         EN
       </a>
-      <span className={`bg-white w-[1px] block h-[1vw] mobile:bg-black tablet:bg-black tablet:h-[5vw] rtl:h-[0.9vw] rtl:mt-[-0.2vw]`}></span>
-      <a className={`${locale === 'ar' ? 'text-golden font-bold  mobile:text-black tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline ' : 'mobile:text-black tablet:text-black '} hover:scale-110  block duration-150 rtl:pt-[0.1vw]`} href={`ar${asPath}`} locale="ar">
+      <span className="bg-white w-[1px] block h-[1vw] mobile:bg-black mobile:h-[6vw] tablet:bg-black tablet:h-[5vw] rtl:h-[0.9vw] rtl:mobile:h-[6vw] rtl:mt-[-0.2vw]"></span>
+      <a
+        className={`${locale === 'ar' ? '!text-golden font-bold tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black '} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`}
+        href={`ar${asPath}`}
+        locale="ar"
+      >
         AR
       </a>
     </div>
-  )
+  );
 };
 
 const Header = () => {
@@ -140,7 +157,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          <LanguageButton className="mobile:hidden tablet:hidden" />
+          <LanguageButton className="" />
         </div>
 
         <div className="hidden mobile:block tablet:block">
@@ -208,9 +225,10 @@ const Header = () => {
                   </a>
                 ))}
               </div>
-              {/* <div className="w-full flex justify-end">
-                <LanguageButton />
-              </div> */}
+              <div className="w-full flex justify-end">
+              <LanguageButton className="" />
+
+              </div>
               <div
                 className="absolute right-[-2%] top-[8%] border rounded-full border-black p-[3vw] rtl:left-[2%] rtl:right-auto"
                 onClick={closeMenuMobile}

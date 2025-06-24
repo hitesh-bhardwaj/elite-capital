@@ -16,7 +16,7 @@ export default function CookieBanner({ cookieVisible, setVisible }) {
                     </Link>
                 </span>
                 <button
-                    className="w-fit h-fit px-[1.2vw] py-[0.8vw] mobile:text-lg tablet:text-2xl mobile:px-4 mobile:py-2 tablet:py-4 tablet:px-6 bg-black rounded-full text-white text-[1.1vw] hover:scale-[0.95] duration-300"
+                    className="w-fit h-fit px-[1.2vw] py-[0.8vw] rtl:pb-[0.6vw]  mobile:text-lg tablet:text-2xl mobile:px-4 mobile:py-2 tablet:py-4 tablet:px-6 bg-black rounded-full text-white text-[1.1vw] hover:scale-[0.95] duration-300"
                     onClick={() => setVisible(false)}
                 >
                     Accept Cookies
