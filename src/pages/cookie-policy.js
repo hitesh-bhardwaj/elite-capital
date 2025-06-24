@@ -30,8 +30,10 @@ export default function Cookie() {
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata} />
       <Layout>
+      <div dir='ltr'>
         <Hero img={bg} translation={'cookie'} heading={t("hero")} para={""} nextSectionId={"cookie-content"} />
         <Content />
+      </div>
       </Layout>
     </>
   );

@@ -39,7 +39,7 @@ const Content = () => {
                             <div className=' flex items-start w-full gap-[1vw]'>
                                 <div className='h-full w-[10%] relative mt-[0.5vw mobile:w-[20%]'>
                                     <span className="bg-white h-full w-full absolute top-0 origin-right yellow-block-cover"></span>
-                                    <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={100} height={36} className=' mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw] rtl:scale-x-[-1]' />
+                                    <Image src={yellowRectangleMask} alt='yellow-rectamngle-mask' width={100} height={36} className=' mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw]' />
                                 </div>
                                 <div className='w-full mobile:w-[80%]'>
                                     <div className='heading-2 pb-[1vw] mobile:pb-[5vw] tablet:pb-[5vw] '>{item.title}</div>

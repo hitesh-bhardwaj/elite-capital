@@ -23,13 +23,7 @@ const socials = [
 const LanguageButton = ({ className = "" }) => {
   const { locale, asPath } = useRouter();
 
-  // Define routes where the button should be hidden
-  const hiddenRoutes = ['/privacy-policy', '/cookie-policy'];
 
-  // Return null if current route is in the hidden list
-  if (hiddenRoutes.includes(asPath)) {
-    return null;
-  }
 
   return (
     <div className={`text-white relative flex items-center h-full gap-x-2 justify-center text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>

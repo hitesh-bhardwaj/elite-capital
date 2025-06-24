@@ -46,7 +46,7 @@ const Content = () => {
                     alt="yellow-rectamngle-mask"
                     width={100}
                     height={36}
-                    className="mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw] rtl:scale-x-[-1]"
+                    className="mobile:h-[8vw] mobile:w-[15vw] tablet:w-[20vw] tablet:h-[5vw] "
                   />
                 </div>
                 <div className="mobile:pb-[10vw] w-full mobile:w-[80%]">
