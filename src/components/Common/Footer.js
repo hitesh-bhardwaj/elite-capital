@@ -45,7 +45,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" bg-transparent h-[38vw] text-white   mobile:h-full tablet:h-[70vw]"
+    <footer className="bg-transparent h-[65vh] text-white mobile:h-full tablet:h-[70vw]"
       style={{
         ...(mobileWidth
           ? {}
@@ -76,11 +76,11 @@ const Footer = () => {
           </div>
           <div className="h-fit w-[40%] py-[3vw] mobile:w-full mobile:py-[8vw] tablet:py-[4vw]">
             <div className="text-white text-[1.15rem]">
-              <p>Elite Capital Head Office</p>
-              <p>Central Park Towers, Office 02-40</p>
-              <p>Dubai International Financial Centre</p>
-              <p>PO Box 507417</p>
-              <p>Dubai, United Arab Emirates</p>
+              <p>{t('address1')}</p>
+              <p>{t('address2')}</p>
+              <p>{t('address3')}</p>
+              <p>{t('address4')}</p>
+              <p>{t('address5')}</p>
             </div>
           </div>
           <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[1vw]  tablet:pb-[5vw] mobile:pt-[5vw] mobile:py-[2vw]">

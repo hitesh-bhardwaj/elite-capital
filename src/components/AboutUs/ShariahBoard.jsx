@@ -64,7 +64,7 @@ const ShariahBoard = () => {
             </div>
           )}
           <div
-            className="text-lg italic mt-[5vw] space-y-[1vw] fadeUp mobile:space-y-[7vw] mobile:w-[95%] tablet:mt-[7vw] px-[4vw]"
+            className="text-[1vw] mobile:text-lg tablet:text-lg italic mt-[5vw] space-y-[0.5vw] fadeUp mobile:space-y-[7vw] mobile:w-[95%] tablet:mt-[7vw] px-[4vw]"
             dangerouslySetInnerHTML={{ __html: t("shariahSub") }}
           />
         </div>
