@@ -10,6 +10,11 @@
   "formAgreement": "Yes, I would like to receive communications from Elite Capital.",
   "formPrivacy":"<p>*Elite Capital will only use this information as described in our <a href='/privacy-policy' class='underline pb-1' > Privacy Policy </a>.</p>",
   "footerline": "Real Assets. Real Returns.",
+  "address1": "Elite Capital Head Office",
+  "address2": "Central Park Towers, Office 02-40",
+  "address3": "Dubai International Financial Centre",
+  "address4": "PO Box 507417",
+  "address5": "Dubai, United Arab Emirates",
   "footerNav": [
     {
       "text": "WHO WE ARE",

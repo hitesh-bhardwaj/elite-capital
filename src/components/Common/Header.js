@@ -23,8 +23,6 @@ const socials = [
 const LanguageButton = ({ className = "" }) => {
   const { locale, asPath } = useRouter();
 
-
-
   return (
     <div className={`text-white relative flex items-center h-full gap-x-2 justify-center text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
       <a

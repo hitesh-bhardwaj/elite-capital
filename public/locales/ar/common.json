@@ -7,15 +7,20 @@
   "footerEmailText": "Enter Your Email",
   "footerEmailButton": "Subscribe",
   "formHead": "تواصل معنا",
-  "formAgreement": "نعم، أرغب في استلام اتصالات من شركة إيليت كابيتال.",
-  "formPrivacy":"<p>*ستستخدم إيليت كابيتال هذه المعلومات فقط كما هو موضح في  <a href='/privacy-policy' class='underline pb-1' >  سياسة الخصوصية. </a>.</p>",
+  "formAgreement": "نعم، أرغب في تلقي آخر التحديثات من شركة إيليت كابيتال.",
+  "formPrivacy": "<p>*ستستخدم إيليت كابيتال هذه المعلومات فقط كما هو موضح في  <a href='/privacy-policy' class='underline pb-1' >  سياسة الخصوصية. </a>.</p>",
   "footerline": "أصول حقيقية. عوائد حقيقية.",
+  "address1": "إيليت كابيتال - المكتب الرئيسي",
+  "address2": "برج سنترال بارك، مكتب 02-40",
+  "address3": "مركز دبي المالي العالمي (DIFC)",
+  "address4": "صندوق بريد 507417",
+  "address5": "دبي، الإمارات العربية المتحدة",
   "footerNav": [
     {
       "text": "من نحن",
       "link": "/about-us"
     },
-    { 
+    {
       "text": "ابدأ استثمارك الآن",
       "link": "/invest-with-us"
     },
