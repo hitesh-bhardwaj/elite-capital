@@ -31,7 +31,7 @@
   ],
   "footerNavBottom": [
     {
-      "text": "تنصل",
+      "text": "إخلاء المسؤولية",
       "link": "/disclaimer"
     },
     {
@@ -39,7 +39,7 @@
       "link": "/privacy-policy"
     },
     {
-      "text": "سياسة الخصوصية",
+      "text": "سياسة ملفات تعريف الارتباط",
       "link": "/cookie-policy"
     }
   ],
