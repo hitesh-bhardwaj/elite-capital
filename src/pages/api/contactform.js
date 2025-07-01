@@ -17,6 +17,7 @@ export default async function handler(req, res) {
     const { data, error } = await resend.emails.send({
       from: "Elite Capital <webforms@elitecapitalinvestments.com>",
       to: ["info@elitecapitalinvestments.com"],
+      // to: ["hitesh@weareenigma.com"],
       subject: "New Contact Form Submission",
       react: ContactDetails({
         userName: name,

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
@@ -11,25 +11,25 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/ui/form"
+import { PhoneInput } from "@/components/ui/phone-input"
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Checkbox } from "../ui/checkbox";
-import { useTranslation } from "next-i18next";
+import { useState } from "react"
+import { useTranslation } from "next-i18next"
+import { Checkbox } from "../ui/checkbox"
+import { isValidPhoneNumber } from "react-phone-number-input"
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   number: z
     .string()
-    .regex(/^\d{10,20}$/, { message: "Phone number must be 10-20 digits." }),
+    .refine(isValidPhoneNumber, { message: "Invalid phone number" }),
   company: z.string().min(2, { message: "Company name is required." }),
   designation: z.string().min(2, { message: "Designation is required." }),
   message: z.string().optional(),
-  terms: z
-    .boolean()
-    .refine((val) => val, { message: "You must agree to terms." }),
-    pageURL: z.string()
+  terms: z.boolean().refine((v) => v, { message: "You must agree to terms." }),
+  pageURL: z.string()
 });
 
 export default function ContactForm() {
@@ -45,43 +45,52 @@ export default function ContactForm() {
       terms: false,
       pageURL: typeof window !== 'undefined' ? window.location.href : '',
     },
-  });
+  })
 
   const [isLoading, setIsLoading] = useState(false);
   const { t } = useTranslation("common");
+  const [statusMessage, setStatusMessage] = useState("")
+  const [statusType, setStatusType] = useState("success")
 
   const onSubmit = async (data) => {
-    setIsLoading(true);
+    setIsLoading(true)
+    // clear any existing message
+    setStatusMessage("")
 
-    const formData = {
+    const payload = {
       name: data.name,
       email: data.email,
       number: data.number,
       message: data.message,
       companyName: data.company,
       designation: data.designation,
-      pageURL: typeof window !== 'undefined' ? window.location.href : '',
-    };
+      pageURL: typeof window !== "undefined" ? window.location.href : "",
+    }
 
     try {
       const res = await fetch("/api/contactform", {
         method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
 
-      if (!res.ok) throw new Error("Failed to send message");
+      if (!res.ok) throw new Error("Network response was not ok")
 
-      form.reset();
-    } catch (error) {
-      console.log(error);
+      form.reset()
+      setStatusType("success")
+      setStatusMessage("Message sent successfully!")
+    } catch (err) {
+      console.error(err)
+      setStatusType("error")
+      setStatusMessage("Failed to send message.")
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
+      // hide message after 5 seconds
+      setTimeout(() => {
+        setStatusMessage("")
+      }, 3000)
     }
-  };
+  }
 
   return (
     <section className="mobile:pt-0" id="formoem">
@@ -136,9 +145,10 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input
-                        autoComplete="off"
+                      <PhoneInput
+                        defaultCountry="AE"
                         placeholder={t("formPhone")}
+                        international
                         {...field}
                         className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
                       />
@@ -263,9 +273,21 @@ export default function ContactForm() {
                   )}
                 </Button>
               </div>
-              <div 
-                className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw] text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]" 
-                dangerouslySetInnerHTML={{ __html: t("formPrivacy") }} 
+              {/* Status message */}
+              {statusMessage && (
+                <p
+                  className={`
+                    ${statusType === "error"
+                      ? "mt-2 text-red-600"
+                      : "mt-2 text-green-600"
+                  } text-lg `}
+                >
+                  {statusMessage}
+                </p>
+              )}
+              <div
+                className="flex gap-[1vw] items-start mobile:gap-[5vw] tablet:gap-[1.5vw] text-[1.2vw] mobile:text-[4.5vw] tablet:text-[2vw] w-[90%] mt-[-0.5vw]"
+                dangerouslySetInnerHTML={{ __html: t("formPrivacy") }}
               />
             </form>
           </Form>
