@@ -19,30 +19,30 @@ const socials = [
   },
 ];
 
-
 const LanguageButton = ({ className = "" }) => {
-  const { locale, asPath } = useRouter();
+  const { locale, asPath, pathname } = useRouter()
+  // If you’re on /ar/about-us, strip the leading “/ar”
+  const basePath = locale === 'ar'
+    ? (asPath || pathname).replace(/^\/ar/, '')
+    : (asPath || pathname)
 
   return (
-    <div className={`text-white relative flex items-center h-full gap-x-2 justify-center text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
-      <a
-        className={`${locale === 'en' ? 'text-golden font-bold  tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`}
-        href={asPath}
-        locale="en"
-      >
+   <div className={`text-white relative flex items-center h-full gap-x-2 justify-center text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
+      {/* English Link */}
+      <a href={basePath} locale="en" className={`${locale === 'en' ? 'text-golden font-bold  tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`}>
         EN
       </a>
+
+      {/* Divider */}
       <span className="bg-white w-[1px] block h-[1vw] mobile:bg-black mobile:h-[6vw] tablet:bg-black tablet:h-[5vw] rtl:h-[0.9vw] rtl:mobile:h-[6vw] rtl:mt-[-0.2vw]"></span>
-      <a
-        className={`${locale === 'ar' ? '!text-golden font-bold tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black '} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`}
-        href={`ar${asPath}`}
-        locale="ar"
-      >
+
+      {/* Arabic Link */}
+      <a href={`/ar${basePath}`} locale="ar" className={`${locale === 'ar' ? '!text-golden font-bold tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black '} hover:scale-110 block duration-150 rtl:pt-[0.1vw]'} `}>
         AR
       </a>
     </div>
-  );
-};
+  )
+}
 
 const Header = () => {
   const headerRef = useRef();
