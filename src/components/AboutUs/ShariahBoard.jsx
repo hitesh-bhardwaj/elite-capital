@@ -64,7 +64,7 @@ const ShariahBoard = () => {
             </div>
           )}
           <div
-            className="text-[1vw] mobile:text-lg tablet:text-lg italic mt-[5vw] space-y-[0.5vw] fadeUp mobile:space-y-[7vw] mobile:w-[95%] tablet:mt-[7vw] px-[4vw]"
+            className="text-[1vw]  mobile:text-lg tablet:text-lg italic mt-[5vw] space-y-[0.5vw] fadeUp mobile:space-y-[7vw] mobile:w-[95%] tablet:mt-[7vw] px-[4vw]"
             dangerouslySetInnerHTML={{ __html: t("shariahSub") }}
           />
         </div>
@@ -84,7 +84,7 @@ const SingleAccordion = ({ id, title, des, content, className }) => {
       </AccordionTrigger>
       <AccordionContent className="text-[1.2vw] tracking-[0.5px] leading-[1.3] space-y-[1.5vw] w-[70%] mb-[20px] mobile:w-full mobile:text-[4.1vw] mobile:font-normal mobile:space-y-[4vw] tablet:text-[2.7vw]  pt-[3vw] mobile:leading-[1.2] font-body tablet:font-normal tablet:w-full ">
         <div className="fadeIn mobile:text-[4.8vw] mobile:mt-[-2vw]">{des}</div>
-        <div className="fadeIn mobile:text-[4.1vw] !space-y-[4vw] tablet:text-[2.5vw]  tablet:leading-[1.4] mobile:leading-[1.6]" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="fadeIn  mobile:text-[4.1vw] !space-y-[4vw] tablet:text-[2.5vw]  tablet:leading-[1.4] mobile:leading-[1.6]" dangerouslySetInnerHTML={{ __html: content }} />
       </AccordionContent>
       <div className="w-full bg-black lineDraw h-[1px] !mt-[7vw] mobile:block tablet:block"></div>
     </AccordionItem>
@@ -126,14 +126,14 @@ const TeamAccordion = ({ members }) => {
                 <div className="w-[50%] mobile:w-[90%]">
                   <div className="transition-all duration-500 ease-in-out overflow-hidden space-y-[1vw]">
                     {item.features.slice(0, 2).map((feature, i) => (
-                      <p key={i} className="text-[1.3vw]">
+                      <p key={i} className="text-[1.3vw] ">
                         {feature}
                       </p>
                     ))}
                   </div>
-                  <AccordionContent className="space-y-[1vw] pt-[1vw]">
+                  <AccordionContent className="space-y-[1vw] pt-[1vw] ">
                     {item.features.slice(2).map((feature, i) => (
-                      <p key={i} className="text-[1.3vw] leading-[1.5] tablet:text-[2.5vw]">
+                      <p key={i} className="text-[1.3vw] leading-[1.5]  tablet:text-[2.5vw]">
                         {feature}
                       </p>
                     ))}
@@ -144,7 +144,7 @@ const TeamAccordion = ({ members }) => {
                       onClick={() =>
                         setOpenedIndex((prev) => (prev === index ? null : index))
                       }
-                      className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal"
+                      className="text-[1.3vw] mt-[2vw] !w-[5vw] tablet:text-[2.5vw] text-left font-normal "
                     >
                       {openedIndex === index ? (
                         <p className="after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%-1rem)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out">

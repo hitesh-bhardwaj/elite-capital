@@ -24,9 +24,9 @@ const Assets = () => {
                     </div>
                 </div>
                 <div className='w-[50%] flex items-center  mobile:w-full tablet:w-[60%] tablet:justify-start rtl:pr-[8vw] rtl:tablet:pr-0 '>
-                    <h3 data-title-anim className='text-black1 text-[5.2vw] leading-[1.2]  !font-body w-[80%] mobile:w-full font-light mobile:text-[12vw] tablet:text-[7vw] tablet:w-full'>{t('realHead')}
+                    <h3 data-title-anim className='text-black1  text-[5.2vw] leading-[1.2]  !font-body w-[65%] mobile:w-full font-light mobile:text-[12vw] tablet:text-[7vw] tablet:w-full'>{t('realHead')}
                         <br />
-                        <span className='!font-semibold'>{t('realHeadSub')}</span>
+                        <span className='!font-semibold '>{t('realHeadSub')}</span>
                     </h3>
                 </div>
             </div>

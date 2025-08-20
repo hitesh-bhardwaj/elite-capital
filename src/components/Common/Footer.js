@@ -51,8 +51,8 @@ const Footer = () => {
           ? {}
           : { clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }),
       }}>
-      <div className="fixed bottom-0 w-full mobile:static">
-        <div className="px-[5vw] w-full bg-[#121212]  mobile:px-[7vw] font-body mobile:py-[5vw]">
+      <div className="fixed bottom-0 w-full mobile:static h-[65vh] mobile:h-full tablet:h-[70vw]">
+        <div className="px-[5vw] w-full bg-[#121212]  mobile:px-[7vw] font-body mobile:py-[5vw] h-full ">
           <div className="  flex  justify-between mobile:flex-col mobile:h-full">
             <div className="flex flex-col items-start justify-start pt-[5vw] mobile:flex-col ">
               <Image
@@ -64,7 +64,7 @@ const Footer = () => {
               />
               <p className="text-[2.1vw] pl-[4.8vw] pt-[0.5vw] mobile:text-[6vw] mobile:pl-[13vw] mobile:pt-[2vw] tablet:text-[2.5vw] tablet:pt-[1vw]"> {t('footerline')} </p>
             </div>
-            <div className="uppercase content font-body font-medium flex items-center justify-end gap-[5vw] mobile:flex-col  mobile:items-start  mobile:pt-[8vw]  mobile:gap-[4vw] tablet:justify-start  mobile:text-[6vw] tablet:gap-[3vw]">
+            <div className="uppercase content font-body font-medium flex items-center justify-end gap-[5vw] mobile:flex-col  mobile:items-start  mobile:pt-[8vw]  mobile:gap-[4vw] tablet:justify-start  mobile:text-[6vw] tablet:gap-[3vw] tablet:pt-[5vw]">
               {footerNav.map((item, index) => (
                 <Link key={index} href={item.link} className="group transition-all duration-300 ease" prefetch={false}>
                   <div className="flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.5rem)] after:h-[1.5px] after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out ">
@@ -74,16 +74,16 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="h-fit w-[40%] py-[3vw] mobile:w-full mobile:py-[8vw] tablet:py-[4vw]">
+          <div className="h-fit w-[50%] py-[3vw] mobile:w-full mobile:py-[8vw] tablet:py-[4vw]">
             <div className="text-white text-[1.15rem]">
-              <p>{t('address1')}</p>
-              <p>{t('address2')}</p>
-              <p>{t('address3')}</p>
-              <p>{t('address4')}</p>
-              <p>{t('address5')}</p>
+              <p className="">{t('address1')}</p>
+              <p className="">{t('address2')}</p>
+              <p className="">{t('address3')}</p>
+              <p className="">{t('address4')}</p>
+              <p className="">{t('address5')}</p>
             </div>
           </div>
-          <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[1vw]  tablet:pb-[5vw] mobile:pt-[5vw] mobile:py-[2vw]">
+          <div className="border-t border-white flex justify-between items-center py-6 mobile:flex-col-reverse mobile:items-start mobile:gap-[1vw]  tablet:pb-[5vw] mobile:pt-[5vw] mobile:py-[2vw] tablet:mt-[10vw] tablet:items-start">
             <p className="text-[1.15rem] tablet:w-[40%] mobile:text-[4vw]">{t('footerCopy')}</p>
             <div className="flex gap-[2.5vw] text-[1.3vw] mobile:flex-col-reverse tablet:flex-col">
               <div className="flex items-center justify-center mobile:items-start gap-[2vw] mobile:flex-col mobile:py-[3vw] mobile:gap-[4vw] tablet:gap-[1vw]">

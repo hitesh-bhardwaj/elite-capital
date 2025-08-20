@@ -63,7 +63,7 @@ const Location = () => {
                         </div>
                         <div className="w-[80%] pb-[3vw] mobile:w-full">
                             <div data-para-anim
-                                className=" w-full content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
+                                className=" w-full  content mobile:w-full mobile:pl-[3vw] tablet:w-full mobile:leading-[1.6]"
 
                             >{t('address1')}</div>
                             <div data-para-anim

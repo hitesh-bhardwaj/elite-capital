@@ -74,7 +74,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId , className}) => 
   return (
     <>
       <section
-        className={`relative min-h-screen tablet:h-[80vh] overflow-hidden ${className}`}
+        className={`relative min-h-screen tablet:h-[80vh] mobile:h-screen mobile:w-screen overflow-hidden ${className}`}
         id="hero"
       >
         <Image

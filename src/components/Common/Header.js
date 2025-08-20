@@ -29,12 +29,12 @@ const LanguageButton = ({ className = "" }) => {
   return (
    <div className={`text-white relative flex items-center h-full gap-x-2 justify-center text-[1.2vw] tablet:text-[3vw] mobile:text-[5vw] ${className}`}>
       {/* English Link */}
-      <a href={basePath} locale="en" className={`${locale === 'en' ? 'text-golden font-bold  tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`}>
+      <a href={basePath} locale="en" className={`${locale === 'en' ? '!text-golden font-bold  tablet:text-black tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black'} hover:scale-110 block duration-150 rtl:pt-[0.1vw]`}>
         EN
       </a>
 
       {/* Divider */}
-      <span className="bg-white w-[1px] block h-[1vw] mobile:bg-black mobile:h-[6vw] tablet:bg-black tablet:h-[5vw] rtl:h-[0.9vw] rtl:mobile:h-[6vw] rtl:mt-[-0.2vw]"></span>
+      <span className="bg-white w-[1px] block h-[1vw] mobile:bg-black mobile:h-[6vw] tablet:bg-black tablet:h-[5vw] rtl:h-[0.9vw] rtl:mobile:h-[6vw] rtl:mt-[-0.2vw] rtl:tablet:h-[4vw]"></span>
 
       {/* Arabic Link */}
       <a href={`/ar${basePath}`} locale="ar" className={`${locale === 'ar' ? '!text-golden font-bold tablet:text-[4vw] mobile:text-[5vw] underline' : 'mobile:text-black tablet:text-black '} hover:scale-110 block duration-150 rtl:pt-[0.1vw]'} `}>
@@ -149,7 +149,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          <LanguageButton className="" />
+          {/* <LanguageButton className="" /> */}
         </div>
 
         <div className="hidden mobile:block tablet:block">
@@ -171,7 +171,7 @@ const Header = () => {
         </div>
         <div className={`w-screen h-screen fixed top-0 left-0 z-[999] pointer-events-none hidden mobile:block tablet:block `}>
           <div
-            className={`${openMenu ? 'h-[55vh] tablet:h-[55vh]' : 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
+            className={`${openMenu ? 'h-[115vw] tablet:h-[55vh]' : 'h-0 '} bg-[#E5E5DC] w-screen relative z-[1] flex flex-col overflow-hidden  justify-between px-[5vw] transition-all duration-500 ease-in-out pointer-events-auto `}
           >
             <div className="flex flex-col gap-[10vw] relative">
               <div className="flex flex-col gap-[2vw] pt-[25vw] tablet:pt-[10vw] ">
@@ -218,7 +218,7 @@ const Header = () => {
                 ))}
               </div>
               <div className="w-full flex justify-end">
-              <LanguageButton className="" />
+              {/* <LanguageButton className="" /> */}
 
               </div>
               <div

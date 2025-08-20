@@ -42,7 +42,7 @@ const Content = () => {
               <div key={index} className=" flex items-start w-full gap-[1vw]">
                 <div className="mobile:pb-[10vw] w-full mobile:w-full ">
                   <div
-                    className="content space-y-[2vw] mobile:space-y-[5vw] mobile:w-full  tablet:space-y-[4vw] mobile:leading-[1.6] rtl:mobile:mr-[-14vw] rtl:mobile:ml-0"
+                    className="content  space-y-[2vw] mobile:space-y-[5vw] mobile:w-full  tablet:space-y-[4vw] mobile:leading-[1.6] rtl:mobile:mr-[-14vw] rtl:mobile:ml-0"
                     dangerouslySetInnerHTML={{ __html: item }}
                   />
                 </div>

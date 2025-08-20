@@ -18,7 +18,7 @@ const PortfolioCard = ({ img, title, location, address1, address2 }) => {
         </div>
         <div className="w-full  text-black1 font-body  mobile:px-1 mobile:space-y-[1vw] ">
           <div className="mobile:space-y-[1vw] mobile:pt-[3vw]">
-            <h3 className="text-[2.5vw] font-display mobile:text-[7vw] font-medium tablet:font-normal tablet:text-[5.5vw]">
+            <h3  className="text-[2.5vw] font-display mobile:text-[7vw] font-medium tablet:font-normal tablet:text-[5.5vw]">
               {title}
             </h3>
             <p className="content">{location}</p>
@@ -55,7 +55,7 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="w-full gap-y-[5vw] flex tablet:justify-between  flex-wrap gap-[1.5vw] pt-[3vw] mobile:space-y-[5vw] tablet:pt-[7vw] mobile:flex-col">
+      <div dir="ltr" className="w-full gap-y-[5vw] flex tablet:justify-between flex-wrap gap-[1.5vw] pt-[3vw] mobile:space-y-[5vw] tablet:pt-[7vw] mobile:flex-col">
         <PortfolioCard
           img={t("portfolio1.img")}
           title={t("portfolio1.title")}

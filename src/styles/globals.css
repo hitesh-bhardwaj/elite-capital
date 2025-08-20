@@ -52,17 +52,22 @@ html:lang(ar) {
   font-size: 4.6vw;
   line-height: 1.15;
   font-family: var(--font-display);
+ 
 }
 .heading-2 {
   font-size: 2.9vw;
   line-height: 1.15;
   font-family: var(--font-display);
+
+
 }
 .content {
   font-size: 1.56vw;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.5px;
+  /* text-align: justify; */
+
 }
 .slide {
   transition: opacity 1s ease-in-out;
@@ -209,7 +214,7 @@ html:lang(ar) {
   }
 }
 
-@media screen and (min-width: 540px) and (max-width: 1023px) {
+@media screen and (min-width: 540px) and (max-width: 1025px) {
   .heading-1 {
     font-size: 8vw;
   }

@@ -18,7 +18,7 @@ export default function Counter() {
     const { t } = useTranslation("home");
     const statsContent = t("stats", { returnObjects: true });
 
-    const [values, setValues] = useState(["000", "00", "00", "0"]); // match digits of 80, 50, 45, 1
+    const [values, setValues] = useState(["000", "00", "00", "0"]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -145,16 +145,19 @@ function DigitScroller({ digit, duration = 2 }) {
     const containerRef = useRef();
 
     useEffect(() => {
-        const digitIndex = parseInt(digit, 10);
-        gsap.to(containerRef.current, {
-            y: `-${digitIndex * 10}%`,
-            duration,
-            ease: "power1.out",
-            scrollTrigger: {
-                trigger: "#stats",
-                start: "top 80%",
-            }
+        const ctx = gsap.context(() => {
+            const digitIndex = parseInt(digit, 10);
+            gsap.to(containerRef.current, {
+                y: `-${digitIndex * 10}%`,
+                duration,
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: "#stats",
+                    start: "top 80%",
+                }
+            });
         });
+        return () => ctx.revert();
     }, [digit, duration]);
 
     return (

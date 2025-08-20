@@ -29,8 +29,10 @@ export default function Privacy() {
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata} />
       <Layout>
+      <div dir='ltr'>
         <Hero img={heroBg} heading={t('hero')} translation={'disclaimer'} nextSectionId={"disclaimer-content"} />
         <Content />
+        </div>
       </Layout>
     </>
   );

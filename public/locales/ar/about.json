@@ -1,32 +1,143 @@
 {
-  "hero": "الخبرة العالمية جنبًا إلى جنب مع الخبرة المحلية",
+  "hero": "خبرة عالمية ومعرفة محلية",
   "cta": "Learn More",
   "aboutHead": "حول إيليت كابيتال",
-  "aboutSub": "إيليت كابيتال هي شركة أسهم خاصة مرخّصة من قبل سلطة دبي للخدمات المالية (DFSA)، وتتخذ من مركز دبي المالي العالمي مقرًا لها. يتمتع فريق إيليت كابيتال بخبرة مهنية جماعية تتجاوز 150 عامًا، حيث ندمج بين الخبرة العالمية العميقة في إدارة الصناديق والفهم الاستراتيجي للسوق العقاري المحلي للاستثمار في أصول عقارية عالية الجودة. نركّز على الاستثمار في أصول حقيقية عالية الجودة مع دعم نمو المجتمعات التي نخدمها وازدهارها.",
+  "aboutSub": "إيليت كابيتال هي شركة أسهم خاصة مرخّصة من قبل سلطة دبي للخدمات المالية (DFSA)، وتتخذ من مركز دبي المالي العالمي مقرًا لها. يتمتع فريق إيليت كابيتال بخبرة مهنية جماعية تتجاوز 150 عامًا، حيث ندمج بين الخبرة العالمية العميقة في إدارة الصناديق والفهم الاستراتيجي للسوق العقاري المحلي للاستثمار في أصول عقارية عالية الجودة. نركّز على الاستثمار في أصول حقيقية عالية الجودة مع دعم نمو وإزدهار المجتمعات.",
   "valuesHead": "قيمنا",
   "values": [
     {
-      "valueTitle": "الشراكة",
-      "valueContent": "نطمح لأن نكون الشريك المفضل للمستثمرين والمطورين والمجتمعات، من خلال بناء علاقات قوية تُفضي إلى حلول طويلة الأمد ونجاحات مستدامة."
+        "valueTitle": "الشراكة",
+        "valueContent": "نطمح أن نكون الشريك المفضل للمستثمرين والمطورين والمجتمعات، من خلال بناء علاقات قوية تُفضي إلى حلول طويلة الأمد ونجاحات مستدامة."
     },
     {
-      "valueTitle": "النزاهة",
-      "valueContent": "نلتزم بأعلى معايير الشفافية، والصدق، والأخلاقيات في جميع تعاملاتنا."
+        "valueTitle": "النزاهة",
+        "valueContent": "نلتزم بأعلى معايير الشفافية والصدق والأخلاقيات في جميع تعاملاتنا."
     },
     {
-      "valueTitle": "المعرفة",
-      "valueContent": "نجمع بين المعرفة المحلية المتعمقة والخبرة العالمية في الاستثمار، لضمان استراتيجيات استثمارية مبتكرة، قائمة على البيانات وموثوقة. يقدّم فريقنا دائمًا نهجًا متميزًا لتحقيق عوائد معدّلة بحسب المخاطر."
+        "valueTitle": "المعرفة",
+        "valueContent": "نجمع بين المعرفة المحلية المتعمقة والخبرة العالمية في الاستثمار لضمان استراتيجيات استثمارية مبتكرة، قائمة على البيانات الموثوقة. يقدم فريقنا دائماً نهجاً متميزاً لتحقيق عوائد تتناسب مع مستوى المخاطر"
     },
     {
-      "valueTitle": "الثقة",
-      "valueContent": "نؤمن بأن الثقة تُبنى بالشفافية والالتزام والتعاون، ونسعى دائمًا للحفاظ عليها في تعاملنا مع جميع أصحاب المصلحة."
+        "valueTitle": "الثقة",
+        "valueContent": ".نحن نبني الثقة ونحافظ عليها من خلال تعزيز التعاون الشفاف في تعاملاتنا وإعطاء الأولوية لمصالح المستثمرين معنا"
     },
     {
-      "valueTitle": "الاستدامة",
-      "valueContent": "نستثمر في مشاريع مصممة بشكل مسؤول لتحقيق فوائد بيئية واجتماعية مستدامة للمجتمعات."
+        "valueTitle": "الاستدامة",
+        "valueContent": "نستثمر في مشاريع مصممة بمسؤلية لتحقيق فوائد بيئية وإجتماعية دائمة تسهم في دعم المجتمعات وتعزيز ازدهارها "
+    }
+],
+  "team": "فريقنا",
+  "teamMembers1":[
+{
+      "name": "فيمل جاين",
+      "des": "الرئيس التنفيذي",
+      "img": "/assets/images/about/vimal-jain.png",
+      "features": [
+        "أكثر من 25 عامًا من الخبرة المهنية",
+        "شغل مناصب قيادية في شركات هندرسون جلوبال إنفستورز، وإرنست ويونغ، وآي إل آند إف إس، وجرشام هاوس، ودونينغ إل إل بي",
+        "حاصل على ماجستير في إدارة الأعمال (ضمن قائمة العميد) من كلية لندن للأعمال",
+        "محاسب قانوني معتمد من معهد المحاسبين القانونيين في الهند"
+      ]
+    },
+    {
+      "name": "سميم ساخي",
+      "des": "المدير التنفيذي",
+      "img": "/assets/images/about/samim-sakhi.png",
+      "features": [
+        "أكثر من 15 عامًا من الخبرة المهنية",
+       "يقود استراتيجية الاستثمار في إيليت ديفيلوبمنتس، ويشرف على دورة تنفيذ المشاريع الكاملة من الاستحواذ على الأراضي وحتى التطوير.",
+        "يتمتع بخبرة في إدارة العديد من المنشآت الطبية في مختلف أنحاء مقاطعة أونتاريو."
+      ]
     }
   ],
-  "team": "فريقنا",
+  "teamMembers2":[
+    {
+            "name": "Umair Waseem",
+            "des": "Vice President of Investments",
+            "img": "/assets/images/about/umair.png",
+            "features": [
+                "10+ years’ professional experience",
+                "Senior roles with ,Intentional Capital, Contessa Developments, and roles at Amica Senior Lifestyles and Macquarie",
+                "Executive MBA from University of Toronto’s Rotman School of Management (Dean’s List); Harvard Real Estate Management Program graduate"
+            ],
+            "para":[
+                "Umair Waseem is Vice President of Investments at Elite Capital, actively involved in origination, underwriting, and execution of mixed-use and multi-residential real estate investments in Canada. He brings over a decade of experience in real estate development, private equity, and investment banking, with transaction and project experience exceeding $5 billion. ",
+                "Prior to joining Elite Capital, Umair held senior roles at Intentional Capital and Contessa Developments, leading large-scale development projects in Toronto, Vancouver, and Kitchener-Waterloo, and managing national income-producing portfolios. He also held investment roles at Amica Senior Lifestyles, an Ontario Teachers Pension Plan company. He began his career at Macquarie Capital’s Real Estate Investment Banking group. ",
+                "Umair holds an Executive MBA from the Rotman School of Management, a Bachelor of Commerce in Economics and Finance from the University of Toronto, completed executive coursework at Harvard, and has passed Level II of the CFA Program."
+            ]
+        },
+     {
+      "name": "توم أرنولد",
+      "des": "مستشار أول",
+      "img": "/assets/images/about/tom-arnold.png",
+      "features": [
+       "مستشار أول يتمتع بخبرة مهنية تزيد عن 20 عامًا. شغل مناصب قيادية في شركات مثل سويد آند سويد، ومكاتب إدارة ثروات العائلات في الشرق الأوسط، وشركة LRIM لإدارة الاستثمارات (التي أصبحت الآن Invest Bridge Capital)، بالإضافة إلى برايس ووترهاوس كوبرز (PwC).",
+        "يحمل توم درجة الماجستير في العقارات الدولية، وبكالوريوس في الاقتصاد."
+      ],
+       "para":[
+                "Tom Arnold is a Senior Advisor at Elite Capital, where he is actively involved in origination, underwriting, and execution of mixed-use and multi-residential real estate investment.  He brings over 15 years of experience across real estate investment and financial advisory, particularly in multi-family transactions in North America. He has held senior roles at leading firms including Sweid & Sweid, Middle East family offices, LRIM Investment Management (now InvestBridge Capital), and PwC, with a focus on investment strategy, asset management, and capital markets.",
+                "Tom holds a Master of Science in International Real Estate from Florida International University and a Bachelor of Arts in Economics from University of San Diego."
+            ]
+    },
+    {
+      "name": "سوزان منصوري",
+      "des": "مديرة الشؤون القانونية وتطوير الشركات",
+      "img": "/assets/images/about/susan-mansuri.png",
+      "features": [
+       "أكثر من 5 سنوات من الخبرة القانونية المهنية، من خلال مناصب في شركة محاماة مرموقة ومجموعة من مديري صناديق الاستثمار في تورونتو",
+        "حاصلة على Juris Doctor من كلية أوزغود هول للقانون، وبكالوريوس بمرتبة الشرف في العلوم السياسية (تخصص فرعي في الاقتصاد السياسي)."
+      ],
+       "para":[
+                "Susan Mansuri is Manager, Legal & Corporate Development at Elite Capital, where she supports legal, regulatory and compliance functions across the firm. She also serves as Company Secretary for the firm.",
+                "Prior to joining Elite Capital, Susan practiced as a corporate lawyer at Osler, Hoskin & Harcourt LLP in Toronto, where she advised public and private companies, asset managers, and investment funds on multi-billion-dollar M&A transactions, fund structuring, private and public fund offerings and various regulatory compliance and securities matters. She has also completed legal secondments at fintech and asset management firms, including Wealthsimple and Purpose Investments. ",
+                "Susan holds a Juris Doctor from Osgoode Hall Law School and a Specialized Honours Bachelor of Arts in Political Science from York University. She is admitted to the Ontario Bar in Canada. "
+            ]
+    },
+    {
+      "name": "أمير بنقة",
+      "des": "مدير الشراكات الاستثمارية وتطوير الشركات",
+      "img": "/assets/images/about/amir-banaga.png",
+      "features": [
+       "أكثر من 10 سنوات من الخبرة المهنية في مناصب ضمن مجموعات تجزئة متعددة الجنسيات، وشركات الضيافة، وقطاع الطيران، بالإضافة إلى تقديم الاستشارات للجهات الحكومية.",
+        "حاصل على بكالوريوس مع مرتبة الشرف في العلاقات الدولية وعلاقات العمل من جامعة تورونتو"
+      ],
+       "para":[
+                "Amir Banaga is Investment Partnerships & Corporate Development Manager at Elite Capital, where he supports strategic growth initiatives, capital partnerships, and corporate development efforts across the firm. ",
+                "Prior to joining Elite Capital, Amir held various roles in corporate strategy, business development and operations, contributing to the expansion and transformation of leading enterprises across Canada and the Middle East. His experience includes navigating complex stakeholder environments, driving strategic initiatives, and supporting cross-border projects with both private and public sector impact.",
+                "Amir holds an Honours Bachelor of Arts in International Relations and Industrial Relations from the University of Toronto."
+            ]
+    },
+     {
+            "name": "Gail Goring",
+            "des": "Compliance Officer and MLRO",
+            "img": "/assets/images/about/icon.png",
+            "features": [
+                "20+ years’ professional experience ",
+                "Senior role in legal and regulatory across the Caribbean, Cayman Islands, and UAE",
+                "Certified Anti-Money Laundering Specialist and FATF-trained legal expert"
+            ],
+            "para":[
+                "Gail Goring serves as the designated Compliance Officer and MLRO at Elite Capital, where she is responsible for matters relating to regulatory strategy, compliance and risk management. ",
+                "She previously served as Legal Counsel at the Cayman Islands Monetary Authority, where she advised on financial services legislation and regulatory enforcement, and as Head of Regulations and Operations for RAKICC, the UAE’s offshore and free zone corporate registry. A former regulator, prosecutor, and legislative drafter, Gail is also a certified Anti-Money Laundering Specialist and a FATF-trained legal expert examiner, with additional certifications in FATCA/CRS compliance and the ADGM OCAB regime.",
+                "Gail completed the Oxford Saïd Business School Fintech Program, with a focus on digital financial products and regulation. "
+            ]
+        },
+        {
+            "name": "Sidra Khan",
+            "des": "Accounting and Finance Professional",
+            "img": "/assets/images/about/sidra.png",
+            "features": [
+                "8+ years’ professional experience in accounting, financial reporting, and tax compliance across multiple sectors",
+                "Chartered Accountancy from the Institute of Chartered Accountants of Pakistan"
+            ],
+            "para":[
+               "Sidra Khan serves as the designated Finance Officer at Elite Capital, where she is responsible for accounting, financial reporting, and financial compliance functions.",
+               "Sidra has worked at leading consultancy firms, where she provided end-to-end accounting, audit support, and VAT compliance services for both regulated and non-regulated clients, including those operating within the DIFC and ADGM. Her work has included regular engagement with regulators such as the Dubai Financial Services Authority (DFSA) and the Financial Services Regulatory Authority (FSRA).",
+               "Sidra holds a Chartered Accountancy qualification from the Institute of Chartered Accountants of Pakistan and a bachelor’s degree in accounting from the University of Agriculture, Pakistan."
+            ]
+        }
+
+  ],
   "teamMembers": [
     {
       "name": "فيمل جاين",
@@ -40,13 +151,13 @@
       ]
     },
     {
-      "name": "سيميم ساخي",
+      "name": "سميم ساخي",
       "des": "المدير التنفيذي",
       "img": "/assets/images/about/samim-sakhi.png",
       "features": [
         "أكثر من 15 عامًا من الخبرة المهنية",
-        "يقود استراتيجية الاستثمار في إيليت ديفيلوبمنتس، ويغطي دورة تنفيذ المشاريع الكاملة من الاستحواذ على الأراضي وحتى التطوير",
-        "يمتلك خبرة في إدارة العديد من المنشآت الطبية في مختلف أنحاء مقاطعة أونتاريو"
+       "يقود استراتيجية الاستثمار في إيليت ديفيلوبمنتس، ويشرف على دورة تنفيذ المشاريع الكاملة من الاستحواذ على الأراضي وحتى التطوير.",
+        "يتمتع بخبرة في إدارة العديد من المنشآت الطبية في مختلف أنحاء مقاطعة أونتاريو."
       ]
     },
     {
@@ -54,7 +165,7 @@
       "des": "مستشار أول",
       "img": "/assets/images/about/tom-arnold.png",
       "features": [
-       "مستشار أول يتمتع بخبرة مهنية تزيد عن 20 عامًا. شغل مناصب قيادية في شركات مثل سويد آند سويد، ومكاتب عائلات ثرية في الشرق الأوسط، وشركة LRIM لإدارة الاستثمارات (التي أصبحت الآن Invest Bridge Capital)، بالإضافة إلى برايس ووترهاوس كوبرز (PwC).",
+       "مستشار أول يتمتع بخبرة مهنية تزيد عن 20 عامًا. شغل مناصب قيادية في شركات مثل سويد آند سويد، ومكاتب إدارة ثروات العائلات في الشرق الأوسط، وشركة LRIM لإدارة الاستثمارات (التي أصبحت الآن Invest Bridge Capital)، بالإضافة إلى برايس ووترهاوس كوبرز (PwC).",
         "يحمل توم درجة الماجستير في العقارات الدولية، وبكالوريوس في الاقتصاد."
       ]
     },
@@ -64,7 +175,7 @@
       "img": "/assets/images/about/susan-mansuri.png",
       "features": [
        "أكثر من 5 سنوات من الخبرة القانونية المهنية، من خلال مناصب في شركة محاماة مرموقة ومجموعة من مديري صناديق الاستثمار في تورونتو",
-        "حاصلة على درجة الدكتوراه في القانون من كلية أوزغود هول للقانون، وبكالوريوس بمرتبة الشرف في العلوم السياسية (تخصص فرعي في الاقتصاد السياسي)"
+        "حاصلة على Juris Doctor من كلية أوزغود هول للقانون، وبكالوريوس بمرتبة الشرف في العلوم السياسية (تخصص فرعي في الاقتصاد السياسي)."
       ]
     },
     {
@@ -72,7 +183,7 @@
       "des": "مدير الشراكات الاستثمارية وتطوير الشركات",
       "img": "/assets/images/about/amir-banaga.png",
       "features": [
-        "أكثر من 10 سنوات من الخبرة المهنية في مناصب ضمن مجموعات تجزئة متعددة الجنسيات، وتطوير الضيافة، وقطاع الطيران، بالإضافة إلى تقديم الاستشارات للجهات الحكومية",
+       "أكثر من 10 سنوات من الخبرة المهنية في مناصب ضمن مجموعات تجزئة متعددة الجنسيات، وشركات الضيافة، وقطاع الطيران، بالإضافة إلى تقديم الاستشارات للجهات الحكومية.",
         "حاصل على بكالوريوس مع مرتبة الشرف في العلاقات الدولية وعلاقات العمل من جامعة تورونتو"
       ]
     }
@@ -97,9 +208,9 @@
       "img": "/assets/images/about/vimal-jain.png",
       "role": ["Board of Directors", "Investment Committee"],
       "features": [
-        "يشغل فيمل جاين منصب الرئيس التنفيذي لشركة إيليت كابيتال، وعضوًا في مجلس الإدارة بصفته مديرًا تنفيذيًا. يجلب فيمل أكثر من 25 عامًا من الخبرة العالمية في مجالات الاستثمار، وجمع رؤوس الأموال، والاستشارات الاستراتيجية عبر الأصول العقارية، بما في ذلك البنية التحتية والطاقة (بمراحلها الجديدة والقائمة). وقد غطت نطاق عمله أسواقًا رئيسية في أوروبا، والشرق الأوسط، وآسيا، وأستراليا، مع مساهمات إجمالية لقيمة المشاريع تجاوزت الـ50 مليار جنيه إسترليني.",
-        "تولى فيمل سابقًا مناصب قيادية عليا في شركات استثمار بارزة مثل داونينغ إل إل بي، وغريشام هاوس لإدارة الأصول. كما شغل منصب الرئيس التنفيذي ورئيس قسم أوروبا في IL&FS، إحدى أبرز مجموعات البنية التحتية والطاقة في الهند. في بداية مسيرته المهنية، عمل فيمل كشريك مساعد في شركة EY، حيث قدّم استشارات في مجالات الدمج والاستحواذ، وهيكلة رأس المال، والصفقات الاستراتيجية للمشاريع الكبرى حول العالم. ",
-        "المؤسسين لفريق الاستثمار في البنية التحتية بشركة هندرسون جلوبال إنفستورز، حيث لعب دورًا رئيسيًا في جمع ونشر أكثر من 900 مليون جنيه إسترليني عبر صندوقين ناجحين. يحمل ماجستير إدارة أعمال مع مرتبة الشرف من كلية لندن للأعمال، وهو محاسب قانوني معتمد من معهد المحاسبين القانونيين في الهند"
+        "فيمل جاين جاين منصب الرئيس التنفيذي لشركة إيليت كابيتال، وعضوًا في مجلس الإدارة بصفته مديرًا تنفيذيًا. يجلب فيمل أكثر من 25 عامًا من الخبرة العالمية في مجالات الاستثمار، وجمع رؤوس الأموال، والاستشارات الاستراتيجية عبر الأصول العقارية، بما في ذلك البنية التحتية والطاقة (بمراحلها الجديدة والقائمة). وقد غطت نطاق عمله أسواقًا رئيسية في أوروبا، والشرق الأوسط، وآسيا، وأستراليا، مع مساهمات إجمالية لقيمة المشاريع تجاوزت الـ50 مليار جنيه إسترليني.",
+        "تولى فيمل سابقًا مناصب قيادية عليا في شركات استثمار بارزة مثل داونينغ إل إل بي، وغريشام هاوس لإدارة الأصول. كما شغل منصب الرئيس التنفيذي ورئيس قسم أوروبا في IL&FS، إحدى أبرز مجموعات البنية التحتية والطاقة في الهند. في بداية مسيرته المهنية، عمل فيمل كشريك مساعد في شركة EY، حيث قدّم استشارات في مجالات الدمج والاستحواذ، وهيكلة رأس المال، والصفقات الاستراتيجية للمشاريع الكبرى حول العالم.",
+       "فيمل هو أحد الأعضاء المؤسسين لفريق الاستثمار في البنية التحتية بشركة هندرسون جلوبال إنفستورز، حيث لعب دورًا رئيسيًا في جمع ونشر استثمارات تجاوزت 900 مليون جنيه إسترليني عبر صندوقين ناجحين. يحمل ماجستير إدارة أعمال مع مرتبة الشرف من كلية لندن للأعمال، وهو محاسب قانوني معتمد من معهد المحاسبين القانونيين في الهند."
       ]
     },
     {
@@ -121,7 +232,7 @@
       "features": [
         "يشغل رضوان ماغوميدوف منصب عضو غير تنفيذي في مجلس إدارة شركة إيليت كابيتال، كما يتولى قيادة قسم التطوير الدولي في شركة دومينانس إم إم أي، حيث يلعب دورًا محوريًا في التفاوض على عقود كبار الرياضيين وصفقات الرعاية، إلى جانب بناء شراكات ترويجية على المستوى العالمي.",
         "وقد شغل سابقًا منصب الرئيس التنفيذي لمنظمة إيغل إف سي حيث قاد عملية التوسع الدولي للمنظمة، ونجح في تأمين اتفاقيات بث ورعاية استراتيجية، وإطلاق فعاليات رياضية في أسواق جديدة.",
-        "يحمل رضوان خلفية أكاديمية في القانون واللغويات، ما يمنحه مزيجًا متميزًا من الفهم القانوني، والرؤية الاستراتيجية، والقدرة على التواصل عبر الثقافات. تواصل خبرته في دفع عجلة النمو المؤثر على المستوى العالمي لكل من الرياضيين النخبة والمشاريع الرياضية الدولية على حد سواء."
+      "يحمل رضوان خلفية أكاديمية في القانون واللغويات، ما يمنحه مزيجًا متميزًا من الفهم القانوني، والرؤية الاستراتيجية، والقدرة على التواصل عبر الثقافات. تواصل خبرته في تعزيز النمو المؤثر عالميًا لكل من نخبة الرياضيين والمشاريع الرياضية الدولية على حد سواء."
       ]
     }
   ],
@@ -194,7 +305,7 @@
       "des": "",
       "img": "/assets/images/about/icon.png",
       "features": [
-        "رئيس مجلس إدارة مجموعة أماني، ترأس سابقًا مجالس شرعية في بنك أبوظبي الأول، البنك المركزي الماليزي، وهيئة الأوراق المالية الماليزية وشركة بيرمودالان ناسيونال بيرهاد.",
+        "رئيس مجلس إدارة مجموعات أماني، ترأس سابقاً بنك أبو ظبي الأول، والمجلس الإستشاري الشرعي في البنك المركزي الماليزي، وهيئة الأوراق المالية الماليزية وشركات بيرمودالان ناسيونال بيرهاد (PNB)",
         "الدكتور محمد داود عضو في عدد من الهيئات الشرعية لدى مؤسسات مالية عالمية، منها 'أماني أدفايزرز المحدودة' (دبي، الإمارات العربية المتحدة) و'أماني أدفايزرز سند بيرهارد' (ماليزيا)، حيث يشغل منصب الرئيس. كما يرأس مجلس إدارة شركة 'سلامة للتأمين' (دبي) وبنك 'حبيب متروبوليتان' (باكستان).",
         "بالإضافة إلى ذلك، يشغل عضوية الهيئات الشرعية لكل من بنك بي إن بي باريبا نجمة (البحرين)، غايدنس فاينانشال (الولايات المتحدة الأمريكية)، أماندي لإدارة الأصول (باريس)، مؤشر داو جونز للسوق الإسلامية (الولايات المتحدة الأمريكية)، مؤشر ستاندرد آند بورز الإسلامي (الولايات المتحدة الأمريكية)، أواسيس لإدارة الأصول (جنوب أفريقيا)، مورغان ستانلي (دبي)، سدكو كابيتال (السعودية ولوكسمبورغ)، كريدي أغريكول (دبي)، مدينة تكافل (عُمان)، وبنك أبوظبي التجاري (الإمارات العربية المتحدة).",
         "حصل الدكتور محمد داود على درجة البكالوريوس في الشريعة من جامعة الكويت عام 1988، وعلى درجة الدكتوراه من جامعة سانت أندروز في المملكة المتحدة عام 1993، كما أنهى درجة البكالوريوس الخارجية في القانون من جامعة مالايا عام 2002."

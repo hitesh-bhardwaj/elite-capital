@@ -32,7 +32,7 @@ const Content = () => {
     <section className="w-screen h-full py-[8%] px-[5vw] overflow-hidden dark bg-white" id="privacy-content">
       <div className="">
         <div className="mobile:py-[7vw]">
-          <p className="content  mobile:leading-[1.6] ">{t("heroSub")}</p>
+          <p className="content  mobile:leading-[1.6]  ">{t("heroSub")}</p>
         </div>
         <span className="bg-black1 w-full h-[1px] block mt-[8vw] mb-[5vw] lineDraw mobile:my-[10vw] tablet:my-[5vw]" />
         <div className="space-y-[4vw] w-full">
@@ -55,7 +55,7 @@ const Content = () => {
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   /> 
                   <div
-                    className="content space-y-[2vw] mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-14vw] tablet:space-y-[4vw] mobile:leading-[1.6] rtl:mobile:mr-[-14vw] rtl:mobile:ml-0"
+                    className="content space-y-[2vw]  mobile:space-y-[5vw] mobile:w-[125%] mobile:ml-[-14vw] tablet:space-y-[4vw] mobile:leading-[1.6] "
                     dangerouslySetInnerHTML={{ __html: item.para }}
                   />
                 </div>

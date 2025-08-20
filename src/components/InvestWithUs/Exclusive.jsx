@@ -42,7 +42,7 @@ const Exclusive = () => {
                         />
                     </div>
                     <div className=" mb-[3vw] text-black1 w-[55%] pl-[7vw] pr-[7vw] py-[3vw] mobile:text-[4.6vw] mobile:w-full  tablet:mb-0 tablet:h-full tablet:flex tablet:items-center ">
-                        <p data-para-anim className="content w-[90%]">{t('exclusiveSub')}</p>
+                        <p data-para-anim className="content w-[90%] ">{t('exclusiveSub')}</p>
                     </div>
                 </div>
             </section>
