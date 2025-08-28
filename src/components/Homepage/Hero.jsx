@@ -114,7 +114,7 @@ const Hero = ({ img, translation, heading, para, nextSectionId }) => {
         <div
           ref={buttonRef}
           onMouseMove={handleMouseMove}
-          className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition z-[20] group duration-500 ease hover:text-white mobile:w-[15vw] mobile:h-[15vw] mobile:right-5 overflow-hidden tablet:w-[7vw] tablet:h-[7vw] tablet:right-5 rtl:right-auto rtl:left-10 rtl:mobile:left-5"
+          className="w-[3vw] h-[3vw] flex justify-center items-center rounded-full bg-white absolute bottom-10 right-20 cursor-pointer transition z-[20] group duration-500 ease hover:text-white mobile:w-[15vw] mobile:h-[15vw] mobile:right-5 mobile:bottom-20 overflow-hidden tablet:w-[7vw] tablet:h-[7vw] tablet:right-5 rtl:right-auto rtl:left-10 rtl:mobile:left-5"
           onClick={scrollToNext}
         >
           <div className="z-10 p-[0.5vw]">

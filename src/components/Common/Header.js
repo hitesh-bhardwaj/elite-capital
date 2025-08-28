@@ -218,7 +218,7 @@ const Header = () => {
                 ))}
               </div>
               <div className="w-full flex justify-end">
-              {/* <LanguageButton className="" /> */}
+              <LanguageButton className="" />
 
               </div>
               <div
