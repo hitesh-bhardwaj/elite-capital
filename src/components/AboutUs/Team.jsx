@@ -84,7 +84,7 @@ const Team = () => {
 
 >
                     <p className="text-[1.2vw]  mobile:text-[3.5vw] tablet:text-[2vw] after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
-                      Learn More +
+                      {t('readMore')}
                     </p>
                     </div>
                   </div>
@@ -178,7 +178,7 @@ const Team = () => {
           onClick={() => setIsClicked(!isClicked)}
         >
           <p className="text-[1.2vw] tablet:text-[2vw] mobile:text-[3.5vw] after:absolute relative after:left-0 after:bottom-0 after:w-[calc(100%)] after:h-[1.5px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out rtl:after:w-[calc(100%+1rem)]">
-            {isClicked ? "Show Less -" : "Learn More +"}
+            {isClicked ?  `${t('readLess')}` : `${t('readMore')}`}
           </p>
         </div>
       </div>

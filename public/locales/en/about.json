@@ -4,7 +4,7 @@
     "aboutHead": "About us",
     "aboutSub": "Elite Capital is a DFSA-authorised private equity firm based in the Dubai International Financial Centre (DIFC). The Elite Capital team has over 150 years of  professional experience, which combines deep global fund management expertise and strategic local real estate knowledge. We focus on investing in high-quality real assets while supporting the growth and vitality of the communities they serve.",
     "valuesHead": "Our values",
-    "values": [ 
+    "values": [
         {
             "valueTitle": "Partnership",
             "valueContent": "We strive to be the partner of choice for investors, developers and communities, building strong relationships that deliver long-term solutions and success."
@@ -27,16 +27,16 @@
         }
     ],
     "team": "Our team",
-    "teamMembers1":[
- {
+    "teamMembers1": [
+        {
             "name": "Vimal Jain",
             "des": "Chief Executive Officer",
             "img": "/assets/images/about/vimal-jain.png",
             "features": [
-                "25+ years' professional experience",
+                "25+ years’ professional experience",
                 "Senior roles with Henderson Global Investors, EY, IL&FS, Gresham House and Downing LLP",
                 "MBA (Dean's List) from London Business School",
-                "Chartered Accountant (Institute of Chartered Accountants of India)"
+                "Chartered Accountant (Institute of Chartered Accountants of India"
             ]
         },
         {
@@ -50,8 +50,8 @@
             ]
         }
     ],
-    "teamMembers2":[
-         {
+    "teamMembers2": [
+        {
             "name": "Umair Waseem",
             "des": "Vice President of Investments",
             "img": "/assets/images/about/umair.png",
@@ -60,7 +60,7 @@
                 "Senior roles with ,Intentional Capital, Contessa Developments, and roles at Amica Senior Lifestyles and Macquarie",
                 "Executive MBA from University of Toronto’s Rotman School of Management (Dean’s List); Harvard Real Estate Management Program graduate"
             ],
-            "para":[
+            "para": [
                 "Umair Waseem is Vice President of Investments at Elite Capital, actively involved in origination, underwriting, and execution of mixed-use and multi-residential real estate investments in Canada. He brings over a decade of experience in real estate development, private equity, and investment banking, with transaction and project experience exceeding $5 billion. ",
                 "Prior to joining Elite Capital, Umair held senior roles at Intentional Capital and Contessa Developments, leading large-scale development projects in Toronto, Vancouver, and Kitchener-Waterloo, and managing national income-producing portfolios. He also held investment roles at Amica Senior Lifestyles, an Ontario Teachers Pension Plan company. He began his career at Macquarie Capital’s Real Estate Investment Banking group. ",
                 "Umair holds an Executive MBA from the Rotman School of Management, a Bachelor of Commerce in Economics and Finance from the University of Toronto, completed executive coursework at Harvard, and has passed Level II of the CFA Program."
@@ -71,12 +71,13 @@
             "des": "Senior Advisor",
             "img": "/assets/images/about/tom-arnold.png",
             "features": [
-                "20+ years' professional experience",
-                "Senior roles with Sweid & Sweid, Middle East Family Offices, LRIM Investment Management (now InvestBridge Capital) and PwC",
+                "15+ years' professional experience",
+                "Senior roles with Sweid &amp; Sweid, Middle East Family Offices, LRIM Investment Management (now InvestBridge Capital) and PwC",
                 "MSc in International Real Estate; BA in Economics"
             ],
-            "para":[
-                "Tom Arnold is a Senior Advisor at Elite Capital, where he is actively involved in origination, underwriting, and execution of mixed-use and multi-residential real estate investment.  He brings over 15 years of experience across real estate investment and financial advisory, particularly in multi-family transactions in North America. He has held senior roles at leading firms including Sweid & Sweid, Middle East family offices, LRIM Investment Management (now InvestBridge Capital), and PwC, with a focus on investment strategy, asset management, and capital markets.",
+            "para": [
+                "Tom Arnold is a Senior Advisor at Elite Capital, where he is actively involved in origination, underwriting, and execution of mixed-use and multi- residential real estate investment. He brings over 15 years of experience across real estate investment and financial advisory, particularly in multi-family transactions in North America.",
+                " He has held senior roles at leading firms including Sweid &amp; Sweid, Middle East family offices, LRIM Investment Management (now InvestBridge Capital), and PwC, with a focus on investment strategy, asset management, and capital markets.",
                 "Tom holds a Master of Science in International Real Estate from Florida International University and a Bachelor of Arts in Economics from University of San Diego."
             ]
         },
@@ -89,10 +90,10 @@
                 "Roles with top tier corporate law firm and various investment fund managers in Toronto",
                 "Juris Doctor from Osgoode Hall Law School; Hon. BA Political Science (Specialization in Political Economy)"
             ],
-            "para":[
+            "para": [
                 "Susan Mansuri is Manager, Legal & Corporate Development at Elite Capital, where she supports legal, regulatory and compliance functions across the firm. She also serves as Company Secretary for the firm.",
-                "Prior to joining Elite Capital, Susan practiced as a corporate lawyer at Osler, Hoskin & Harcourt LLP in Toronto, where she advised public and private companies, asset managers, and investment funds on multi-billion-dollar M&A transactions, fund structuring, private and public fund offerings and various regulatory compliance and securities matters. She has also completed legal secondments at fintech and asset management firms, including Wealthsimple and Purpose Investments. ",
-                "Susan holds a Juris Doctor from Osgoode Hall Law School and a Specialized Honours Bachelor of Arts in Political Science from York University. She is admitted to the Ontario Bar in Canada. "
+                "Prior to joining Elite Capital, Susan practiced as a corporate lawyer at Osler, Hoskin &amp; Harcourt LLP in Toronto, where she advised public and private companies, asset managers, and investment funds on multi-billion-dollar M&amp;A transactions, fund structuring, private and public fund offerings and various regulatory compliance and securities matters. She has also completed legal secondments at fintech and asset management firms, including Wealthsimple and Purpose Investments.",
+                "Susan holds a Juris Doctor from Osgoode Hall Law School and a Specialized Honours Bachelor of Arts in Political Science from York University. She is admitted to the Ontario Bar in Canada."
             ]
         },
         {
@@ -101,11 +102,11 @@
             "img": "/assets/images/about/amir-banaga.png",
             "features": [
                 "10+ years’ professional experience",
-                "Roles across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations",
+                "Roles across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations.",
                 "Hon. BA International Relations & Industrial Relations from the University of Toronto"
             ],
-            "para":[
-                "Amir Banaga is Investment Partnerships & Corporate Development Manager at Elite Capital, where he supports strategic growth initiatives, capital partnerships, and corporate development efforts across the firm. ",
+            "para": [
+                "Amir Banaga is Investment Partnerships & Corporate Development Manager at Elite Capital, where he supports strategic growth initiatives, capital partnerships, and corporate development efforts across the firm.",
                 "Prior to joining Elite Capital, Amir held various roles in corporate strategy, business development and operations, contributing to the expansion and transformation of leading enterprises across Canada and the Middle East. His experience includes navigating complex stakeholder environments, driving strategic initiatives, and supporting cross-border projects with both private and public sector impact.",
                 "Amir holds an Honours Bachelor of Arts in International Relations and Industrial Relations from the University of Toronto."
             ]
@@ -115,14 +116,14 @@
             "des": "Compliance Officer and MLRO",
             "img": "/assets/images/about/gail.png",
             "features": [
-                "20+ years’ professional experience ",
+                "20+ years’ professional experience",
                 "Senior role in legal and regulatory across the Caribbean, Cayman Islands, and UAE",
                 "Certified Anti-Money Laundering Specialist and FATF-trained legal expert"
             ],
-            "para":[
-                "Gail Goring serves as the designated Compliance Officer and MLRO at Elite Capital, where she is responsible for matters relating to regulatory strategy, compliance and risk management. ",
+            "para": [
+                "Gail Goring serves as the designated Compliance Officer and MLRO at Elite Capital, where she is responsible for matters relating to regulatory strategy, compliance and risk management. ",
                 "She previously served as Legal Counsel at the Cayman Islands Monetary Authority, where she advised on financial services legislation and regulatory enforcement, and as Head of Regulations and Operations for RAKICC, the UAE’s offshore and free zone corporate registry. A former regulator, prosecutor, and legislative drafter, Gail is also a certified Anti-Money Laundering Specialist and a FATF-trained legal expert examiner, with additional certifications in FATCA/CRS compliance and the ADGM OCAB regime.",
-                "Gail completed the Oxford Saïd Business School Fintech Program, with a focus on digital financial products and regulation. "
+                "Gail completed the Oxford Saïd Business School Fintech Program, with a focus on digital financial products and regulation."
             ]
         },
         {
@@ -130,74 +131,18 @@
             "des": "Accounting and Finance Professional",
             "img": "/assets/images/about/sidra.png",
             "features": [
-                "8+ years’ professional experience in accounting, financial reporting, and tax compliance across multiple sectors",
+                "8+ years’ professional experience in accounting, financial reporting, and tax compliance across multiple sectors.",
                 "Chartered Accountancy from the Institute of Chartered Accountants of Pakistan"
             ],
-            "para":[
-               "Sidra Khan serves as the designated Finance Officer at Elite Capital, where she is responsible for accounting, financial reporting, and financial compliance functions.",
-               "Sidra has worked at leading consultancy firms, where she provided end-to-end accounting, audit support, and VAT compliance services for both regulated and non-regulated clients, including those operating within the DIFC and ADGM. Her work has included regular engagement with regulators such as the Dubai Financial Services Authority (DFSA) and the Financial Services Regulatory Authority (FSRA).",
-               "Sidra holds a Chartered Accountancy qualification from the Institute of Chartered Accountants of Pakistan and a bachelor’s degree in accounting from the University of Agriculture, Pakistan."
+            "para": [
+                "Sidra Khan serves as the designated Finance Officer at Elite Capital, where she is responsible for accounting, financial reporting, and financial compliance functions.",
+                "Sidra has worked at leading consultancy firms, where she provided end-to-end accounting, audit support, and VAT compliance services for both regulated and non-regulated clients, including those operating within the DIFC and ADGM. Her work has included regular engagement with regulators such as the Dubai Financial Services Authority (DFSA) and the Financial Services Regulatory Authority (FSRA).",
+                "Sidra holds a Chartered Accountancy qualification from the Institute of Chartered Accountants of Pakistan and a bachelor’s degree in accounting from the University of Agriculture, Pakistan."
             ]
         }
-
-
     ],
-    "teamMembers": [
-        {
-            "name": "Vimal Jain",
-            "des": "Chief Executive Officer",
-            "img": "/assets/images/about/vimal-jain.png",
-            "features": [
-                "25+ years' professional experience",
-                "Senior roles with Henderson Global Investors, EY, IL&FS, Gresham House and Downing LLP",
-                "MBA (Dean's List) from London Business School",
-                "Chartered Accountant (Institute of Chartered Accountants of India)"
-            ]
-        },
-        {
-            "name": "Samim Sakhi",
-            "des": "Executive Director",
-            "img": "/assets/images/about/samim-sakhi.png",
-            "features": [
-                "15+ years' professional experience",
-                "Leads investment strategy at Elite Developments covering full-cycle project execution, from land acquisition through to development",
-                "Experience managing multiple medical facilities across Ontario"
-            ]
-        },
-        {
-            "name": "Tom Arnold",
-            "des": "Senior Advisor",
-            "img": "/assets/images/about/tom-arnold.png",
-            "features": [
-                "20+ years' professional experience",
-                "Senior roles with Sweid & Sweid, Middle East Family Offices, LRIM Investment Management (now InvestBridge Capital) and PwC",
-                "MSc in International Real Estate; BA in Economics"
-            ]
-        },
-        {
-            "name": "Susan Mansuri",
-            "des": "Legal & Corporate Development Manager",
-            "img": "/assets/images/about/susan-mansuri.png",
-            "features": [
-                "5+ years’ professional legal experience",
-                "Roles with top tier corporate law firm and various investment fund managers in Toronto",
-                "Juris Doctor from Osgoode Hall Law School; Hon. BA Political Science (Specialization in Political Economy)"
-            ]
-        },
-        {
-            "name": "Amir Banaga",
-            "des": "Investment Partnerships & Corporate Development Manager",
-            "img": "/assets/images/about/amir-banaga.png",
-            "features": [
-                "10+ years’ professional experience",
-                "Roles across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations",
-                "Hon. BA International Relations & Industrial Relations from the University of Toronto"
-            ]
-        }
-        
-    ],
-    "readLess":"Read Less -",
-    "readMore":"Read More +",
+    "readLess": "Read Less -",
+    "readMore": "Read More +",
     "teamSub": "Board of Directors ",
     "boardMembers": [
         {
@@ -222,9 +167,10 @@
                 "Investment Committee"
             ],
             "features": [
-                "Vimal Jain serves as CEO of Elite Capital and sits on the Board of Directors as an Executive Director. Vimal brings over 25 years of global experience in investment, fundraising and strategic advisory across real assets including infrastructure and energy, spanning greenfield and brownfield projects. His work has covered key markets across Europe, the Middle East, Asia and Australia, with cumulative enterprise value  exceeding £50 billion.",
+                "Vimal Jain serves as CEO of Elite Capital and sits on the Board of Directors as an Executive Director. Vimal brings over 25 years of global experience in investment, fundraising and strategic advisory across real assets including infrastructure and energy, spanning greenfield and brownfield projects. His work has covered key markets across Europe, the Middle East, Asia and Australia, with cumulative enterprise value exceeding £50 billion.",
                 "He previously held senior leadership roles at prominent investment firms such as Downing LLP and Gresham House Asset Management. He also served as CEO and Head of Europe at IL&FS, one of India’s leading infrastructure and energy investment groups. Earlier in his career, Vimal was an Associate Partner at EY, advising on M&A, capital structuring and strategic transactions for major infrastructure assets globally.",
-                "Vimal was a founding member of the infrastructure private equity team at Henderson Global Investors, where he played a key role in raising and deploying over £900 million across two successful funds. He holds an MBA from London Business School and is a qualified Chartered Accountant through the Institute of Chartered Accountants of India."
+                "Vimal was a founding member of the infrastructure private equity team at Henderson Global Investors, where he played a key role in raising and deploying over £900 million across two successful funds.",
+                "He holds an MBA from London Business School and is a qualified Chartered Accountant through the Institute of Chartered Accountants of India."
             ]
         },
         {
@@ -236,7 +182,7 @@
                 "Investment Committee"
             ],
             "features": [
-                "Samim Sakhi serves on the Board of Directors at Elite Capital as an Executive Director. Samim has over 15 years of experience in managing real estate developments and acquisitions. As President of Elite Developments he leads the firm’s investment strategy with a focus on full-cycle project execution, from land acquisition through to development, while closely monitoring and evaluating project financial performance at each stage.",
+                "Samim Sakhi serves on the Board of Directors at Elite Capital as an Executive Director. Samim has over 15 years of experience in managing real estate developments and acquisitions. As President of Elite Developments, he leads the firm’s investment strategy with a focus on full-cycle project execution, from land acquisition through to development, while closely monitoring and evaluating project financial performance at each stage.",
                 "Samim has a strong track record of structuring investments in large-scale land developments across North America. He is well-known in the industry for his strategic vision, operational expertise and results-oriented leadership. In addition to his real estate work, he has extensive experience managing mid- and large-scale medical facilities across Ontario."
             ]
         },
@@ -288,7 +234,7 @@
             ],
             "features": [
                 "Sophie Llewellyn is a senior real estate executive with over 30 years of experience leading commercial growth across the UK, Middle East and Africa. A Fellow of the Royal Institution of Chartered Surveyors (FRICS), she has held executive roles across multiple real estate sectors, including a 15-year tenure at Majid Al Futtaim Properties. There, she served as Head of Asset Management for an $11 billion diversified portfolio, where she led strategic planning, investment oversight and performance optimization, delivering consistent revenue and EBITDA growth.",
-               "Sophie's expertise spans investment and asset management, valuation, strategic development and corporate real estate. She has served in key advisory and non-executive roles, including over 15 years with a leading Middle Eastern REIT and as an elected member of the RICS Global Governing Council. She holds a BSc in Estate Management from Oxford Brookes University and has completed executive education at both the London School of Economics and Harvard University."
+                "Sophie's expertise spans investment and asset management, valuation, strategic development and corporate real estate. She has served in key advisory and non-executive roles, including over 15 years with a leading Middle Eastern REIT and as an elected member of the RICS Global Governing Council. She holds a BSc in Estate Management from Oxford Brookes University and has completed executive education at both the London School of Economics and Harvard University."
             ]
         },
         {
@@ -321,9 +267,9 @@
             "des": "",
             "img": "/assets/images/about/icon.png",
             "features": [
-               "Dr. Mohd Daud Bakar is the Founder and Executive Chairman of Amanie Group. He is the former Chairman of First Abu Dhabi Bank (UAE), the Shariah Advisory Council (SAC) at the Central Bank of Malaysia, the Securities Commission of Malaysia, and Permodalan Nasional Berhad (PNB).",
-               "Dr. Mohd Daud is a Shariah Board Member of various global financial institutions, including Amanie Advisors Ltd (Dubai, UAE) and Amanie Advisors Sdn Bhd (Malaysia), where he serves as Chairman. He also chairs Salama Insurance (Dubai) and Habib Metropolitan Bank (Pakistan). Additionally, he serves on the Shariah boards of BNP Paribas Najma (Bahrain), Guidance Financial (USA), Amundi Asset Management (Paris), Dow Jones Islamic Market Index (USA), Standard and Poor’s Islamic Index (USA), Oasis Asset Management (South Africa), Morgan Stanley (Dubai), Sedco Capital (Saudi Arabia and Luxembourg), Credit Agricole CIB (Dubai), Madina Takaful (Oman), and Abu Dhabi Commercial Bank (UAE).",
-               "Dr. Mohd Daud earned his first degree in Shariah from the University of Kuwait in 1988, a Ph.D. from the University of St. Andrews, United Kingdom in 1993, and completed his external Bachelor of Jurisprudence at the University of Malaya in 2002."
+                "Dr. Mohd Daud Bakar is the Founder and Executive Chairman of Amanie Group. He is the former Chairman of First Abu Dhabi Bank (UAE), the Shariah Advisory Council (SAC) at the Central Bank of Malaysia, the Securities Commission of Malaysia, and Permodalan Nasional Berhad (PNB).",
+                "Dr. Mohd Daud is a Shariah Board Member of various global financial institutions, including Amanie Advisors Ltd (Dubai, UAE) and Amanie Advisors Sdn Bhd (Malaysia), where he serves as Chairman. He also chairs Salama Insurance (Dubai) and Habib Metropolitan Bank (Pakistan). Additionally, he serves on the Shariah boards of BNP Paribas Najma (Bahrain), Guidance Financial (USA), Amundi Asset Management (Paris), Dow Jones Islamic Market Index (USA), Standard and Poor’s Islamic Index (USA), Oasis Asset Management (South Africa), Morgan Stanley (Dubai), Sedco Capital (Saudi Arabia and Luxembourg), Credit Agricole CIB (Dubai), Madina Takaful (Oman), and Abu Dhabi Commercial Bank (UAE).",
+                "Dr. Mohd Daud earned his first degree in Shariah from the University of Kuwait in 1988, a Ph.D. from the University of St. Andrews, United Kingdom in 1993, and completed his external Bachelor of Jurisprudence at the University of Malaya in 2002."
             ]
         },
         {
