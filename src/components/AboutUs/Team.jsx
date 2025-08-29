@@ -122,7 +122,7 @@ const Team = () => {
       </div>
 
       {/* Info Panel */}
-      <div data-lenis-prevent
+      <div {...(isClicked ? { "data-lenis-prevent": true } : {})}
         className={`
           mobile:space-y-[2vw] flex flex-col mobile:gap-[4vw] absolute bottom-0
           transition-all duration-500 ease-in-out 
@@ -163,7 +163,7 @@ const Team = () => {
 
         {isClicked && (
           
-         <div className="w-full py-[3vw] px-[1vw] tablet:px-[1.5vw]">
+         <div className="w-full py-[3vw] px-[1vw] space-y-[1vw] tablet:px-[1.5vw]">
           {item.para.map((item,index)=>(
              <p key={index} className="text-[1.2vw] mobile:text-[3.5vw] tablet:text-[2vw] mobile:leading-[1.6]">
                 {item}

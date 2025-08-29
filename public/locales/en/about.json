@@ -36,7 +36,7 @@
                 "25+ years’ professional experience",
                 "Senior roles with Henderson Global Investors, EY, IL&FS, Gresham House and Downing LLP",
                 "MBA (Dean's List) from London Business School",
-                "Chartered Accountant (Institute of Chartered Accountants of India"
+                "Chartered Accountant (Institute of Chartered Accountants of India)"
             ]
         },
         {
@@ -64,6 +64,21 @@
                 "Umair Waseem is Vice President of Investments at Elite Capital, actively involved in origination, underwriting, and execution of mixed-use and multi-residential real estate investments in Canada. He brings over a decade of experience in real estate development, private equity, and investment banking, with transaction and project experience exceeding $5 billion. ",
                 "Prior to joining Elite Capital, Umair held senior roles at Intentional Capital and Contessa Developments, leading large-scale development projects in Toronto, Vancouver, and Kitchener-Waterloo, and managing national income-producing portfolios. He also held investment roles at Amica Senior Lifestyles, an Ontario Teachers Pension Plan company. He began his career at Macquarie Capital’s Real Estate Investment Banking group. ",
                 "Umair holds an Executive MBA from the Rotman School of Management, a Bachelor of Commerce in Economics and Finance from the University of Toronto, completed executive coursework at Harvard, and has passed Level II of the CFA Program."
+            ]
+        },
+        {
+            "name": "Amir Banaga",
+            "des": "Investment Partnerships & Corporate Development Manager",
+            "img": "/assets/images/about/amir-banaga.png",
+            "features": [
+                "10+ years’ professional experience",
+                "Roles across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations.",
+                "Hon. BA International Relations & Industrial Relations from the University of Toronto"
+            ],
+            "para": [
+                "Amir Banaga is Investment Partnerships & Corporate Development Manager at Elite Capital, where he supports strategic growth initiatives, capital partnerships, and corporate development efforts across the firm.",
+                "Prior to joining Elite Capital, Amir held various roles in corporate strategy, business development and operations, contributing to the expansion and transformation of leading enterprises across Canada and the Middle East. His experience includes navigating complex stakeholder environments, driving strategic initiatives, and supporting cross-border projects with both private and public sector impact.",
+                "Amir holds an Honours Bachelor of Arts in International Relations and Industrial Relations from the University of Toronto."
             ]
         },
         {
@@ -96,21 +111,7 @@
                 "Susan holds a Juris Doctor from Osgoode Hall Law School and a Specialized Honours Bachelor of Arts in Political Science from York University. She is admitted to the Ontario Bar in Canada."
             ]
         },
-        {
-            "name": "Amir Banaga",
-            "des": "Investment Partnerships & Corporate Development Manager",
-            "img": "/assets/images/about/amir-banaga.png",
-            "features": [
-                "10+ years’ professional experience",
-                "Roles across multinational retail groups, hospitality developers, aerospace, and consulting for government organizations.",
-                "Hon. BA International Relations & Industrial Relations from the University of Toronto"
-            ],
-            "para": [
-                "Amir Banaga is Investment Partnerships & Corporate Development Manager at Elite Capital, where he supports strategic growth initiatives, capital partnerships, and corporate development efforts across the firm.",
-                "Prior to joining Elite Capital, Amir held various roles in corporate strategy, business development and operations, contributing to the expansion and transformation of leading enterprises across Canada and the Middle East. His experience includes navigating complex stakeholder environments, driving strategic initiatives, and supporting cross-border projects with both private and public sector impact.",
-                "Amir holds an Honours Bachelor of Arts in International Relations and Industrial Relations from the University of Toronto."
-            ]
-        },
+        
         {
             "name": "Gail Goring",
             "des": "Compliance Officer and MLRO",
