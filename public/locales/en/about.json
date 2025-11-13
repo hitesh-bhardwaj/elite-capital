@@ -82,21 +82,6 @@
             ]
         },
         {
-            "name": "Tom Arnold",
-            "des": "Senior Advisor",
-            "img": "/assets/images/about/tom-arnold.png",
-            "features": [
-                "15+ years' professional experience",
-                "Senior roles with Sweid & Sweid, Middle East Family Offices, LRIM Investment Management (now InvestBridge Capital) and PwC",
-                "MSc in International Real Estate; BA in Economics"
-            ],
-            "para": [
-                "Tom Arnold is a Senior Advisor at Elite Capital, where he is actively involved in origination, underwriting, and execution of mixed-use and multi- residential real estate investment. He brings over 15 years of experience across real estate investment and financial advisory, particularly in multi-family transactions in North America.",
-                " He has held senior roles at leading firms including Sweid & Sweid, Middle East family offices, LRIM Investment Management (now InvestBridge Capital), and PwC, with a focus on investment strategy, asset management, and capital markets.",
-                "Tom holds a Master of Science in International Real Estate from Florida International University and a Bachelor of Arts in Economics from University of San Diego."
-            ]
-        },
-        {
             "name": "Susan Mansuri",
             "des": "Legal & Corporate Development Manager",
             "img": "/assets/images/about/susan-mansuri.png",
@@ -248,6 +233,18 @@
             "features": [
                 "Michael A. D. Cox is a global real estate leader with more than 30 years of executive experience across the United States, Asia, the Middle East and Australia. He specializes in strategic business planning, investment frameworks and end-to-end project delivery for complex real estate ventures. Michael has held senior leadership roles with institutions including the Public Investment Fund (PIF), Dubai Holding, Aldar Properties, QIC and Portman Holdings, where he oversaw multi-billion-dollar developments from inception through to asset management.",
                 "His expertise spans P&L oversight, M&A due diligence, acquisitions and large-scale construction management. Currently, he serves as Projects Executive Officer for a Confidential Private Office in Saudi Arabia, and serves on the Board of PRI and the Investment Committee of Gallery Securities."
+            ]
+        },
+        {
+            "name": "Karsten von Wersebe",
+            "des": "Investment Committee Member",
+            "img": "/assets/images/about/karsten.png",
+            "role": [
+                "Investment Committee"
+            ],
+            "features": [
+                "Karsten von Wersebe is an accomplished real estate executive with over 40 years of experience leading residential development projects across Canada. Beginning his career with The Metropolitan Trust Company in Toronto (later merged into Toronto-Dominion Bank), he went on to represent Canadian and international investors and family offices in the development and operation of mid and high-rise communities in Ontario, Quebec, Alberta and British Columbia. Over the course of his career, he has built enduring partnerships with leading groups including Polaris Realty, Dutra International, Robert H. Lee Group and Sonco Group, and most recently led Contessa Developments in Toronto, delivering large-scale projects such as a purpose-built rental community in downtown Montreal and a three-tower residential development in Mississauga.",
+                "Karsten’s expertise spans residential development, investment structuring, and strategic advisory for both family offices and institutional investors. He currently advises international real estate clients, including Alpine Immobilien of Zurich and the IC/IFB Group of Germany, guiding cross-border development initiatives and investment strategies."
             ]
         }
     ],
