@@ -33,23 +33,23 @@
     "address2": "210 Apartments | 10 Town Homes"
   },
   "portfolio2": {
-    "img": "/assets/images/invest/portfolio-2.png",
-    "title":  "570 Upper Ottawa",
-    "location": "Hamilton, ON",
-    "address2": "346 Apartments"
-  },
-  "portfolio3": {
-    "img": "/assets/images/invest/portfolio-3.png",
-    "title": "60 Market",
-    "location":"Brantford, ON",
-    "address2": " 242 Apartments"
-  },
-  "portfolio4": {
-    "img": "/assets/images/invest/portfolio-4.png",
-    "title": "148 Niagara",
-    "location": "St. Catharines, ON",
-    "adddress2": "179 Apartments"
-  },
+        "img": "/assets/images/invest/brant.png",
+        "title": "688 Brant",
+        "location": "Burlington, ON",
+        "address2": "346 Apartments"
+    },
+    "portfolio3": {
+        "img": "/assets/images/invest/sanatorium.png",
+        "title": "559 Sanatorium",
+        "location": " Hamilton, ON",
+        "address2": " 242 Apartments"
+    },
+    "portfolio4": {
+        "img": "/assets/images/invest/upper-james.png",
+        "title": "1452 Upper James",
+        "location": "Hamilton​, ON",
+        "address2": "179 Apartments"
+    },
   "portfolio5": {
     "img": "/assets/images/invest/portfolio-5.png",
     "title": "4th Avenue - Phase 1 ",
