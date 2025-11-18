@@ -76,19 +76,19 @@
             "text1": "81-87 Rymal",
             "text2": "Hamilton, ON"
         },
+         {
+            "image": "/assets/images/homepage/brant.png",
+            "text1": "688 Brant",
+            "text2": "Burlington, ON"
+        },
         {
-            "image": "/assets/images/homepage/ottawa-portfolio.png",
-            "text1": "570 Upper Ottawa",
+            "image": "/assets/images/homepage/sanatorium.png",
+            "text1": "559 Sanatorium",
             "text2": "Hamilton, ON"
         },
         {
-            "image": "/assets/images/homepage/station-portfolio.png",
-            "text1": "60 Market",
-            "text2": "Brantford, ON"
-        },
-        {
-            "image": "/assets/images/homepage/niagara-portfolio.png",
-            "text1": "148 Niagara",
+            "image": "/assets/images/homepage/upper-james.png",
+            "text1": "1452 Upper James",
             "text2": "Hamilton, ON"
         },
         {
