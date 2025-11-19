@@ -4,35 +4,30 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
+import {Form,FormControl,FormField,FormItem,FormMessage} from "@/components/ui/form"
 import { PhoneInput } from "@/components/ui/phone-input"
 import { Input } from "@/components/ui/input";
 import { useState } from "react"
 import { useTranslation } from "next-i18next"
-import { Checkbox } from "../ui/checkbox"
 import { isValidPhoneNumber } from "react-phone-number-input"
 
-const formSchema = z.object({
-  name: z.string().min(3, { message: "Name must be at least 3 characters." }),
-  email: z.string().email({ message: "Invalid email address." }),
-  number: z
-    .string()
-    .refine(isValidPhoneNumber, { message: "Invalid phone number" }),
-  company: z.string().min(2, { message: "Company name is required." }),
-  designation: z.string().min(2, { message: "Designation is required." }),
+export default function ContactForm() {
+  const [isLoading, setIsLoading] = useState(false);
+  const { t } = useTranslation("common");
+  const [statusMessage, setStatusMessage] = useState("")
+  const [statusType, setStatusType] = useState("success")
+
+  const formSchema = z.object({
+  name: z.string().min(3, {  message: t("formNameError"), }),
+  email: z.string().email({ message: t("formEmailError"), }),
+  number: z.string().refine(isValidPhoneNumber, { message: t("formPhoneError"),}),
+  company: z.string().min(2, { message: t("formCompanyError"), }),
+  designation: z.string().min(2, { message: t("formDesignationError"), }),
   message: z.string().optional(),
-  terms: z.boolean().refine((v) => v, { message: "You must agree to terms." }),
+  // terms: z.boolean().refine((v) => v, { message: "You must agree to terms." }),
   pageURL: z.string()
 });
 
-export default function ContactForm() {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,15 +37,12 @@ export default function ContactForm() {
       company: "",
       designation: "",
       message: "",
-      terms: false,
+      // terms: false,
       pageURL: typeof window !== 'undefined' ? window.location.href : '',
     },
   })
 
-  const [isLoading, setIsLoading] = useState(false);
-  const { t } = useTranslation("common");
-  const [statusMessage, setStatusMessage] = useState("")
-  const [statusType, setStatusType] = useState("success")
+  
 
   const onSubmit = async (data) => {
     setIsLoading(true)
@@ -113,7 +105,7 @@ export default function ContactForm() {
                         autoComplete="off"
                         placeholder={t("formName")}
                         {...field}
-                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
+                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw] mobile:text-[4.5vw] tablet:text-[2.2vw]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -131,7 +123,7 @@ export default function ContactForm() {
                         autoComplete="off"
                         placeholder={t("formEmail")}
                         {...field}
-                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
+                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw] mobile:text-[4.5vw] tablet:text-[2.2vw]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -146,11 +138,12 @@ export default function ContactForm() {
                   <FormItem>
                     <FormControl>
                       <PhoneInput
+                       autoComplete="off"
                         defaultCountry="AE"
                         placeholder={t("formPhone")}
                         international
                         {...field}
-                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
+                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw] mobile:text-[4.5vw] tablet:text-[2.2vw]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -168,7 +161,7 @@ export default function ContactForm() {
                         autoComplete="off"
                         placeholder={t("formCompany")}
                         {...field}
-                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
+                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw] mobile:text-[4.5vw] tablet:text-[2.2vw]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -186,7 +179,7 @@ export default function ContactForm() {
                         autoComplete="off"
                         placeholder={t("formDesignation")}
                         {...field}
-                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
+                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw] mobile:text-[4.5vw] tablet:text-[2.2vw]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -204,7 +197,7 @@ export default function ContactForm() {
                         autoComplete="off"
                         placeholder={t("formMessage")}
                         {...field}
-                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw]"
+                        className="mobile:placeholder:text-[4.5vw] tablet:placeholder:text-[2.2vw] mobile:text-[4.5vw] tablet:text-[2.2vw]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -212,7 +205,7 @@ export default function ContactForm() {
                 )}
               />
 
-              <FormField
+              {/* <FormField
                 control={form.control}
                 name="terms"
                 render={({ field }) => (
@@ -233,7 +226,7 @@ export default function ContactForm() {
                     <FormMessage />
                   </FormItem>
                 )}
-              />
+              /> */}
 
               <div className="mt-[2vw] w-full flex justify-start">
                 <Button
@@ -268,7 +261,7 @@ export default function ContactForm() {
                     </div>
                   ) : (
                     <span className="text-[1.1vw] mobile:text-[4.5vw] tablet:text-[2.5vw]">
-                      Submitting..
+                     {t("formSubmitting")}
                     </span>
                   )}
                 </Button>
@@ -276,11 +269,12 @@ export default function ContactForm() {
               {/* Status message */}
               {statusMessage && (
                 <p
+                dir="ltr"
                   className={`
                     ${statusType === "error"
                       ? "mt-2 text-red-600"
                       : "mt-2 text-green-600"
-                  } text-lg `}
+                  } text-lg text-left  rtl:text-right`}
                 >
                   {statusMessage}
                 </p>

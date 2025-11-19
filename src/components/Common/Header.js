@@ -5,6 +5,7 @@ import logo from "../../../public/EC-text.svg";
 import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
+import { usePathname } from "next/navigation";
 
 const socials = [
   {
@@ -53,8 +54,8 @@ const Header = () => {
   const footerNav = t("footerNav", { returnObjects: true });
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-
-
+  const pathname = usePathname();
+   const isHomeActive = pathname === "/";
 
   useEffect(() => {
     if (globalThis.innerWidth >= 1023) {
@@ -132,7 +133,7 @@ const Header = () => {
 
         <div className="flex gap-[4vw] mobile:hidden tablet:hidden">
           <div className={`flex flex-nowrap justify-end text-white gap-[2vw]`}>
-            <Link href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
+            {/* <Link href="/" className={`menu-link text-[1.2vw] group`} prefetch={false}>
               <div className={`flex gap-2 items-center after:absolute relative after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]  after:scale-x-0 group-hover:after:scale-x-100 after:transition-all after:duration-300 after:ease-in-out after:bg-current`}>
                 <span className="group-hover:scale-[0.98] transition-all duration-300 ease">
                   {t('home')}
@@ -147,7 +148,54 @@ const Header = () => {
                   </span>
                 </div>
               </Link>
-            ))}
+            ))} */}
+            <Link
+        href="/"
+        className="menu-link text-[1.2vw] group"
+        prefetch={false}
+      >
+        <div
+          className={`
+            flex gap-2 items-center after:absolute relative
+            after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]
+            after:scale-x-0 group-hover:after:scale-x-100
+            after:transition-all after:duration-300 after:ease-in-out after:bg-current
+            ${isHomeActive ? "after:scale-x-100" : ""}
+          `}
+        >
+          <span className="group-hover:scale-[0.98] transition-all duration-300 ease">
+            {t("home")}
+          </span>
+        </div>
+      </Link>
+
+      {/* Other links */}
+      {footerNav.map((item, id) => {
+        const isActive = pathname === item.link;
+
+        return (
+          <Link
+            key={id}
+            href={item.link}
+            className="menu-link text-[1.2vw] group"
+            prefetch={false}
+          >
+            <div
+              className={`
+                flex gap-2 items-center after:absolute relative
+                after:bottom-0 after:w-[calc(100%+0.2rem)] after:h-[1.5px]
+                after:scale-x-0 group-hover:after:scale-x-100
+                after:transition-all after:duration-300 after:ease-in-out after:bg-current
+                ${isActive ? "after:scale-x-100" : ""}
+              `}
+            >
+              <span className="group-hover:scale-[0.98] transition-all duration-300 ease tablet:text-[2.2vw]">
+                {item.text}
+              </span>
+            </div>
+          </Link>
+        );
+      })}
           </div>
           <LanguageButton className="" />
         </div>

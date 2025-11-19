@@ -73,6 +73,7 @@ const CountrySelect = ({ disabled, value: selectedCountry, options: countryList,
       <PopoverContent className="w-[300px] p-0">
         <Command>
           <CommandInput
+           dir="ltr"
             value={searchValue}
             onValueChange={(val) => {
               setSearchValue(val);

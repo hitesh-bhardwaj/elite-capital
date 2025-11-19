@@ -43,13 +43,19 @@
       "link": "/cookie-policy"
     }
   ],
-  "formName": "الاسم بالكامل*",
+   "formName": "الاسم بالكامل*",
   "formEmail": "البريد الإلكتروني*",
   "formPhone": "رقم الهاتف*",
   "formCompany": "اسم الشركة*",
   "formDesignation": "المسمى الوظيفي*",
-  "formMessage": "رسالتك*",
+  "formMessage": "رسالتك",
   "formcta": "يُقدِّم",
   "errorSub": "هذه الصفحة غير موجودة.",
-  "errorCta": "العودة إلى الصفحة الرئيسية"
+  "errorCta": "العودة إلى الصفحة الرئيسية",
+  "formNameError":"يجب أن يتكون الاسم من 3 أحرف على الأقل.",
+  "formEmailError":"عنوان البريد الإلكتروني غير صالح.",
+  "formPhoneError":"رقم الهاتف غير صالح",
+  "formCompanyError":"اسم الشركة مطلوب.",
+  "formDesignationError":"التعيين مطلوب.",
+  "formSubmitting":"تقديم..."
 }

@@ -43,13 +43,19 @@
       "link": "/cookie-policy"
     }
   ],
-  "formName": "Full name*",
+"formName": "Full name*",
+  "formNameError":"Name must be at least 3 characters.",
   "formEmail": "Email*",
+  "formEmailError":"Invalid email address.",
   "formPhone": "Phone*",
+  "formPhoneError":"Invalid phone number",
   "formCompany": "Company name*",
+  "formCompanyError":"Company name is required.",
   "formDesignation": "Designation*",
-  "formMessage": "Message*",
+  "formDesignationError":"Designation is required.",
+  "formMessage": "Message",
   "formcta": "Submit",
+   "formSubmitting":"Submitting...",
   "errorSub": "This page does not exist.",
   "errorCta": "Go back to Homepage"
 }
