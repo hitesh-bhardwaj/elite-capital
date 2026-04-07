@@ -24,22 +24,33 @@ const Advantage = () => {
         })
         return () => ctx.revert()
     }, [])
+
     const { t } = useTranslation('home');
     const advantage = t('advantage', { returnObjects: true });
 
     return (
-        <section className="bg-[#747977] overflow-hidden h-full mobile:pb-[10vw] tablet:pt-[7%]">
-            <div className="flex items-center mobile:flex-col-reverse mobile:gap-[8vw] tablet:flex-col tablet:gap-[7vw]">
-                <div className="text-white w-1/2 pl-[4vw] mobile:w-full mobile:px-[5vw] mobile:space-y-[8vw] tablet:w-full rtl:pr-[4.5vw] rtl:mobile:pr-[5vw]">
-                    <h2 data-title-anim className="heading-1  mb-[5vw] mobile:mb-[8vw]">{t('advantageHead')}</h2>
-                    <div className=" content  space-y-[2vw] pr-[4.5vw]   mb-[5vw] mobile:space-y-[4vw] rtl:pr-0">
+        <section className="bg-[#747977] overflow-hidden">
+            {/* Key change: items-stretch so both columns fill equal height */}
+            <div className="flex items-stretch mobile:flex-col-reverse tablet:flex-col">
+
+                {/* Text column — padding added top & bottom, no longer drives height via gap */}
+                <div className="text-white w-1/2 px-[4vw] py-[6vw] mobile:w-full mobile:px-[5vw] mobile:py-[10vw] tablet:w-full tablet:px-[5vw] tablet:py-[8vw] rtl:pr-[4.5vw] rtl:mobile:pr-[5vw] flex flex-col justify-center gap-[2.5vw] mobile:gap-[6vw]">
+                    <h2 data-title-anim className="heading-1">{t('advantageHead')}</h2>
+                    <div className="content space-y-[2vw] pr-[4.5vw] mobile:space-y-[4vw] rtl:pr-0">
                         {advantage.map((item, index) => (
-                            <p data-para-anim key={index} className="">{item.text}</p>
+                            <p data-para-anim key={index}>{item.text}</p>
                         ))}
                     </div>
-                    <LineButton text={t('advantageCta')} href="/invest-with-us" className="fadein text-white" prefetch={false}/>
+                    <LineButton
+                        text={t('advantageCta')}
+                        href="/invest-with-us"
+                        className="fadein text-white"
+                        prefetch={false}
+                    />
                 </div>
-                <div className="w-1/2 overflow-hidden advantage-block mobile:w-full  tablet:w-full tablet:h-[70vw]">
+
+                {/* Image column — self-stretch + h-full keeps it flush top-to-bottom */}
+                <div className="w-1/2 overflow-hidden advantage-block self-stretch mobile:w-full mobile:h-[80vw] tablet:w-full tablet:h-[70vw]">
                     <Image
                         className="object-cover w-full h-full advantage-image translate-y-[5%]"
                         src={image}
@@ -48,6 +59,7 @@ const Advantage = () => {
                         loading="lazy"
                     />
                 </div>
+
             </div>
         </section>
     )
