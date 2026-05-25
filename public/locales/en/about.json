@@ -30,25 +30,25 @@
     "teamMembers1": [
         {
             "name": "Samim Sakhi",
-            "des": "Executive Director",
+            "des": "Chairman & Executive Director",
             "img": "/assets/images/about/samim-sakhi.png",
             "features": [
-                "15+ years' professional experience",
+                "17+ years' professional experience",
                 "Leads investment strategy at Elite Developments covering full-cycle project execution, from land acquisition through to development",
                 "Experience managing multiple medical facilities across Ontario"
             ]
         },
         {
             "name": "Umair Waseem",
-            "des": "Vice President of Investments",
+            "des": "Chief Investment Officer",
             "img": "/assets/images/about/umair.png",
             "features": [
-                "10+ years’ professional experience",
+                "15+ years’ professional experience",
                 "Senior roles with ,Intentional Capital, Contessa Developments, and roles at Amica Senior Lifestyles and Macquarie",
                 "Executive MBA from University of Toronto’s Rotman School of Management (Dean’s List); Harvard Real Estate Management Program graduate"
             ],
             "para": [
-                "Umair Waseem is Vice President of Investments at Elite Capital, actively involved in origination, underwriting, and execution of mixed-use and multi-residential real estate investments in Canada. He brings over a decade of experience in real estate development, private equity, and investment banking, with transaction and project experience exceeding $5 billion. ",
+                "Umair Waseem is Chief Investment Officer at Elite Capital, actively involved in origination, underwriting, and execution of mixed-use and multi-residential real estate investments in Canada. He brings over a decade of experience in real estate development, private equity, and investment banking, with transaction and project experience exceeding $5 billion. ",
                 "Prior to joining Elite Capital, Umair held senior roles at Intentional Capital and Contessa Developments, leading large-scale development projects in Toronto, Vancouver, and Kitchener-Waterloo, and managing national income-producing portfolios. He also held investment roles at Amica Senior Lifestyles, an Ontario Teachers Pension Plan company. He began his career at Macquarie Capital’s Real Estate Investment Banking group. ",
                 "Umair holds an Executive MBA from the Rotman School of Management, a Bachelor of Commerce in Economics and Finance from the University of Toronto, completed executive coursework at Harvard, and has passed Level II of the CFA Program."
             ]
@@ -58,7 +58,7 @@
         
         {
             "name": "Amir Banaga",
-            "des": "Investment Partnerships & Corporate Development Manager",
+            "des": "Head of Investor Relations",
             "img": "/assets/images/about/amir-banaga.png",
             "features": [
                 "10+ years’ professional experience",
@@ -66,22 +66,22 @@
                 "Hon. BA International Relations & Industrial Relations from the University of Toronto"
             ],
             "para": [
-                "Amir Banaga is Investment Partnerships & Corporate Development Manager at Elite Capital, where he supports strategic growth initiatives, capital partnerships, and corporate development efforts across the firm.",
+                "Amir Banaga is Head of Investor Relations at Elite Capital, where he supports strategic growth initiatives, capital partnerships, and corporate development efforts across the firm.",
                 "Prior to joining Elite Capital, Amir held various roles in corporate strategy, business development and operations, contributing to the expansion and transformation of leading enterprises across Canada and the Middle East. His experience includes navigating complex stakeholder environments, driving strategic initiatives, and supporting cross-border projects with both private and public sector impact.",
                 "Amir holds an Honours Bachelor of Arts in International Relations and Industrial Relations from the University of Toronto."
             ]
         },
         {
             "name": "Susan Mansuri",
-            "des": "Legal & Corporate Development Manager",
+            "des": "General Counsel",
             "img": "/assets/images/about/susan-mansuri.png",
             "features": [
-                "5+ years’ professional legal experience",
+                "7+ years’ professional legal experience",
                 "Roles with top tier corporate law firm and various investment fund managers in Toronto",
                 "Juris Doctor from Osgoode Hall Law School; Hon. BA Political Science (Specialization in Political Economy)"
             ],
             "para": [
-                "Susan Mansuri is Manager, Legal & Corporate Development at Elite Capital, where she supports legal, regulatory and compliance functions across the firm. She also serves as Company Secretary for the firm.",
+                "Susan Mansuri is General Counsel at Elite Capital, where she supports legal, regulatory and compliance functions across the firm. She also serves as Company Secretary for the firm.",
                 "Prior to joining Elite Capital, Susan practiced as a corporate lawyer at Osler, Hoskin & Harcourt LLP in Toronto, where she advised public and private companies, asset managers, and investment funds on multi-billion-dollar M & A transactions, fund structuring, private and public fund offerings and various regulatory compliance and securities matters. She has also completed legal secondments at fintech and asset management firms, including Wealthsimple and Purpose Investments.",
                 "Susan holds a Juris Doctor from Osgoode Hall Law School and a Specialized Honours Bachelor of Arts in Political Science from York University. She is admitted to the Ontario Bar in Canada."
             ]
@@ -123,27 +123,27 @@
     "boardMembers": [
         {
             "name": "Hamid Hakimi",
-            "des": "Chairman",
+            "des": "Chief Executive Officer",
             "img": "/assets/images/about/hamid-hakimi.png",
             "role": [
                 "Board of Directors",
                 "Investment Committee"
             ],
             "features": [
-                "Hamid Hakimi serves as the Chairman of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
+                "Hamid Hakimi serves as the Chief Executive Officer of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
                 "Prior to this, Hamid successfully managed a team of realtors who completed real estate sales in Ontario, Canada in excess of $1 billion. His expertise in the field has solidified his place as a respected and influential figure in real estate development and acquisition."
             ]
         },
         {
             "name": "Samim Sakhi",
-            "des": "Executive Director",
+            "des": "Chairman & Executive Director",
             "img": "/assets/images/about/samim-sakhi.png",
             "role": [
                 "Board of Directors",
                 "Investment Committee"
             ],
             "features": [
-                "Samim Sakhi serves on the Board of Directors at Elite Capital as an Executive Director. Samim has over 15 years of experience in managing real estate developments and acquisitions. As President of Elite Developments, he leads the firm’s investment strategy with a focus on full-cycle project execution, from land acquisition through to development, while closely monitoring and evaluating project financial performance at each stage.",
+                "Samim Sakhi serves on the Board of Directors at Elite Capital as Chairman & Executive Director. Samim has over 17 years of experience in managing real estate developments and acquisitions. As President of Elite Developments, he leads the firm’s investment strategy with a focus on full-cycle project execution, from land acquisition through to development, while closely monitoring and evaluating project financial performance at each stage.",
                 "Samim has a strong track record of structuring investments in large-scale land developments across North America. He is well-known in the industry for his strategic vision, operational expertise and results-oriented leadership. In addition to his real estate work, he has extensive experience managing mid- and large-scale medical facilities across Ontario."
             ]
         },
