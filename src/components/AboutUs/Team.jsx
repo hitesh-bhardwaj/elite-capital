@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslation } from "next-i18next";
-import BoardofDirectors from "./BoardofDirectors";
 import ShariahBoard from "./ShariahBoard";
 import BoardofDirectorsCopy from "./BoardofDirectors-copy";
 
@@ -35,7 +34,7 @@ const TeamMemberCard = ({
       onMouseLeave={handleMouseLeave}
       role="group"
     >
-      <div className="h-full w-full bg-white group overflow-hidden transition-all duration-500 ease mobile:h-[100vw] ">
+      <div className="h-full w-full bg-white group overflow-hidden transition-all duration-500 ease ">
         <Image
           src={item.img}
           height={626}
@@ -155,16 +154,16 @@ const Team = () => {
             {t("team")}
           </h2>
           <div className="mobile:overflow-x-scroll mobile:w-screen mobile:h-full mobile:pr-[10vw] mobile:ml-[-5vw] mobile:pl-[5vw] tablet:overflow-x-scroll rtl:mobile:mr-[-5vw] rtl:mobile:pr-[5vw]">
-            <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[3vw] mobile:flex-nowrap mobile:w-fit mobile:h-[110vw] tablet:flex-nowrap tablet:w-fit tablet:h-[70vw]">
+            <div className="w-full h-full flex flex-wrap justify-start gap-[3vw] gap-y-[3vw] mobile:flex-nowrap mobile:w-fit mobile:h-[125vw] tablet:flex-nowrap tablet:w-fit tablet:h-[70vw]">
               {members1.map((item, index) => (
                 <TeamMemberCard
                   key={index}
                   item={item}
                   t={t}
                   scrollToId={scrollToId}
-                  behavior={index === 0 ? "scroll" : "toggle"}
-                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[85vw] mobile:h-[100vw] transition-transform hover:scale-[1.02] tablet:w-[48vw] rtl:tablet:rounded-[2vw] overflow-hidden mobile:rounded-[3vw] tablet:h-[60vw] mobile:mt-[-5vw] w-[43vw]`}
-                  collapsedPanelClasses="h-[30vw] mobile:h-[100vw] mobile:translate-y-[75%] tablet:translate-y-[75%]"
+                  behavior="scroll"
+                  className={` h-[30vw] relative flex flex-col gap-[1vw] fadeUp border border-black/10 rounded-[0.5vw] group mobile:w-[85vw] mobile:h-[115vw] transition-transform hover:scale-[1.02] tablet:w-[48vw] rtl:tablet:rounded-[2vw] overflow-hidden mobile:rounded-[3vw] tablet:h-[60vw] mobile:mt-[-5vw] w-[43vw]`}
+                  collapsedPanelClasses="h-[30vw] mobile:h-[115vw] mobile:translate-y-[75%] tablet:translate-y-[75%]"
                   readMoreWrapperClasses="pl-[28vw] mobile:pl-[50vw]"
                 />
               ))}

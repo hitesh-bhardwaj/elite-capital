@@ -29,15 +29,28 @@
     "team": "Our team",
     "teamMembers1": [
         {
+            "name": "Hamid Hakimi",
+            "des": "Chief Executive Officer",
+            "img": "/assets/images/about/hamid-hakimi.png",
+            "features": [
+                "20+ years' professional experience",
+                "Leads a development portfolio of 45+ active projects, making Elite Developments one of the fastest-growing real estate developers in Ontario",
+                "Track record of managing real estate sales in Ontario in excess of $1 billion, recognised as an influential figure in real estate development and acquisition"
+            ]
+        },
+        {
             "name": "Samim Sakhi",
-            "des": "Chairman & Executive Director",
+            "des": "Executive Director",
             "img": "/assets/images/about/samim-sakhi.png",
             "features": [
                 "17+ years' professional experience",
                 "Leads investment strategy at Elite Developments covering full-cycle project execution, from land acquisition through to development",
                 "Experience managing multiple medical facilities across Ontario"
             ]
-        },
+        }
+        
+    ],
+    "teamMembers2": [
         {
             "name": "Umair Waseem",
             "des": "Chief Investment Officer",
@@ -52,10 +65,7 @@
                 "Prior to joining Elite Capital, Umair held senior roles at Intentional Capital and Contessa Developments, leading large-scale development projects in Toronto, Vancouver, and Kitchener-Waterloo, and managing national income-producing portfolios. He also held investment roles at Amica Senior Lifestyles, an Ontario Teachers Pension Plan company. He began his career at Macquarie Capital’s Real Estate Investment Banking group. ",
                 "Umair holds an Executive MBA from the Rotman School of Management, a Bachelor of Commerce in Economics and Finance from the University of Toronto, completed executive coursework at Harvard, and has passed Level II of the CFA Program."
             ]
-        }
-    ],
-    "teamMembers2": [
-        
+        },
         {
             "name": "Amir Banaga",
             "des": "Head of Investor Relations",
@@ -121,20 +131,7 @@
     "readMore": "Read More +",
     "teamSub": "Board of Directors ",
     "boardMembers": [
-        {
-            "name": "Hamid Hakimi",
-            "des": "Chief Executive Officer",
-            "img": "/assets/images/about/hamid-hakimi.png",
-            "role": [
-                "Board of Directors",
-                "Investment Committee"
-            ],
-            "features": [
-                "Hamid Hakimi serves as the Chief Executive Officer of Elite Capital and the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
-                "Prior to this, Hamid successfully managed a team of realtors who completed real estate sales in Ontario, Canada in excess of $1 billion. His expertise in the field has solidified his place as a respected and influential figure in real estate development and acquisition."
-            ]
-        },
-        {
+         {
             "name": "Samim Sakhi",
             "des": "Chairman & Executive Director",
             "img": "/assets/images/about/samim-sakhi.png",
@@ -147,6 +144,20 @@
                 "Samim has a strong track record of structuring investments in large-scale land developments across North America. He is well-known in the industry for his strategic vision, operational expertise and results-oriented leadership. In addition to his real estate work, he has extensive experience managing mid- and large-scale medical facilities across Ontario."
             ]
         },
+        {
+            "name": "Hamid Hakimi",
+            "des": "Non-Executive Director",
+            "img": "/assets/images/about/hamid-hakimi.png",
+            "role": [
+                "Board of Directors",
+                "Investment Committee"
+            ],
+            "features": [
+                "Hamid Hakimi serves as CEO and Non-Executive Director on the Board of Elite Capital, and is the Founder & CEO of Elite Developments. Known for his strategic foresight and entrepreneurial spirit, Hamid has built a strong reputation for transforming the real estate landscape in Ontario. Under his leadership, Elite Developments has pursued an aggressive land acquisition strategy, resulting in a development portfolio with over 45 active projects making it one of the fastest-growing real estate developers in the region.",
+                "Prior to this, Hamid successfully managed a team of realtors who completed real estate sales in Ontario, Canada in excess of $1 billion. His expertise in the field has solidified his place as a respected and influential figure in real estate development and acquisition."
+            ]
+        },
+       
         {
             "name": "Rizvan Magomedov",
             "des": "Non-Executive Director",
